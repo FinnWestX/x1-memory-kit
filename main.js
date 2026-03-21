@@ -26,56 +26,13 @@ if (checkbox && checkoutBtn) {
     });
 }
 
-/* ===== Stripe Checkout ===== */
+/* ===== Stripe Payment Link Checkout ===== */
 if (checkoutBtn) {
     checkoutBtn.addEventListener('click', function() {
         if (!checkbox.checked) return;
-
-        // Redirect to Stripe Checkout (test mode)
-        // In production, this would create a Checkout Session via your backend.
-        // For the test/demo deployment, we show a message.
-
-        checkoutBtn.textContent = 'Redirecting to Stripe...';
-        checkoutBtn.disabled = true;
-
-        // Create Stripe Checkout session via inline fetch
-        // NOTE: In production, NEVER expose the secret key client-side.
-        // This is TEST MODE only for demonstration.
-        fetch('https://api.stripe.com/v1/checkout/sessions', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer STRIPE_SECRET_KEY_PLACEHOLDER',
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams({
-                'mode': 'payment',
-                'line_items[0][price_data][currency]': 'eur',
-                'line_items[0][price_data][product_data][name]': 'X1 Memory Kit for OpenClaw',
-                'line_items[0][price_data][product_data][description]': '9 MD config files, scripts, guides. One-time purchase.',
-                'line_items[0][price_data][unit_amount]': '4700',
-                'line_items[0][quantity]': '1',
-                'success_url': window.location.origin + '/success.html',
-                'cancel_url': window.location.origin + '/#pricing'
-            })
-        })
-        .then(function(response) { return response.json(); })
-        .then(function(session) {
-            if (session.url) {
-                window.location.href = session.url;
-            } else {
-                alert('Stripe test checkout: ' + (session.error ? session.error.message : 'Session created. In production, you would be redirected to pay.'));
-                checkoutBtn.textContent = 'Buy Now — €47';
-                checkoutBtn.disabled = false;
-                checkbox.checked = true;
-            }
-        })
-        .catch(function(err) {
-            console.error('Stripe error:', err);
-            alert('Could not connect to Stripe. Please try again.');
-            checkoutBtn.textContent = 'Buy Now — €47';
-            checkoutBtn.disabled = false;
-            checkbox.checked = true;
-        });
+        // Redirect to Stripe Payment Link (test mode)
+        // Replace with live payment link URL when going live
+        window.location.href = 'https://buy.stripe.com/test_3cIaER2AidUc9Bo7ZHc7u01';
     });
 }
 
