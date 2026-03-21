@@ -525,56 +525,47 @@ a:hover {
     line-height: 1.7;
 }
 
-/* ===== Contact Form ===== */
-.contact-form-wrapper {
-    max-width: 560px;
+/* ===== Contact Mailto ===== */
+.contact-mailto-wrapper {
+    max-width: 480px;
     margin: 0 auto;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.form-group label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-}
-
-.form-group input,
-.form-group textarea {
+.contact-mailto-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 14px 16px;
-    color: var(--text-primary);
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    text-align: center;
+}
+
+.contact-mailto-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(108, 92, 231, 0.15);
+    color: var(--accent-light);
+    margin-bottom: 24px;
+}
+
+.contact-mailto-text {
+    color: var(--text-secondary);
     font-size: 1rem;
-    font-family: inherit;
-    transition: border-color var(--transition);
-    outline: none;
+    line-height: 1.7;
+    margin-bottom: 28px;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+.contact-mailto-btn {
+    display: block;
+}
+
+.contact-mailto-note {
+    margin-top: 16px;
+    font-size: 0.8rem;
     color: var(--text-muted);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--accent);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
 }
 
 /* ===== Footer ===== */

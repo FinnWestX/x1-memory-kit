@@ -90,32 +90,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
 });
 
-/* ===== Contact Form Submit via hidden iframe ===== */
-(function() {
-    var form = document.getElementById('contact-form');
-    var iframe = document.getElementById('hidden-form-iframe');
-    var submitBtn = document.getElementById('contact-submit-btn');
-
-    if (!form || !iframe || !submitBtn) return;
-
-    form.addEventListener('submit', function(e) {
-        // The form submits natively into the hidden iframe (target="hidden-form-iframe").
-        // We just update the button text and listen for the iframe load event.
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-    });
-
-    iframe.addEventListener('load', function() {
-        // The iframe fires 'load' on initial page load (empty) and after form submission.
-        // We only want to react after a form submission, so check if the button says "Sending...".
-        if (submitBtn.textContent === 'Sending...') {
-            form.reset();
-            submitBtn.textContent = 'Send Message';
-            submitBtn.disabled = false;
-            alert('Message sent successfully! We will get back to you soon.');
-        }
-    });
-})();
+/* ===== Contact mailto: link — no backend, no tracking ===== */
 
 /* ===== Nav background on scroll ===== */
 var nav = document.querySelector('.nav');
