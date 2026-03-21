@@ -30,9 +30,8 @@ if (checkbox && checkoutBtn) {
 if (checkoutBtn) {
     checkoutBtn.addEventListener('click', function() {
         if (!checkbox.checked) return;
-        // Redirect to Stripe Payment Link (test mode)
-        // Replace with live payment link URL when going live
-        window.location.href = 'https://buy.stripe.com/test_3cIaER2AidUc9Bo7ZHc7u01';
+        // Redirect to Stripe Payment Link (LIVE)
+        window.location.href = 'https://buy.stripe.com/dRm7sFaVUaJu6w56MU2Nq00';
     });
 }
 
