@@ -16,25 +16,6 @@ document.querySelectorAll('.faq-question').forEach(function(button) {
     });
 });
 
-/* ===== Consent Checkbox → Enable Button ===== */
-var checkbox = document.getElementById('consent-checkbox');
-var checkoutBtn = document.getElementById('checkout-btn');
-
-if (checkbox && checkoutBtn) {
-    checkbox.addEventListener('change', function() {
-        checkoutBtn.disabled = !this.checked;
-    });
-}
-
-/* ===== Stripe Payment Link Checkout ===== */
-if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', function() {
-        if (!checkbox.checked) return;
-        // Redirect to Stripe Payment Link (LIVE)
-        window.location.href = 'https://buy.stripe.com/dRm7sFaVUaJu6w56MU2Nq00';
-    });
-}
-
 /* ===== Smooth scroll for nav links ===== */
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
@@ -46,14 +27,39 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
 });
 
-/* ===== Contact mailto: link — no backend, no tracking ===== */
-
 /* ===== Nav background on scroll ===== */
 var nav = document.querySelector('.nav');
 window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
-        nav.style.borderBottomColor = 'rgba(108, 92, 231, 0.3)';
+        nav.style.borderBottomColor = 'rgba(14, 165, 233, 0.3)';
     } else {
         nav.style.borderBottomColor = '';
     }
 });
+
+/* ===== Language Toggle ===== */
+function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-toggle button').forEach(function(b) {
+        b.classList.remove('active');
+    });
+    if (lang === 'de') {
+        document.querySelectorAll('.lang-toggle button')[1].classList.add('active');
+    } else {
+        document.querySelectorAll('.lang-toggle button')[0].classList.add('active');
+    }
+    localStorage.setItem('fwx-lang', lang);
+}
+
+// Restore language preference on load
+(function() {
+    var savedLang = localStorage.getItem('fwx-lang');
+    if (savedLang === 'de') {
+        document.documentElement.lang = 'de';
+        var btns = document.querySelectorAll('.lang-toggle button');
+        if (btns.length >= 2) {
+            btns[0].classList.remove('active');
+            btns[1].classList.add('active');
+        }
+    }
+})();
