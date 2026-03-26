@@ -1,123 +1,92 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widerrufsbelehrung — X1 Memory Kit for OpenClaw</title>
+    <title>Widerruf / Cancellation Policy — FWX Aviation</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --accent: #0ea5e9; --accent-light: #38bdf8; --accent-glow: rgba(14, 165, 233, 0.3); }
+        .lang-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 4px; background: var(--bg-card); padding: 4px; border-radius: 8px; border: 1px solid var(--border); }
+        .lang-toggle button { background: none; border: none; color: var(--text-secondary); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; }
+        .lang-toggle button.active { background: var(--accent); color: #fff; }
+        .de { display: none; }
+        html[lang="de"] .en { display: none; }
+        html[lang="de"] .de { display: block; }
+    </style>
 </head>
 <body>
+    <div class="lang-toggle">
+        <button class="active" onclick="setLang('en')">EN</button>
+        <button onclick="setLang('de')">DE</button>
+    </div>
+
     <nav class="nav">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">X1 Memory Kit</a>
+            <a href="index.html" class="nav-logo">FWX Aviation</a>
             <div class="nav-links">
-                <a href="index.html">Zur&uuml;ck zur Hauptseite</a>
+                <a href="index.html" class="en">Back to Home</a>
+                <a href="index.html" class="de">Zur&uuml;ck zur Hauptseite</a>
             </div>
         </div>
     </nav>
 
     <section class="legal-page">
         <div class="container">
-            <h1>Widerrufsbelehrung</h1>
+            <h1 class="en">Cancellation Policy</h1>
+            <h1 class="de">Widerrufsbelehrung</h1>
 
-            <h2>Widerrufsrecht</h2>
-            <p>
-                Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gr&uuml;nden diesen Vertrag zu widerrufen.
-            </p>
-            <p>
-                Die Widerrufsfrist betr&auml;gt <strong>vierzehn Tage ab dem Tag des Vertragsschlusses</strong>.
-            </p>
-            <p>
-                Um Ihr Widerrufsrecht auszu&uuml;ben, m&uuml;ssen Sie uns
-            </p>
+            <h2 class="en">Right of Withdrawal</h2>
+            <h2 class="de">Widerrufsrecht</h2>
+            <p class="en">You have the right to withdraw from this contract within <strong>fourteen days</strong> without giving any reason. The withdrawal period is fourteen days from the date of the contract. To exercise your right of withdrawal, you must inform us by a clear statement (e.g. a letter or email):</p>
+            <p class="de">Sie haben das Recht, binnen <strong>vierzehn Tagen</strong> ohne Angabe von Gr&uuml;nden diesen Vertrag zu widerrufen. Die Widerrufsfrist betr&auml;gt vierzehn Tage ab dem Tag des Vertragsschlusses. Um Ihr Widerrufsrecht auszu&uuml;ben, m&uuml;ssen Sie uns mittels einer eindeutigen Erkl&auml;rung (z.B. per Brief oder E-Mail) informieren:</p>
             <p>
                 <strong>Elmar Lahnstein</strong><br>
                 Finn West<br>
-                Hittorfstr. 13<br>
-                84489 Burghausen<br>
-                Deutschland<br>
+                Hittorfstr. 13, 84489 Burghausen<br>
                 E-Mail: <a href="mailto:Finn.West@gmx.net">Finn.West@gmx.net</a>
             </p>
-            <p>
-                mittels einer eindeutigen Erkl&auml;rung (z.&nbsp;B. ein per Post versandter Brief oder eine E-Mail) &uuml;ber Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie k&ouml;nnen daf&uuml;r das beigef&uuml;gte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.
-            </p>
-            <p>
-                Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung &uuml;ber die Aus&uuml;bung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
-            </p>
 
-            <h2>Folgen des Widerrufs</h2>
-            <p>
-                Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, unverz&uuml;glich und sp&auml;testens binnen vierzehn Tagen ab dem Tag zur&uuml;ckzuzahlen, an dem die Mitteilung &uuml;ber Ihren Widerruf dieses Vertrags bei uns eingegangen ist.
-            </p>
-            <p>
-                F&uuml;r diese R&uuml;ckzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der urspr&uuml;nglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdr&uuml;cklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser R&uuml;ckzahlung Entgelte berechnet.
-            </p>
+            <h2 class="en">Consequences of Withdrawal</h2>
+            <h2 class="de">Folgen des Widerrufs</h2>
+            <p class="en">If you withdraw, we will refund all payments received from you within fourteen days using the same payment method. No fees will be charged for this refund.</p>
+            <p class="de">Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen unverz&uuml;glich und sp&auml;testens binnen vierzehn Tagen zur&uuml;ckzuzahlen. F&uuml;r diese R&uuml;ckzahlung verwenden wir dasselbe Zahlungsmittel.</p>
 
-            <h2>Hinweis: Kein Wertersatz bei digitalen Inhalten</h2>
-            <p>
-                Gem&auml;&szlig; &sect; 357 Abs. 8 BGB ist bei Vertr&auml;gen &uuml;ber digitale Inhalte, die nicht auf einem k&ouml;rperlichen Datentr&auml;ger geliefert werden, kein Wertersatz zu leisten.
-            </p>
+            <h2 class="en">Early Expiration for Digital Content</h2>
+            <h2 class="de">Vorzeitiges Erl&ouml;schen bei digitalen Inhalten</h2>
+            <p class="en">Pursuant to &sect; 356(5) BGB, the right of withdrawal expires for digital content not on a physical medium when the consumer expressly consents to early performance and acknowledges the loss of the right of withdrawal, and the provider has confirmed this on a durable medium.</p>
+            <p class="de">Gem&auml;&szlig; &sect; 356 Abs. 5 BGB erlischt das Widerrufsrecht bei digitalen Inhalten, wenn der Verbraucher der vorzeitigen Ausf&uuml;hrung ausdr&uuml;cklich zugestimmt und die Kenntnis vom Verlust des Widerrufsrechts best&auml;tigt hat, und der Anbieter dies auf dauerhaftem Datentr&auml;ger best&auml;tigt hat.</p>
 
-            <h2>Vorzeitiges Erl&ouml;schen des Widerrufsrechts bei digitalen Inhalten</h2>
-            <p>
-                Gem&auml;&szlig; <strong>&sect; 356 Abs. 5 BGB</strong> erlischt das Widerrufsrecht bei Vertr&auml;gen &uuml;ber die Bereitstellung von nicht auf einem k&ouml;rperlichen Datentr&auml;ger befindlichen digitalen Inhalten, wenn <strong>alle vier</strong> folgenden Voraussetzungen erf&uuml;llt sind:
-            </p>
-            <ul>
-                <li><strong>1.</strong> Der Unternehmer hat mit der Ausf&uuml;hrung des Vertrags begonnen (Download wurde freigeschaltet).</li>
-                <li><strong>2.</strong> Der Verbraucher hat <strong>ausdr&uuml;cklich zugestimmt</strong>, dass der Unternehmer mit der Ausf&uuml;hrung des Vertrags vor Ablauf der Widerrufsfrist beginnt.</li>
-                <li><strong>3.</strong> Der Verbraucher hat <strong>seine Kenntnis davon best&auml;tigt</strong>, dass er durch seine Zustimmung mit Beginn der Ausf&uuml;hrung des Vertrags sein Widerrufsrecht verliert.</li>
-                <li><strong>4.</strong> Der Unternehmer hat dem Verbraucher eine Best&auml;tigung gem&auml;&szlig; &sect; 312f BGB auf einem dauerhaften Datentr&auml;ger (z.&nbsp;B. per E-Mail) zur Verf&uuml;gung gestellt.</li>
-            </ul>
+            <h2 class="en">Withdrawal Button</h2>
+            <h2 class="de">Widerrufsbutton</h2>
+            <p class="en">From <strong>19.06.2026</strong>, a withdrawal button will be provided on the website pursuant to &sect; 356a BGB.</p>
+            <p class="de">Ab dem <strong>19.06.2026</strong> wird gem&auml;&szlig; &sect; 356a BGB ein Widerrufsbutton auf der Website bereitgestellt.</p>
 
-            <h2>Checkout-Hinweis</h2>
-            <p>
-                Vor der Bereitstellung des Downloads wird der K&auml;ufer gebeten, die folgende Zustimmung per separater, nicht vorausgef&uuml;llter Checkbox aktiv zu erteilen:
-            </p>
-            <p style="padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-card);">
-                <em>&bdquo;Ich stimme ausdr&uuml;cklich zu, dass vor Ablauf der Widerrufsfrist mit der Ausf&uuml;hrung des Vertrages begonnen wird. Mir ist bekannt, dass ich durch die Bereitstellung der digitalen Inhalte mein Widerrufsrecht verliere.&ldquo;</em>
-            </p>
-            <p>
-                Erst nach Aktivierung dieser Checkbox und Abschluss der Zahlung wird der Download-Link bereitgestellt. Mit der Bereitstellung des Downloads erlischt das Widerrufsrecht.
-            </p>
-
-            <h2>Hinweis: Widerrufsbutton</h2>
-            <p>
-                Ab dem <strong>19.06.2026</strong> wird gem&auml;&szlig; &sect; 356a BGB ein Widerrufsbutton auf der Website bereitgestellt, &uuml;ber den der Widerruf direkt erkl&auml;rt werden kann.
-            </p>
-
-            <h2>Muster-Widerrufsformular</h2>
-            <p><em>(Wenn Sie den Vertrag widerrufen wollen, dann f&uuml;llen Sie bitte dieses Formular aus und senden Sie es zur&uuml;ck.)</em></p>
-
+            <h2 class="en">Model Withdrawal Form</h2>
+            <h2 class="de">Muster-Widerrufsformular</h2>
             <div style="padding: 24px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-card); margin: 16px 0;">
+                <p class="en"><em>(If you wish to withdraw from the contract, please fill out this form and send it back.)</em></p>
+                <p class="de"><em>(Wenn Sie den Vertrag widerrufen wollen, f&uuml;llen Sie bitte dieses Formular aus und senden Sie es zur&uuml;ck.)</em></p>
                 <p>
-                    An:<br>
-                    Elmar Lahnstein<br>
-                    Finn West<br>
-                    Hittorfstr. 13<br>
-                    84489 Burghausen<br>
+                    <span class="en">To:</span><span class="de">An:</span><br>
+                    Elmar Lahnstein, Finn West<br>
+                    Hittorfstr. 13, 84489 Burghausen<br>
                     E-Mail: Finn.West@gmx.net
                 </p>
-                <p>
-                    Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag &uuml;ber die Bereitstellung der folgenden digitalen Inhalte (*):
-                </p>
-                <p>_______________________________________________</p>
-                <p>Bestellt am (*) / erhalten am (*):</p>
-                <p>_______________________________________________</p>
-                <p>Name des/der Verbraucher(s):</p>
-                <p>_______________________________________________</p>
-                <p>Anschrift des/der Verbraucher(s):</p>
-                <p>_______________________________________________</p>
-                <p>Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier):</p>
-                <p>_______________________________________________</p>
-                <p>Datum:</p>
-                <p>_______________________________________________</p>
-                <p><em>(*) Unzutreffendes streichen.</em></p>
+                <p class="en">I/we hereby withdraw from the contract for the following digital content: _______________</p>
+                <p class="de">Hiermit widerrufe(n) ich/wir den Vertrag &uuml;ber folgende digitale Inhalte: _______________</p>
+                <p><span class="en">Ordered on / received on:</span><span class="de">Bestellt am / erhalten am:</span> _______________</p>
+                <p><span class="en">Name:</span><span class="de">Name:</span> _______________</p>
+                <p><span class="en">Address:</span><span class="de">Anschrift:</span> _______________</p>
+                <p><span class="en">Date:</span><span class="de">Datum:</span> _______________</p>
             </div>
 
-            <p style="margin-top: 48px; color: var(--text-muted); font-size: 0.8rem;">Stand: M&auml;rz 2026</p>
+            <p style="margin-top: 48px; color: var(--text-muted); font-size: 0.8rem;"><span class="en">Last updated:</span><span class="de">Stand:</span> March 2026</p>
 
-            <a href="index.html" class="legal-back">&larr; Zur&uuml;ck zur Hauptseite</a>
+            <a href="index.html" class="legal-back en">&larr; Back to Home</a>
+            <a href="index.html" class="legal-back de">&larr; Zur&uuml;ck zur Hauptseite</a>
         </div>
     </section>
+    <script src="main.js"></script>
 </body>
 </html>

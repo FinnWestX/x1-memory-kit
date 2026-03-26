@@ -1,55 +1,75 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum — X1 Memory Kit for OpenClaw</title>
+    <title>Impressum / Legal Notice — FWX Aviation</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --accent: #0ea5e9; --accent-light: #38bdf8; --accent-glow: rgba(14, 165, 233, 0.3); }
+        .lang-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 4px; background: var(--bg-card); padding: 4px; border-radius: 8px; border: 1px solid var(--border); }
+        .lang-toggle button { background: none; border: none; color: var(--text-secondary); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; }
+        .lang-toggle button.active { background: var(--accent); color: #fff; }
+        .de { display: none; }
+        html[lang="de"] .en { display: none; }
+        html[lang="de"] .de { display: block; }
+    </style>
 </head>
 <body>
+    <div class="lang-toggle">
+        <button class="active" onclick="setLang('en')">EN</button>
+        <button onclick="setLang('de')">DE</button>
+    </div>
+
     <nav class="nav">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">X1 Memory Kit</a>
+            <a href="index.html" class="nav-logo">FWX Aviation</a>
             <div class="nav-links">
-                <a href="index.html">Zur&uuml;ck zur Hauptseite</a>
+                <a href="index.html" class="en">Back to Home</a>
+                <a href="index.html" class="de">Zur&uuml;ck zur Hauptseite</a>
             </div>
         </div>
     </nav>
 
     <section class="legal-page">
         <div class="container">
-            <h1>Impressum</h1>
+            <h1 class="en">Legal Notice (Impressum)</h1>
+            <h1 class="de">Impressum</h1>
 
-            <h2>Angaben gem&auml;&szlig; &sect; 5 DDG</h2>
+            <h2 class="en">Information pursuant to &sect; 5 DDG</h2>
+            <h2 class="de">Angaben gem&auml;&szlig; &sect; 5 DDG</h2>
             <p>
                 <strong>Elmar Lahnstein</strong><br>
-                Gesch&auml;ftsbezeichnung: Finn West<br>
+                <span class="en">Trade name:</span><span class="de">Gesch&auml;ftsbezeichnung:</span> Finn West<br>
                 Hittorfstr. 13<br>
                 84489 Burghausen<br>
-                Deutschland
+                <span class="en">Germany</span><span class="de">Deutschland</span>
             </p>
 
-            <h2>Kontakt</h2>
+            <h2 class="en">Contact</h2>
+            <h2 class="de">Kontakt</h2>
             <p>
                 <strong>E-Mail:</strong> <a href="mailto:Finn.West@gmx.net">Finn.West@gmx.net</a><br>
-                Anfragen werden innerhalb von 24 Stunden beantwortet.<br>
-                <em>Schnelle elektronische Kontaktaufnahme und unmittelbare Kommunikation gem&auml;&szlig; &sect;5 Abs. 1 Nr. 2 DDG ist &uuml;ber die oben genannte E-Mail-Adresse gew&auml;hrleistet.</em>
+                <span class="en">Inquiries are answered within 24 hours.</span>
+                <span class="de">Anfragen werden innerhalb von 24 Stunden beantwortet.</span>
             </p>
 
-            <h2>Umsatzsteuer</h2>
-            <p>
-                Aufgrund der Kleinunternehmerregelung gem&auml;&szlig; &sect;19 UStG wird keine Umsatzsteuer erhoben und daher auch nicht ausgewiesen.
-            </p>
+            <h2 class="en">VAT</h2>
+            <h2 class="de">Umsatzsteuer</h2>
+            <p class="en">No VAT is charged pursuant to &sect;19 UStG (small business regulation).</p>
+            <p class="de">Aufgrund der Kleinunternehmerregelung gem&auml;&szlig; &sect;19 UStG wird keine Umsatzsteuer erhoben und daher auch nicht ausgewiesen.</p>
 
-            <h2>Verbraucherstreitbeilegung</h2>
-            <p>
-                Gem&auml;&szlig; &sect;36 VSBG (Verbraucherstreitbeilegungsgesetz) weisen wir darauf hin, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-            </p>
+            <h2 class="en">Consumer Dispute Resolution</h2>
+            <h2 class="de">Verbraucherstreitbeilegung</h2>
+            <p class="en">Pursuant to &sect;36 VSBG (Consumer Dispute Resolution Act), we are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+            <p class="de">Gem&auml;&szlig; &sect;36 VSBG (Verbraucherstreitbeilegungsgesetz) weisen wir darauf hin, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
-            <p style="margin-top: 48px; color: var(--text-muted); font-size: 0.8rem;">Stand: M&auml;rz 2026</p>
+            <p style="margin-top: 48px; color: var(--text-muted); font-size: 0.8rem;"><span class="en">Last updated:</span><span class="de">Stand:</span> March 2026</p>
 
-            <a href="index.html" class="legal-back">&larr; Zur&uuml;ck zur Hauptseite</a>
+            <a href="index.html" class="legal-back en">&larr; Back to Home</a>
+            <a href="index.html" class="legal-back de">&larr; Zur&uuml;ck zur Hauptseite</a>
         </div>
     </section>
+    <script src="main.js"></script>
 </body>
 </html>
