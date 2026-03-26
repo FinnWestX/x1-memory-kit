@@ -57,49 +57,7 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero" style="position:relative;overflow:hidden;">
-        <!-- Eigene SVG Hintergrund-Szenerie -->
-        <svg style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.35;" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
-            <!-- Himmel-Verlauf -->
-            <rect x="0" y="0" width="1200" height="600" fill="url(#skyGrad)"/>
-            <defs><linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0c2840"/><stop offset="100%" stop-color="#0a0a14"/></linearGradient></defs>
-            <!-- Berge hinten -->
-            <polygon points="0,600 100,320 200,380 350,220 500,300 650,180 800,260 950,200 1100,280 1200,240 1200,600" fill="#0c3555" opacity="0.8"/>
-            <!-- Berge vorne -->
-            <polygon points="0,600 150,380 300,440 450,340 600,400 750,320 900,380 1050,350 1200,400 1200,600" fill="#0a2540" opacity="0.9"/>
-            <!-- Boden/Wald -->
-            <rect x="0" y="480" width="1200" height="120" fill="#081a2a" opacity="0.9"/>
-            <!-- Bäume angedeutet -->
-            <g opacity="0.4">
-                <polygon points="100,480 110,440 120,480" fill="#0c3555"/>
-                <polygon points="200,480 212,430 224,480" fill="#0c3555"/>
-                <polygon points="350,480 360,445 370,480" fill="#0c3555"/>
-                <polygon points="500,480 510,435 520,480" fill="#0c3555"/>
-                <polygon points="700,480 712,440 724,480" fill="#0c3555"/>
-                <polygon points="900,480 910,442 920,480" fill="#0c3555"/>
-                <polygon points="1050,480 1062,438 1074,480" fill="#0c3555"/>
-            </g>
-            <!-- EC135 Silhouette -->
-            <g transform="translate(700,200) scale(2.5)" opacity="0.9">
-                <!-- Rumpf -->
-                <path d="M-40,0 Q-45,-8 -30,-12 L30,-12 Q50,-10 55,-5 L60,0 Q55,8 40,10 L-20,10 Q-40,8 -40,0" fill="none" stroke="#0ea5e9" stroke-width="1"/>
-                <!-- Cockpit-Fenster -->
-                <path d="M35,-10 Q45,-8 48,-4 L40,-4 Q38,-8 35,-10" fill="#0ea5e9" opacity="0.2"/>
-                <!-- Hauptrotor -->
-                <line x1="-60" y1="-14" x2="60" y2="-14" stroke="#0ea5e9" stroke-width="0.8"/>
-                <circle cx="0" cy="-14" r="2" fill="#0ea5e9"/>
-                <!-- Heckausleger -->
-                <line x1="-40" y1="0" x2="-80" y2="-5" stroke="#0ea5e9" stroke-width="1"/>
-                <!-- Fenestron -->
-                <circle cx="-82" cy="-5" r="6" fill="none" stroke="#0ea5e9" stroke-width="0.8"/>
-                <!-- Kufen -->
-                <path d="M-15,12 L25,12" stroke="#0ea5e9" stroke-width="0.8"/>
-                <line x1="-10" y1="10" x2="-10" y2="12" stroke="#0ea5e9" stroke-width="0.8"/>
-                <line x1="20" y1="10" x2="20" y2="12" stroke="#0ea5e9" stroke-width="0.8"/>
-                <!-- FWX Label -->
-                <text x="5" y="4" fill="#0ea5e9" font-family="sans-serif" font-size="5" font-weight="700" opacity="0.8">FWX</text>
-            </g>
-        </svg>
+    <section class="hero" style="background:linear-gradient(135deg, rgba(10,10,20,0.98), rgba(14,165,233,0.06), rgba(10,10,20,0.98));">
         <div class="container">
             <div class="hero-badge"><span class="en">MSFS 2024 - Compatible with the EC135 helicopter</span><span class="de">MSFS 2024 - Kompatibel mit dem EC135 Helikopter</span></div>
             <h1 class="hero-title">
