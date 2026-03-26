@@ -29,6 +29,8 @@
 
     var form = document.getElementById('review-form');
     var msg = document.getElementById('review-msg');
+    var WEBHOOK_URL = 'https://webhook.finnwestx1.com';
+
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -38,12 +40,48 @@
                 msg.style.color = '#ef4444';
                 return;
             }
-            msg.textContent = 'Thank you! Your review will be verified and published shortly. / Danke! Deine Bewertung wird geprueft und in Kuerze veroeffentlicht.';
+
+            var orderNum = document.getElementById('review-order').value.trim();
+            var reviewName = document.getElementById('review-name').value.trim();
+            var reviewProduct = document.getElementById('review-product').value;
+            var reviewText = document.getElementById('review-text').value.trim();
+            var reviewRating = parseInt(ratingInput.value);
+
+            msg.textContent = 'Verifying order... / Bestellung wird geprueft...';
             msg.style.display = 'block';
-            msg.style.color = '#22c55e';
-            form.reset();
-            ratingInput.value = 0;
-            starSelect.querySelectorAll('[data-star]').forEach(function(s) { s.style.color = '#333'; });
+            msg.style.color = '#0ea5e9';
+
+            fetch(WEBHOOK_URL + '/submit-review', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    order_id: orderNum,
+                    name: reviewName,
+                    product: reviewProduct,
+                    rating: reviewRating,
+                    text: reviewText
+                })
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.success) {
+                    msg.textContent = 'Thank you! Your review has been submitted and will be published shortly. / Danke! Deine Bewertung wurde eingereicht und wird in Kuerze veroeffentlicht.';
+                    msg.style.color = '#22c55e';
+                    form.reset();
+                    ratingInput.value = 0;
+                    starSelect.querySelectorAll('[data-star]').forEach(function(s) { s.style.color = '#333'; });
+                } else if (data.error === 'not_verified') {
+                    msg.textContent = 'Order not verified. Only verified buyers can leave a review. Please purchase first. / Bestellung nicht verifiziert. Nur verifizierte Kaeufer koennen eine Bewertung abgeben. Bitte zuerst kaufen.';
+                    msg.style.color = '#ef4444';
+                } else {
+                    msg.textContent = data.message || 'Error / Fehler';
+                    msg.style.color = '#ef4444';
+                }
+            })
+            .catch(function(err) {
+                msg.textContent = 'Connection error. Please try again. / Verbindungsfehler. Bitte erneut versuchen.';
+                msg.style.color = '#ef4444';
+            });
         });
     }
 })();
