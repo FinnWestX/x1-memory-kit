@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X1 Memory Kit for OpenClaw — Stop Wasting Tokens, Start Building</title>
+    <meta name="description" content="Pre-configured memory system for OpenClaw. 9 optimized MD files, install scripts, guides. Works with any AI provider. €47 one-time.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">X1 Memory Kit</a>
+            <div class="nav-links">
+                <a href="#problems">Problems</a>
+                <a href="#included">What's Included</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">by FinnWestX1</div>
+            <h1 class="hero-title">Your OpenClaw Agent<br>Forgets Everything?<br><span class="gradient-text">Not Anymore.</span></h1>
+            <p class="hero-subtitle">The X1 Memory Kit gives your OpenClaw agent persistent, token-optimized memory — pre-configured, ready to install, works with any AI provider.</p>
+            <div class="hero-cta">
+                <a href="#pricing" class="btn btn-primary btn-lg">Get the Kit — €47</a>
+                <p class="hero-note">One-time payment. No subscription. Instant download.</p>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Config Files</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Install Scripts</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Guide PDFs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section id="problems" class="section">
+        <div class="container">
+            <h2 class="section-title">4 Problems. <span class="gradient-text">1 Kit.</span></h2>
+            <p class="section-subtitle">OpenClaw is powerful — but its memory system fights you at every step.</p>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-icon">01</div>
+                    <h3>Memory Is Hard to Configure</h3>
+                    <p>OpenClaw's memory system is powerful but poorly documented. One wrong setting and your agent forgets mid-conversation. The X1 Kit includes <strong>9 pre-configured, battle-tested MD files</strong> that just work.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">02</div>
+                    <h3>Token Waste Kills Your Budget</h3>
+                    <p>Bloated config files eat tokens on every single API call. Our files are <strong>aggressively optimized</strong> — every line earns its place. Less tokens per call means more calls per dollar.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">03</div>
+                    <h3>Setup Takes Hours (or Days)</h3>
+                    <p>Reading docs, trial-and-error, debugging configs. We compressed weeks of iteration into <strong>install scripts that set everything up in minutes</strong>. Linux, macOS, and Windows supported.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">04</div>
+                    <h3>Too Complex for Non-Experts</h3>
+                    <p>You shouldn't need a CS degree to run an AI agent. Our <strong>step-by-step guides (English + German)</strong> explain everything from scratch. No prior knowledge required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section id="included" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Everything in the Kit</h2>
+            <p class="section-subtitle">One download. Everything you need. Nothing you don't.</p>
+            <div class="grid grid-3">
+                <div class="include-card">
+                    <div class="include-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </div>
+                    <h4>9 MD Config Files</h4>
+                    <p>Pre-configured, token-optimized memory files. Drop them in and your agent remembers.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <h4>Chat-Recapture Script</h4>
+                    <p>Python script that recaptures conversation context automatically. Never lose a thread again.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h4>System-Cleanup Script</h4>
+                    <p>Shell script to keep your agent environment clean and prevent resource leaks.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </div>
+                    <h4>Install Scripts</h4>
+                    <p>One-click installers for Linux (.sh), macOS (.sh), and Windows (.bat). Choose your platform, run, done.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    </div>
+                    <h4>Setup Guide PDF</h4>
+                    <p>Complete walkthrough in English and German. Every step explained, every term defined.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </div>
+                    <h4>Token Guide + FAQ PDFs</h4>
+                    <p>Token management strategies and frequently asked questions. Both in English and German.</p>
+                </div>
+            </div>
+            <div class="provider-note">
+                <p><strong>Works with ANY AI provider</strong> — Anthropic, OpenAI, Z.AI, local models via Ollama, or whatever you're running. The X1 Kit is provider-agnostic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-subtitle">No tiers. No upsells. One price for everything.</p>
+            <div class="pricing-card">
+                <div class="pricing-badge">One-Time Payment</div>
+                <div class="pricing-amount">
+                    <span class="currency">€</span><span class="price">47</span>
+                </div>
+                <p class="pricing-note" style="font-size: 0.9rem; margin-top: 4px;">Endpreis. Keine Umsatzsteuer gem. &sect;19 UStG.</p>
+                <p class="pricing-note">Pay once. Download instantly. Keep forever.</p>
+                <ul class="pricing-features">
+                    <li>9 pre-configured MD memory files</li>
+                    <li>Chat-recapture Python script</li>
+                    <li>System-cleanup shell script</li>
+                    <li>Install scripts (Linux + macOS + Windows)</li>
+                    <li>Setup Guide PDF (EN + DE)</li>
+                    <li>Token Management Guide PDF (EN + DE)</li>
+                    <li>FAQ PDF (EN + DE)</li>
+                    <li>Works with any AI provider</li>
+                    <li>Free updates for 12 months</li>
+                </ul>
+                <div class="delivery-info" style="margin-bottom: 24px; padding: 20px; border: 1px solid var(--border); border-radius: var(--radius); background: rgba(0, 206, 201, 0.06); text-align: left;">
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+                        <strong style="color: var(--success);">Lieferung / Delivery:</strong><br>
+                        Nach erfolgreicher Zahlung erhalten Sie das Produkt als ZIP-Datei per E-Mail an die beim Kauf angegebene E-Mail-Adresse. Die Zustellung erfolgt automatisch innerhalb weniger Minuten nach Zahlungseingang.<br><br>
+                        After successful payment, you will receive the product as a ZIP file via email to the address provided during checkout. Delivery is automatic within minutes of payment.
+                    </p>
+                </div>
+                <div class="checkout-consent">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="consent-checkbox">
+                        <span class="checkmark"></span>
+                        <span>Ich stimme ausdr&uuml;cklich zu, dass vor Ablauf der Widerrufsfrist mit der Ausf&uuml;hrung des Vertrages begonnen wird. Mir ist bekannt, dass ich durch die Bereitstellung der digitalen Inhalte mein Widerrufsrecht verliere. / I expressly agree that the execution of the contract begins before the withdrawal period expires. I acknowledge that I lose my right of withdrawal upon delivery of the digital content. <a href="widerruf.html" target="_blank">Widerrufsbelehrung / Cancellation Policy</a></span>
+                    </label>
+                </div>
+                <button id="checkout-btn" class="btn btn-primary btn-lg btn-full" disabled>
+                    Zahlungspflichtig bestellen — €47
+                </button>
+                <p class="pricing-stripe">Secure payment via <strong>Stripe</strong>. Es gelten unsere <a href="agb.html" style="color:#8a8a9a;text-decoration:underline;">AGB</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I need to use a specific AI provider?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. The X1 Memory Kit is completely provider-agnostic. It works with Anthropic (Claude), OpenAI (GPT), Z.AI, local models via Ollama, or any other provider that OpenClaw supports. The memory files use standard Markdown format that any LLM can read.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>I'm not technical. Can I still use this?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. That's exactly who this is for. The install scripts automate the setup process — you run one command and everything is configured. The guides explain every step and every term in plain language, available in both English and German.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What version of OpenClaw do I need?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The X1 Memory Kit works with OpenClaw 2026.3.x and later. If you're running an older version, the guides include instructions for upgrading. The memory file format is backward-compatible with older versions in most cases.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I modify the files for my own setup?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. The files are yours to customize. They're designed as optimized starting points — tweak them to match your workflow. The only restriction is that you can't resell or redistribute them. See our <a href="agb.html">Terms of Service</a> for details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Questions? Send us an email directly.</p>
+            <div class="contact-mailto-wrapper">
+                <div class="contact-mailto-card">
+                    <div class="contact-mailto-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <p class="contact-mailto-text">Click the button below to open your email client with a pre-filled message. Just type your question and hit send.</p>
+                    <a href="mailto:Finn.West@gmx.net?subject=X1%20Memory%20Kit%20%E2%80%94%20Question&body=Hi%2C%0A%0AI%20have%20a%20question%20about%20the%20X1%20Memory%20Kit%3A%0A%0A" class="btn btn-primary btn-lg btn-full contact-mailto-btn">Send Email</a>
+                    <p class="contact-mailto-note">Your default email app will open. No data is collected or stored on this website.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo">X1 Memory Kit</span>
+                    <p>by FinnWestX1</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Privacy Policy (Datenschutz)</a>
+                    <a href="widerruf.html">Widerrufsbelehrung / Cancellation Policy</a>
+                    <a href="agb.html">Terms of Service (AGB)</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Product</h5>
+                    <a href="#problems">Problems We Solve</a>
+                    <a href="#included">What's Included</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FinnWestX1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

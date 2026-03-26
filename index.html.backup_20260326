@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWX Aviation — EC135 Sound &amp; Haptic Mods for MSFS 2024</title>
+    <meta name="description" content="Realistic cockpit sounds and real rotor haptics for the Nemeth Design EC135 in Microsoft Flight Simulator 2024. By pilots, for pilots.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* FWX overrides */
+        :root {
+            --accent: #0ea5e9;
+            --accent-light: #38bdf8;
+            --accent-glow: rgba(14, 165, 233, 0.3);
+            --success: #22c55e;
+        }
+        .lang-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 4px; background: var(--bg-card); padding: 4px; border-radius: 8px; border: 1px solid var(--border); }
+        .lang-toggle button { background: none; border: none; color: var(--text-secondary); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; }
+        .lang-toggle button.active { background: var(--accent); color: #fff; }
+        .de { display: none; }
+        html[lang="de"] .en { display: none; }
+        html[lang="de"] .de { display: block; }
+        html[lang="de"] span.de, html[lang="de"] a.de { display: inline; }
+        html[lang="de"] span.en, html[lang="de"] a.en { display: none; }
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 40px 0; }
+        @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }
+        .product-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; transition: border-color var(--transition), transform var(--transition); }
+        .product-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .product-tag { display: inline-block; background: rgba(14,165,233,0.15); color: var(--accent-light); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .product-price { font-size: 48px; font-weight: 800; color: var(--text-primary); margin: 16px 0 8px; }
+        .product-price .currency { font-size: 24px; vertical-align: super; color: var(--text-secondary); }
+        .product-features { list-style: none; padding: 0; margin: 24px 0; }
+        .product-features li { padding: 8px 0; padding-left: 24px; position: relative; color: var(--text-secondary); font-size: 15px; }
+        .product-features li::before { content: "✓"; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+        .bundle-card { background: linear-gradient(135deg, var(--bg-card), rgba(14,165,233,0.08)); border: 2px solid var(--accent); }
+        .bundle-badge { background: var(--accent); color: #000; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; display: inline-block; margin-bottom: 16px; }
+        .hero-image { max-width: 100%; border-radius: var(--radius-lg); margin-top: 40px; border: 1px solid var(--border); }
+        .feature-highlight { display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--border); }
+        .feature-highlight:last-child { border-bottom: none; }
+        .feature-number { flex-shrink: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(14,165,233,0.15); color: var(--accent-light); border-radius: 10px; font-weight: 700; font-size: 16px; }
+        .coming-soon-note { background: rgba(234,179,8,0.1); border: 1px solid rgba(234,179,8,0.3); border-radius: var(--radius); padding: 16px 20px; margin: 16px 0; font-size: 14px; color: #eab308; }
+    </style>
+</head>
+<body>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="active" onclick="setLang('en')">EN</button>
+        <button onclick="setLang('de')">DE</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">FWX Aviation</a>
+            <div class="nav-links">
+                <a href="#products"><span class="en">Products</span><span class="de">Produkte</span></a>
+                <a href="#sound"><span class="en">Sound Pack</span><span class="de">Sound-Pack</span></a>
+                <a href="#haptic"><span class="en">Haptic Engine</span><span class="de">Haptic Engine</span></a>
+                <a href="#pricing"><span class="en">Pricing</span><span class="de">Preise</span></a>
+                <a href="#contact"><span class="en">Contact</span><span class="de">Kontakt</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">MSFS 2024 — Nemeth Design EC135</div>
+            <h1 class="hero-title">
+                <span class="en">Your EC135<br>Deserves Better Sound.<br><span class="gradient-text">And Real Rotor Feel.</span></span>
+                <span class="de">Dein EC135<br>verdient besseren Sound.<br><span class="gradient-text">Und echtes Rotorgefuehl.</span></span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="en">Two mods built by a VR helicopter pilot who wasn't satisfied with the stock experience. Realistic turbine audio. Physical rotor impulses you can feel through your seat. Made for the Nemeth Design EC135 in MSFS 2024.</span>
+                <span class="de">Zwei Mods von einem VR-Helikopterpiloten, der mit dem Original nicht zufrieden war. Realistische Turbinen-Sounds. Physische Rotorimpulse, die du im Sitz spuerst. Fuer den Nemeth Design EC135 in MSFS 2024.</span>
+            </p>
+            <div class="hero-cta">
+                <a href="#pricing" class="btn btn-primary btn-lg">
+                    <span class="en">See Products</span>
+                    <span class="de">Zu den Produkten</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label"><span class="en">Products</span><span class="de">Produkte</span></span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">VR</span>
+                    <span class="stat-label"><span class="en">Optimized</span><span class="de">Optimiert</span></span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label"><span class="en">Blade Impulses</span><span class="de">Blatt-Impulse</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Overview -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en">Two Mods. <span class="gradient-text">One Mission.</span></span>
+                <span class="de">Zwei Mods. <span class="gradient-text">Ein Ziel.</span></span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="en">Make the Nemeth EC135 sound and feel like the real thing.</span>
+                <span class="de">Den Nemeth EC135 klingen und fuehlen lassen wie das Original.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Sound Pack Section -->
+    <section id="sound" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en">FWX Sound Enhancement Pack</span>
+                <span class="de">FWX Sound Enhancement Pack</span>
+            </h2>
+            <div class="grid grid-2">
+                <div>
+                    <p class="en" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">The stock Nemeth EC135 sounds aggressive in VR. Turbines scream when you touch the throttle. The pitch jumps 20% on every torque change — in a real EC135, it's maybe 2-3%. If you fly with a ButtKicker, the bass rattles your entire setup.</p>
+                    <p class="de" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">Der originale Nemeth EC135 klingt in VR aggressiv. Die Turbinen kreischen bei jeder Schubhebel-Bewegung. Die Tonhoehe springt um 20% bei Drehmoment-Aenderungen — in einem echten EC135 sind das vielleicht 2-3%. Mit einem ButtKicker vibriert das ganze Setup unangenehm.</p>
+                    <br>
+                    <p class="en" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">We replaced the entire cockpit sound environment. Realistic H145-B turbine tones. A custom startup sequence mixed from real helicopter audio. Pitch variation reduced to realistic levels. Internal bass removed so your shaker reproduces what matters — the rotor, not engine rumble.</p>
+                    <p class="de" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">Wir haben die komplette Cockpit-Klangumgebung ersetzt. Realistische H145-B Turbinen-Toene. Eine eigene Startsequenz aus echtem Helikopter-Audio gemischt. Tonhoehenaenderung auf realistische Werte reduziert. Interner Bass entfernt, damit dein Schallwandler das wiedergibt was zaehlt — den Rotor, nicht Motor-Brummen.</p>
+                    <div class="feature-highlight">
+                        <div class="feature-number">1</div>
+                        <div>
+                            <strong class="en">Realistic turbine audio</strong>
+                            <strong class="de">Realistische Turbinen-Sounds</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">H145-B engine tones, custom mixed</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">H145-B Triebwerks-Toene, eigener Mix</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-number">2</div>
+                        <div>
+                            <strong class="en">Custom startup sequence</strong>
+                            <strong class="de">Eigene Startsequenz</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">Cold start that sounds like being on the ramp</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">Kaltstart der klingt wie auf dem Vorfeld</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-number">3</div>
+                        <div>
+                            <strong class="en">Reduced pitch variation</strong>
+                            <strong class="de">Reduzierte Tonhoehenaenderung</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">20% of stock — matches real EC135 behavior</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">20% des Originals — wie im echten EC135</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-number">4</div>
+                        <div>
+                            <strong class="en">No bass distortion</strong>
+                            <strong class="de">Kein Bass-Brummen</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">Internal bass removed — ButtKicker-safe</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">Interner Bass entfernt — ButtKicker-sicher</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card" style="text-align:center; padding:60px 40px;">
+                        <div style="font-size:80px; margin-bottom:20px;">🎧</div>
+                        <p class="en" style="color:var(--text-secondary); font-size:16px;">One-click installer. Drop into your Community folder. Reversible in seconds.</p>
+                        <p class="de" style="color:var(--text-secondary); font-size:16px;">Ein-Klick-Installer. In den Community-Ordner legen. In Sekunden rueckgaengig machbar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Haptic Engine Section -->
+    <section id="haptic" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en">FWX Rotor Haptic Engine</span>
+                <span class="de">FWX Rotor Haptic Engine</span>
+            </h2>
+            <div class="grid grid-2">
+                <div>
+                    <div class="card" style="text-align:center; padding:60px 40px;">
+                        <div style="font-size:80px; margin-bottom:20px;">🔊</div>
+                        <p class="en" style="color:var(--text-secondary); font-size:16px;">Standalone .exe — start it, connect to MSFS, feel the difference.</p>
+                        <p class="de" style="color:var(--text-secondary); font-size:16px;">Eigenstaendige .exe — starten, mit MSFS verbinden, den Unterschied spueren.</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="en" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">Standard haptic software sends a constant vibration based on RPM. That feels like sitting on a washing machine, not in a helicopter. In a real EC135, you feel four distinct blade passes per revolution — thump, thump, thump, thump.</p>
+                    <p class="de" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">Standard-Haptik-Software sendet eine gleichmaessige Vibration basierend auf der Drehzahl. Das fuehlt sich an wie auf einer Waschmaschine, nicht wie in einem Helikopter. In einem echten EC135 spuert man vier einzelne Blattdurchgaenge pro Umdrehung — thump, thump, thump, thump.</p>
+                    <br>
+                    <p class="en" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">Our Haptic Engine reads real rotor RPM from MSFS via SimConnect, 20 times per second. It generates four sharp impulses per revolution. At low RPM during startup, you feel each blade individually. At 30-50% RPM, the blades rattle — just like they do when they're hanging and slapping. At full RPM, it becomes a smooth bass pulse.</p>
+                    <p class="de" style="font-size:18px; line-height:1.8; color:var(--text-secondary);">Unsere Haptic Engine liest die echte Rotor-Drehzahl aus MSFS ueber SimConnect, 20 Mal pro Sekunde. Sie erzeugt vier scharfe Impulse pro Umdrehung. Bei niedrigem RPM waehrend des Starts spuerst du jedes Blatt einzeln. Bei 30-50% RPM rattern die Blaetter — genau wie wenn sie haengen und schlagen. Bei voller Drehzahl wird es ein gleichmaessiger Bass-Puls.</p>
+                    <div class="feature-highlight">
+                        <div class="feature-number">1</div>
+                        <div>
+                            <strong class="en">4 impulses per revolution</strong>
+                            <strong class="de">4 Impulse pro Umdrehung</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">Real 4-blade main rotor physics, not generic vibration</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">Echte 4-Blatt-Hauptrotor-Physik, keine generische Vibration</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-number">2</div>
+                        <div>
+                            <strong class="en">Blade rattle at low RPM</strong>
+                            <strong class="de">Blatt-Rattern bei niedrigem RPM</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">Hanging blades slap at 30-50% — you feel it</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">Haengende Blaetter schlagen bei 30-50% — das spuerst du</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-number">3</div>
+                        <div>
+                            <strong class="en">Dual channel output</strong>
+                            <strong class="de">Zwei-Kanal-Ausgabe</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">Separate controls for ButtKicker and VR headphones</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">Getrennte Regler fuer ButtKicker und VR-Kopfhoerer</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-number">4</div>
+                        <div>
+                            <strong class="en">GUI with live controls</strong>
+                            <strong class="de">Bedienoberflaeche mit Live-Reglern</strong>
+                            <p class="en" style="color:var(--text-muted);font-size:14px;">Adjust volume, bass, impulse strength — saved automatically</p>
+                            <p class="de" style="color:var(--text-muted);font-size:14px;">Lautstaerke, Bass, Impulsstaerke anpassen — wird automatisch gespeichert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en">Pricing</span>
+                <span class="de">Preise</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="en">One-time payment. No subscription. Instant download after purchase.</span>
+                <span class="de">Einmalzahlung. Kein Abo. Sofortiger Download nach dem Kauf.</span>
+            </p>
+            <div class="product-grid">
+                <!-- Sound Pack -->
+                <div class="product-card">
+                    <div class="product-tag">Sound</div>
+                    <h3>FWX Sound Enhancement Pack</h3>
+                    <div class="product-price"><span class="currency">&euro;</span>7<sup style="font-size:24px;">,99</sup></div>
+                    <p style="font-size:13px; color:var(--text-muted);">
+                        <span class="en">Final price. No VAT (§19 UStG).</span>
+                        <span class="de">Endpreis. Keine USt gem. §19 UStG.</span>
+                    </p>
+                    <ul class="product-features">
+                        <li class="en">Complete cockpit sound replacement</li>
+                        <li class="de">Kompletter Cockpit-Sound-Ersatz</li>
+                        <li class="en">Realistic H145-B turbine tones</li>
+                        <li class="de">Realistische H145-B Turbinen-Toene</li>
+                        <li class="en">Custom startup sequence</li>
+                        <li class="de">Eigene Startsequenz</li>
+                        <li class="en">Reduced pitch variation (realistic)</li>
+                        <li class="de">Reduzierte Tonhoehenaenderung (realistisch)</li>
+                        <li class="en">No bass distortion (ButtKicker-safe)</li>
+                        <li class="de">Kein Bass-Brummen (ButtKicker-sicher)</li>
+                        <li class="en">One-click installer</li>
+                        <li class="de">Ein-Klick-Installer</li>
+                        <li class="en">Reversible — uninstall in seconds</li>
+                        <li class="de">Rueckgaengig machbar in Sekunden</li>
+                    </ul>
+                    <div class="coming-soon-note">
+                        <span class="en">⏳ Download available within hours. Leave your email or check back soon.</span>
+                        <span class="de">⏳ Download in Kuerze verfuegbar. Schau bald wieder vorbei.</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-lg btn-full" id="btn-sound">
+                        <span class="en">Get Notified</span>
+                        <span class="de">Benachrichtigung erhalten</span>
+                    </a>
+                </div>
+                <!-- Haptic Engine -->
+                <div class="product-card">
+                    <div class="product-tag">Haptic</div>
+                    <h3>FWX Rotor Haptic Engine</h3>
+                    <div class="product-price"><span class="currency">&euro;</span>3<sup style="font-size:24px;">,99</sup></div>
+                    <p style="font-size:13px; color:var(--text-muted);">
+                        <span class="en">Final price. No VAT (§19 UStG).</span>
+                        <span class="de">Endpreis. Keine USt gem. §19 UStG.</span>
+                    </p>
+                    <ul class="product-features">
+                        <li class="en">Real 4-blade rotor impulses</li>
+                        <li class="de">Echte 4-Blatt-Rotorimpulse</li>
+                        <li class="en">Blade rattle at low RPM</li>
+                        <li class="de">Blatt-Rattern bei niedrigem RPM</li>
+                        <li class="en">Dual channel (ButtKicker + headphones)</li>
+                        <li class="de">Zwei Kanaele (ButtKicker + Kopfhoerer)</li>
+                        <li class="en">GUI with live controls</li>
+                        <li class="de">Bedienoberflaeche mit Live-Reglern</li>
+                        <li class="en">Works with any MSFS 2024 helicopter</li>
+                        <li class="de">Funktioniert mit jedem MSFS 2024 Helikopter</li>
+                        <li class="en">Standalone .exe — no dependencies</li>
+                        <li class="de">Eigenstaendige .exe — keine Abhaengigkeiten</li>
+                    </ul>
+                    <div class="coming-soon-note">
+                        <span class="en">⏳ Download available within hours. Leave your email or check back soon.</span>
+                        <span class="de">⏳ Download in Kuerze verfuegbar. Schau bald wieder vorbei.</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-lg btn-full" id="btn-haptic">
+                        <span class="en">Get Notified</span>
+                        <span class="de">Benachrichtigung erhalten</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Bundle -->
+            <div class="product-card bundle-card" style="max-width:600px; margin:0 auto;">
+                <div class="bundle-badge">
+                    <span class="en">BUNDLE — SAVE €0.99</span>
+                    <span class="de">BUNDLE — SPARE €0,99</span>
+                </div>
+                <h3 style="font-size:24px;">FWX EC135 Complete Pack</h3>
+                <p class="en" style="color:var(--text-secondary);">Sound Enhancement + Rotor Haptic Engine together.</p>
+                <p class="de" style="color:var(--text-secondary);">Sound Enhancement + Rotor Haptic Engine zusammen.</p>
+                <div class="product-price"><span class="currency">&euro;</span>10<sup style="font-size:24px;">,99</sup></div>
+                <p style="font-size:13px; color:var(--text-muted);">
+                    <span class="en">Final price. No VAT (§19 UStG). Instead of €11.98 separately.</span>
+                    <span class="de">Endpreis. Keine USt gem. §19 UStG. Statt €11,98 einzeln.</span>
+                </p>
+                <div class="coming-soon-note">
+                    <span class="en">⏳ Download available within hours. Leave your email or check back soon.</span>
+                    <span class="de">⏳ Download in Kuerze verfuegbar. Schau bald wieder vorbei.</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-lg btn-full" id="btn-bundle" style="margin-top:20px;">
+                    <span class="en">Get Notified</span>
+                    <span class="de">Benachrichtigung erhalten</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="en">Do I need the Nemeth Design EC135 DLC?</span>
+                        <span class="de">Brauche ich den Nemeth Design EC135 DLC?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="en">Yes. The Sound Enhancement Pack is specifically designed for the Nemeth Design EC135 (Local Legend 21 DLC for MSFS 2024). The Haptic Engine works with any MSFS 2024 helicopter, but is optimized for the EC135's 4-blade rotor.</p>
+                        <p class="de">Ja. Das Sound Enhancement Pack ist speziell fuer den Nemeth Design EC135 (Local Legend 21 DLC fuer MSFS 2024) entwickelt. Die Haptic Engine funktioniert mit jedem MSFS 2024 Helikopter, ist aber fuer den 4-Blatt-Rotor des EC135 optimiert.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="en">Do I need a ButtKicker for the Haptic Engine?</span>
+                        <span class="de">Brauche ich einen ButtKicker fuer die Haptic Engine?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="en">The Haptic Engine has two output channels. The ButtKicker/bass shaker channel delivers physical impulses. The headphone channel uses a real blade slap audio sample — so even without a shaker, you get enhanced rotor audio in your VR headset.</p>
+                        <p class="de">Die Haptic Engine hat zwei Ausgabekanaele. Der ButtKicker/Schallwandler-Kanal liefert physische Impulse. Der Kopfhoerer-Kanal nutzt ein echtes Blattschlag-Sample — auch ohne Schallwandler bekommst du verbessertes Rotor-Audio im VR-Headset.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="en">Can I uninstall the Sound Pack?</span>
+                        <span class="de">Kann ich das Sound Pack deinstallieren?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="en">Yes. Delete the mod folder from your Community directory and the original Nemeth sounds are back instantly. No permanent changes are made to any game files.</p>
+                        <p class="de">Ja. Loesche den Mod-Ordner aus deinem Community-Verzeichnis und die originalen Nemeth-Sounds sind sofort zurueck. Es werden keine permanenten Aenderungen an Spieldateien vorgenommen.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="en">Does the Haptic Engine work with other helicopters?</span>
+                        <span class="de">Funktioniert die Haptic Engine mit anderen Helikoptern?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="en">Yes. It reads engine RPM via SimConnect, which works with any MSFS 2024 aircraft. The 4-blade impulse pattern is optimized for the EC135, but it produces realistic feedback with any helicopter.</p>
+                        <p class="de">Ja. Sie liest die Triebwerksdrehzahl ueber SimConnect, was mit jedem MSFS 2024 Flugzeug funktioniert. Das 4-Blatt-Impulsmuster ist fuer den EC135 optimiert, erzeugt aber mit jedem Helikopter realistisches Feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en">Contact</span>
+                <span class="de">Kontakt</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="en">Questions? Want to be notified when the download is ready? Send us an email.</span>
+                <span class="de">Fragen? Benachrichtigung wenn der Download bereit ist? Schreib uns eine E-Mail.</span>
+            </p>
+            <div class="contact-mailto-wrapper">
+                <div class="contact-mailto-card">
+                    <div class="contact-mailto-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <p class="contact-mailto-text en">Click below to send us an email. We'll reply as soon as possible.</p>
+                    <p class="contact-mailto-text de">Klicke unten um uns eine E-Mail zu schreiben. Wir antworten so schnell wie moeglich.</p>
+                    <a href="mailto:Finn.West@gmx.net?subject=FWX%20EC135%20Mods%20%E2%80%94%20Question&body=Hi%2C%0A%0A" class="btn btn-primary btn-lg btn-full contact-mailto-btn">
+                        <span class="en">Send Email</span>
+                        <span class="de">E-Mail senden</span>
+                    </a>
+                    <p class="contact-mailto-note en">Your default email app will open. No data is collected on this website.</p>
+                    <p class="contact-mailto-note de">Deine Standard-E-Mail-App oeffnet sich. Auf dieser Website werden keine Daten gesammelt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo">FWX Aviation</span>
+                    <p>MSFS 2024 Helicopter Mods</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz / Privacy</a>
+                    <a href="widerruf.html">Widerruf / Cancellation</a>
+                    <a href="agb.html">AGB / Terms</a>
+                </div>
+                <div class="footer-links">
+                    <h5><span class="en">Products</span><span class="de">Produkte</span></h5>
+                    <a href="#sound">Sound Enhancement Pack</a>
+                    <a href="#haptic">Rotor Haptic Engine</a>
+                    <a href="#pricing"><span class="en">Pricing</span><span class="de">Preise</span></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FWX Aviation / Finn West. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+    function setLang(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+        localStorage.setItem('fwx-lang', lang);
+    }
+    // Restore language preference
+    const savedLang = localStorage.getItem('fwx-lang');
+    if (savedLang === 'de') {
+        document.documentElement.lang = 'de';
+        document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.lang-toggle button')[1].classList.add('active');
+    }
+    </script>
+</body>
+</html>
