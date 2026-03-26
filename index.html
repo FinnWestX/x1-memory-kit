@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FWX Aviation - EC135 Sound &amp; Haptic Mods for MSFS 2024</title>
-    <meta name="description" content="Realistic cockpit sounds and real rotor haptics for the Nemeth Design EC135 in Microsoft Flight Simulator 2024. By pilots, for pilots.">
+    <meta name="description" content="Realistic cockpit sounds and real rotor haptics for the EC135 helicopter in Microsoft Flight Simulator 2024. Third-party mod, not affiliated with Nemeth Designs. By pilots, for pilots.">
     <meta name="keywords" content="EC135 sound mod MSFS, MSFS helicopter sound pack, ButtKicker EC135, Nemeth EC135 mod, Local Legend 21 mod, MSFS 2024 helicopter haptic feedback, bass shaker MSFS, rotor vibration MSFS">
     <link rel="stylesheet" href="style.css?v=20260326b">
     <style>
@@ -57,9 +57,35 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero" style="background:linear-gradient(135deg, rgba(10,10,20,0.95), rgba(14,165,233,0.08), rgba(10,10,20,0.95));">
+    <section class="hero" style="position:relative;overflow:hidden;">
+        <!-- Eigene SVG Hintergrund-Szenerie -->
+        <svg style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.12;" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+            <!-- Berge -->
+            <polygon points="0,600 150,280 300,400 450,200 600,350 750,180 900,300 1050,220 1200,350 1200,600" fill="#0ea5e9" opacity="0.3"/>
+            <polygon points="0,600 200,350 400,450 550,300 700,400 850,280 1000,380 1200,320 1200,600" fill="#0ea5e9" opacity="0.15"/>
+            <!-- EC135 Silhouette -->
+            <g transform="translate(700,160) scale(1.8)" opacity="0.6">
+                <!-- Rumpf -->
+                <path d="M-40,0 Q-45,-8 -30,-12 L30,-12 Q50,-10 55,-5 L60,0 Q55,8 40,10 L-20,10 Q-40,8 -40,0" fill="none" stroke="#0ea5e9" stroke-width="1"/>
+                <!-- Cockpit-Fenster -->
+                <path d="M35,-10 Q45,-8 48,-4 L40,-4 Q38,-8 35,-10" fill="#0ea5e9" opacity="0.2"/>
+                <!-- Hauptrotor -->
+                <line x1="-60" y1="-14" x2="60" y2="-14" stroke="#0ea5e9" stroke-width="0.8"/>
+                <circle cx="0" cy="-14" r="2" fill="#0ea5e9"/>
+                <!-- Heckausleger -->
+                <line x1="-40" y1="0" x2="-80" y2="-5" stroke="#0ea5e9" stroke-width="1"/>
+                <!-- Fenestron -->
+                <circle cx="-82" cy="-5" r="6" fill="none" stroke="#0ea5e9" stroke-width="0.8"/>
+                <!-- Kufen -->
+                <path d="M-15,12 L25,12" stroke="#0ea5e9" stroke-width="0.8"/>
+                <line x1="-10" y1="10" x2="-10" y2="12" stroke="#0ea5e9" stroke-width="0.8"/>
+                <line x1="20" y1="10" x2="20" y2="12" stroke="#0ea5e9" stroke-width="0.8"/>
+                <!-- FWX Label -->
+                <text x="5" y="4" fill="#0ea5e9" font-family="sans-serif" font-size="5" font-weight="700" opacity="0.8">FWX</text>
+            </g>
+        </svg>
         <div class="container">
-            <div class="hero-badge">MSFS 2024 - Nemeth Design EC135 (Local Legend 21)</div>
+            <div class="hero-badge">MSFS 2024 - Compatible with the EC135 (Local Legend 21)</div>
             <h1 class="hero-title">
                 <span class="en">Your EC135 Deserves<br>Better Sound.<br><span class="gradient-text">And Real Rotor Feel.</span></span>
                 <span class="de">Dein EC135 verdient<br>besseren Sound.<br><span class="gradient-text">Und echtes Rotorgefuehl.</span></span>
@@ -83,14 +109,14 @@
                 <span class="de">FWX EC135 Sound Enhancement Pack</span>
             </h2>
             <p class="section-subtitle">
-                <span class="en">Custom cockpit sound mod for the Nemeth Design EC135 in MSFS 2024.</span>
-                <span class="de">Eigener Cockpit-Sound-Mod für den Nemeth Design EC135 in MSFS 2024.</span>
+                <span class="en">Custom cockpit sound mod for the EC135 helicopter in MSFS 2024. Third-party product, not affiliated with Nemeth Designs.</span>
+                <span class="de">Eigener Cockpit-Sound-Mod für den EC135 Helikopter in MSFS 2024. Drittanbieter-Produkt, nicht verbunden mit Nemeth Designs.</span>
             </p>
 
             <!-- Problem -->
             <h3><span class="en">The Problem</span><span class="de">Das Problem</span></h3>
-            <p class="en" style="font-size:18px;line-height:1.8;color:var(--text-secondary);">The stock Nemeth EC135 turbine audio was designed for flatscreen gaming, not for VR pilots who hear every detail directly through headphones. The pitch jumps 20% on every torque change - in a real EC135 that's 2-3% at most. If you fly with a ButtKicker, the internal bass practically destroys your transducer. The original sounds are locked inside an encrypted Wwise audio bank that nobody could replace - until now.</p>
-            <p class="de" style="font-size:18px;line-height:1.8;color:var(--text-secondary);">Die originalen Nemeth EC135 Turbinen-Sounds wurden für Flachbildschirm-Spieler gemacht, nicht für VR-Piloten die jedes Detail direkt im Kopfhörer hören. Die Tonhöhe springt um 20% bei jeder Drehmomentsänderung - in einem echten EC135 sind das hoechstens 2-3%. Mit einem ButtKicker zerstört der interne Bass praktisch den Schallwandler. Die Original-Sounds sind in einer verschlüsselten Wwise-Audiodatei eingesperrt die niemand ersetzen konnte - bis jetzt.</p>
+            <p class="en" style="font-size:18px;line-height:1.8;color:var(--text-secondary);">The stock EC135 turbine audio was designed for flatscreen gaming, not for VR pilots who hear every detail directly through headphones. The pitch jumps 20% on every torque change - in a real EC135 that's 2-3% at most. If you fly with a ButtKicker, the internal bass practically destroys your transducer. We built a complete cockpit sound replacement that solves all of these issues.</p>
+            <p class="de" style="font-size:18px;line-height:1.8;color:var(--text-secondary);">Die originalen EC135 Turbinen-Sounds wurden für Flachbildschirm-Spieler gemacht, nicht für VR-Piloten die jedes Detail direkt im Kopfhörer hören. Die Tonhöhe springt um 20% bei jeder Drehmomentänderung - in einem echten EC135 sind das höchstens 2-3%. Mit einem ButtKicker zerstört der interne Bass praktisch den Schallwandler. Wir haben einen kompletten Cockpit-Sound-Ersatz gebaut der all diese Probleme löst.</p>
 
             <div style="max-width:800px;margin:24px auto;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg, #0a0a14, #0c1525, #0a0a14);">
                 <svg width="100%" height="280" viewBox="0 0 800 280" preserveAspectRatio="xMidYMid meet">
@@ -126,7 +152,7 @@
                     <!-- Text -->
                     <text x="480" y="125" fill="#ffffff" font-family="sans-serif" font-size="26" font-weight="700">SOUND</text>
                     <text x="480" y="155" fill="#0ea5e9" font-family="sans-serif" font-size="18" font-weight="600">ENHANCEMENT PACK</text>
-                    <text x="480" y="185" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="13">Nemeth Design EC135 - MSFS 2024</text>
+                    <text x="480" y="185" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="13">For the EC135 in MSFS 2024</text>
                 </svg>
             </div>
 
@@ -144,8 +170,8 @@
                     <li class="de">Kein internes Bass-Brummen - ButtKicker/Schallwandler sicher</li>
                     <li class="en">Seamless transition from starter to turbine run - no audio gaps</li>
                     <li class="de">Nahtloser Übergang von Anlasser zu Turbinenlauf - keine Tonlücken</li>
-                    <li class="en">External sounds and cockpit sounds (switches, warnings, rain) stay original Nemeth quality</li>
-                    <li class="de">Externe Sounds und Cockpit-Geraeusche (Schalter, Warnungen, Regen) bleiben in originaler Nemeth-Qualitaet</li>
+                    <li class="en">External sounds and cockpit sounds (switches, warnings, rain) stay original</li>
+                    <li class="de">Externe Sounds und Cockpit-Geräusche (Schalter, Warnungen, Regen) bleiben original</li>
                 </ul>
                 <ul class="product-features">
                     <li class="en">Drag &amp; drop installation - copy folder to Community, done</li>
@@ -200,7 +226,7 @@
                     <h4><span class="en">Required</span><span class="de">Erforderlich</span></h4>
                     <ul class="product-features">
                         <li>Microsoft Flight Simulator 2024</li>
-                        <li>Nemeth Design EC135 DLC (Local Legend 21)</li>
+                        <li>EC135 DLC (Local Legend 21) - sold separately</li>
                     </ul>
                 </div>
                 <div class="spec-box">
@@ -390,8 +416,8 @@
             </div>
             <div class="spec-box" style="margin-top:16px;">
                 <h4><span class="en">Works With</span><span class="de">Funktioniert mit</span></h4>
-                <p class="en" style="color:var(--text-secondary);">Optimized for Nemeth Design EC135. Basic RPM impulse function works with any MSFS 2024 helicopter.</p>
-                <p class="de" style="color:var(--text-secondary);">Optimiert für Nemeth Design EC135. Grundlegende Drehzahl-Impulsfunktion funktioniert mit jedem MSFS 2024 Helikopter.</p>
+                <p class="en" style="color:var(--text-secondary);">Optimized for the EC135. Basic RPM impulse function works with any MSFS 2024 helicopter.</p>
+                <p class="de" style="color:var(--text-secondary);">Optimiert für die EC135. Grundlegende Drehzahl-Impulsfunktion funktioniert mit jedem MSFS 2024 Helikopter.</p>
             </div>
         </div>
     </section>
@@ -458,7 +484,7 @@
             <h2 class="section-title">FAQ</h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question"><span class="en">Do I need the Nemeth Design EC135 DLC?</span><span class="de">Brauche ich den Nemeth Design EC135 DLC?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <button class="faq-question"><span class="en">Do I need the EC135 DLC (Local Legend 21)?</span><span class="de">Brauche ich den EC135 DLC (Local Legend 21)?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
                     <div class="faq-answer"><p class="en">For the Sound Pack: Yes. For the Haptic Engine: Recommended but it works with any MSFS 2024 helicopter.</p><p class="de">Für das Sound Pack: Ja. Für die Haptic Engine: Empfohlen, funktioniert aber mit jedem MSFS 2024 Helikopter.</p></div>
                 </div>
                 <div class="faq-item">
@@ -478,7 +504,7 @@
                     <div class="faq-answer"><p class="en">No. Neither product uses your GPU. The Haptic Engine uses minimal CPU.</p><p class="de">Nein. Keines der Produkte belastet die Grafikkarte. Die Haptic Engine nutzt minimale Prozessorleistung.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question"><span class="en">What happens if Nemeth releases an update?</span><span class="de">Was passiert wenn Nemeth ein Update herausbringt?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    <button class="faq-question"><span class="en">What happens if the EC135 DLC gets an update?</span><span class="de">Was passiert wenn der EC135 DLC ein Update bekommt?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
                     <div class="faq-answer"><p class="en">The Sound Pack works as long as the folder structure stays the same. If there are issues after an update, contact support.</p><p class="de">Das Sound Pack funktioniert solange die Ordnerstruktur gleich bleibt. Falls es nach einem Update Probleme gibt, kontaktiere den Support.</p></div>
                 </div>
                 <div class="faq-item">
