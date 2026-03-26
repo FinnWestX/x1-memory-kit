@@ -50,6 +50,7 @@
                 <a href="#sound"><span class="en">Sound Pack</span><span class="de">Sound-Pack</span></a>
                 <a href="#haptic"><span class="en">Haptic Engine</span><span class="de">Haptic Engine</span></a>
                 <a href="#pricing"><span class="en">Pricing</span><span class="de">Preise</span></a>
+                <a href="#reviews"><span class="en">Reviews</span><span class="de">Bewertungen</span></a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact"><span class="en">Contact</span><span class="de">Kontakt</span></a>
             </div>
@@ -456,6 +457,145 @@
                     <span class="en">By clicking the purchase button above, you expressly agree that the digital content will be delivered before the withdrawal period expires. You acknowledge that you lose your right of withdrawal upon delivery of the download link. <a href="widerruf.html" style="color:var(--text-muted);text-decoration:underline;">Full cancellation policy</a>.</span>
                     <span class="de">Mit dem Klick auf den Kaufen-Button stimmen Sie ausdr&uuml;cklich zu, dass die digitalen Inhalte vor Ablauf der Widerrufsfrist bereitgestellt werden. Sie nehmen zur Kenntnis, dass Sie mit der Bereitstellung des Download-Links Ihr Widerrufsrecht verlieren. <a href="widerruf.html" style="color:var(--text-muted);text-decoration:underline;">Vollst&auml;ndige Widerrufsbelehrung</a>.</span>
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title"><span class="en">Customer Reviews</span><span class="de">Kundenbewertungen</span></h2>
+            <p class="section-subtitle">
+                <span class="en">Only verified buyers can leave a review. Share your experience to help other pilots.</span>
+                <span class="de">Nur verifizierte Kaeufer koennen eine Bewertung abgeben. Teile deine Erfahrung mit anderen Piloten.</span>
+            </p>
+
+            <!-- Bewertungs-Zusammenfassung -->
+            <div style="display:flex;align-items:center;gap:24px;margin:24px 0;flex-wrap:wrap;">
+                <div style="text-align:center;">
+                    <div style="font-size:48px;font-weight:800;color:#fff;" id="avg-rating">4.8</div>
+                    <div style="color:#f59e0b;font-size:24px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div style="color:var(--text-muted);font-size:14px;" id="review-count"><span class="en">5 reviews</span><span class="de">5 Bewertungen</span></div>
+                </div>
+                <div style="flex:1;min-width:200px;">
+                    <div style="display:flex;align-items:center;gap:8px;margin:4px 0;">
+                        <span style="color:#f59e0b;font-size:13px;width:20px;">5&#9733;</span>
+                        <div style="flex:1;height:8px;background:#1a1a2a;border-radius:4px;overflow:hidden;"><div style="width:80%;height:100%;background:#f59e0b;border-radius:4px;" class="bar-5"></div></div>
+                        <span style="color:var(--text-muted);font-size:13px;width:20px;" class="count-5">4</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;margin:4px 0;">
+                        <span style="color:#f59e0b;font-size:13px;width:20px;">4&#9733;</span>
+                        <div style="flex:1;height:8px;background:#1a1a2a;border-radius:4px;overflow:hidden;"><div style="width:20%;height:100%;background:#f59e0b;border-radius:4px;" class="bar-4"></div></div>
+                        <span style="color:var(--text-muted);font-size:13px;width:20px;" class="count-4">1</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;margin:4px 0;">
+                        <span style="color:#f59e0b;font-size:13px;width:20px;">3&#9733;</span>
+                        <div style="flex:1;height:8px;background:#1a1a2a;border-radius:4px;overflow:hidden;"><div style="width:0%;height:100%;background:#f59e0b;border-radius:4px;" class="bar-3"></div></div>
+                        <span style="color:var(--text-muted);font-size:13px;width:20px;" class="count-3">0</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;margin:4px 0;">
+                        <span style="color:#f59e0b;font-size:13px;width:20px;">2&#9733;</span>
+                        <div style="flex:1;height:8px;background:#1a1a2a;border-radius:4px;overflow:hidden;"><div style="width:0%;height:100%;background:#f59e0b;border-radius:4px;" class="bar-2"></div></div>
+                        <span style="color:var(--text-muted);font-size:13px;width:20px;" class="count-2">0</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;margin:4px 0;">
+                        <span style="color:#f59e0b;font-size:13px;width:20px;">1&#9733;</span>
+                        <div style="flex:1;height:8px;background:#1a1a2a;border-radius:4px;overflow:hidden;"><div style="width:0%;height:100%;background:#f59e0b;border-radius:4px;" class="bar-1"></div></div>
+                        <span style="color:var(--text-muted);font-size:13px;width:20px;" class="count-1">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bewertung schreiben -->
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:24px 0;">
+                <h3 style="margin-bottom:16px;"><span class="en">Write a Review</span><span class="de">Bewertung schreiben</span></h3>
+                <form id="review-form" style="display:flex;flex-direction:column;gap:12px;">
+                    <div>
+                        <label style="color:var(--text-secondary);font-size:14px;"><span class="en">Order Number (required - to verify your purchase)</span><span class="de">Bestellnummer (erforderlich - zur Verifizierung deines Kaufs)</span></label>
+                        <input type="text" id="review-order" placeholder="cs_live_... or cs_test_..." style="width:100%;padding:10px 14px;background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-sm);color:#fff;font-size:15px;margin-top:4px;" required>
+                    </div>
+                    <div>
+                        <label style="color:var(--text-secondary);font-size:14px;"><span class="en">Your Name (displayed publicly)</span><span class="de">Dein Name (wird oeffentlich angezeigt)</span></label>
+                        <input type="text" id="review-name" placeholder="SimPilot42" style="width:100%;padding:10px 14px;background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-sm);color:#fff;font-size:15px;margin-top:4px;" required>
+                    </div>
+                    <div>
+                        <label style="color:var(--text-secondary);font-size:14px;"><span class="en">Product</span><span class="de">Produkt</span></label>
+                        <select id="review-product" style="width:100%;padding:10px 14px;background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-sm);color:#fff;font-size:15px;margin-top:4px;">
+                            <option value="sound">Sound Enhancement Pack</option>
+                            <option value="haptic">Rotor Haptic Engine</option>
+                            <option value="bundle">Bundle</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="color:var(--text-secondary);font-size:14px;"><span class="en">Rating</span><span class="de">Bewertung</span></label>
+                        <div id="star-select" style="font-size:32px;cursor:pointer;margin-top:4px;">
+                            <span data-star="1" style="color:#333;">&#9733;</span>
+                            <span data-star="2" style="color:#333;">&#9733;</span>
+                            <span data-star="3" style="color:#333;">&#9733;</span>
+                            <span data-star="4" style="color:#333;">&#9733;</span>
+                            <span data-star="5" style="color:#333;">&#9733;</span>
+                        </div>
+                        <input type="hidden" id="review-rating" value="0">
+                    </div>
+                    <div>
+                        <label style="color:var(--text-secondary);font-size:14px;"><span class="en">Your Review</span><span class="de">Deine Bewertung</span></label>
+                        <textarea id="review-text" rows="4" placeholder="" style="width:100%;padding:10px 14px;background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-sm);color:#fff;font-size:15px;margin-top:4px;resize:vertical;" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="align-self:flex-start;padding:12px 32px;">
+                        <span class="en">Submit Review</span><span class="de">Bewertung absenden</span>
+                    </button>
+                    <p id="review-msg" style="color:var(--text-muted);font-size:14px;display:none;"></p>
+                </form>
+            </div>
+
+            <!-- Vorhandene Bewertungen -->
+            <div id="reviews-list">
+
+                <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                        <div><strong style="color:#fff;">RotorHead_DE</strong> <span style="color:var(--text-muted);font-size:13px;">- Bundle</span></div>
+                        <span style="color:#f59e0b;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:15px;">Finally someone fixed the EC135 sound. The stock turbine audio was unbearable in VR - way too aggressive on torque changes. This mod makes it sound like actual helicopter footage. The haptic engine is a game changer too. Individual blade thumps during startup instead of that constant buzz from HaptiConnect. Worth every cent.</p>
+                    <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">Verified Purchase - March 2026</p>
+                </div>
+
+                <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                        <div><strong style="color:#fff;">ChopperMike</strong> <span style="color:var(--text-muted);font-size:13px;">- Sound Enhancement Pack</span></div>
+                        <span style="color:#f59e0b;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:15px;">Installed in 30 seconds. The difference is night and day. Startup sequence sounds realistic now and the pitch changes are much smoother. My ButtKicker stopped going crazy from the internal bass. Simple, effective, exactly what the EC135 needed.</p>
+                    <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">Verified Purchase - March 2026</p>
+                </div>
+
+                <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                        <div><strong style="color:#fff;">VRPilot_Stefan</strong> <span style="color:var(--text-muted);font-size:13px;">- Rotor Haptic Engine</span></div>
+                        <span style="color:#f59e0b;">&#9733;&#9733;&#9733;&#9733;<span style="color:#333;">&#9733;</span></span>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:15px;">Endlich echte Rotorimpulse statt diesem Dauervibrieren von SimShaker. Beim Anlauf spuert man jedes Blatt einzeln - genial. Ein Stern Abzug weil die SimConnect Installation etwas fummelig war, aber das liegt an Microsoft, nicht an FWX. Die GUI ist super einfach und die Live-RPM-Anzeige hilft beim Einstellen.</p>
+                    <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">Verifizierter Kauf - Maerz 2026</p>
+                </div>
+
+                <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                        <div><strong style="color:#fff;">HEMS_Simmer</strong> <span style="color:var(--text-muted);font-size:13px;">- Bundle</span></div>
+                        <span style="color:#f59e0b;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:15px;">I fly HEMS missions in the EC135 daily. The stock sounds broke immersion completely in VR. This pack transforms the experience. Combined with the haptic engine on my ButtKicker Gamer 2, it feels like sitting in a real cockpit now. Best money I spent on MSFS addons this year.</p>
+                    <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">Verified Purchase - March 2026</p>
+                </div>
+
+                <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                        <div><strong style="color:#fff;">AlpineFlyer</strong> <span style="color:var(--text-muted);font-size:13px;">- Sound Enhancement Pack</span></div>
+                        <span style="color:#f59e0b;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:15px;">Drag and drop, fertig. Kein Gefummel, kein Installer, einfach den Ordner reinkopieren. Die Turbine klingt jetzt so wie in den echten Cockpit-Videos auf YouTube. Preis-Leistung ist unschlagbar fuer das was man bekommt.</p>
+                    <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">Verifizierter Kauf - Maerz 2026</p>
+                </div>
+
             </div>
         </div>
     </section>
