@@ -115,12 +115,14 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
 });
 
-/* ===== Nav background on scroll ===== */
+/* ===== Nav transparency on scroll ===== */
 var nav = document.querySelector('.nav');
 window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
-        nav.style.borderBottomColor = 'rgba(14, 165, 233, 0.3)';
+        nav.style.background = 'rgba(10, 10, 15, 0.65)';
+        nav.style.borderBottomColor = 'rgba(14, 165, 233, 0.2)';
     } else {
+        nav.style.background = 'rgba(10, 10, 15, 0.85)';
         nav.style.borderBottomColor = '';
     }
 });
