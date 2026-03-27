@@ -86,6 +86,46 @@
     }
 })();
 
+/* ===== Newsletter ===== */
+(function() {
+    var form = document.getElementById('newsletter-form');
+    var msg = document.getElementById('newsletter-msg');
+    var WEBHOOK_URL = 'https://webhook.finnwestx1.com';
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('newsletter-email').value.trim();
+            if (!email) return;
+
+            msg.textContent = 'Subscribing... / Wird angemeldet...';
+            msg.style.display = 'block';
+            msg.style.color = '#0ea5e9';
+
+            fetch(WEBHOOK_URL + '/newsletter-subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email })
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.success) {
+                    msg.textContent = 'Check your email for confirmation + your 5% discount code! / Prüfe deine E-Mail für die Bestätigung + deinen 5% Rabattcode!';
+                    msg.style.color = '#22c55e';
+                    form.reset();
+                } else {
+                    msg.textContent = data.message || 'Error';
+                    msg.style.color = '#ef4444';
+                }
+            })
+            .catch(function() {
+                msg.textContent = 'Connection error. Please try again. / Verbindungsfehler.';
+                msg.style.color = '#ef4444';
+            });
+        });
+    }
+})();
+
 /* ===== FAQ Accordion ===== */
 document.querySelectorAll('.faq-question').forEach(function(button) {
     button.addEventListener('click', function() {
