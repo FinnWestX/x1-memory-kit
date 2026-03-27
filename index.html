@@ -6,7 +6,7 @@
     <title>FWX Aviation - EC135 Sound &amp; Haptic Mods for MSFS 2024</title>
     <meta name="description" content="Realistic cockpit sounds and real rotor haptics compatible with the EC135 helicopter in Microsoft Flight Simulator 2024. Third-party mod, not affiliated with Nemeth Designs. By pilots, for pilots.">
     <meta name="keywords" content="EC135 sound mod MSFS, MSFS helicopter sound pack, ButtKicker EC135, Nemeth EC135 mod, Local Legend 21 mod, MSFS 2024 helicopter haptic feedback, bass shaker MSFS, rotor vibration MSFS">
-    <link rel="stylesheet" href="style.css?v=20260327k">
+    <link rel="stylesheet" href="style.css?v=20260327m">
     <script defer src="https://webhook.finnwestx1.com/fwx.js" data-website-id="80459d03-bda7-45fa-a7bc-6472be80e47a" data-host-url="https://webhook.finnwestx1.com"></script>
     <style>
         :root { --accent: #0ea5e9; --accent-light: #38bdf8; --accent-glow: rgba(14,165,233,0.3); --success: #22c55e; }
@@ -696,6 +696,12 @@
             <div class="footer-bottom"><p>&copy; 2026 FWX Aviation / Finn West. All rights reserved.</p></div>
         </div>
     </footer>
+
+    <!-- Scroll Navigation Buttons -->
+    <div id="scroll-nav" style="position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:8px;z-index:9999;">
+        <button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(14,165,233,0.3);background:rgba(10,10,20,0.85);color:#38bdf8;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.2s;" onmouseover="this.style.background='rgba(14,165,233,0.3)'" onmouseout="this.style.background='rgba(10,10,20,0.85)'" title="Scroll to top">&#9650;</button>
+        <button onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(14,165,233,0.3);background:rgba(10,10,20,0.85);color:#38bdf8;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.2s;" onmouseover="this.style.background='rgba(14,165,233,0.3)'" onmouseout="this.style.background='rgba(10,10,20,0.85)'" title="Scroll to bottom">&#9660;</button>
+    </div>
 
     <script src="main.js"></script>
 </body>
