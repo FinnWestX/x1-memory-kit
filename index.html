@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css?v=20260326b">
     <style>
         :root { --accent: #0ea5e9; --accent-light: #38bdf8; --accent-glow: rgba(14,165,233,0.3); --success: #22c55e; }
+        .nav-logo-icon:hover{transform:scale(5);z-index:9999;position:relative;}
         .lang-toggle{display:flex;gap:4px;background:var(--bg-card);padding:4px;border-radius:8px;border:1px solid var(--border)}
         .lang-toggle button{background:none;border:none;color:var(--text-secondary);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:14px;font-weight:600}
         .lang-toggle button.active{background:var(--accent);color:#fff}
@@ -41,7 +42,7 @@
     <nav class="nav">
         <div class="container nav-inner">
             <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:8px;">
-                <img src="fwx-logo.svg" alt="FWX" class="nav-logo-icon" style="width:64px;height:64px;border-radius:50%;margin:-16px 0;">
+                <img src="fwx-logo.svg" alt="FWX" class="nav-logo-icon" style="width:64px;height:64px;border-radius:50%;margin:-16px 0;transition:transform 0.3s ease;cursor:pointer;">
                 <span class="nav-logo-text">FWX Aviation</span>
             </a>
             <div style="display:flex;align-items:center;gap:8px;">
