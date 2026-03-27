@@ -711,6 +711,10 @@ a:hover {
         display: none;
     }
 
+    .nav-buy-btn {
+        display: inline-block !important;
+    }
+
     .pricing-card {
         padding: 36px 24px;
     }
