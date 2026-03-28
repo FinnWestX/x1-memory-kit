@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FWX - Tracking deaktivieren</title>
+<style>body{background:#0a0a0f;color:#e8e8ed;font-family:sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0;}
+.box{text-align:center;padding:40px;max-width:400px;}
+.btn{background:#0ea5e9;color:#000;border:none;padding:16px 32px;border-radius:8px;font-size:18px;font-weight:700;cursor:pointer;margin-top:20px;}
+.status{margin-top:20px;font-size:16px;color:#22c55e;}</style></head>
+<body><div class="box">
+<h2>FWX Analytics</h2>
+<p>Klicke den Button um das Tracking auf diesem Geraet zu deaktivieren.</p>
+<button class="btn" onclick="localStorage.setItem('fwx-notrack','1');document.getElementById('st').textContent='Tracking deaktiviert! Du kannst diese Seite schliessen.';">Tracking deaktivieren</button>
+<p id="st" class="status"></p>
+<script>if(localStorage.getItem('fwx-notrack')){document.getElementById('st').textContent='Bereits deaktiviert auf diesem Geraet.';}</script>
+</div></body></html>
