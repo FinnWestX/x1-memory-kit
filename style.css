@@ -736,10 +736,21 @@ a:hover {
 }
 
 .price-old {
-    text-decoration: line-through;
     color: #ef4444;
     font-weight: 600;
     font-size: 16px;
+    position: relative;
+    text-decoration: none;
+}
+
+.price-old::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    top: 50%;
+    height: 2px;
+    background: #ef4444;
 }
 
 .save-badge {
