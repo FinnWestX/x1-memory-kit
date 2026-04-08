@@ -167,6 +167,22 @@ window.addEventListener('scroll', function() {
     }
 });
 
+/* ===== Umami Scroll Depth Tracking ===== */
+(function() {
+    var scrollMarks = {25: false, 50: false, 75: false, 100: false};
+    window.addEventListener('scroll', function() {
+        var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        [25, 50, 75, 100].forEach(function(mark) {
+            if (scrollPct >= mark && !scrollMarks[mark]) {
+                scrollMarks[mark] = true;
+                if (typeof umami !== 'undefined') {
+                    umami.track('scroll-depth-' + mark);
+                }
+            }
+        });
+    });
+})();
+
 /* ===== Language Toggle ===== */
 function setLang(lang) {
     document.documentElement.lang = lang;

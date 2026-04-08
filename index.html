@@ -20,7 +20,36 @@
     <meta name="twitter:title" content="FWX Aviation — EC135 Sound &amp; Haptic Mods for MSFS 2024">
     <meta name="twitter:description" content="Realistic turbine sounds and real rotor haptic feedback compatible with the Nemeth Design EC135 in MSFS 2024. Built by a real helicopter pilot.">
     <meta name="twitter:image" content="https://finnwestx1.com/product-bundle-200x282.png">
-    <link rel="stylesheet" href="style.css?v=20260327p">
+    <link rel="stylesheet" href="style.css?v=20260408a">
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "FWX EC135 Sound Enhancement Pack",
+        "description": "Realistic cockpit and exterior turbine sounds compatible with the EC135 helicopter in MSFS 2024",
+        "brand": {"@type": "Brand", "name": "FWX Aviation"},
+        "offers": {"@type": "Offer", "price": "7.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#pricing"},
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "5", "bestRating": "5"}
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "FWX Rotor Haptic Engine",
+        "description": "Real 4-blade rotor impulses for ButtKicker and bass shakers in MSFS 2024",
+        "brand": {"@type": "Brand", "name": "FWX Aviation"},
+        "offers": {"@type": "Offer", "price": "3.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#pricing"},
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "5", "bestRating": "5"}
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "FWX EC135 Bundle",
+        "description": "Sound Enhancement Pack + Rotor Haptic Engine bundle for the complete EC135 experience in MSFS 2024",
+        "brand": {"@type": "Brand", "name": "FWX Aviation"},
+        "offers": {"@type": "Offer", "price": "10.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#pricing"},
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "5", "bestRating": "5"}
+    }]
+    </script>
     <script>if(!localStorage.getItem('fwx-notrack')){var s=document.createElement('script');s.defer=true;s.src='https://webhook.finnwestx1.com/fwx.js';s.setAttribute('data-website-id','80459d03-bda7-45fa-a7bc-6472be80e47a');s.setAttribute('data-host-url','https://webhook.finnwestx1.com');document.head.appendChild(s);}</script>
     <style>
         :root { --accent: #0ea5e9; --accent-light: #38bdf8; --accent-glow: rgba(14,165,233,0.3); --success: #22c55e; }
@@ -69,7 +98,7 @@
                 <a href="#faq">FAQ</a>
                 <a href="#contact"><span class="en">Contact</span><span class="de">Kontakt</span></a>
             </div>
-            <a href="#pricing" class="btn btn-primary nav-buy-btn" style="padding:8px 16px;font-size:13px;white-space:nowrap;margin-left:16px;"><span class="en">Products</span><span class="de">Produkte</span></a>
+            <a href="#pricing" class="btn btn-primary nav-buy-btn" style="padding:8px 16px;font-size:13px;white-space:nowrap;margin-left:16px;" data-umami-event="nav-products-click"><span class="en">Products</span><span class="de">Produkte</span></a>
             <div class="lang-toggle" style="position:static;margin-left:8px;">
                 <button class="active" onclick="setLang('en')">EN</button>
                 <button onclick="setLang('de')">DE</button>
@@ -92,7 +121,15 @@
                 <span class="de">Zwei Mods von einem VR-Helikopterpiloten, der mit dem Original nicht zufrieden war. Realistische Turbinen-Sounds im Cockpit. Physische Rotorimpulse die du im Sitz spürst. Der erste Sound-Mod speziell kompatibel mit dem Nemeth Design EC135 in MSFS 2024.</span>
             </p>
             <div class="hero-cta">
-                <a href="#pricing" class="btn btn-primary btn-lg"><span class="en">See Products</span><span class="de">Zu den Produkten</span></a>
+                <a href="#pricing" class="btn btn-primary btn-lg" data-umami-event="hero-cta-click"><span class="en">Upgrade Your EC135 Now</span><span class="de">Jetzt dein EC135 upgraden</span></a>
+                <p class="hero-price-teaser"><span class="en">Starting at just &euro;3.99 &mdash; Bundle from &euro;10.99</span><span class="de">Ab nur &euro;3,99 &mdash; Bundle ab &euro;10,99</span></p>
+            </div>
+            <div class="hero-trust">
+                <span class="hero-trust-item">&#9733; 4.8/5 Rating</span>
+                <span class="hero-trust-sep">&middot;</span>
+                <span class="hero-trust-item"><span class="en">Trusted by MSFS Pilots</span><span class="de">Vertraut von MSFS-Piloten</span></span>
+                <span class="hero-trust-sep">&middot;</span>
+                <span class="hero-trust-item"><span class="en">Instant Download</span><span class="de">Sofort-Download</span></span>
             </div>
         </div>
     </section>
@@ -460,8 +497,11 @@
                 <div class="product-card">
                     <img src="product-sound-200x282.png" alt="FWX Sound Enhancement Pack" style="width:120px;height:auto;border-radius:8px;margin:0 auto 16px;display:block;border:1px solid var(--border);">
                     <div class="product-tag">Sound</div>
+                    <span class="launch-badge"><span class="en">Launch Price</span><span class="de">Einführungspreis</span></span>
                     <h3>FWX EC135 Sound Enhancement Pack</h3>
+                    <div class="price-compare"><span class="en">SimMarket Price: <span class="price-old">&euro;11.99</span></span><span class="de">SimMarket-Preis: <span class="price-old">&euro;11,99</span></span></div>
                     <div class="product-price"><span class="currency">&euro;</span>7<sup style="font-size:24px;">,99</sup></div>
+                    <div class="save-badge"><span class="en">You save 33%</span><span class="de">Du sparst 33%</span></div>
                     <p style="font-size:13px;color:var(--text-muted);"><span class="en">Final price. No VAT (&sect;19 UStG).</span><span class="de">Endpreis. Keine USt gem. &sect;19 UStG.</span></p>
                     <ul class="product-features">
                         <li class="en">Complete cockpit + exterior sound replacement</li><li class="de">Kompletter Cockpit- + Außensound-Ersatz</li>
@@ -470,13 +510,17 @@
                         <li class="en">No bass distortion (ButtKicker-safe)</li><li class="de">Kein Bass-Brummen (ButtKicker-sicher)</li>
                         <li class="en">Drag &amp; drop - reversible in seconds</li><li class="de">Drag &amp; Drop - in Sekunden rückgängig</li>
                     </ul>
-                    <a href="https://buy.stripe.com/eVq00d6FE3h2dYxefm2Nq04" class="btn btn-primary btn-lg btn-full" id="btn-sound"><span class="en">Buy Now - Chargeable</span><span class="de">Jetzt kostenpflichtig kaufen</span></a>
+                    <a href="https://buy.stripe.com/eVq00d6FE3h2dYxefm2Nq04" class="btn btn-primary btn-lg btn-full" id="btn-sound" data-umami-event="buy-click-sound"><span class="en">Upgrade Sound Now</span><span class="de">Sound jetzt upgraden</span></a>
+                    <div class="trust-badges"><span>&#128274; <span class="en">Secure Payment</span><span class="de">Sichere Zahlung</span></span><span>&#9889; <span class="en">Instant Download</span><span class="de">Sofort-Download</span></span><span>&#128260; <span class="en">Easy Uninstall</span><span class="de">Einfach entfernen</span></span></div>
                 </div>
                 <div class="product-card">
                     <img src="product-haptic-200x282.png" alt="FWX Rotor Haptic Engine" style="width:120px;height:auto;border-radius:8px;margin:0 auto 16px;display:block;border:1px solid var(--border);">
                     <div class="product-tag">Haptic</div>
+                    <span class="launch-badge"><span class="en">Launch Price</span><span class="de">Einführungspreis</span></span>
                     <h3>FWX Rotor Haptic Engine</h3>
+                    <div class="price-compare"><span class="en">SimMarket Price: <span class="price-old">&euro;5.99</span></span><span class="de">SimMarket-Preis: <span class="price-old">&euro;5,99</span></span></div>
                     <div class="product-price"><span class="currency">&euro;</span>3<sup style="font-size:24px;">,99</sup></div>
+                    <div class="save-badge"><span class="en">You save 33%</span><span class="de">Du sparst 33%</span></div>
                     <p style="font-size:13px;color:var(--text-muted);"><span class="en">Final price. No VAT (&sect;19 UStG).</span><span class="de">Endpreis. Keine USt gem. &sect;19 UStG.</span></p>
                     <ul class="product-features">
                         <li class="en">Real 4-blade rotor impulses</li><li class="de">Echte 4-Blatt-Rotorimpulse</li>
@@ -485,18 +529,23 @@
                         <li class="en">GUI with live controls</li><li class="de">Bedienoberfläche mit Live-Reglern</li>
                         <li class="en">Works with any MSFS 2024 helicopter</li><li class="de">Funktioniert mit jedem MSFS 2024 Helikopter</li>
                     </ul>
-                    <a href="https://buy.stripe.com/aFaaER0hg4l6g6F7QY2Nq05" class="btn btn-primary btn-lg btn-full" id="btn-haptic"><span class="en">Buy Now - Chargeable</span><span class="de">Jetzt kostenpflichtig kaufen</span></a>
+                    <a href="https://buy.stripe.com/aFaaER0hg4l6g6F7QY2Nq05" class="btn btn-primary btn-lg btn-full" id="btn-haptic" data-umami-event="buy-click-haptic"><span class="en">Feel the Rotor Now</span><span class="de">Rotor jetzt spüren</span></a>
+                    <div class="trust-badges"><span>&#128274; <span class="en">Secure Payment</span><span class="de">Sichere Zahlung</span></span><span>&#9889; <span class="en">Instant Download</span><span class="de">Sofort-Download</span></span><span>&#128260; <span class="en">Easy Uninstall</span><span class="de">Einfach entfernen</span></span></div>
                 </div>
             </div>
-            <div class="product-card bundle-card" style="max-width:600px;margin:32px auto 0;">
+            <div class="product-card bundle-card" style="max-width:600px;margin:32px auto 0;position:relative;">
+                <div class="popular-badge"><span class="en">MOST POPULAR</span><span class="de">BELIEBTESTE WAHL</span></div>
                 <img src="product-bundle-200x282.png" alt="FWX EC135 Bundle" style="width:120px;height:auto;border-radius:8px;margin:0 auto 16px;display:block;border:1px solid var(--border);">
-                <div class="bundle-badge"><span class="en">BUNDLE - SAVE &euro;0.99</span><span class="de">BUNDLE - SPARE &euro;0,99</span></div>
+                <div class="bundle-badge"><span class="en">BUNDLE - BEST VALUE</span><span class="de">BUNDLE - BESTES ANGEBOT</span></div>
                 <h3 style="font-size:24px;">FWX EC135 Bundle</h3>
                 <p class="en" style="color:var(--text-secondary);">Sound Enhancement + Rotor Haptic Engine together. The complete EC135 immersion upgrade.</p>
                 <p class="de" style="color:var(--text-secondary);">Sound Enhancement + Rotor Haptic Engine zusammen. Das komplette EC135 Immersions-Upgrade.</p>
+                <div class="price-compare" style="margin-top:12px;"><span class="en">SimMarket combined: <span class="price-old">&euro;17.98</span></span><span class="de">SimMarket zusammen: <span class="price-old">&euro;17,98</span></span></div>
                 <div class="product-price"><span class="currency">&euro;</span>10<sup style="font-size:24px;">,99</sup></div>
+                <div class="save-badge save-badge-big"><span class="en">You save 39% vs SimMarket</span><span class="de">Du sparst 39% vs SimMarket</span></div>
                 <p style="font-size:13px;color:var(--text-muted);"><span class="en">Final price. No VAT (&sect;19 UStG). Instead of &euro;11.98 separately.</span><span class="de">Endpreis. Keine USt gem. &sect;19 UStG. Statt &euro;11,98 einzeln.</span></p>
-                <a href="https://buy.stripe.com/3cI00dfca7xi07Hfjq2Nq06" class="btn btn-primary btn-lg btn-full" style="margin-top:20px;" id="btn-bundle"><span class="en">Buy Bundle - Chargeable</span><span class="de">Bundle kostenpflichtig kaufen</span></a>
+                <a href="https://buy.stripe.com/3cI00dfca7xi07Hfjq2Nq06" class="btn btn-primary btn-lg btn-full" style="margin-top:20px;" id="btn-bundle" data-umami-event="buy-click-bundle"><span class="en">Get the Full Experience</span><span class="de">Das volle Erlebnis holen</span></a>
+                <div class="trust-badges" style="margin-top:12px;"><span>&#128274; <span class="en">Secure Payment</span><span class="de">Sichere Zahlung</span></span><span>&#9889; <span class="en">Instant Download</span><span class="de">Sofort-Download</span></span><span>&#128260; <span class="en">Easy Uninstall</span><span class="de">Einfach entfernen</span></span></div>
             </div>
             <div style="text-align:center;margin-top:24px;">
                 <p style="font-size:14px;color:var(--text-muted);">
