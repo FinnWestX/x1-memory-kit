@@ -800,6 +800,47 @@ a:hover {
     font-weight: 500;
 }
 
+/* ===== Press Section ===== */
+.press-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.press-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.press-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.press-logos a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all var(--transition);
+}
+
+.press-logos a:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
     .grid-3 {
