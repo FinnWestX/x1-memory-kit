@@ -815,30 +815,64 @@ a:hover {
     font-weight: 600;
 }
 
-.press-logos {
+.press-quotes {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 32px;
+    align-items: stretch;
+    gap: 24px;
     flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.press-logos a {
-    display: inline-block;
-    padding: 8px 20px;
+.press-quote-card {
+    flex: 1;
+    min-width: 240px;
+    max-width: 340px;
+    padding: 20px 24px;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 600;
+    border-radius: var(--radius);
+    text-align: center;
     transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.press-logos a:hover {
+.press-quote-card:hover {
     border-color: var(--accent);
-    color: var(--text-primary);
     transform: translateY(-2px);
+}
+
+.press-quote-text {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.press-quote-source {
+    color: var(--accent-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.press-divider {
+    width: 1px;
+    background: var(--border);
+    align-self: stretch;
+}
+
+@media (max-width: 600px) {
+    .press-divider {
+        width: 60px;
+        height: 1px;
+        align-self: center;
+    }
 }
 
 /* ===== Responsive ===== */
