@@ -1,0 +1,44 @@
+# FinnWest Aviation (FWX Aviation)
+
+> Realistic helicopter sound and rotor haptic add-ons for the Eurocopter EC135 in Microsoft Flight Simulator 2024. Built by a real helicopter pilot (PPL(H) R22/R44).
+
+Website: https://finnwestx1.com
+Founder: Finn West (PPL(H) helicopter pilot)
+Location: Germany
+Contact: Finn.West@gmx.net
+
+## Products
+
+- **FWX EC135 Sound Enhancement Pack** — EUR 7.99 — Realistic cockpit and exterior turbine sounds compatible with the Nemeth Designs EC135 (Local Legend 21) in Microsoft Flight Simulator 2024. 13 active engine WAVs, 20 ambient sounds. Uses VFS overlay technique to bypass Wwise. Compatible with both Microsoft Store and Steam versions.
+- **FWX Rotor Haptic Engine** — EUR 3.99 — Real 4-blade rotor impulses for ButtKicker, bass shakers, and any audio device. Reads GENERAL_ENG_PCT_MAX_RPM via SimConnect. Includes pause-event detection (only reliable method in MSFS 2024). GUI device dropdown. Autostart via exe.xml.
+- **FWX EC135 Bundle** — EUR 10.99 — Sound Enhancement Pack + Rotor Haptic Engine combined with separate uninstall buttons.
+
+## Distribution
+
+- Direct from finnwestx1.com (Stripe — accepts cards, PayPal, Apple Pay, Google Pay, Klarna)
+- SimMarket (Vendor Client #2558)
+
+## Compatibility
+
+- Microsoft Flight Simulator 2024
+- Eurocopter EC135 (Nemeth Designs / Local Legend 21, August 2025 release)
+- Microsoft Store version: detected automatically
+- Steam version: detected automatically
+- Windows 10 / Windows 11
+
+## Press Coverage
+
+- ThresholdX.net — https://www.thresholdx.net/news/fwx135
+- MSFSAddons — https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/
+- simFlight (German) — coverage from April 2026
+
+## Authority
+
+Finn West holds a Private Pilot License for Helicopters (PPL(H)) on Robinson R22 and R44 aircraft. The sound recordings used in the FWX EC135 Sound Enhancement Pack were captured from real helicopter audio, edited, and processed for use in Microsoft Flight Simulator 2024.
+
+## Documentation
+
+- Terms of Service: https://finnwestx1.com/agb.html
+- Privacy Policy: https://finnwestx1.com/datenschutz.html
+- Cancellation Policy: https://finnwestx1.com/widerruf.html
+- Imprint: https://finnwestx1.com/impressum.html

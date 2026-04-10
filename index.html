@@ -5,51 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FWX Aviation - EC135 Sound &amp; Haptic Mods for MSFS 2024</title>
     <meta name="description" content="Realistic cockpit sounds and real rotor haptics compatible with the EC135 helicopter in Microsoft Flight Simulator 2024. Built by a real helicopter pilot. By pilots, for pilots.">
-    <meta name="keywords" content="EC135 sound mod MSFS, MSFS helicopter sound pack, MSFS 2024 helicopter haptic feedback, bass shaker MSFS, rotor vibration MSFS, Nemeth EC135, flight sim mod">
     <!-- Open Graph (Facebook, Discord, Telegram link previews) -->
     <meta property="og:title" content="FWX Aviation - EC135 Sound &amp; Haptic Mods for MSFS 2024">
     <meta property="og:description" content="Realistic turbine sounds and real rotor haptic feedback compatible with the Nemeth Design EC135. Built by a real helicopter pilot (PPL(H) R22/R44). Sound Pack €7.99 · Haptic Engine €3.99 · Bundle €10.99">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://finnwestx1.com/">
-    <meta property="og:url" content="https://finnwestx1.com">
+    <link rel="alternate" hreflang="en" href="https://finnwestx1.com/">
+    <link rel="alternate" hreflang="de" href="https://finnwestx1.com/?lang=de">
+    <link rel="alternate" hreflang="x-default" href="https://finnwestx1.com/">
+    <link rel="preload" as="image" href="hero-bg.webp" type="image/webp" fetchpriority="high">
+    <meta property="og:url" content="https://finnwestx1.com/">
     <meta property="og:image" content="https://finnwestx1.com/product-bundle-200x282.png">
     <meta property="og:site_name" content="FWX Aviation">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="de_DE">
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FWX Aviation - EC135 Sound &amp; Haptic Mods for MSFS 2024">
     <meta name="twitter:description" content="Realistic turbine sounds and real rotor haptic feedback compatible with the Nemeth Design EC135 in MSFS 2024. Built by a real helicopter pilot.">
     <meta name="twitter:image" content="https://finnwestx1.com/product-bundle-200x282.png">
     <link rel="stylesheet" href="style.css?v=20260408b">
     <script type="application/ld+json">
-    [{
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "FWX EC135 Sound Enhancement Pack",
-        "description": "Realistic cockpit and exterior turbine sounds compatible with the EC135 helicopter in MSFS 2024",
-        "brand": {"@type": "Brand", "name": "FWX Aviation"},
-        "offers": {"@type": "Offer", "price": "7.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#pricing"},
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "5", "bestRating": "5"}
-    },
     {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "FWX Rotor Haptic Engine",
-        "description": "Real 4-blade rotor impulses for ButtKicker and bass shakers in MSFS 2024",
-        "brand": {"@type": "Brand", "name": "FWX Aviation"},
-        "offers": {"@type": "Offer", "price": "3.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#pricing"},
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "5", "bestRating": "5"}
-    },
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "FWX EC135 Bundle",
-        "description": "Sound Enhancement Pack + Rotor Haptic Engine bundle for the complete EC135 experience in MSFS 2024",
-        "brand": {"@type": "Brand", "name": "FWX Aviation"},
-        "offers": {"@type": "Offer", "price": "10.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#pricing"},
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "5", "bestRating": "5"}
-    }]
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://finnwestx1.com/#organization",
+                "name": "FinnWest Aviation",
+                "alternateName": "FWX Aviation",
+                "url": "https://finnwestx1.com/",
+                "logo": "https://finnwestx1.com/fwx-logo.svg",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Finn West",
+                    "jobTitle": "Helicopter Pilot (PPL(H) R22/R44) and Developer"
+                },
+                "sameAs": [
+                    "https://www.youtube.com/@FWXAviation",
+                    "https://www.reddit.com/user/FWXAviation",
+                    "https://secure.simmarket.com/finnwest-aviation.mhtml"
+                ]
+            },
+            {
+                "@type": "Product",
+                "@id": "https://finnwestx1.com/#sound-pack",
+                "name": "FWX EC135 Sound Enhancement Pack",
+                "description": "Realistic cockpit and exterior turbine sounds compatible with the EC135 helicopter in MSFS 2024",
+                "image": "https://finnwestx1.com/product-sound-200x282.png",
+                "brand": {"@id": "https://finnwestx1.com/#organization"},
+                "offers": {"@type": "Offer", "price": "7.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#sound"}
+            },
+            {
+                "@type": "Product",
+                "@id": "https://finnwestx1.com/#haptic-engine",
+                "name": "FWX Rotor Haptic Engine",
+                "description": "Real 4-blade rotor impulses for ButtKicker and bass shakers in MSFS 2024",
+                "image": "https://finnwestx1.com/product-haptic-200x282.png",
+                "brand": {"@id": "https://finnwestx1.com/#organization"},
+                "offers": {"@type": "Offer", "price": "3.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#haptic"}
+            },
+            {
+                "@type": "Product",
+                "@id": "https://finnwestx1.com/#bundle",
+                "name": "FWX EC135 Bundle",
+                "description": "Sound Enhancement Pack + Rotor Haptic Engine bundle for the complete EC135 experience in MSFS 2024",
+                "image": "https://finnwestx1.com/product-bundle-200x282.png",
+                "brand": {"@id": "https://finnwestx1.com/#organization"},
+                "offers": {"@type": "Offer", "price": "10.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://finnwestx1.com/#pricing"}
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Does this work with the Nemeth Designs EC135 in MSFS 2024?",
+                        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The FWX EC135 Sound Enhancement Pack is built specifically to be compatible with the Eurocopter EC135 (Local Legend 21) in Microsoft Flight Simulator 2024."}
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need a ButtKicker or bass shaker for the Haptic Engine?",
+                        "acceptedAnswer": {"@type": "Answer", "text": "The FWX Rotor Haptic Engine is designed for ButtKicker and similar bass shakers, but it also works with any audio output device including headphones, where you will feel the rotor impulses as low-frequency vibrations."}
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does it support both Microsoft Store and Steam versions of MSFS 2024?",
+                        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The installer automatically detects both Microsoft Store and Steam installations of Microsoft Flight Simulator 2024."}
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is this a one-time purchase or a subscription?",
+                        "acceptedAnswer": {"@type": "Answer", "text": "One-time purchase. No subscription. Free updates included."}
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I download the product after purchase?",
+                        "acceptedAnswer": {"@type": "Answer", "text": "After purchase you receive a confirmation email from Stripe. You can download anytime from our download page using your purchase email and order number. Up to 3 downloads per purchase."}
+                    }
+                ]
+            }
+        ]
+    }
     </script>
     <script>if(!localStorage.getItem('fwx-notrack')){var s=document.createElement('script');s.defer=true;s.src='https://webhook.finnwestx1.com/fwx.js';s.setAttribute('data-website-id','80459d03-bda7-45fa-a7bc-6472be80e47a');s.setAttribute('data-host-url','https://webhook.finnwestx1.com');document.head.appendChild(s);}</script>
     <style>
