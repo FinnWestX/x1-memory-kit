@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /notrack.html
+Disallow: /rabatt.html
+
+Sitemap: https://finnwestx1.com/sitemap.xml
