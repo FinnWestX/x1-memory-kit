@@ -198,9 +198,27 @@ function setLang(lang) {
 }
 
 // Restore language preference on load
+// Priority: ?lang=de URL parameter > browser language (if German) > localStorage > default English
 (function() {
+    var urlLang = new URLSearchParams(location.search).get('lang');
     var savedLang = localStorage.getItem('fwx-lang');
-    if (savedLang === 'de') {
+    var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var useGerman = false;
+
+    if (urlLang === 'de') {
+        useGerman = true;
+        localStorage.setItem('fwx-lang', 'de');
+    } else if (urlLang === 'en') {
+        useGerman = false;
+        localStorage.setItem('fwx-lang', 'en');
+    } else if (savedLang === 'de') {
+        useGerman = true;
+    } else if (!savedLang && browserLang.indexOf('de') === 0) {
+        // First visit from a German browser - default to German
+        useGerman = true;
+    }
+
+    if (useGerman) {
         document.documentElement.lang = 'de';
         var btns = document.querySelectorAll('.lang-toggle button');
         if (btns.length >= 2) {
