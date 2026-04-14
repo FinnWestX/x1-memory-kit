@@ -93,7 +93,7 @@ img, svg { max-width: 100%; display: block; }
   content: "";
   position: absolute; inset: 0;
   background: url('hero-bg.webp') center 30% / cover no-repeat;
-  opacity: 0.22;
+  opacity: 0.33;
   pointer-events: none;
 }
 .t-hero-inner {
@@ -429,6 +429,20 @@ img, svg { max-width: 100%; display: block; }
   .t-trust-row { gap: 14px; font-size: 13px; }
 }
 </style>
+<script>
+(function(){
+  try {
+    var path = location.pathname.replace(/\/index\.html$/,'/');
+    var skip = sessionStorage.getItem('fwx-lang-skip');
+    if (path !== '/' || skip) return;
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (lang.indexOf('de') === 0) {
+      sessionStorage.setItem('fwx-lang-skip','1');
+      location.replace('/de/');
+    }
+  } catch(e) {}
+})();
+</script>
 </head>
 <body>
 
