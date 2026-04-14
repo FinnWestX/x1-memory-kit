@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FWX EC135 — Installation Guide</title>
-<meta name="description" content="Step-by-step installation guide for the FWX EC135 Sound Enhancement Pack and Rotor Haptic Engine in MSFS 2024.">
+<title>FWX EC135 Enhancement Mod — Installation Guide</title>
+<meta name="description" content="Step-by-step installation guide for the FWX EC135 Enhancement Mod and Rotor Haptic Engine in MSFS 2024.">
 <meta name="robots" content="noindex, nofollow">
 <style>
 :root {
@@ -57,10 +57,10 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   display: flex; align-items: center; justify-content: space-between;
 }
 .t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
-.t-nav-brand-badge {
+.t-nav-logo {
   width: 32px; height: 32px; border-radius: 50%;
   background: linear-gradient(135deg, var(--brand), var(--accent));
-  display: grid; place-items: center; font-size: 14px;
+  padding: 2px;
 }
 .t-nav-cta {
   padding: 10px 18px; border-radius: 999px;
@@ -214,10 +214,13 @@ hr.sep {
 <nav class="t-nav">
   <div class="t-nav-inner">
     <a href="./" class="t-nav-brand">
-      <span class="t-nav-brand-badge">🚁</span>
+      <img src="../fwx-logo.svg" alt="FWX Aviation" class="t-nav-logo">
       FWX Aviation
     </a>
-    <a href="./#pricing" class="t-nav-cta">See pricing</a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="de/install.html" style="color:var(--text-dim);font-size:13px;font-weight:600;">DE</a>
+      <a href="./#pricing" class="t-nav-cta">See pricing</a>
+    </div>
   </div>
 </nav>
 
@@ -237,7 +240,7 @@ hr.sep {
   <h2 id="requirements">Requirements</h2>
   <ul style="list-style:none; padding:0; color:var(--text-dim);">
     <li style="padding:6px 0;">✓ <strong>Microsoft Flight Simulator 2024</strong> — MS Store or Steam edition</li>
-    <li style="padding:6px 0;">✓ <strong>Nemeth Design EC135</strong> (for the Sound Pack — not required for the Haptic Engine)</li>
+    <li style="padding:6px 0;">✓ <strong>The EC135</strong> (already free with MSFS 2024 — nothing extra to install)</li>
     <li style="padding:6px 0;">✓ <strong>Windows 10 or 11</strong></li>
     <li style="padding:6px 0;">✓ <strong>ButtKicker or bass shaker</strong> (optional — only for the Haptic Engine)</li>
     <li style="padding:6px 0;">✓ Your Stripe order number from the confirmation email</li>
@@ -274,13 +277,13 @@ hr.sep {
     </li>
     <li>
       <strong>Start MSFS 2024 and load the EC135.</strong>
-      Start a free flight with the Nemeth Design EC135. Start the engines. The new turbine should be audible immediately.
+      Start a free flight with the EC135. Start the engines. The new turbine should be audible immediately.
     </li>
   </ol>
 
   <div class="callout warn">
     <div class="head">⚠️ Steam users: Package load order</div>
-    <p>If you hear the default EC135 sound after installing, the package load order inside MSFS is wrong. Inside MSFS go to <em>Content Manager</em>, find <em>fwx-ec135-sound</em> and move it ABOVE the default <em>nemeth-design-ec135</em> entry. Restart MSFS.</p>
+    <p>If the new audio is not audible after installing, the package load order inside MSFS needs adjusting. Inside MSFS go to <em>Content Manager</em>, find <em>fwx-ec135-sound</em> and make sure it is loaded <strong>above</strong> the stock EC135 package. Restart MSFS.</p>
   </div>
 
   <hr class="sep">
@@ -323,8 +326,8 @@ hr.sep {
 
   <h2 id="troubleshooting">Troubleshooting</h2>
 
-  <h3>I still hear the default EC135 sound.</h3>
-  <p>Package load order. Inside MSFS → Content Manager → move <em>fwx-ec135-sound</em> above <em>nemeth-design-ec135</em>. Restart MSFS. This is the #1 issue on Steam installations.</p>
+  <h3>The new audio is not audible after installing.</h3>
+  <p>Package load order. Inside MSFS → Content Manager → make sure <em>fwx-ec135-sound</em> is loaded above the stock EC135 package. Restart MSFS. This is the #1 issue on Steam installations.</p>
 
   <h3>The Haptic Engine shows "No device found".</h3>
   <p>Windows does not see your haptic transducer as an audio output device. Open Windows Sound settings → make sure the device is listed and set as default or secondary output. Reopen the FWX GUI, it should appear in the dropdown.</p>
