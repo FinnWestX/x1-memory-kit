@@ -250,7 +250,7 @@ h1 {
       <dt>Produkt</dt>
       <dd id="legal-product">—</dd>
       <dt>Gesamtpreis</dt>
-      <dd id="legal-price">— <br><span style="color:var(--text-muted);font-size:12px;">Kein Ausweis der USt (Kleinunternehmer gemaess § 19 UStG). Keine Versandkosten.</span></dd>
+      <dd id="legal-price">— <br><span style="color:var(--text-muted);font-size:12px;">Kein Ausweis der USt (Kleinunternehmer gemäß § 19 UStG). Keine Versandkosten.</span></dd>
       <dt>Lieferung</dt>
       <dd>Sofortiger digitaler Download nach erfolgreicher Zahlung über Stripe. Der Downloadlink wird auf der Zahlungsbestätigungsseite und per E-Mail bereitgestellt.</dd>
       <dt>Vertragssprache</dt>
@@ -352,7 +352,7 @@ h1 {
 
   document.getElementById('legal-product').textContent = product.name;
   document.getElementById('legal-price').innerHTML =
-    product.price + '<br><span style="color:var(--text-muted);font-size:12px;">Kein Ausweis der USt (Kleinunternehmer gemaess § 19 UStG). Keine Versandkosten.</span>';
+    product.price + '<br><span style="color:var(--text-muted);font-size:12px;">Kein Ausweis der USt (Kleinunternehmer gemäß § 19 UStG). Keine Versandkosten.</span>';
 
   var consent = document.getElementById('consent');
   var btn = document.getElementById('submit-btn');
