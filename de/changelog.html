@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FWX EC135 Enhancement Mod — Changelog</title>
-<meta name="description" content="Version history of the FWX EC135 Enhancement Mod, Rotor Haptic Engine and Bundle for MSFS 2024.">
-<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Versionshistorie des FWX EC135 Enhancement Mod, der Rotor Haptic Engine und des Bundles für MSFS 2024.">
 <style>
 :root {
   --bg: #05050a;
@@ -31,17 +30,6 @@ body {
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
-.t-banner {
-  background: rgba(245,158,11,0.1);
-  border-bottom: 1px solid rgba(245,158,11,0.3);
-  color: #fbbf24;
-  padding: 10px 16px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 600;
-}
-.t-banner a { color: #fff; text-decoration: underline; }
 
 .t-nav {
   position: sticky; top: 0; z-index: 50;
@@ -204,10 +192,6 @@ h1 .accent {
 </head>
 <body>
 
-<div class="t-banner">
-  TEST LAYOUT — not indexed. <a href="./">← Back to test landing</a>
-</div>
-
 <nav class="t-nav">
   <div class="t-nav-inner">
     <a href="./" class="t-nav-brand">
@@ -215,16 +199,16 @@ h1 .accent {
       FWX Aviation
     </a>
     <div style="display:flex;align-items:center;gap:14px;">
-      <a href="de/changelog.html" style="color:var(--text-dim);font-size:13px;font-weight:600;">DE</a>
-      <a href="./#pricing" class="t-nav-cta">See pricing</a>
+      <a href="../changelog.html" style="color:var(--text-dim);font-size:13px;font-weight:600;">EN</a>
+      <a href="./#pricing" class="t-nav-cta">Preise</a>
     </div>
   </div>
 </nav>
 
 <main>
 
-  <h1>What's <span class="accent">new</span>.</h1>
-  <p class="lede">Every release, notable fixes, and what's coming next. Updates are free for every existing customer — use the same download link you received with your order.</p>
+  <h1>Was ist <span class="accent">neu</span>.</h1>
+  <p class="lede">Jede Version, wichtige Fixes und was als nächstes kommt. Updates sind kostenlos für bestehende Kunden — einfach denselben Download-Link nutzen.</p>
 
   <div class="product-group-head">FWX EC135 Enhancement Mod — Sound</div>
 
@@ -232,18 +216,18 @@ h1 .accent {
     <div class="release-head">
       <h2>v1.44</h2>
       <span class="version-tag">Sound Pack</span>
-      <span class="current-tag">Current</span>
+      <span class="current-tag">Aktuell</span>
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>New</h3>
+      <h3>Neu</h3>
       <ul>
-        <li>Installer now shows an explicit <strong>Package Reorder dialog</strong>. On some Steam installations the FWX package has to be loaded above the stock EC135 package — the dialog now explains this step so it can't be missed.</li>
-        <li>Updated product description and requirements mention the load-order note up front.</li>
+        <li>Der Installer zeigt jetzt einen expliziten <strong>Package-Reorder-Dialog</strong>. Bei einigen Steam-Installationen muss das FWX-Paket über dem Standard-EC135-Paket geladen werden — der Dialog erklärt diesen Schritt jetzt, damit er nicht übersehen wird.</li>
+        <li>Aktualisierte Produktbeschreibung und Voraussetzungen erwähnen den Lade-Reihenfolge-Hinweis direkt.</li>
       </ul>
       <h3>Fixes</h3>
       <ul>
-        <li>Addressed the load-order case reported by some Steam users where the FWX audio was not audible after installation.</li>
+        <li>Behoben: der von einigen Steam-Nutzern gemeldete Lade-Reihenfolge-Fall, bei dem der FWX-Sound nach der Installation nicht hörbar war.</li>
       </ul>
     </div>
   </article>
@@ -253,14 +237,14 @@ h1 .accent {
       <h2>v1.41</h2>
       <span class="version-tag">Sound Pack</span>
     </div>
-    <div class="release-date">March 2026</div>
+    <div class="release-date">März 2026</div>
     <div class="release-notes">
-      <h3>New</h3>
+      <h3>Neu</h3>
       <ul>
-        <li>Full cockpit and exterior turbine audio for the EC135 in MSFS 2024.</li>
-        <li>13 active engine WAVs, 20 non-engine WAVs, custom startup sequence.</li>
-        <li>Tuned pitch variation for a smoother, more realistic turbine response under torque changes.</li>
-        <li>ButtKicker-safe — no internal cockpit bass rumble.</li>
+        <li>Kompletter Cockpit- und Außen-Turbinensound für den EC135 in MSFS 2024.</li>
+        <li>13 aktive Engine-WAVs, 20 Nicht-Engine-WAVs, eigene Startsequenz.</li>
+        <li>Abgestimmte Pitch-Variation für weichere, realistischere Turbinen-Reaktion bei Drehmomentwechseln.</li>
+        <li>ButtKicker-sicher — kein internes Cockpit-Bass-Brummen.</li>
       </ul>
     </div>
   </article>
@@ -271,14 +255,14 @@ h1 .accent {
     <div class="release-head">
       <h2>v1.51</h2>
       <span class="version-tag">Haptic Engine</span>
-      <span class="current-tag">Current</span>
+      <span class="current-tag">Aktuell</span>
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>New</h3>
+      <h3>Neu</h3>
       <ul>
-        <li><strong>Auto-close:</strong> the Haptic Engine now exits automatically when MSFS 2024 is closed. No more background processes after you quit the sim.</li>
-        <li>Stability and performance refinements across SimConnect reads and device output.</li>
+        <li><strong>Auto-Close:</strong> die Haptic Engine beendet sich jetzt automatisch, wenn MSFS 2024 geschlossen wird. Keine Hintergrundprozesse mehr nach dem Sim-Ende.</li>
+        <li>Stabilität und Performance verbessert bei SimConnect-Lesevorgängen und Geräte-Ausgabe.</li>
       </ul>
     </div>
   </article>
@@ -288,15 +272,15 @@ h1 .accent {
       <h2>v1.42</h2>
       <span class="version-tag">Haptic Engine</span>
     </div>
-    <div class="release-date">March 2026</div>
+    <div class="release-date">März 2026</div>
     <div class="release-notes">
-      <h3>New</h3>
+      <h3>Neu</h3>
       <ul>
-        <li>SimConnect-based rotor impulse generation reading <code>GENERAL_ENG_PCT_MAX_RPM:1</code>.</li>
-        <li>Pause detection via ctypes — the only reliable method in MSFS 2024.</li>
-        <li>Autostart via <code>exe.xml</code>.</li>
-        <li>GUI with live pulse strength, rattle threshold and device dropdown.</li>
-        <li>Works with any 4-blade rotor helicopter in MSFS 2024 — not restricted to the EC135.</li>
+        <li>SimConnect-basierte Rotorimpuls-Erzeugung liest <code>GENERAL_ENG_PCT_MAX_RPM:1</code>.</li>
+        <li>Pause-Erkennung über ctypes — die einzig zuverlässige Methode in MSFS 2024.</li>
+        <li>Autostart über <code>exe.xml</code>.</li>
+        <li>GUI mit Live-Reglern für Impulsstärke, Rattern-Schwellwert und Geräte-Dropdown.</li>
+        <li>Funktioniert mit jedem 4-Blatt-Rotor-Helikopter in MSFS 2024 — nicht auf den EC135 beschränkt.</li>
       </ul>
     </div>
   </article>
@@ -307,15 +291,15 @@ h1 .accent {
     <div class="release-head">
       <h2>v1.45</h2>
       <span class="version-tag">Bundle</span>
-      <span class="current-tag">Current</span>
+      <span class="current-tag">Aktuell</span>
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>Contents</h3>
+      <h3>Inhalt</h3>
       <ul>
-        <li>Sound Pack v1.44 (with Package Reorder dialog)</li>
-        <li>Rotor Haptic Engine v1.51 (with auto-close and stability refinements)</li>
-        <li>Combined installer with separate uninstall entries for each component</li>
+        <li>Sound Pack v1.44 (mit Package-Reorder-Dialog)</li>
+        <li>Rotor Haptic Engine v1.51 (mit Auto-Close und Stabilitätsverbesserungen)</li>
+        <li>Kombinierter Installer mit separaten Deinstall-Einträgen für jede Komponente</li>
       </ul>
     </div>
   </article>
@@ -325,40 +309,40 @@ h1 .accent {
       <h2>v1.42</h2>
       <span class="version-tag">Bundle</span>
     </div>
-    <div class="release-date">March 2026</div>
+    <div class="release-date">März 2026</div>
     <div class="release-notes">
-      <h3>New</h3>
+      <h3>Neu</h3>
       <ul>
-        <li>First bundled installer combining Sound Pack v1.41 and Haptic Engine v1.42.</li>
+        <li>Erster Bundle-Installer, der Sound Pack v1.41 und Haptic Engine v1.42 kombiniert.</li>
       </ul>
     </div>
   </article>
 
   <section class="back-cta">
-    <h3>Already a customer? Updates are free.</h3>
-    <p>Use the same Stripe download link from your confirmation email. If you need a fresh link, email Finn.West@gmx.net with your order number.</p>
-    <a href="./#pricing" class="btn">See current pricing →</a>
+    <h3>Schon Kunde? Updates sind kostenlos.</h3>
+    <p>Nutze denselben Stripe-Download-Link aus deiner Bestätigungsmail. Wenn du einen neuen Link brauchst, schreibe an Finn.West@gmx.net mit deiner Bestellnummer.</p>
+    <a href="./#pricing" class="btn">Aktuelle Preise ansehen →</a>
   </section>
 
 </main>
 
 <footer class="t-footer">
   <div style="margin-bottom:12px;">
-    <a href="./">Test landing</a> ·
+    <a href="./">Test-Startseite</a> ·
     <a href="./faq.html">FAQ</a> ·
     <a href="./install.html">Installation</a> ·
-    <a href="./contact.html">Contact</a>
+    <a href="./contact.html">Kontakt</a>
   </div>
   <div>
-    <a href="../">Main site</a> ·
+    <a href="/">Hauptseite</a> ·
     <a href="../impressum.html">Impressum</a> ·
-    <a href="../datenschutz.html">Privacy</a> ·
-    <a href="../agb.html">Terms</a> ·
-    <a href="../widerruf.html">Cancellation</a>
+    <a href="../datenschutz.html">Datenschutz</a> ·
+    <a href="../agb.html">AGB</a> ·
+    <a href="../widerruf.html">Widerrufsbelehrung</a>
   </div>
-  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px 0 10px;">EU dispute resolution: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board.</div>
-  <div style="margin-top:12px;">© 2026 FinnWest Aviation — TEST variant (not indexed)</div>
-  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator 2024 is a trademark of Microsoft Corporation. ButtKicker is a trademark of The Guitammer Company. FinnWest Aviation is not affiliated with, endorsed by, or sponsored by any of these companies.</div>
+  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px 0 10px;">EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</div>
+  <div style="margin-top:12px;">© 2026 FinnWest Aviation</div>
+  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. ButtKicker ist eine Marke der The Guitammer Company. FinnWest Aviation steht in keiner Verbindung zu diesen Unternehmen und wird von ihnen nicht unterstützt oder gesponsert.</div>
 </footer>
 
 </body>
