@@ -378,14 +378,35 @@ img, svg { max-width: 100%; display: block; }
 
 /* ============ FOOTER ============ */
 .t-footer {
-  padding: 40px 20px 30px;
+  padding: 60px 20px 40px;
   background: var(--bg);
   border-top: 1px solid var(--border);
-  text-align: center;
   font-size: 13px; color: var(--text-muted);
 }
-.t-footer a { color: var(--text-dim); margin: 0 10px; }
-.t-footer .t-foot-links { margin-bottom: 14px; }
+.t-footer-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.t-footer-col { display: flex; flex-direction: column; gap: 6px; }
+.t-footer-head {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 10px;
+}
+.t-footer-col a {
+  color: var(--text-dim); font-size: 14px;
+  padding: 3px 0;
+  transition: color 0.15s ease;
+}
+.t-footer-col a:hover { color: #fff; }
+.t-footer-bottom {
+  max-width: 1080px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+}
 
 /* ============ MOBILE STICKY CTA ============ */
 .t-mobile-cta {
@@ -633,17 +654,44 @@ img, svg { max-width: 100%; display: block; }
 </section>
 
 <!-- ============================================================
-     FOOTER
+     FOOTER — organised into groups (info, community, legal)
      ============================================================ -->
 <footer class="t-footer">
-  <div class="t-foot-links">
-    <a href="../">Main site</a> ·
-    <a href="../impressum.html">Impressum</a> ·
-    <a href="../datenschutz.html">Privacy</a> ·
-    <a href="../agb.html">Terms</a> ·
-    <a href="../widerruf.html">Cancellation</a>
+  <div class="t-footer-grid">
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Product info</div>
+      <a href="faq.html">FAQ</a>
+      <a href="install.html">Installation guide</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="mailto:Finn.West@gmx.net">Email support</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Community</div>
+      <a href="https://www.youtube.com/@FWXAviation" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener">Reddit</a>
+      <a href="https://discord.gg/fwx-aviation" target="_blank" rel="noopener">Discord</a>
+      <a href="https://secure.simmarket.com/finnwest-aviation.mhtml" target="_blank" rel="noopener">SimMarket</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Press</div>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener">ThresholdX review</a>
+      <a href="https://www.simflight.de/2026/04/04/fwx-ec135-sound-enhancement-pack-realistischer-turbinensound-fuer-den-msfs-2024/" target="_blank" rel="noopener">simFlight.de review</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Legal</div>
+      <a href="../">Main site</a>
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Privacy</a>
+      <a href="../agb.html">Terms</a>
+      <a href="../widerruf.html">Cancellation</a>
+    </div>
+
   </div>
-  <div>© 2026 FinnWest Aviation — TEST variant (not indexed)</div>
+  <div class="t-footer-bottom">© 2026 FinnWest Aviation — TEST variant (not indexed)</div>
 </footer>
 
 <!-- Mobile sticky CTA -->

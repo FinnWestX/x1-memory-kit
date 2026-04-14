@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FWX EC135 — Frequently Asked Questions</title>
+<meta name="description" content="FAQ for the FWX EC135 Sound Enhancement Pack and Rotor Haptic Engine — MSFS 2024 compatibility, installation, Steam/Store, refunds and support.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.t-banner {
+  background: rgba(245,158,11,0.1);
+  border-bottom: 1px solid rgba(245,158,11,0.3);
+  color: #fbbf24;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.t-banner a { color: #fff; text-decoration: underline; }
+
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-brand-badge {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  display: grid; place-items: center; font-size: 14px;
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+
+main {
+  max-width: 860px; margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.02em; line-height: 1.1;
+  margin-bottom: 14px;
+}
+h1 .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lede {
+  font-size: 17px; color: var(--text-dim);
+  margin-bottom: 44px; max-width: 620px;
+}
+
+.faq-group { margin-bottom: 40px; }
+.faq-group h2 {
+  font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--accent); margin-bottom: 16px; font-weight: 700;
+}
+
+details.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0;
+  margin-bottom: 10px;
+  transition: background 0.2s ease;
+  overflow: hidden;
+}
+details.faq-item[open] { background: rgba(14,165,233,0.05); border-color: rgba(14,165,233,0.3); }
+summary {
+  padding: 18px 22px;
+  font-size: 16px; font-weight: 600; color: #fff;
+  cursor: pointer;
+  list-style: none;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "+";
+  font-size: 22px; font-weight: 300;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+details[open] summary::after { content: "−"; }
+.faq-body {
+  padding: 0 22px 22px;
+  color: var(--text-dim);
+  font-size: 15px; line-height: 1.7;
+}
+.faq-body p { margin-bottom: 10px; }
+.faq-body p:last-child { margin-bottom: 0; }
+.faq-body code {
+  background: rgba(255,255,255,0.06);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: 13px;
+  color: var(--accent);
+}
+.faq-body strong { color: #fff; }
+
+.back-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.back-cta h3 { color: #fff; font-size: 22px; margin-bottom: 10px; }
+.back-cta p { color: var(--text-dim); margin-bottom: 20px; }
+.back-cta .btn {
+  display: inline-block; padding: 14px 28px; border-radius: 12px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 15px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.t-footer {
+  padding: 40px 20px 30px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px; color: var(--text-muted);
+}
+.t-footer a { color: var(--text-dim); margin: 0 10px; }
+</style>
+</head>
+<body>
+
+<div class="t-banner">
+  TEST LAYOUT — not indexed. <a href="./">← Back to test landing</a>
+</div>
+
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="./" class="t-nav-brand">
+      <span class="t-nav-brand-badge">🚁</span>
+      FWX Aviation
+    </a>
+    <a href="./#pricing" class="t-nav-cta">See pricing</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Frequently asked <span class="accent">questions</span>.</h1>
+  <p class="lede">Short, honest answers about the FWX EC135 Sound Pack and Rotor Haptic Engine. If something is missing, email us at Finn.West@gmx.net.</p>
+
+  <section class="faq-group">
+    <h2>Compatibility &amp; Requirements</h2>
+
+    <details class="faq-item" id="faq-msfs-version">
+      <summary>Which version of MSFS does this work with?</summary>
+      <div class="faq-body">
+        <p><strong>Microsoft Flight Simulator 2024 only.</strong> The Sound Enhancement Pack and Rotor Haptic Engine were built and tested against MSFS 2024. MSFS 2020 is not supported.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-steam-store">
+      <summary>Does it work with both Steam and MS Store editions?</summary>
+      <div class="faq-body">
+        <p>Yes — both editions are supported. The installer auto-detects the Community folder for MS Store and Steam.</p>
+        <p><strong>Note for Steam users:</strong> On some Steam installations the package load order needs to be adjusted inside MSFS so the FWX sounds take priority over the default EC135. From v1.42 onward the installer shows an explicit dialog about this step, so you can't miss it.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-ec135-needed">
+      <summary>Do I need to own the Nemeth Design EC135?</summary>
+      <div class="faq-body">
+        <p>Yes — the Sound Enhancement Pack is a sound replacement for the existing Nemeth Design EC135 in MSFS 2024. It does not ship with the helicopter model, just the new audio files.</p>
+        <p>The Rotor Haptic Engine works standalone and is compatible with <strong>any</strong> MSFS 2024 helicopter, not just the EC135.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-buttkicker">
+      <summary>Do I need a ButtKicker or bass shaker?</summary>
+      <div class="faq-body">
+        <p>The Sound Pack works with any audio setup — headphones, speakers, or transducers. It's explicitly built to be ButtKicker-safe, meaning no unwanted bass rumble inside the cockpit audio.</p>
+        <p>The Rotor Haptic Engine is designed for ButtKickers, bass shakers, or any haptic transducer. It sends dedicated rotor-pulse signals so you feel the blade rhythm physically in your chair. Without a haptic device the Haptic Engine has no effect — get the Sound Pack only in that case.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="faq-group">
+    <h2>Installation &amp; Setup</h2>
+
+    <details class="faq-item" id="faq-how-install">
+      <summary>How do I install the Sound Pack?</summary>
+      <div class="faq-body">
+        <p>Run the installer (.exe) from the ZIP you receive after purchase. It detects your MSFS 2024 Community folder automatically. Click through the dialogs, confirm the package reorder instructions if prompted, and you're done.</p>
+        <p>Full step-by-step guide with screenshots: <a href="install.html">Installation Guide</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-uninstall">
+      <summary>How do I uninstall it?</summary>
+      <div class="faq-body">
+        <p>Use the Windows "Add or remove programs" panel, find "FWX EC135 Sound Enhancement Pack" or "FWX Rotor Haptic Engine" and click Uninstall. The Community folder entries are removed cleanly, and the default EC135 sounds come back.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-mac">
+      <summary>Does it work on Mac or Xbox?</summary>
+      <div class="faq-body">
+        <p>Windows-only. MSFS 2024 is a Windows title for PC and Xbox, and the installer + Haptic Engine require Windows. Xbox cannot install third-party Community addons at all, so this is fundamentally a PC product.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="faq-group">
+    <h2>Purchase, Updates &amp; Support</h2>
+
+    <details class="faq-item" id="faq-how-delivered">
+      <summary>How do I get the files after buying?</summary>
+      <div class="faq-body">
+        <p>Payment runs through Stripe (card, PayPal, Apple Pay, Google Pay, Link, Amazon Pay). After a successful payment you are redirected to a success page and receive an email with a download link. The download can be used up to three times from our download page using your email and order number.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-updates">
+      <summary>Do I get free updates?</summary>
+      <div class="faq-body">
+        <p>Yes — every version upgrade (v1.42 → v1.43 etc.) is free for existing customers. Use the same download link, or email us if you need a fresh one. See the <a href="changelog.html">changelog</a> for what's new.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-refund">
+      <summary>What is your refund policy?</summary>
+      <div class="faq-body">
+        <p><strong>30-day full refund, no questions.</strong> If the product doesn't live up to the demo, email Finn.West@gmx.net within 30 days of purchase and we refund you — no form, no fight, no gotchas.</p>
+        <p>Formally, German law removes the statutory right of withdrawal for digital content once the download link is provided. The 30-day refund above is a voluntary goodwill policy on top of that. We honour it.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-simmarket">
+      <summary>Why is the same product on SimMarket too?</summary>
+      <div class="faq-body">
+        <p>Because some customers trust the SimMarket storefront more than a new independent site. Same product, same price, same updates. Buy wherever feels right. Bulk and promotional discounts are only on our site.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-contact">
+      <summary>How do I reach you for support?</summary>
+      <div class="faq-body">
+        <p>Email: <a href="mailto:Finn.West@gmx.net">Finn.West@gmx.net</a></p>
+        <p>I read and reply to every message. Response time is usually under 24 hours (German timezone).</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="back-cta">
+    <h3>Ready to upgrade your EC135?</h3>
+    <p>One-time payment, 30-day refund, instant download.</p>
+    <a href="./#pricing" class="btn">See pricing →</a>
+  </section>
+
+</main>
+
+<footer class="t-footer">
+  <div style="margin-bottom:12px;">
+    <a href="./">Test landing</a> ·
+    <a href="./install.html">Installation</a> ·
+    <a href="./changelog.html">Changelog</a>
+  </div>
+  <div>
+    <a href="../">Main site</a> ·
+    <a href="../impressum.html">Impressum</a> ·
+    <a href="../datenschutz.html">Privacy</a> ·
+    <a href="../agb.html">Terms</a> ·
+    <a href="../widerruf.html">Cancellation</a>
+  </div>
+  <div style="margin-top:12px;">© 2026 FinnWest Aviation — TEST variant (not indexed)</div>
+</footer>
+
+</body>
+</html>
