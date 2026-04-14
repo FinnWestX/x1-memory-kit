@@ -258,12 +258,12 @@ hr.sep {
       Stelle sicher, dass Microsoft Flight Simulator 2024 komplett beendet ist bevor du installierst. Wenn es läuft, ist der Community-Ordner möglicherweise gesperrt.
     </li>
     <li>
-      <strong>ZIP herunterladen.</strong>
-      Öffne den Download-Link aus deiner Stripe-Bestätigungsmail. Du kannst bis zu 3 Mal erneut herunterladen, indem du E-Mail und Bestellnummer eingibst.
+      <strong>Installer (.exe) herunterladen.</strong>
+      Öffne den Download-Link aus deiner Stripe-Bestätigungsmail und speichere <code>FWX-EC135-SoundPack-Setup-v1.44.exe</code> auf deinem Desktop oder im Downloads-Ordner. Du kannst bis zu 3 Mal erneut herunterladen, indem du E-Mail und Bestellnummer eingibst. Kein ZIP, nichts zum Entpacken.
     </li>
     <li>
-      <strong>Entpacken und Installer starten.</strong>
-      Entpacke den Download und doppelklicke <code>FWX-EC135-SoundPack-Installer.exe</code>. Windows SmartScreen fragt eventuell nach einer Bestätigung — klicke <em>Weitere Informationen</em> → <em>Trotzdem ausführen</em> (der Installer ist noch nicht code-signiert, aber sicher).
+      <strong>Installer starten. Bei der Auswahl "Installieren" wählen.</strong>
+      Doppelklicke <code>FWX-EC135-SoundPack-Setup-v1.44.exe</code>. Der Installer öffnet sich und bietet zwei Optionen an — wähle <strong>Installieren</strong>. Windows SmartScreen fragt eventuell nach einer Bestätigung — klicke <em>Weitere Informationen</em> → <em>Trotzdem ausführen</em> (der Installer ist noch nicht code-signiert, aber sicher).
     </li>
     <li>
       <strong>Community-Ordner bestätigen.</strong>
@@ -298,8 +298,8 @@ hr.sep {
       ButtKicker, Bass-Shaker oder jeder Schallwandler als Standard-Audio-Ausgabegerät in Windows angeschlossen. Stelle sicher, dass er in den Windows-Sound-Einstellungen erkannt wird, bevor du installierst.
     </li>
     <li>
-      <strong>Haptic-Engine-Installer starten.</strong>
-      Entpacke den Download und starte <code>FWX-Rotor-Haptic-Engine-Installer.exe</code>. Gleiche SmartScreen-Bestätigung wie oben.
+      <strong>Haptic-Engine-Installer starten. "Installieren" wählen.</strong>
+      Doppelklicke <code>FWX-RotorHaptic-Setup-v1.51.exe</code> — kein ZIP, nichts zum Entpacken. Wenn der Installer öffnet, wähle <strong>Installieren</strong>. Gleiche SmartScreen-Bestätigung wie oben.
     </li>
     <li>
       <strong>Installationsordner wählen.</strong>
@@ -343,7 +343,13 @@ hr.sep {
   <hr class="sep">
 
   <h2 id="uninstall">Deinstallation</h2>
-  <p>Beide Produkte sind in Windows "Apps &amp; Features" eingetragen. Suche <em>FWX EC135 Sound Enhancement Pack</em> oder <em>FWX Rotor Haptic Engine</em> und klick auf Deinstallieren. Die Community-Ordner-Einträge werden sauber entfernt und die Standard-Sounds kommen automatisch zurück.</p>
+  <p>Starte dieselbe Installer-Datei (.exe) erneut, mit der du installiert hast — jeder FWX-Installer ist gleichzeitig sein eigener Deinstaller. Wenn er öffnet, wähle <strong>Deinstallieren</strong> statt Installieren.</p>
+  <ul style="list-style:none; padding:0; color:var(--text-dim);">
+    <li style="padding:6px 0;">• <strong>Sound Pack:</strong> <code>FWX-EC135-SoundPack-Setup-v1.44.exe</code> starten → Deinstallieren. Die Einträge im Community-Ordner werden sauber entfernt und die Standard-EC135-Sounds kommen zurück.</li>
+    <li style="padding:6px 0;">• <strong>Rotor Haptic Engine:</strong> <code>FWX-RotorHaptic-Setup-v1.51.exe</code> starten → Deinstallieren. Das Programm wird vom System entfernt und der Autostart-Eintrag in <code>exe.xml</code> bereinigt.</li>
+    <li style="padding:6px 0;">• <strong>Bundle:</strong> <code>FWX-EC135-Bundle-Setup-v1.45.exe</code> starten → Deinstallieren entfernt beide Produkte in einem Schritt.</li>
+  </ul>
+  <p>Kein ZIP, keine Registry-Suche, keine Systemsteuerung nötig — nur die Installer-Datei, die du bereits hast.</p>
 
   <section class="back-cta">
     <h3>Noch Probleme?</h3>
