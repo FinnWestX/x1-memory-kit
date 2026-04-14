@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FWX EC135 — Contact &amp; Support</title>
+<meta name="description" content="Contact FinnWest Aviation for questions, support or refund requests about the FWX EC135 Sound Pack and Rotor Haptic Engine.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.t-banner {
+  background: rgba(245,158,11,0.1);
+  border-bottom: 1px solid rgba(245,158,11,0.3);
+  color: #fbbf24;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.t-banner a { color: #fff; text-decoration: underline; }
+
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-brand-badge {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  display: grid; place-items: center; font-size: 14px;
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+
+main {
+  max-width: 720px; margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.02em; line-height: 1.1;
+  margin-bottom: 14px;
+  text-align: center;
+}
+h1 .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lede {
+  font-size: 17px; color: var(--text-dim);
+  margin: 0 auto 44px; max-width: 560px;
+  text-align: center;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 44px 38px;
+  text-align: center;
+  box-shadow: 0 30px 80px -30px rgba(14,165,233,0.35);
+}
+.contact-icon {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  display: grid; place-items: center; margin: 0 auto 22px;
+  box-shadow: 0 20px 50px -15px rgba(14,165,233,0.7);
+}
+.contact-icon svg { width: 34px; height: 34px; color: #fff; }
+.contact-card h2 {
+  color: #fff; font-size: 24px; font-weight: 800;
+  margin-bottom: 10px;
+}
+.contact-card p.intro {
+  color: var(--text-dim); font-size: 16px;
+  margin-bottom: 26px;
+}
+.contact-card .email-line {
+  display: inline-block;
+  padding: 12px 22px;
+  background: rgba(14,165,233,0.08);
+  border: 1px solid rgba(14,165,233,0.3);
+  border-radius: 10px;
+  color: var(--accent);
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 26px;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  letter-spacing: 0.3px;
+}
+
+.contact-form {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.contact-form .row {
+  display: grid; gap: 14px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 14px;
+}
+.contact-form .row.full { grid-template-columns: 1fr; }
+.contact-form label {
+  display: block;
+  font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--text-dim); font-weight: 700;
+  margin-bottom: 6px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 0;
+  border-color: rgba(14,165,233,0.5);
+  background: rgba(255,255,255,0.07);
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.5;
+}
+.contact-form .submit-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 800; font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 20px 50px -15px rgba(14,165,233,0.55);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.contact-form .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 60px -15px rgba(14,165,233,0.8);
+}
+
+.hint {
+  font-size: 13px; color: var(--text-muted);
+  margin-top: 12px;
+  text-align: center;
+}
+.hint strong { color: #fff; }
+
+.alt-channels {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.alt-channels p {
+  color: var(--text-dim); font-size: 14px; margin-bottom: 16px;
+}
+.alt-channels .links {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+}
+.alt-channels .links a {
+  padding: 10px 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 14px; font-weight: 600;
+  text-decoration: none;
+}
+.alt-channels .links a:hover {
+  color: #fff; border-color: rgba(14,165,233,0.4);
+  text-decoration: none;
+}
+
+.response-time {
+  margin-top: 30px;
+  padding: 16px 22px;
+  background: rgba(34,197,94,0.06);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 12px;
+  color: #bbf7d0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.t-footer {
+  padding: 40px 20px 30px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px; color: var(--text-muted);
+}
+.t-footer a { color: var(--text-dim); margin: 0 10px; }
+
+@media (max-width: 620px) {
+  .contact-form .row { grid-template-columns: 1fr; }
+  .contact-card { padding: 32px 22px; }
+}
+</style>
+</head>
+<body>
+
+<div class="t-banner">
+  TEST LAYOUT — not indexed. <a href="./">← Back to test landing</a>
+</div>
+
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="./" class="t-nav-brand">
+      <span class="t-nav-brand-badge">🚁</span>
+      FWX Aviation
+    </a>
+    <a href="./#pricing" class="t-nav-cta">See pricing</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Contact &amp; <span class="accent">support</span>.</h1>
+  <p class="lede">Questions, install help, refund requests, or feedback — one form, straight to our inbox. Replies usually within 24 hours (German timezone).</p>
+
+  <div class="contact-card">
+
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+    </div>
+
+    <h2>Send us a message</h2>
+    <p class="intro">Fill in the form and we'll reply by email.</p>
+
+    <div class="email-line">Finn.West@gmx.net</div>
+
+    <!--
+      Form submits via mailto: so it works on GitHub Pages without a backend.
+      The browser opens the user's default mail client with the subject and body prefilled.
+      If the Chef wants a proper serverless submit endpoint later (Cloudflare Worker /
+      Formsubmit / Formspree), we can swap the action without changing the layout.
+    -->
+    <form class="contact-form"
+          action="mailto:Finn.West@gmx.net"
+          method="post"
+          enctype="text/plain">
+
+      <div class="row">
+        <div>
+          <label for="cf-name">Your name</label>
+          <input type="text" id="cf-name" name="Name" placeholder="John Doe" required>
+        </div>
+        <div>
+          <label for="cf-email">Your email</label>
+          <input type="email" id="cf-email" name="Email" placeholder="you@example.com" required>
+        </div>
+      </div>
+
+      <div class="row full">
+        <div>
+          <label for="cf-topic">Topic</label>
+          <select id="cf-topic" name="Topic" required>
+            <option value="">Choose a topic...</option>
+            <option>Pre-sale question</option>
+            <option>Installation help</option>
+            <option>Sound Pack issue</option>
+            <option>Haptic Engine issue</option>
+            <option>Refund request</option>
+            <option>Product feedback</option>
+            <option>Business / partnership</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row full">
+        <div>
+          <label for="cf-order">Order number (optional)</label>
+          <input type="text" id="cf-order" name="OrderNumber" placeholder="Stripe receipt #, if applicable">
+        </div>
+      </div>
+
+      <div class="row full">
+        <div>
+          <label for="cf-msg">Your message</label>
+          <textarea id="cf-msg" name="Message" placeholder="Tell us what's going on..." required></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn"
+              data-umami-event="test-contact-submit">
+        <span>Send message</span>
+        <span>→</span>
+      </button>
+    </form>
+
+    <div class="hint">
+      Clicking <strong>Send message</strong> opens your email client with the filled-in message.
+      If your browser does not open an email client, just copy <strong>Finn.West@gmx.net</strong> and write us directly.
+    </div>
+
+    <div class="response-time">
+      ⚡ Average reply time: <strong>under 24 hours</strong> on weekdays.
+    </div>
+
+    <div class="alt-channels">
+      <p>Prefer another channel?</p>
+      <div class="links">
+        <a href="https://discord.gg/fwx-aviation" target="_blank" rel="noopener">💬 Discord</a>
+        <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener">👽 Reddit</a>
+        <a href="https://www.youtube.com/@FWXAviation" target="_blank" rel="noopener">▶️ YouTube</a>
+        <a href="https://secure.simmarket.com/finnwest-aviation.mhtml" target="_blank" rel="noopener">🛒 SimMarket</a>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="t-footer">
+  <div style="margin-bottom:12px;">
+    <a href="./">Test landing</a> ·
+    <a href="./faq.html">FAQ</a> ·
+    <a href="./install.html">Installation</a> ·
+    <a href="./changelog.html">Changelog</a>
+  </div>
+  <div>
+    <a href="../">Main site</a> ·
+    <a href="../impressum.html">Impressum</a> ·
+    <a href="../datenschutz.html">Privacy</a> ·
+    <a href="../agb.html">Terms</a> ·
+    <a href="../widerruf.html">Cancellation</a>
+  </div>
+  <div style="margin-top:12px;">© 2026 FinnWest Aviation — TEST variant (not indexed)</div>
+</footer>
+
+</body>
+</html>
