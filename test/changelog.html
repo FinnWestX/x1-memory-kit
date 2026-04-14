@@ -56,9 +56,11 @@ a:hover { text-decoration: underline; }
 }
 .t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
 .t-nav-logo {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
-  padding: 2px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
 }
 .t-nav-cta {
   padding: 10px 18px; border-radius: 999px;
@@ -228,7 +230,7 @@ h1 .accent {
 
   <article class="release current">
     <div class="release-head">
-      <h2>v1.42</h2>
+      <h2>v1.44</h2>
       <span class="version-tag">Sound Pack</span>
       <span class="current-tag">Current</span>
     </div>
@@ -236,12 +238,12 @@ h1 .accent {
     <div class="release-notes">
       <h3>New</h3>
       <ul>
-        <li>Installer now shows an explicit <strong>Package Reorder dialog</strong>. On some Steam installations the FWX package had to be moved above the default EC135 manually — the dialog now explains this step so it can't be missed.</li>
+        <li>Installer now shows an explicit <strong>Package Reorder dialog</strong>. On some Steam installations the FWX package has to be loaded above the stock EC135 package — the dialog now explains this step so it can't be missed.</li>
         <li>Updated product description and requirements mention the load-order note up front.</li>
       </ul>
       <h3>Fixes</h3>
       <ul>
-        <li>Resolved the issue reported by some Steam users where the default EC135 sounds kept playing after installation.</li>
+        <li>Addressed the load-order case reported by some Steam users where the FWX audio was not audible after installation.</li>
       </ul>
     </div>
   </article>
@@ -267,7 +269,7 @@ h1 .accent {
 
   <article class="release current">
     <div class="release-head">
-      <h2>v1.43</h2>
+      <h2>v1.51</h2>
       <span class="version-tag">Haptic Engine</span>
       <span class="current-tag">Current</span>
     </div>
@@ -276,6 +278,7 @@ h1 .accent {
       <h3>New</h3>
       <ul>
         <li><strong>Auto-close:</strong> the Haptic Engine now exits automatically when MSFS 2024 is closed. No more background processes after you quit the sim.</li>
+        <li>Stability and performance refinements across SimConnect reads and device output.</li>
       </ul>
     </div>
   </article>
@@ -293,7 +296,7 @@ h1 .accent {
         <li>Pause detection via ctypes — the only reliable method in MSFS 2024.</li>
         <li>Autostart via <code>exe.xml</code>.</li>
         <li>GUI with live pulse strength, rattle threshold and device dropdown.</li>
-        <li>Works with any MSFS 2024 helicopter — not restricted to the EC135.</li>
+        <li>Works with any 4-blade rotor helicopter in MSFS 2024 — not restricted to the EC135.</li>
       </ul>
     </div>
   </article>
@@ -302,7 +305,7 @@ h1 .accent {
 
   <article class="release current">
     <div class="release-head">
-      <h2>v1.43</h2>
+      <h2>v1.45</h2>
       <span class="version-tag">Bundle</span>
       <span class="current-tag">Current</span>
     </div>
@@ -310,8 +313,8 @@ h1 .accent {
     <div class="release-notes">
       <h3>Contents</h3>
       <ul>
-        <li>Sound Pack v1.42 (with Package Reorder dialog)</li>
-        <li>Rotor Haptic Engine v1.43 (with auto-close)</li>
+        <li>Sound Pack v1.44 (with Package Reorder dialog)</li>
+        <li>Rotor Haptic Engine v1.51 (with auto-close and stability refinements)</li>
         <li>Combined installer with separate uninstall entries for each component</li>
       </ul>
     </div>
