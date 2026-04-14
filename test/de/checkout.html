@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bestellung bestaetigen — FWX Aviation</title>
+<title>Bestellung bestätigen — FWX Aviation</title>
 <meta name="robots" content="noindex, nofollow">
 <style>
 :root {
@@ -238,7 +238,7 @@ h1 {
 <body>
 
 <div class="t-banner">
-  TEST LAYOUT — nicht indexiert. <a href="./">← zurueck zur Test-Landing</a> · <a href="../checkout.html">English</a>
+  TEST LAYOUT — nicht indexiert. <a href="./">← zurück zur Test-Landing</a> · <a href="../checkout.html">English</a>
 </div>
 
 <nav class="t-nav">
@@ -253,22 +253,22 @@ h1 {
 
 <main>
 
-  <h1>Bestellung bestaetigen</h1>
-  <p class="lede">Bevor wir dich zur Stripe-Kasse weiterleiten, pruefe bitte deine Bestellung und bestaetige den gesetzlichen Hinweis unten.</p>
+  <h1>Bestellung bestätigen</h1>
+  <p class="lede">Bevor wir dich zur Stripe-Kasse weiterleiten, prüfe bitte deine Bestellung und bestätige den gesetzlichen Hinweis unten.</p>
 
   <div id="product-container"></div>
 
   <div class="legal-block">
     <h3>Wesentliche Informationen vor Vertragsschluss (Art. 246a § 1 EGBGB)</h3>
     <dl>
-      <dt>Verkaeufer</dt>
+      <dt>Verkäufer</dt>
       <dd>Finn West, FinnWest Aviation<br>Hittorfstr. 13, 84489 Burghausen, Deutschland<br>Finn.West@gmx.net</dd>
       <dt>Produkt</dt>
       <dd id="legal-product">—</dd>
       <dt>Gesamtpreis</dt>
       <dd id="legal-price">— <br><span style="color:var(--text-muted);font-size:12px;">Kein Ausweis der USt (Kleinunternehmer gemaess § 19 UStG). Keine Versandkosten.</span></dd>
       <dt>Lieferung</dt>
-      <dd>Sofortiger digitaler Download nach erfolgreicher Zahlung ueber Stripe. Der Downloadlink wird auf der Zahlungsbestaetigungsseite und per E-Mail bereitgestellt.</dd>
+      <dd>Sofortiger digitaler Download nach erfolgreicher Zahlung über Stripe. Der Downloadlink wird auf der Zahlungsbestätigungsseite und per E-Mail bereitgestellt.</dd>
       <dt>Vertragssprache</dt>
       <dd>Deutsch</dd>
       <dt>Zahlung</dt>
@@ -278,31 +278,39 @@ h1 {
 
   <div class="withdrawal-note">
     <strong>Hinweis zum Widerrufsrecht:</strong>
-    Es handelt sich um einen digitalen Inhalt, der sofort nach Kauf zum Download bereitgestellt wird. Gemaess § 356 Abs. 5 BGB erlischt dein gesetzliches 14-taegiges Widerrufsrecht, sobald wir mit der Ausfuehrung des Vertrags beginnen — d.h. sobald dir der Downloadlink bereitgestellt wird — vorausgesetzt, du hast ausdruecklich zugestimmt, dass wir mit der Ausfuehrung sofort beginnen, und bestaetigt, dass du mit diesem Beginn dein Widerrufsrecht verlierst. Bitte bestaetige dies unten.
+    Es handelt sich um einen digitalen Inhalt, der sofort nach Kauf zum Download bereitgestellt wird. Gemäß § 356 Abs. 5 BGB erlischt dein gesetzliches 14-tägiges Widerrufsrecht, sobald wir mit der Ausführung des Vertrags beginnen — d.h. sobald dir der Downloadlink bereitgestellt wird — vorausgesetzt, du hast ausdrücklich zugestimmt, dass wir mit der Ausführung sofort beginnen, und bestätigt, dass du mit diesem Beginn dein Widerrufsrecht verlierst. Bitte bestätige dies unten.
   </div>
 
   <form id="checkout-form" novalidate>
     <div class="consent-box">
       <label>
         <input type="checkbox" id="consent" required>
-        <span>Ich stimme <strong>ausdruecklich zu</strong>, dass die Ausfuehrung des Vertrags sofort beginnt, und <strong>bestaetige, dass ich mit der Bereitstellung des Downloadlinks mein gesetzliches Widerrufsrecht verliere</strong>.</span>
+        <span>Ich stimme <strong>ausdrücklich zu</strong>, dass die Ausführung des Vertrags sofort beginnt, und <strong>bestätige, dass ich mit der Bereitstellung des Downloadlinks mein gesetzliches Widerrufsrecht verliere</strong>.</span>
       </label>
     </div>
 
     <button type="submit" class="submit-btn" id="submit-btn" disabled>
       Weiter zu Stripe — Jetzt kaufen <span aria-hidden="true">→</span>
     </button>
-    <a href="./" class="cancel-link">Abbrechen und zurueck zur Produktseite</a>
+    <a href="./" class="cancel-link">Abbrechen und zurück zur Produktseite</a>
   </form>
 
 </main>
 
 <footer class="t-footer">
-  © 2026 FinnWest Aviation —
-  <a href="../../impressum.html">Impressum</a> ·
-  <a href="../../datenschutz.html">Datenschutz</a> ·
-  <a href="../../agb.html">AGB</a> ·
-  <a href="../../widerruf.html">Widerruf</a>
+  <div>
+    © 2026 FinnWest Aviation —
+    <a href="../../impressum.html">Impressum</a> ·
+    <a href="../../datenschutz.html">Datenschutz</a> ·
+    <a href="../../agb.html">AGB</a> ·
+    <a href="../../widerruf.html">Widerrufsbelehrung</a>
+  </div>
+  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px auto 0;max-width:760px;">
+    EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+  </div>
+  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin:16px auto 0;max-width:760px;">
+    EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. ButtKicker ist eine Marke der The Guitammer Company. FinnWest Aviation steht in keiner Verbindung zu diesen Unternehmen und wird von ihnen nicht unterstützt oder gesponsert.
+  </div>
 </footer>
 
 <script>
@@ -318,7 +326,7 @@ h1 {
     haptic: {
       name: "FWX EC135 Haptic — Bass Shaker Mod",
       tag: "Haptic",
-      tagline: "Rotor-Impulse fuer ButtKicker / Bass Shaker (4-Blatt)",
+      tagline: "Rotor-Impulse für ButtKicker / Bass Shaker (4-Blatt)",
       price: "€3,99",
       stripe: "https://buy.stripe.com/aFaaER0hg4l6g6F7QY2Nq05"
     },
@@ -342,8 +350,8 @@ h1 {
 
   if (!product) {
     container.innerHTML =
-      '<div class="error-box"><strong>Kein Produkt ausgewaehlt.</strong> ' +
-      'Bitte gehe zurueck zur <a href="./">Produktseite</a> und waehle Sound, Haptic oder Bundle.</div>';
+      '<div class="error-box"><strong>Kein Produkt ausgewählt.</strong> ' +
+      'Bitte gehe zurück zur <a href="./">Produktseite</a> und wähle Sound, Haptic oder Bundle.</div>';
     document.getElementById('submit-btn').remove();
     document.getElementById('consent').closest('.consent-box').remove();
     return;
