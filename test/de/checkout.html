@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bestellung bestaetigen — FWX Aviation</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+  --warn: #fbbf24;
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img, svg { max-width: 100%; display: block; }
+
+.t-banner {
+  background: rgba(245,158,11,0.1);
+  border-bottom: 1px solid rgba(245,158,11,0.3);
+  color: #fbbf24;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.t-banner a { color: #fff; text-decoration: underline; }
+
+.t-nav {
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
+}
+
+main {
+  flex: 1;
+  padding: 40px 20px 60px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.lede {
+  color: var(--text-dim);
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px 24px;
+  margin-bottom: 26px;
+}
+.product-card .t-tag {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 8px;
+}
+.product-card h2 {
+  font-size: 20px; font-weight: 800; color: #fff;
+  margin-bottom: 6px;
+}
+.product-card .tagline {
+  font-size: 14px; color: var(--text-dim);
+  margin-bottom: 18px;
+}
+.product-card .price {
+  display: flex; align-items: baseline; gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.product-card .price .big {
+  font-size: 32px; font-weight: 900; color: #fff;
+  line-height: 1;
+}
+.product-card .price .note {
+  font-size: 12px; color: var(--text-muted);
+}
+
+.legal-block {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 22px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+.legal-block h3 {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 12px;
+}
+.legal-block dl {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 8px 14px;
+}
+.legal-block dt { color: var(--text-muted); font-weight: 600; }
+.legal-block dd { color: var(--text); }
+@media (max-width: 540px) {
+  .legal-block dl { grid-template-columns: 1fr; gap: 2px 0; }
+  .legal-block dd { margin-bottom: 8px; }
+}
+
+.withdrawal-note {
+  background: rgba(245,158,11,0.06);
+  border: 1px solid rgba(245,158,11,0.3);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+  font-size: 13.5px;
+  color: #fde68a;
+}
+.withdrawal-note strong { color: #fff; }
+
+.consent-box {
+  background: rgba(14,165,233,0.05);
+  border: 1px solid rgba(14,165,233,0.35);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 22px;
+}
+.consent-box label {
+  display: flex; align-items: flex-start; gap: 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+}
+.consent-box input[type="checkbox"] {
+  width: 22px; height: 22px;
+  margin-top: 2px;
+  accent-color: var(--brand);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.consent-box span { line-height: 1.55; }
+.consent-box strong { color: #fff; }
+
+.submit-btn {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  width: 100%;
+  padding: 20px 28px;
+  font-size: 17px; font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand) 60%, var(--accent));
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow:
+    0 20px 60px -15px rgba(14,165,233,0.6),
+    0 0 0 1px rgba(14,165,233,0.35) inset;
+  transition: transform .15s ease, box-shadow .2s ease, opacity .2s ease;
+  letter-spacing: 0.2px;
+}
+.submit-btn:not(:disabled):hover { transform: translateY(-2px); }
+.submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.cancel-link {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.error-box {
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.4);
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: #fecaca;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+.t-footer {
+  padding: 30px 20px 40px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  font-size: 12px; color: var(--text-muted);
+  text-align: center;
+}
+.t-footer a { color: var(--text-dim); margin: 0 8px; }
+.t-footer a:hover { color: #fff; }
+</style>
+</head>
+<body>
+
+<div class="t-banner">
+  TEST LAYOUT — nicht indexiert. <a href="./">← zurueck zur Test-Landing</a> · <a href="../checkout.html">English</a>
+</div>
+
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="./" class="t-nav-brand">
+      <img src="../../fwx-logo.svg" alt="FWX Aviation" class="t-nav-logo">
+      FWX Aviation
+    </a>
+    <a href="../checkout.html" style="color:var(--text-dim);font-size:13px;font-weight:600;" title="English">EN</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Bestellung bestaetigen</h1>
+  <p class="lede">Bevor wir dich zur Stripe-Kasse weiterleiten, pruefe bitte deine Bestellung und bestaetige den gesetzlichen Hinweis unten.</p>
+
+  <div id="product-container"></div>
+
+  <div class="legal-block">
+    <h3>Wesentliche Informationen vor Vertragsschluss (Art. 246a § 1 EGBGB)</h3>
+    <dl>
+      <dt>Verkaeufer</dt>
+      <dd>Finn West, FinnWest Aviation<br>Hittorfstr. 13, 84489 Burghausen, Deutschland<br>Finn.West@gmx.net</dd>
+      <dt>Produkt</dt>
+      <dd id="legal-product">—</dd>
+      <dt>Gesamtpreis</dt>
+      <dd id="legal-price">— <br><span style="color:var(--text-muted);font-size:12px;">Kein Ausweis der USt (Kleinunternehmer gemaess § 19 UStG). Keine Versandkosten.</span></dd>
+      <dt>Lieferung</dt>
+      <dd>Sofortiger digitaler Download nach erfolgreicher Zahlung ueber Stripe. Der Downloadlink wird auf der Zahlungsbestaetigungsseite und per E-Mail bereitgestellt.</dd>
+      <dt>Vertragssprache</dt>
+      <dd>Deutsch</dd>
+      <dt>Zahlung</dt>
+      <dd>Sichere Bezahlung via Stripe Payments Europe Ltd.</dd>
+    </dl>
+  </div>
+
+  <div class="withdrawal-note">
+    <strong>Hinweis zum Widerrufsrecht:</strong>
+    Es handelt sich um einen digitalen Inhalt, der sofort nach Kauf zum Download bereitgestellt wird. Gemaess § 356 Abs. 5 BGB erlischt dein gesetzliches 14-taegiges Widerrufsrecht, sobald wir mit der Ausfuehrung des Vertrags beginnen — d.h. sobald dir der Downloadlink bereitgestellt wird — vorausgesetzt, du hast ausdruecklich zugestimmt, dass wir mit der Ausfuehrung sofort beginnen, und bestaetigt, dass du mit diesem Beginn dein Widerrufsrecht verlierst. Bitte bestaetige dies unten.
+  </div>
+
+  <form id="checkout-form" novalidate>
+    <div class="consent-box">
+      <label>
+        <input type="checkbox" id="consent" required>
+        <span>Ich stimme <strong>ausdruecklich zu</strong>, dass die Ausfuehrung des Vertrags sofort beginnt, und <strong>bestaetige, dass ich mit der Bereitstellung des Downloadlinks mein gesetzliches Widerrufsrecht verliere</strong>.</span>
+      </label>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn" disabled>
+      Weiter zu Stripe — Jetzt kaufen <span aria-hidden="true">→</span>
+    </button>
+    <a href="./" class="cancel-link">Abbrechen und zurueck zur Produktseite</a>
+  </form>
+
+</main>
+
+<footer class="t-footer">
+  © 2026 FinnWest Aviation —
+  <a href="../../impressum.html">Impressum</a> ·
+  <a href="../../datenschutz.html">Datenschutz</a> ·
+  <a href="../../agb.html">AGB</a> ·
+  <a href="../../widerruf.html">Widerruf</a>
+</footer>
+
+<script>
+(function () {
+  var PRODUCTS = {
+    sound: {
+      name: "FWX EC135 Turbine Sound Enhancement Mod",
+      tag: "Sound",
+      tagline: "Authentischer Cockpit- und Aussen-Turbinensound",
+      price: "€7,99",
+      stripe: "https://buy.stripe.com/eVq00d6FE3h2dYxefm2Nq04"
+    },
+    haptic: {
+      name: "FWX EC135 Haptic — Bass Shaker Mod",
+      tag: "Haptic",
+      tagline: "Rotor-Impulse fuer ButtKicker / Bass Shaker (4-Blatt)",
+      price: "€3,99",
+      stripe: "https://buy.stripe.com/aFaaER0hg4l6g6F7QY2Nq05"
+    },
+    bundle: {
+      name: "FWX EC135 Sound + Haptic Bundle",
+      tag: "Bundle",
+      tagline: "Sound Pack + Haptic Engine — das komplette Paket",
+      price: "€10,99",
+      stripe: "https://buy.stripe.com/3cI00dfca7xi07Hfjq2Nq06"
+    }
+  };
+
+  function getParam(name) {
+    var m = new RegExp('[?&]' + name + '=([^&]+)').exec(window.location.search);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  var productKey = getParam('product');
+  var product = productKey && PRODUCTS[productKey];
+  var container = document.getElementById('product-container');
+
+  if (!product) {
+    container.innerHTML =
+      '<div class="error-box"><strong>Kein Produkt ausgewaehlt.</strong> ' +
+      'Bitte gehe zurueck zur <a href="./">Produktseite</a> und waehle Sound, Haptic oder Bundle.</div>';
+    document.getElementById('submit-btn').remove();
+    document.getElementById('consent').closest('.consent-box').remove();
+    return;
+  }
+
+  container.innerHTML =
+    '<div class="product-card">' +
+      '<div class="t-tag">' + product.tag + '</div>' +
+      '<h2>' + product.name + '</h2>' +
+      '<p class="tagline">' + product.tagline + '</p>' +
+      '<div class="price"><span class="big">' + product.price + '</span>' +
+      '<span class="note">einmalig · ohne USt-Ausweis (§19 UStG) · Sofort-Download</span></div>' +
+    '</div>';
+
+  document.getElementById('legal-product').textContent = product.name;
+  document.getElementById('legal-price').innerHTML =
+    product.price + '<br><span style="color:var(--text-muted);font-size:12px;">Kein Ausweis der USt (Kleinunternehmer gemaess § 19 UStG). Keine Versandkosten.</span>';
+
+  var consent = document.getElementById('consent');
+  var btn = document.getElementById('submit-btn');
+  consent.addEventListener('change', function () {
+    btn.disabled = !consent.checked;
+  });
+
+  document.getElementById('checkout-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!consent.checked) return;
+    try {
+      var record = {
+        product: productKey,
+        productName: product.name,
+        price: product.price,
+        consent: "waiver-of-withdrawal-digital-content",
+        timestamp: new Date().toISOString(),
+        language: "de",
+        userAgent: navigator.userAgent
+      };
+      var log = JSON.parse(localStorage.getItem('fwx_consent_log') || '[]');
+      log.push(record);
+      localStorage.setItem('fwx_consent_log', JSON.stringify(log));
+      localStorage.setItem('fwx_consent_last', JSON.stringify(record));
+    } catch (err) { /* localStorage ggf. deaktiviert */ }
+    window.location.href = product.stripe;
+  });
+})();
+</script>
+
+</body>
+</html>
