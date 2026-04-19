@@ -42,3 +42,7 @@ Finn West holds a Private Pilot License for Helicopters (PPL(H)) on Robinson R22
 - Privacy Policy: https://finnwestx1.com/datenschutz.html
 - Cancellation Policy: https://finnwestx1.com/widerruf.html
 - Imprint: https://finnwestx1.com/impressum.html
+
+## Voluntary Support
+
+Existing customers who wish to support further development can make a voluntary contribution (pay-what-you-want) at https://finnwestx1.com/support.html. This is strictly voluntary, without consideration, without invoice, without right of withdrawal, and not a tax-deductible donation. Payments are processed by Stripe.
