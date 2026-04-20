@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Stripe - FWX Aviation</title>
+    <meta name="description" content="Redirect confirmation to Stripe for voluntary contribution.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://finnwestx1.com/tip-redirect.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --accent: #0ea5e9; --gold: #ffcc33; --gold-2: #ff7a1a; }
+        .redirect-box { max-width: 640px; margin: 80px auto 40px; padding: 40px 32px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,204,51,0.35); }
+        .redirect-box h1 { font-size: 1.6rem; margin-bottom: 20px; color: #fff; }
+        .redirect-box p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px; }
+        .redirect-box strong { color: #fff; }
+        .btn-row { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+        .btn-primary { display: inline-block; padding: 14px 28px; border-radius: 999px; background: linear-gradient(135deg, #ffcc33, #ff7a1a); color: #000; font-weight: 700; text-decoration: none; font-size: 1rem; border: none; cursor: pointer; }
+        .btn-secondary { display: inline-block; padding: 14px 28px; border-radius: 999px; background: transparent; color: #cbd5e1; font-weight: 600; text-decoration: none; font-size: 1rem; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-secondary:hover { background: rgba(255,255,255,0.05); }
+        .amount-display { text-align: center; font-size: 1.8rem; font-weight: 700; color: var(--gold); margin: 12px 0 24px; }
+        .de { display: none; }
+        html[lang="de"] .en { display: none; }
+        html[lang="de"] .de { display: block; }
+        html[lang="de"] .de-inline { display: inline; }
+        .lang-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 4px; background: var(--bg-card); padding: 4px; border-radius: 8px; border: 1px solid var(--border); }
+        .lang-toggle button { background: none; border: none; color: var(--text-secondary); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; }
+        .lang-toggle button.active { background: var(--accent); color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="lang-toggle">
+        <button class="active" onclick="setLang('en')">EN</button>
+        <button onclick="setLang('de')">DE</button>
+    </div>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">FWX Aviation</a>
+            <div class="nav-links">
+                <a href="support.html" class="en">Back</a>
+                <a href="support.html" class="de">Zur&uuml;ck</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="redirect-box">
+        <h1 class="en">Leaving finnwestx1.com</h1>
+        <h1 class="de">Du verl&auml;sst finnwestx1.com</h1>
+
+        <div class="amount-display" id="amount-display">&euro; ?</div>
+
+        <p class="en"><strong>You are about to be redirected to Stripe</strong> (Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Dublin 2, Ireland), an independent payment processor and data controller.</p>
+        <p class="de"><strong>Du wirst gleich zu Stripe weitergeleitet</strong> (Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Dublin 2, Irland), einem unabh&auml;ngigen Zahlungsdienstleister und eigenst&auml;ndigen Verantwortlichen.</p>
+
+        <p class="en">When you continue, your IP address, browser metadata, and the amount you selected will be transmitted to Stripe. Stripe processes this data under its own privacy policy: <a href="https://stripe.com/privacy" target="_blank" rel="noopener" style="color:#7dd3fc;">stripe.com/privacy</a>. Legal basis: Art. 6(1)(b) GDPR (performance of the voluntary payment agreement pursuant to &sect; 516 BGB).</p>
+        <p class="de">Beim Fortfahren werden deine IP-Adresse, Browser-Metadaten und der ausgew&auml;hlte Betrag an Stripe &uuml;bermittelt. Stripe verarbeitet diese Daten nach eigener Datenschutzerkl&auml;rung: <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener" style="color:#7dd3fc;">stripe.com/de/privacy</a>. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Durchf&uuml;hrung der freiwilligen Zuwendung gem&auml;&szlig; &sect; 516 BGB).</p>
+
+        <p class="en">This is a voluntary contribution without consideration. Not a tax-deductible donation. No invoice, no right of withdrawal, no refund. Maximum 100 EUR per transaction.</p>
+        <p class="de">Es handelt sich um eine freiwillige Zahlung ohne Gegenleistung. Keine steuerlich abzugsf&auml;hige Spende. Keine Rechnung, kein Widerrufsrecht, keine R&uuml;ckerstattung. Maximal 100 EUR pro Transaktion.</p>
+
+        <div class="btn-row">
+            <a href="#" id="continue-btn" class="btn-primary">
+                <span class="en">Continue to Stripe &rarr;</span>
+                <span class="de">Weiter zu Stripe &rarr;</span>
+            </a>
+            <a href="support.html" class="btn-secondary">
+                <span class="en">Cancel</span>
+                <span class="de">Abbrechen</span>
+            </a>
+        </div>
+    </div>
+
+    <footer style="padding:40px 20px 30px;background:#05050a;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:#64748b;text-align:center;">
+        <div><span class="en">&copy; 2026 FinnWest Aviation &middot; Elmar Lahnstein, Burghausen, Germany</span><span class="de">&copy; 2026 FinnWest Aviation &middot; Elmar Lahnstein, Burghausen, Deutschland</span></div>
+        <div style="margin-top:12px;">
+            <a href="impressum.html" style="color:#64748b;margin:0 8px;">Impressum</a>
+            <a href="datenschutz.html" style="color:#64748b;margin:0 8px;"><span class="en">Privacy</span><span class="de">Datenschutz</span></a>
+            <a href="agb.html" style="color:#64748b;margin:0 8px;"><span class="en">Terms</span><span class="de">AGB</span></a>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            var params = new URLSearchParams(window.location.search);
+            var amount = params.get('amount');
+            var stripeBase = "https://buy.stripe.com/fZu28l6FEg3O5s1b3a2Nq07";
+            var targetUrl = stripeBase;
+            var display = document.getElementById('amount-display');
+            if (amount && /^\d+$/.test(amount)) {
+                var a = parseInt(amount, 10);
+                if (a > 10000) a = 10000;
+                if (a < 100) a = 100;
+                targetUrl = stripeBase + "?prefilled_amount=" + a;
+                display.textContent = "\u20AC " + (a/100).toFixed(2);
+            } else {
+                display.textContent = "\u20AC ?";
+            }
+            document.getElementById('continue-btn').href = targetUrl;
+        })();
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            localStorage.setItem('fwx-lang', lang);
+        }
+        (function(){ var saved = localStorage.getItem('fwx-lang'); if (saved === 'de') { document.documentElement.lang = 'de'; document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active')); document.querySelectorAll('.lang-toggle button')[1].classList.add('active'); } })();
+    </script>
+</body>
+</html>
