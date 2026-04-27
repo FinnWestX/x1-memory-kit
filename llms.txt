@@ -9,13 +9,13 @@ Contact: Finn.West@gmx.net
 
 ## Products
 
-- **FWX EC135 Sound Enhancement Pack** — EUR 7.99 — Realistic cockpit and exterior turbine sounds compatible with the Nemeth Designs EC135 (Local Legend 21) in Microsoft Flight Simulator 2024. 13 active engine WAVs, 20 ambient sounds. Uses VFS overlay technique to bypass Wwise. Compatible with both Microsoft Store and Steam versions.
-- **FWX Rotor Haptic Engine** — EUR 3.99 — Real 4-blade rotor impulses for ButtKicker, bass shakers, and any audio device. Reads GENERAL_ENG_PCT_MAX_RPM via SimConnect. Includes pause-event detection (only reliable method in MSFS 2024). GUI device dropdown. Autostart via exe.xml.
-- **FWX EC135 Bundle** — EUR 10.99 — Sound Enhancement Pack + Rotor Haptic Engine combined with separate uninstall buttons.
+- **FWX EC135 Sound Enhancement Pack** (EUR 7.99). Realistic cockpit and exterior turbine sounds compatible with the Nemeth Designs EC135 (Local Legend 21) in Microsoft Flight Simulator 2024. 13 active engine WAVs, 20 ambient sounds. Uses VFS overlay technique to bypass Wwise. Compatible with both Microsoft Store and Steam versions.
+- **FWX Rotor Haptic Engine** (EUR 3.99). Real 4-blade rotor impulses for ButtKicker, bass shakers, and any audio device. Reads GENERAL_ENG_PCT_MAX_RPM via SimConnect. Includes pause-event detection (only reliable method in MSFS 2024). GUI device dropdown. Autostart via exe.xml.
+- **FWX EC135 Bundle** (EUR 10.99). Sound Enhancement Pack + Rotor Haptic Engine combined with separate uninstall buttons.
 
 ## Distribution
 
-- Direct from finnwestx1.com (Stripe — accepts cards, PayPal, Apple Pay, Google Pay, Klarna)
+- Direct from finnwestx1.com (Stripe: cards, PayPal, Apple Pay, Google Pay, Klarna)
 - SimMarket (Vendor Client #2558)
 
 ## Compatibility
@@ -28,9 +28,9 @@ Contact: Finn.West@gmx.net
 
 ## Press Coverage
 
-- ThresholdX.net — https://www.thresholdx.net/news/fwx135
-- MSFSAddons — https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/
-- simFlight (German) — coverage from April 2026
+- ThresholdX.net: https://www.thresholdx.net/news/fwx135
+- MSFSAddons: https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/
+- simFlight (German): coverage from April 2026
 
 ## Authority
 
