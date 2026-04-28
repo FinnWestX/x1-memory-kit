@@ -57,7 +57,16 @@
     "shippingDetails": {
       "@type": "OfferShippingDetails",
       "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-      "shippingDestination": { "@type": "DefinedRegion", "geoTargetName": "WORLDWIDE" }
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "geoTargetName": "WORLDWIDE",
+        "addressCountry": "DE"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+      }
     },
     "hasMerchantReturnPolicy": {
       "@type": "MerchantReturnPolicy",
@@ -74,7 +83,8 @@
   "name": "FWX EC135 Turbinen-Sound-Enhancement-Mod: 60 Sekunden Cockpit-Demo",
   "description": "60 Sekunden Cockpit-Demo des FWX EC135 Turbinen-Sound-Enhancement-Mod für Microsoft Flight Simulator 2024.",
   "thumbnailUrl": "https://i.ytimg.com/vi/ZVN1D-Lr_eQ/maxresdefault.jpg",
-  "uploadDate": "2026-04-01",
+  "uploadDate": "2026-03-28T12:00:00+02:00",
+  "contentUrl": "https://www.youtube.com/watch?v=ZVN1D-Lr_eQ",
   "embedUrl": "https://www.youtube-nocookie.com/embed/ZVN1D-Lr_eQ"
 }
 </script>
