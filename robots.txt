@@ -4,7 +4,7 @@ Disallow: /notrack.html
 Disallow: /rabatt.html
 Disallow: /liveries.html
 
-# AI Search Engine Bots — Explicitly allowed
+# AI Search Engine Bots - Explicitly allowed
 User-agent: GPTBot
 Allow: /
 
