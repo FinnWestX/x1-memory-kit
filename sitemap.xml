@@ -92,4 +92,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://finnwestx1.com/press.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://finnwestx1.com/press.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://finnwestx1.com/de/presse.html"/>
+  </url>
+  <url>
+    <loc>https://finnwestx1.com/de/presse.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://finnwestx1.com/press.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://finnwestx1.com/de/presse.html"/>
+  </url>
 </urlset>

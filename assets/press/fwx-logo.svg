@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0c2040"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="250" fill="url(#bg)" stroke="#0ea5e9" stroke-width="4"/>
+  <!-- Rotor-Symbol (4 Blätter, minimalistisch, professionell) -->
+  <g transform="translate(256,170)">
+    <!-- Rotorblätter -->
+    <ellipse cx="0" cy="-45" rx="8" ry="45" fill="#0ea5e9" opacity="0.8" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-45" rx="8" ry="45" fill="#0ea5e9" opacity="0.6" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-45" rx="8" ry="45" fill="#0ea5e9" opacity="0.8" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-45" rx="8" ry="45" fill="#0ea5e9" opacity="0.6" transform="rotate(270)"/>
+    <!-- Rotormitte -->
+    <circle cx="0" cy="0" r="10" fill="#0ea5e9"/>
+    <circle cx="0" cy="0" r="5" fill="#0c2040"/>
+  </g>
+  <!-- Trennlinie -->
+  <line x1="156" y1="265" x2="356" y2="265" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
+  <!-- FWX Text -->
+  <text x="256" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="8">FWX</text>
+  <!-- Aviation Text -->
+  <text x="256" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="400" fill="#0ea5e9" letter-spacing="12">AVIATION</text>
+</svg>
