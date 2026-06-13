@@ -155,6 +155,54 @@ details[open] summary::after { content: "−"; }
 }
 .t-footer a { color: var(--text-dim); margin: 0 10px; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the FWX EC135 Sound Pack work with the Steam version of MSFS 2024?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The FWX EC135 Sound Enhancement Pack (v1.49) works with both the Steam and Microsoft Store editions of Microsoft Flight Simulator 2024. The installer is a single .exe that automatically detects the correct Community folder for whichever edition you run, so you never have to locate any path by hand. On some Steam installations the package load order must be set inside MSFS so the FWX audio takes priority over the default EC135 sounds; from version 1.42 onward the installer shows an explicit dialog about this one-time step, so it cannot be missed. The Sound Pack enhances the free Nemeth Design EC135 (Local Legend 21) that ships with MSFS 2024, and it runs on Windows 10 and Windows 11. It does not run on Xbox, because Xbox cannot install third-party Community add-ons. If you later move between the Steam and Microsoft Store editions, run the installer again and it re-detects whichever Community folder is active."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which bass shakers and transducers does the FWX Rotor Haptic Engine support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The FWX Rotor Haptic Engine (v1.53) works with any haptic hardware that Windows sees as an audio output device. That includes ButtKicker units such as the Gamer, Mini and LFE models, generic bass shakers and tactile transducers, and even a spare pair of speakers repurposed as transducers. The engine sends dedicated four-blade rotor pulses in sync with the helicopter, and a device dropdown in its small interface lets you choose exactly which output the pulses are routed to, so your headphones or main speakers stay untouched. It starts automatically when MSFS 2024 launches. A haptic device is required for it to have any effect; with no transducer connected there is nothing to feel. The Haptic Engine works with any four-blade rotor helicopter in MSFS 2024, not only the EC135. Because each output is selected separately, the cockpit turbine audio can stay on your headset while the rotor pulses are sent only to the shaker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I install the FWX EC135 Sound Pack into the MSFS Community folder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After purchase you download a single installer (.exe); there is no ZIP to extract. Double-click it and choose Install, and it automatically finds your Microsoft Flight Simulator 2024 Community folder for both the Microsoft Store and Steam editions, so you do not have to navigate there yourself. Click through the dialogs, confirm the package reorder instructions if prompted so the FWX audio takes priority, and the enhancement is active the next time you load the Nemeth Design EC135. To remove it later, run the same .exe and choose Uninstall instead of Install; the default EC135 sounds return cleanly. A full step-by-step guide with screenshots is available on the Installation Guide page, and support is one email away at Finn.West@gmx.net if anything looks different on your system. Because everything installs through the standard Community-folder mechanism, it sits alongside your other MSFS add-ons and does not modify the simulator's own files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the FWX Bundle and the standalone Sound Pack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standalone FWX EC135 Sound Enhancement Pack (EUR 7.99, v1.49) replaces the EC135's in-game audio with custom turbine recordings: 13 active engine layers plus 20 ambient sounds for both cockpit and exterior views. It works with any audio setup and needs no extra hardware. The FWX Rotor Haptic Engine (EUR 3.99, v1.53) is a separate program that drives ButtKickers and bass shakers with real four-blade rotor pulses, so you physically feel the rotor in your seat; it needs a haptic device to do anything. The FWX EC135 Bundle (EUR 10.99) combines both products in one purchase at a lower combined price, with separate uninstall buttons so you can remove either part on its own. Choose the Sound Pack alone for better audio only; choose the Bundle if you also own a bass shaker and want synchronized rotor haptics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which MSFS versions and editions do FWX products support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All FWX Aviation products, the EC135 Sound Enhancement Pack (v1.49), the Rotor Haptic Engine (v1.53) and the EC135 Bundle (v1.49), are built and tested exclusively for Microsoft Flight Simulator 2024. MSFS 2020 is not supported, because the products target the MSFS 2024 audio system and the Nemeth Design EC135 (Local Legend 21) that released for MSFS 2024 in August 2025. Both the Microsoft Store and the Steam edition of MSFS 2024 are supported, and the installer auto-detects the correct Community folder for each. The products run on Windows 10 and Windows 11 only; they do not run on Mac or Xbox, since Xbox cannot install third-party Community add-ons and the Haptic Engine requires Windows. Every future version upgrade is free for existing customers and arrives through the same download link you received at purchase."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -275,6 +323,45 @@ details[open] summary::after { content: "−"; }
       <div class="faq-body">
         <p>Email: <a href="mailto:Finn.West@gmx.net">Finn.West@gmx.net</a></p>
         <p>I read and reply to every message. Response time is usually under 24 hours (German timezone).</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="faq-group">
+    <h2>Sound Pack, Haptics &amp; Bundle in depth</h2>
+
+    <details class="faq-item" id="faq-steam-version">
+      <summary>Does the FWX EC135 Sound Pack work with the Steam version of MSFS 2024?</summary>
+      <div class="faq-body">
+        <p>Yes. The FWX EC135 Sound Enhancement Pack (v1.49) works with both the Steam and Microsoft Store editions of Microsoft Flight Simulator 2024. The installer is a single .exe that automatically detects the correct Community folder for whichever edition you run, so you never have to locate any path by hand. On some Steam installations the package load order must be set inside MSFS so the FWX audio takes priority over the default EC135 sounds; from version 1.42 onward the installer shows an explicit dialog about this one-time step, so it cannot be missed. The Sound Pack enhances the free Nemeth Design EC135 (Local Legend 21) that ships with MSFS 2024, and it runs on Windows 10 and Windows 11. It does not run on Xbox, because Xbox cannot install third-party Community add-ons. If you later move between the Steam and Microsoft Store editions, run the installer again and it re-detects whichever Community folder is active.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-supported-shakers">
+      <summary>Which bass shakers and transducers does the FWX Rotor Haptic Engine support?</summary>
+      <div class="faq-body">
+        <p>The FWX Rotor Haptic Engine (v1.53) works with any haptic hardware that Windows sees as an audio output device. That includes ButtKicker units such as the Gamer, Mini and LFE models, generic bass shakers and tactile transducers, and even a spare pair of speakers repurposed as transducers. The engine sends dedicated four-blade rotor pulses in sync with the helicopter, and a device dropdown in its small interface lets you choose exactly which output the pulses are routed to, so your headphones or main speakers stay untouched. It starts automatically when MSFS 2024 launches. A haptic device is required for it to have any effect; with no transducer connected there is nothing to feel. The Haptic Engine works with any four-blade rotor helicopter in MSFS 2024, not only the EC135. Because each output is selected separately, the cockpit turbine audio can stay on your headset while the rotor pulses are sent only to the shaker.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-install-community">
+      <summary>How do I install the FWX EC135 Sound Pack into the MSFS Community folder?</summary>
+      <div class="faq-body">
+        <p>After purchase you download a single installer (.exe); there is no ZIP to extract. Double-click it and choose Install, and it automatically finds your Microsoft Flight Simulator 2024 Community folder for both the Microsoft Store and Steam editions, so you do not have to navigate there yourself. Click through the dialogs, confirm the package reorder instructions if prompted so the FWX audio takes priority, and the enhancement is active the next time you load the Nemeth Design EC135. To remove it later, run the same .exe and choose Uninstall instead of Install; the default EC135 sounds return cleanly. A full step-by-step guide with screenshots is available on the Installation Guide page, and support is one email away at Finn.West@gmx.net if anything looks different on your system. Because everything installs through the standard Community-folder mechanism, it sits alongside your other MSFS add-ons and does not modify the simulator's own files.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-bundle-vs-soundpack">
+      <summary>What is the difference between the FWX Bundle and the standalone Sound Pack?</summary>
+      <div class="faq-body">
+        <p>The standalone FWX EC135 Sound Enhancement Pack (EUR 7.99, v1.49) replaces the EC135's in-game audio with custom turbine recordings: 13 active engine layers plus 20 ambient sounds for both cockpit and exterior views. It works with any audio setup and needs no extra hardware. The FWX Rotor Haptic Engine (EUR 3.99, v1.53) is a separate program that drives ButtKickers and bass shakers with real four-blade rotor pulses, so you physically feel the rotor in your seat; it needs a haptic device to do anything. The FWX EC135 Bundle (EUR 10.99) combines both products in one purchase at a lower combined price, with separate uninstall buttons so you can remove either part on its own. Choose the Sound Pack alone for better audio only; choose the Bundle if you also own a bass shaker and want synchronized rotor haptics.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-msfs-versions-all">
+      <summary>Which MSFS versions and editions do FWX products support?</summary>
+      <div class="faq-body">
+        <p>All FWX Aviation products, the EC135 Sound Enhancement Pack (v1.49), the Rotor Haptic Engine (v1.53) and the EC135 Bundle (v1.49), are built and tested exclusively for Microsoft Flight Simulator 2024. MSFS 2020 is not supported, because the products target the MSFS 2024 audio system and the Nemeth Design EC135 (Local Legend 21) that released for MSFS 2024 in August 2025. Both the Microsoft Store and the Steam edition of MSFS 2024 are supported, and the installer auto-detects the correct Community folder for each. The products run on Windows 10 and Windows 11 only; they do not run on Mac or Xbox, since Xbox cannot install third-party Community add-ons and the Haptic Engine requires Windows. Every future version upgrade is free for existing customers and arrives through the same download link you received at purchase.</p>
       </div>
     </details>
   </section>
