@@ -248,7 +248,7 @@ h1 .accent {
       <ul>
         <li><strong>Audible turbine ignition.</strong> You now hear the distinctive igniter clicks right at the beginning of each engine start, then the clear light-up as combustion catches.</li>
         <li><strong>Complete independent per-engine spool-up.</strong> From there each engine plays its full turbine spool-up. Start or shut down either engine on its own and hear each one spool up completely.</li>
-        <li><strong>Matched cold start.</strong> Engine 1 now cranks up exactly like Engine 2 for consistent realism on both sides.</li>
+        <li><strong>Matched cold-start layer.</strong> Engine 1's cold-start cranking layer now matches Engine 2 for consistent realism on both sides.</li>
       </ul>
     </div>
   </article>
@@ -263,11 +263,11 @@ h1 .accent {
       <h3>New</h3>
       <ul>
         <li><strong>Interruptible startup sequence.</strong> The turbine spool-up can now be aborted at any moment by switching the starter off, matching real EC135 behaviour. No more committed startup once you flip the switch.</li>
-        <li><strong>Fully independent dual engines.</strong> Engine 1 and Engine 2 are now completely separated. Asymmetric start, asymmetric shutdown, single-engine taxi: each engine has its own voice.</li>
+        <li><strong>Fully independent dual engines.</strong> Engine 1 and Engine 2 are now completely separated. Asymmetric start, asymmetric shutdown, single-engine taxi: each engine plays its own sound layer.</li>
       </ul>
       <h3>Installer</h3>
       <ul>
-        <li>New installer that finds your simulator on its own, with a manual override if you need one.</li>
+        <li>New installer with editable Community-folder path picker and improved auto-detection.</li>
         <li>Clean Apps and Features integration for proper Windows uninstall.</li>
       </ul>
     </div>
@@ -282,7 +282,7 @@ h1 .accent {
     <div class="release-notes">
       <h3>Fixed</h3>
       <ul>
-        <li>Turbine startup sound now plays reliably from cold start. Under certain audio configurations the FWX startup sound in v1.44 could stay silent and you were left with the default sound.</li>
+        <li>Turbine startup sound now plays reliably from cold start. Under certain audio configurations the FWX startup sound in v1.44 could fail to engage, causing MSFS to fall back to the default sound.</li>
         <li>AI helicopters (AI Traffic) now correctly receive the FWX sounds.</li>
       </ul>
       <h3>Improved</h3>
@@ -301,12 +301,12 @@ h1 .accent {
     <div class="release-notes">
       <h3>New</h3>
       <ul>
-        <li>Installer now shows an explicit <strong>extra-step dialog</strong>. A small number of Steam setups need one additional click after installing before the FWX audio is audible, and the dialog now walks you through it so it can't be missed.</li>
-        <li>Updated product description and requirements mention this extra step up front.</li>
+        <li>Installer now shows an explicit <strong>Package Reorder dialog</strong>. On some Steam installations the FWX package has to be loaded above the stock EC135 package, and the dialog now explains this step so it can't be missed.</li>
+        <li>Updated product description and requirements mention the load-order note up front.</li>
       </ul>
       <h3>Fixes</h3>
       <ul>
-        <li>Addressed the case reported by some Steam users where the FWX audio was not audible after installation.</li>
+        <li>Addressed the load-order case reported by some Steam users where the FWX audio was not audible after installation.</li>
       </ul>
     </div>
   </article>
@@ -321,7 +321,7 @@ h1 .accent {
       <h3>New</h3>
       <ul>
         <li>Full cockpit and exterior turbine audio for the EC135 in MSFS 2024.</li>
-        <li>Cold start, spool-up, idle, flight and shutdown, plus a custom startup sequence.</li>
+        <li>13 active engine WAVs, 20 non-engine WAVs, custom startup sequence.</li>
         <li>Tuned pitch variation for a smoother, more realistic turbine response under torque changes.</li>
         <li>ButtKicker-safe, no internal cockpit bass rumble.</li>
       </ul>
@@ -354,7 +354,7 @@ h1 .accent {
     <div class="release-notes">
       <h3>Installer</h3>
       <ul>
-        <li>New installer that finds your simulator on its own, with a manual override if you need one.</li>
+        <li>New installer with editable Community-folder path picker and improved auto-detection.</li>
         <li>Clean Apps and Features integration for proper Windows uninstall.</li>
       </ul>
       <h3>Unchanged</h3>
@@ -387,8 +387,8 @@ h1 .accent {
     <div class="release-notes">
       <h3>New</h3>
       <ul>
-        <li><strong>Auto-close:</strong> the Haptic Engine now exits automatically when MSFS 2024 is closed. Nothing is left running after you quit the sim.</li>
-        <li>Stability and performance refinements.</li>
+        <li><strong>Auto-close:</strong> the Haptic Engine now exits automatically when MSFS 2024 is closed. No more background processes after you quit the sim.</li>
+        <li>Stability and performance refinements across rotor reads and device output.</li>
       </ul>
     </div>
   </article>
@@ -429,7 +429,7 @@ h1 .accent {
       <ul>
         <li>Turbine Sound Enhancement Mod v1.54</li>
         <li>Haptic Bass Shaker Mod v1.54</li>
-        <li>One-click installer that finds your simulator on its own, separate uninstall entries for each component</li>
+        <li>One-click installer with editable Community-folder path picker, separate uninstall entries for each component</li>
       </ul>
     </div>
   </article>
@@ -445,7 +445,7 @@ h1 .accent {
       <ul>
         <li>Turbine Sound Enhancement Mod v1.52 (complete, independent per-engine turbine spool-up on start)</li>
         <li>Haptic Bass Shaker Mod v1.53 (sound and impulse characteristics unchanged)</li>
-        <li>One-click installer that finds your simulator on its own, separate uninstall entries for each component</li>
+        <li>One-click installer with editable Community-folder path picker, separate uninstall entries for each component</li>
       </ul>
     </div>
   </article>
@@ -461,7 +461,7 @@ h1 .accent {
       <ul>
         <li>Turbine Sound Enhancement Mod v1.49 (interruptible startup sequence, fully independent dual engines)</li>
         <li>Haptic Bass Shaker Mod v1.53 (new installer, sound and impulse characteristics unchanged)</li>
-        <li>New installer that finds your simulator on its own with a manual override, clean Apps and Features integration, separate uninstall entries for each component</li>
+        <li>New installer with editable Community-folder path picker, improved auto-detection, clean Apps and Features integration, separate uninstall entries for each component</li>
       </ul>
     </div>
   </article>
@@ -491,7 +491,7 @@ h1 .accent {
     <div class="release-notes">
       <h3>Contents</h3>
       <ul>
-        <li>Turbine Sound Enhancement Mod v1.44 (with the guided extra-step dialog for Steam setups)</li>
+        <li>Turbine Sound Enhancement Mod v1.44 (with Package Reorder dialog)</li>
         <li>Haptic Bass Shaker Mod v1.51 (with auto-close and stability refinements)</li>
         <li>Combined installer with separate uninstall entries for each component</li>
       </ul>
