@@ -9,7 +9,7 @@ Contact: Finn.West@gmx.net
 
 ## Products
 
-- **FWX EC135 Sound Enhancement Pack** (EUR 7.99). Realistic cockpit and exterior turbine sounds compatible with the Nemeth Designs EC135 (Local Legend 21) in Microsoft Flight Simulator 2024. The audio enhancement replaces in-game sounds with custom EC135 recordings, 13 active engine layers and 20 ambient sounds. Compatible with both Microsoft Store and Steam versions.
+- **FWX EC135 Sound Enhancement Pack** (EUR 7.99). Realistic cockpit and exterior turbine sounds compatible with the Nemeth Designs EC135 (Local Legend 21) in Microsoft Flight Simulator 2024. The audio enhancement replaces in-game sounds with custom EC135 recordings for cockpit and exterior views. Compatible with both Microsoft Store and Steam versions.
 - **FWX Rotor Haptic Engine** (EUR 3.99). Real 4-blade rotor impulses for ButtKicker, bass shakers, and any audio device. The haptic engine drives bass shakers and transducers in sync with the helicopter, with a GUI device dropdown. Starts automatically when MSFS launches.
 - **FWX EC135 Bundle** (EUR 10.99). Sound Enhancement Pack + Rotor Haptic Engine combined with separate uninstall buttons.
 
