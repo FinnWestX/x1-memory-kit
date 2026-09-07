@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FWX EC135 Enhancement Mod: Frequently Asked Questions</title>
+<meta name="description" content="FAQ for the FWX EC135 Turbine Sound Enhancement Mod and the FWX Helicopter Rotor Blade Haptic: MSFS 2024 compatibility, installation, Steam/Store, refunds and support.">
+<style>
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+
+main {
+  max-width: 860px; margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.02em; line-height: 1.1;
+  margin-bottom: 14px;
+}
+h1 .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lede {
+  font-size: 17px; color: var(--text-dim);
+  margin-bottom: 44px; max-width: 620px;
+}
+
+.faq-group { margin-bottom: 40px; }
+.faq-group h2 {
+  font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--accent); margin-bottom: 16px; font-weight: 700;
+}
+
+details.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0;
+  margin-bottom: 10px;
+  transition: background 0.2s ease;
+  overflow: hidden;
+}
+details.faq-item[open] { background: rgba(14,165,233,0.05); border-color: rgba(14,165,233,0.3); }
+summary {
+  padding: 18px 22px;
+  font-size: 16px; font-weight: 600; color: #fff;
+  cursor: pointer;
+  list-style: none;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "+";
+  font-size: 22px; font-weight: 300;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+details[open] summary::after { content: "−"; }
+.faq-body {
+  padding: 0 22px 22px;
+  color: var(--text-dim);
+  font-size: 15px; line-height: 1.7;
+}
+.faq-body p { margin-bottom: 10px; }
+.faq-body p:last-child { margin-bottom: 0; }
+.faq-body code {
+  background: rgba(255,255,255,0.06);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: 13px;
+  color: var(--accent);
+}
+.faq-body strong { color: #fff; }
+
+.back-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.back-cta h3 { color: #fff; font-size: 22px; margin-bottom: 10px; }
+.back-cta p { color: var(--text-dim); margin-bottom: 20px; }
+.back-cta .btn {
+  display: inline-block; padding: 14px 28px; border-radius: 12px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 15px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.t-footer {
+  padding: 40px 20px 30px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px; color: var(--text-muted);
+}
+.t-footer a { color: var(--text-dim); margin: 0 10px; }
+
+/* ---------- KLON-BANNER + GELBE RANDNOTIZEN (07.09.2026) ---------------
+   VOR DER VEROEFFENTLICHUNG ERSATZLOS LOESCHEN: dieser CSS-Block, der
+   Banner ganz oben im Koerper und jede .chef-note. */
+.draft-banner { background: rgba(245,158,11,0.10); border-bottom: 2px solid rgba(245,158,11,0.55);
+  color: #fde68a; padding: 14px 20px; font-size: 13px; line-height: 1.55; }
+.draft-banner .inner { max-width: 900px; margin: 0 auto; }
+.draft-banner strong { color: #fff; }
+.draft-banner ul { margin: 8px 0 0 18px; }
+.chef-note { display: block; margin: 8px 0; padding: 7px 11px; border-left: 4px solid #f59e0b;
+  background: rgba(245,158,11,0.10); color: #fde68a; font-size: 12px; line-height: 1.5; border-radius: 0 6px 6px 0; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the FWX EC135 Sound Pack work with the Steam version of MSFS 2024?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The FWX EC135 Sound Enhancement Pack (v1.52) works with both the Steam and Microsoft Store editions of Microsoft Flight Simulator 2024. The installer is a single .exe that automatically detects the correct Community folder for whichever edition you run, so you never have to locate any path by hand. On some Steam installations the package load order must be set inside MSFS so the FWX audio takes priority over the default EC135 sounds; from version 1.42 onward the installer shows an explicit dialog about this one-time step, so it cannot be missed. The Sound Pack enhances the free Nemeth Design EC135 (Local Legend 21) that ships with MSFS 2024, and it runs on Windows 10 and Windows 11. It does not run on Xbox, because Xbox cannot install third-party Community add-ons. If you later move between the Steam and Microsoft Store editions, run the installer again and it re-detects whichever Community folder is active."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which shakers and transducers does the FWX Helicopter Rotor Blade Haptic support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The FWX Helicopter Rotor Blade Haptic works with any haptic hardware that Windows sees as an audio output device: shakers, tactile transducers, and even a spare pair of speakers repurposed as transducers. You feel single blade beats rather than one flat vibration, and the device list in the Haptic tab of the FWX Control Center - the panel you open from the toolbar inside the simulator - lets you choose exactly which output the pulses go to, so your headphones or main speakers stay untouched. A haptic device is required for it to have any effect; with nothing connected there is nothing to feel. It works on every helicopter in MSFS 2024, turbine or piston, not only the EC135, and the blade count is picked for the common types by itself. Because each output is selected separately, the cockpit turbine audio can stay on your headset while the rotor pulses go only to the shaker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I install the FWX EC135 Sound Pack into the MSFS Community folder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After purchase you download a single installer (.exe); there is no ZIP to extract. Double-click it and choose Install, and it automatically finds your Microsoft Flight Simulator 2024 Community folder for both the Microsoft Store and Steam editions, so you do not have to navigate there yourself. Click through the dialogs, confirm the package reorder instructions if prompted so the FWX audio takes priority, and the enhancement is active the next time you load the Nemeth Design EC135. To remove it later, run the same .exe and choose Uninstall instead of Install; the default EC135 sounds return cleanly. A full step-by-step guide with screenshots is available on the Installation Guide page, and support is one email away at Finn.West@gmx.net if anything looks different on your system. Because everything installs through the standard Community-folder mechanism, it sits alongside your other MSFS add-ons and does not modify the simulator's own files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the FWX Bundle and the standalone Sound Pack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standalone FWX EC135 Sound Enhancement Pack (EUR 7.99) replaces the EC135's in-game audio with custom turbine recordings: 13 active engine layers plus 20 ambient sounds for both cockpit and exterior views. It works with any audio setup and needs no extra hardware. The FWX Helicopter Rotor Blade Haptic (EUR 7.99) turns the rotor into single blade beats you feel in your seat or through your controls, on every helicopter in MSFS 2024; it needs a haptic device to do anything. The FWX EC135 Bundle (EUR 14.99) combines both products in one purchase at a lower combined price, with separate uninstall buttons so you can remove either part on its own. Both are set up in the same place: the FWX Control Center panel inside the simulator. Choose the Sound Pack alone for better audio only; choose the Bundle if you also own a shaker and want the rotor as well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which MSFS versions and editions do FWX products support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All FWX Aviation products - the EC135 Sound Enhancement Pack, the FWX Helicopter Rotor Blade Haptic and the EC135 Bundle - are built and tested exclusively for Microsoft Flight Simulator 2024. MSFS 2020 is not supported, because the products target the MSFS 2024 audio system and the Nemeth Design EC135 (Local Legend 21) that released for MSFS 2024 in August 2025. Both the Microsoft Store and the Steam edition of MSFS 2024 are supported, and the installer auto-detects the correct Community folder for each. The products run on Windows 10 and Windows 11 only; they do not run on Mac or Xbox, since Xbox cannot install third-party Community add-ons and our add-ons require Windows. Every future version upgrade is free for existing customers and arrives through the same download link you received at purchase."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- KLON-BANNER - VOR DER VEROEFFENTLICHUNG ERSATZLOS LOESCHEN (Block + CSS) -->
+<div class="draft-banner">
+  <div class="inner">
+    <strong>KLON: FAQ (EN) - nicht veroeffentlicht.</strong> Stand 07.09.2026. Die Live-Seite ist unveraendert.
+    Geaendert wurde nur, was mit dem Haptik-Produkt, dem Sound-Mod und den alten Windows-Oberflaechen zu tun
+    hat - alles andere steht Wort fuer Wort wie auf der Live-Seite. Offene Punkte:
+    <ul>
+      <li><strong>&#9888; Versionsnummern entfernt</strong> (v1.52 / v1.53). Sie standen an sechs Stellen und sind ueberholt; ich habe sie NICHT durch geratene Zahlen ersetzt. Wenn der Chef aktuelle Zahlen nennt, kommen sie zurueck.</li>
+      <li><strong>Preise unveraendert</strong> (7,99 / 3,99 / 10,99 EUR) - siehe den gelben Punkt auf der Hauptseite: der Haptik-Preis gehoert bestaetigt.</li>
+      <li><strong>Jede geaenderte Antwort steht ZWEIMAL in der Datei</strong> - einmal sichtbar und einmal in den unsichtbaren Daten fuer Suchmaschinen. Beide sind gleich nachgezogen.</li>
+      <li><strong>Alte Windows-Oberflaeche raus</strong>, ersetzt durch das In-Sim-Panel FWX Control Center. Fremde Geraete-Markennamen raus - die Markenzeile in der Fusszeile bleibt.</li>
+      <li><strong>&#9888; "Windows 10 und 11"</strong> steht hier weiter so; die Mod-Seiten sagen "Windows 11". Chef-Entscheid offen, ich habe nichts vereinheitlicht.</li>
+      <li><strong>&#9888; STRIPE-PREISE SIND NICHT GEAENDERT.</strong> Die neuen Betraege stehen nur auf
+          unseren Seiten. Die Artikel im Stripe-Konto tragen weiter die alten Preise - der Kunde zahlt
+          sonst auf der Bezahlseite etwas anderes, als hier steht. <strong>Das muss der Chef im
+          Stripe-Konto selbst nachziehen</strong>; von uns aus ist das nicht moeglich und wurde NICHT
+          angefasst.</li>
+    </ul>
+  </div>
+</div>
+
+
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="./" class="t-nav-brand">
+      <img src="../fwx-logo.svg" alt="FWX Aviation" class="t-nav-logo">
+      FWX Aviation
+    </a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="de/faq.html" style="color:var(--text-dim);font-size:13px;font-weight:600;">DE</a>
+      <a href=".././#pricing" class="t-nav-cta">See pricing</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Frequently asked <span class="accent">questions</span>.</h1>
+  <p class="lede">Short, honest answers about the FWX EC135 Turbine Sound Enhancement Mod and the FWX Helicopter Rotor Blade Haptic. If something is missing, email us at Finn.West@gmx.net.</p>
+
+  <section class="faq-group">
+    <h2>Compatibility &amp; Requirements</h2>
+
+    <details class="faq-item" id="faq-msfs-version">
+      <summary>Which version of MSFS does this work with?</summary>
+      <div class="faq-body">
+        <p><strong>Microsoft Flight Simulator 2024 only.</strong> The Turbine Sound Enhancement Mod and the FWX Helicopter Rotor Blade Haptic were built and tested against MSFS 2024. MSFS 2020 is not supported.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-steam-store">
+      <summary>Does it work with both Steam and MS Store editions?</summary>
+      <div class="faq-body">
+        <p>Yes, both editions are supported. The installer auto-detects the Community folder for MS Store and Steam.</p>
+        <p><strong>Note for Steam users:</strong> On some Steam installations the package load order needs to be adjusted inside MSFS so the FWX audio takes priority. From v1.42 onward the installer shows an explicit dialog about this step, so you can't miss it.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-ec135-needed">
+      <summary>Do I need any extra helicopter add-on?</summary>
+      <div class="faq-body">
+        <p>No. The Enhancement Mod is compatible with the free <strong>Nemeth Design EC135</strong> that ships with MSFS 2024, so you already have it.</p>
+        <p><strong>Important:</strong> The mod is <strong>not</strong> compatible with the paid <strong>HPG H135 or HPG H145</strong> from Hype Performance Group. Please make sure you are flying the free Nemeth Design EC135 before purchasing.</p>
+        <p>The FWX Helicopter Rotor Blade Haptic works standalone and is compatible with <strong>every helicopter</strong> in MSFS 2024, turbine or piston, not just the EC135.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-buttkicker">
+      <summary>Do I need a shaker or transducer?</summary>
+      <div class="faq-body">
+        <p>The Turbine Sound Enhancement Mod works with any audio setup: headphones, speakers, or transducers. It is built to be shaker-safe, meaning no unwanted rumble inside the cockpit audio.</p>
+        <p>The FWX Helicopter Rotor Blade Haptic is made for a shaker or any haptic transducer. It sends rotor pulses so you feel the blade rhythm in your chair. Without such a device it has no effect, so get the Turbine Sound Enhancement Mod only in that case.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="faq-group">
+    <h2>Installation &amp; Setup</h2>
+
+    <details class="faq-item" id="faq-how-install">
+      <summary>How do I install the Turbine Sound Enhancement Mod?</summary>
+      <div class="faq-body">
+        <p>Double-click the installer (.exe) you downloaded after purchase. No ZIP, no extraction. When the installer opens, choose <strong>Install</strong>. It detects your MSFS 2024 Community folder automatically. Click through the dialogs, confirm the package reorder instructions if prompted, and you're done.</p>
+        <p>Full step-by-step guide with screenshots: <a href="install.html">Installation Guide</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-uninstall">
+      <summary>How do I uninstall it?</summary>
+      <div class="faq-body">
+        <p>Run the same installer (.exe) you used to install. It doubles as an uninstaller. When it opens, choose <strong>Uninstall</strong> instead of Install. The Community folder entries for the Turbine Sound Enhancement Mod are removed cleanly, the default EC135 sounds come back, and the FWX Helicopter Rotor Blade Haptic removes itself cleanly. Each installer handles its own product; if you have the Bundle, use the Bundle installer to remove both in one go.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-mac">
+      <summary>Does it work on Mac or Xbox?</summary>
+      <div class="faq-body">
+        <p>Windows-only. MSFS 2024 is a Windows title for PC and Xbox, and our add-ons require Windows. Xbox cannot install third-party Community addons at all, so this is fundamentally a PC product.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="faq-group">
+    <h2>Purchase, Updates &amp; Support</h2>
+
+    <details class="faq-item" id="faq-how-delivered">
+      <summary>How do I get the files after buying?</summary>
+      <div class="faq-body">
+        <p>Payment runs through Stripe (card, PayPal, Apple Pay, Google Pay, Link, Amazon Pay). After a successful payment you are redirected to a success page and receive an email with a download link. The download can be used up to three times from our download page using your email and order number.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-updates">
+      <summary>Do I get free updates?</summary>
+      <div class="faq-body">
+        <p>Yes, every version upgrade is free for existing customers. <strong>We notify you by email</strong> as soon as a new version is available, and your original Stripe download link always delivers the latest build. You can also see what is new on the <a href="../changelog.html">changelog</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-refund">
+      <summary>What is your refund policy?</summary>
+      <div class="faq-body">
+        <p><strong>30-day technical refund.</strong> If the product does not work on your setup or does not match the demo, email Finn.West@gmx.net within 30 days with your order number. We will investigate and issue a full refund for confirmed technical issues. Refunds are processed manually to ensure fair handling.</p>
+        <p>Formally, German law removes the statutory right of withdrawal for digital content once the download link is provided. Our technical refund policy is a voluntary goodwill measure in addition to that. We honour it for confirmed technical issues, and refunds are processed manually to ensure fair handling.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-simmarket">
+      <summary>Why is the same product on SimMarket too?</summary>
+      <div class="faq-body">
+        <p>Because SimMarket is an established marketplace that publishes quality flight-sim add-ons, and we are proud to be listed there with other respected developers. You get the same product with the same updates. SimMarket adds their marketplace markup, so the direct price on our own site is lower. Buy wherever you feel most comfortable; promotional discounts are only available here.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-contact">
+      <summary>How do I reach you for support?</summary>
+      <div class="faq-body">
+        <p>Email: <a href="mailto:Finn.West@gmx.net">Finn.West@gmx.net</a></p>
+        <p>I read and reply to every message. Response time is usually under 24 hours (German timezone).</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="faq-group">
+    <h2>Sound Pack, Haptics &amp; Bundle in depth</h2>
+
+    <details class="faq-item" id="faq-steam-version">
+      <summary>Does the FWX EC135 Sound Pack work with the Steam version of MSFS 2024?</summary>
+      <div class="faq-body">
+        <p>Yes. The FWX EC135 Sound Enhancement Pack (v1.52) works with both the Steam and Microsoft Store editions of Microsoft Flight Simulator 2024. The installer is a single .exe that automatically detects the correct Community folder for whichever edition you run, so you never have to locate any path by hand. On some Steam installations the package load order must be set inside MSFS so the FWX audio takes priority over the default EC135 sounds; from version 1.42 onward the installer shows an explicit dialog about this one-time step, so it cannot be missed. The Sound Pack enhances the free Nemeth Design EC135 (Local Legend 21) that ships with MSFS 2024, and it runs on Windows 10 and Windows 11. It does not run on Xbox, because Xbox cannot install third-party Community add-ons. If you later move between the Steam and Microsoft Store editions, run the installer again and it re-detects whichever Community folder is active.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-supported-shakers">
+      <summary>Which shakers and transducers does the FWX Helicopter Rotor Blade Haptic support?</summary>
+      <div class="faq-body">
+        <p>The FWX Helicopter Rotor Blade Haptic works with any haptic hardware that Windows sees as an audio output device: shakers, tactile transducers, and even a spare pair of speakers repurposed as transducers. You feel single blade beats rather than one flat vibration, and the device list in the Haptic tab of the FWX Control Center - the panel you open from the toolbar inside the simulator - lets you choose exactly which output the pulses go to, so your headphones or main speakers stay untouched. A haptic device is required for it to have any effect; with nothing connected there is nothing to feel. It works on every helicopter in MSFS 2024, turbine or piston, not only the EC135, and the blade count is picked for the common types by itself. Because each output is selected separately, the cockpit turbine audio can stay on your headset while the rotor pulses go only to the shaker.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-install-community">
+      <summary>How do I install the FWX EC135 Sound Pack into the MSFS Community folder?</summary>
+      <div class="faq-body">
+        <p>After purchase you download a single installer (.exe); there is no ZIP to extract. Double-click it and choose Install, and it automatically finds your Microsoft Flight Simulator 2024 Community folder for both the Microsoft Store and Steam editions, so you do not have to navigate there yourself. Click through the dialogs, confirm the package reorder instructions if prompted so the FWX audio takes priority, and the enhancement is active the next time you load the Nemeth Design EC135. To remove it later, run the same .exe and choose Uninstall instead of Install; the default EC135 sounds return cleanly. A full step-by-step guide with screenshots is available on the Installation Guide page, and support is one email away at Finn.West@gmx.net if anything looks different on your system. Because everything installs through the standard Community-folder mechanism, it sits alongside your other MSFS add-ons and does not modify the simulator's own files.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-bundle-vs-soundpack">
+      <summary>What is the difference between the FWX Bundle and the standalone Sound Pack?</summary>
+      <div class="faq-body">
+        <p>The standalone FWX EC135 Sound Enhancement Pack (EUR 7.99) replaces the EC135's in-game audio with custom turbine recordings: 13 active engine layers plus 20 ambient sounds for both cockpit and exterior views. It works with any audio setup and needs no extra hardware. The FWX Helicopter Rotor Blade Haptic (EUR 7.99) turns the rotor into single blade beats you feel in your seat or through your controls, on every helicopter in MSFS 2024; it needs a haptic device to do anything. The FWX EC135 Bundle (EUR 14.99) combines both products in one purchase at a lower combined price, with separate uninstall buttons so you can remove either part on its own. Both are set up in the same place: the FWX Control Center panel inside the simulator. Choose the Sound Pack alone for better audio only; choose the Bundle if you also own a shaker and want the rotor as well.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="faq-msfs-versions-all">
+      <summary>Which MSFS versions and editions do FWX products support?</summary>
+      <div class="faq-body">
+        <p>All FWX Aviation products - the EC135 Sound Enhancement Pack, the FWX Helicopter Rotor Blade Haptic and the EC135 Bundle - are built and tested exclusively for Microsoft Flight Simulator 2024. MSFS 2020 is not supported, because the products target the MSFS 2024 audio system and the Nemeth Design EC135 (Local Legend 21) that released for MSFS 2024 in August 2025. Both the Microsoft Store and the Steam edition of MSFS 2024 are supported, and the installer auto-detects the correct Community folder for each. The products run on Windows 10 and Windows 11 only; they do not run on Mac or Xbox, since Xbox cannot install third-party Community add-ons and our add-ons require Windows. Every future version upgrade is free for existing customers and arrives through the same download link you received at purchase.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="back-cta">
+    <h3>Ready to upgrade your EC135?</h3>
+    <p>One-time payment, 30-day technical refund, instant download.</p>
+    <a href=".././#pricing" class="btn">See pricing →</a>
+  </section>
+
+</main>
+
+<footer class="t-footer">
+  <div style="max-width:1080px;margin:0 auto;display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Product info</div>
+      <a href="faq.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">FAQ</a>
+      <a href="install.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Installation guide</a>
+      <a href="../changelog.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Changelog</a>
+      <a href="../contact.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Contact &amp; support</a>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Community</div>
+      <a href="https://www.youtube.com/@FinnWest" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">YouTube</a>
+      <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Reddit</a>
+      <a href="https://discord.gg/nfGaV5eXJg" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Discord</a>
+      <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">SimMarket store</a>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Press</div>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">ThresholdX</a>
+      <a href="https://www.simflight.de/2026/04/04/fwx-ec135-sound-enhancement-pack-realistischer-turbinensound-fuer-den-msfs-2024/" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">simFlight.de</a>
+      <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">MSFS Addons</a>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Legal</div>
+      <a href="/" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Main site</a>
+      <a href="../impressum.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Impressum</a>
+      <a href="../datenschutz.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Privacy</a>
+      <a href="../agb.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Terms</a>
+      <a href="../widerruf.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Cancellation</a>
+      <a href="../support.html" style="color:#cbd5e1;font-size:14px;padding:3px 0;">Support us &#9749;</a>
+    </div>
+
+  </div>
+  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px 0 10px;">EU dispute resolution: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board.</div>
+  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator 2024 is a trademark of Microsoft Corporation. Asobo Studio is a trademark of its respective owner. ButtKicker is a trademark of The Guitammer Company. All other product and company names are trademarks of their respective owners. FinnWest Aviation is an independent third-party developer and is not affiliated with, endorsed by, or sponsored by any of these companies.</div>
+  <div style="max-width:1080px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--text-muted);">© 2026 FinnWest Aviation</div>
+</footer>
+
+<script>if(!localStorage.getItem("fwx-notrack")&&navigator.doNotTrack!=="1"&&window.doNotTrack!=="1"&&navigator.msDoNotTrack!=="1"&&navigator.globalPrivacyControl!==true){var s=document.createElement("script");s.defer=true;s.src="/script.js";s.setAttribute("data-website-id","80459d03-bda7-45fa-a7bc-6472be80e47a");s.setAttribute("data-host-url","https://webhook.finnwestx1.com");document.head.appendChild(s);}</script>
+</body>
+</html>

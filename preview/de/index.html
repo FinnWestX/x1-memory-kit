@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FWX EC135 Enhancement Mod: authentischer Turbinensound für MSFS 2024</title>
+<meta name="description" content="Authentischer Cockpit- und Außensound für den EC135 in MSFS 2024, plus Rotor-Haptik für jeden Hubschrauber. Alles im FWX Control Center im Simulator einstellbar.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://finnwestx1.com/de/">
+<link rel="alternate" hreflang="en" href="https://finnwestx1.com/">
+<link rel="alternate" hreflang="de" href="https://finnwestx1.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://finnwestx1.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FinnWest Aviation">
+<meta property="og:title" content="FWX EC135 Enhancement Mod: authentischer Turbinensound für MSFS 2024">
+<meta property="og:description" content="Authentischer Cockpit- und Außensound für den EC135 in MSFS 2024, plus Rotor-Haptik für jeden Hubschrauber. Alles im FWX Control Center im Simulator einstellbar.">
+<meta property="og:url" content="https://finnwestx1.com/de/">
+<meta property="og:image" content="https://finnwestx1.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FWX EC135 Sound Enhancement Mod für MSFS 2024">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FWX EC135 Enhancement Mod: authentischer Turbinensound für MSFS 2024">
+<meta name="twitter:description" content="Authentischer Cockpit- und Außensound für den EC135 in MSFS 2024, plus Rotor-Haptik für jeden Hubschrauber. Alles im FWX Control Center im Simulator einstellbar.">
+<meta name="twitter:image" content="https://finnwestx1.com/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FinnWest Aviation",
+  "alternateName": "FWX Aviation",
+  "url": "https://finnwestx1.com",
+  "logo": "https://finnwestx1.com/fwx-logo.svg",
+  "email": "Finn.West@gmx.net",
+  "sameAs": [
+    "https://www.youtube.com/@FinnWest"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "FWX EC135 Sound und Haptic Bundle",
+  "description": "Turbinen-Sound-Enhancement-Mod plus Rotor-Haptic-Engine für den Airbus Helicopters EC135 in Microsoft Flight Simulator 2024.",
+  "brand": { "@type": "Brand", "name": "FinnWest Aviation" },
+  "image": "https://finnwestx1.com/og-image.png",
+  "category": "FlightSimulatorMod",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://finnwestx1.com/de/checkout.html?product=bundle",
+    "price": "14.99",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "geoTargetName": "WORLDWIDE",
+        "addressCountry": "DE"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "DE",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "FWX EC135 Turbinen-Sound-Enhancement-Mod: 60 Sekunden Cockpit-Demo",
+  "description": "60 Sekunden Cockpit-Demo des FWX EC135 Turbinen-Sound-Enhancement-Mod für Microsoft Flight Simulator 2024.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/ZVN1D-Lr_eQ/maxresdefault.jpg",
+  "uploadDate": "2026-03-28T12:00:00+02:00",
+  "contentUrl": "https://www.youtube.com/watch?v=ZVN1D-Lr_eQ",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/ZVN1D-Lr_eQ"
+}
+</script>
+<link rel="preload" as="image" href="../../hero-bg.webp" type="image/webp" fetchpriority="high">
+<style>
+/* ============================================================
+   Research-driven test page (v2)
+   Sources: CXL hero teardowns, NN/g F-pattern, Unbounce 2024,
+   HubSpot single-CTA, StoryBrand, Orbx/Contrail competitor scan.
+   Design decisions:
+   - 1 headline, 1 sub, 1 medium, 1 primary CTA (single-task hero)
+   - Problem-first / Before-After-Bridge headline
+   - Price baked into CTA button text
+   - Risk-reversal (30-day refund) directly under CTA
+   - Pilot credential trust signal
+   - Mobile sticky CTA
+   - No multiple competing buttons above the fold
+   ============================================================ */
+
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img, svg { max-width: 100%; display: block; }
+
+/* ------- TEST BANNER ------- */
+/* ------- NAV ------- */
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+
+/* ------- HERO ------- */
+.t-hero {
+  min-height: calc(100vh - 56px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 60px 20px 40px;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(14,165,233,0.18), transparent 55%),
+    var(--bg);
+  overflow: hidden;
+}
+.t-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: url("../../hero-bg.webp") center top / 100% auto no-repeat;
+  opacity: 0.66;
+  pointer-events: none;
+}
+.t-hero-inner {
+  position: relative; z-index: 2;
+  max-width: 960px; width: 100%; text-align: center;
+}
+.t-eyebrow {
+  display: inline-block;
+  padding: 7px 16px; margin-bottom: 22px;
+  border-radius: 999px;
+  background: rgba(14,165,233,0.1);
+  border: 1px solid rgba(14,165,233,0.35);
+  color: var(--accent);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.t-headline {
+  font-size: clamp(38px, 6.5vw, 72px);
+  line-height: 1.02;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+}
+.t-headline .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.t-sub {
+  font-size: clamp(16px, 1.7vw, 19px);
+  color: var(--text-dim);
+  max-width: 620px;
+  margin: 0 auto 30px;
+  line-height: 1.55;
+}
+.t-sub strong { color: #fff; font-weight: 700; }
+
+/* Demo media frame */
+.t-demo {
+  max-width: 820px; margin: 0 auto 30px;
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 30px 100px -20px rgba(0,0,0,0.8),
+    0 0 0 1px rgba(14,165,233,0.3);
+  background: #000;
+}
+.t-demo-pad { position: relative; padding-bottom: 56.25%; height: 0; }
+.t-demo iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.t-demo-caption {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-size: 13px; color: var(--text-dim);
+  margin: 14px 0 26px;
+}
+.t-demo-caption .live-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--ok);
+  animation: t-pulse 2s infinite ease-in-out;
+}
+@keyframes t-pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.9);} }
+
+/* Primary CTA - single, bold, price-in-button */
+.t-cta-primary {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 22px 40px;
+  font-size: 19px; font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand) 60%, var(--accent));
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  box-shadow:
+    0 25px 70px -15px rgba(14,165,233,0.7),
+    0 0 0 1px rgba(14,165,233,0.35) inset;
+  transition: transform .15s ease, box-shadow .2s ease;
+  letter-spacing: 0.2px;
+}
+.t-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 32px 80px -15px rgba(14,165,233,0.85), 0 0 0 1px rgba(14,165,233,0.5) inset; }
+.t-cta-primary .old-price { color: rgba(255,255,255,0.55); text-decoration: line-through; font-size: 14px; font-weight: 600; margin-right: -4px; }
+.t-cta-primary .price { font-size: 22px; font-weight: 900; }
+.t-cta-primary .arrow { font-size: 20px; }
+
+.t-cta-below {
+  margin-top: 14px;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 18px; border-radius: 999px;
+  background: rgba(34,197,94,0.1);
+  border: 1px dashed rgba(34,197,94,0.45);
+  color: #86efac;
+  font-size: 13px; font-weight: 600;
+}
+.t-cta-below .shield { font-size: 15px; }
+
+/* Secondary (below the fold) - link style to not compete with primary */
+.t-hero-sec {
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.t-hero-sec a { color: var(--accent); text-decoration: underline; font-weight: 600; }
+
+/* Trust row: pilot cred + stars + sold */
+.t-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 22px; margin-top: 34px;
+  color: var(--text-dim); font-size: 14px;
+}
+.t-trust-item { display: inline-flex; align-items: center; gap: 8px; }
+.t-trust-item .icon { color: var(--accent); font-size: 16px; }
+.t-trust-item strong { color: #fff; font-weight: 700; }
+.t-stars { color: #f59e0b; letter-spacing: 2px; font-size: 17px; }
+
+/* Press strip */
+.t-press {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 26px;
+}
+.t-press-label {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 14px;
+}
+.t-press-quotes {
+  display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;
+  font-size: 14px;
+}
+.t-press-quotes a {
+  color: var(--text-dim); font-style: italic; max-width: 340px;
+}
+.t-press-quotes a:hover { color: #fff; }
+.t-press-quotes strong { color: var(--accent); font-style: normal; font-weight: 600; }
+
+/* ============ PRODUCTS SECTION ============ */
+.t-section {
+  padding: 90px 20px 70px;
+  background: linear-gradient(180deg, var(--bg), var(--bg-alt));
+  border-top: 1px solid var(--border);
+}
+.t-section-head { text-align: center; max-width: 680px; margin: 0 auto 50px; }
+.t-section-head h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 900; color: #fff;
+  margin-bottom: 12px; letter-spacing: -0.02em;
+}
+.t-section-head p { color: var(--text-dim); font-size: 16px; }
+
+.t-cards {
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  max-width: 1080px; margin: 0 auto;
+}
+.t-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 26px;
+}
+.t-card.popular {
+  border-color: rgba(14,165,233,0.5);
+  box-shadow: 0 25px 70px -20px rgba(14,165,233,0.45);
+  transform: translateY(-8px);
+}
+.t-card .popular-tag {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-size: 11px; font-weight: 800;
+  padding: 6px 14px; border-radius: 999px;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px -6px rgba(14,165,233,0.6);
+}
+.t-card .t-tag {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 8px;
+}
+.t-card h3 {
+  font-size: 21px; font-weight: 800; color: #fff;
+  margin-bottom: 8px;
+}
+.t-card .t-tagline {
+  font-size: 14px; color: var(--text-dim);
+  margin-bottom: 18px; min-height: 38px;
+}
+.t-card .t-price {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 18px;
+}
+.t-card .t-price .big {
+  font-size: 42px; font-weight: 900; color: #fff;
+  line-height: 1;
+}
+.t-card .t-price .old {
+  color: var(--text-muted); text-decoration: line-through;
+  font-size: 15px;
+}
+.t-card ul {
+  list-style: none; margin: 0 0 22px; padding: 0;
+  font-size: 14px; color: var(--text-dim);
+}
+.t-card ul li {
+  padding: 7px 0 7px 22px;
+  position: relative;
+}
+.t-card ul li::before {
+  content: "✓"; color: var(--ok);
+  position: absolute; left: 0; font-weight: 800;
+}
+.t-card .t-buy {
+  display: block; text-align: center;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.t-card.popular .t-buy {
+  box-shadow: 0 15px 45px -10px rgba(14,165,233,0.55);
+}
+.t-card .t-buy:hover { filter: brightness(1.1); }
+.t-card .t-refund-note {
+  text-align: center; margin-top: 12px;
+  font-size: 12px; color: var(--text-muted);
+}
+
+/* ============ PILOT SECTION ============ */
+.t-pilot {
+  padding: 80px 20px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.t-pilot-inner {
+  max-width: 900px; margin: 0 auto;
+  text-align: center;
+}
+.t-pilot h2 {
+  font-size: clamp(26px, 4vw, 36px);
+  color: #fff; font-weight: 900;
+  margin-bottom: 20px;
+}
+.t-pilot p {
+  color: var(--text-dim); font-size: 17px; line-height: 1.7;
+  max-width: 680px; margin: 0 auto 14px;
+}
+.t-pilot .sig {
+  margin-top: 22px; color: var(--accent); font-weight: 700;
+  font-size: 15px;
+}
+
+/* ============ FAQ / GUARANTEE ============ */
+.t-guarantee {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, var(--bg-alt), var(--bg));
+  text-align: center;
+}
+.t-guarantee-card {
+  max-width: 640px; margin: 0 auto;
+  background: rgba(34,197,94,0.05);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 20px;
+  padding: 40px 30px;
+}
+.t-guarantee-card .big-shield { font-size: 48px; margin-bottom: 16px; }
+.t-guarantee-card h2 {
+  color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 14px;
+}
+.t-guarantee-card p {
+  color: var(--text-dim); font-size: 15px; line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* ============ FOOTER ============ */
+.t-footer {
+  padding: 60px 20px 40px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  font-size: 13px; color: var(--text-muted);
+}
+.t-footer-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.t-footer-col { display: flex; flex-direction: column; gap: 6px; }
+.t-footer-head {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 10px;
+}
+.t-footer-col a {
+  color: var(--text-dim); font-size: 14px;
+  padding: 3px 0;
+  transition: color 0.15s ease;
+}
+.t-footer-col a:hover { color: #fff; }
+.t-footer-bottom {
+  max-width: 1080px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ============ MOBILE STICKY CTA ============ */
+.t-mobile-cta {
+  display: none;
+}
+@media (max-width: 720px) {
+  .t-mobile-cta {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    position: fixed; bottom: 14px; left: 14px; right: 14px; z-index: 90;
+    padding: 14px 18px;
+    background: linear-gradient(90deg, var(--brand-2), var(--brand));
+    border-radius: 999px;
+    color: #fff; font-weight: 800; font-size: 14px;
+    box-shadow: 0 25px 60px -15px rgba(14,165,233,0.7),
+                0 0 0 1px rgba(255,255,255,0.15) inset;
+  }
+  .t-mobile-cta .label { display: flex; flex-direction: column; text-align: left; }
+  .t-mobile-cta .label .sub { font-size: 10px; opacity: 0.85; letter-spacing: 0.5px; }
+  .t-mobile-cta .price { font-size: 16px; font-weight: 900; }
+  .t-hero { padding-bottom: 120px; }
+  .t-headline { font-size: 40px; }
+  .t-card.popular { transform: none; }
+  /* Leave room for the sticky buy button so legal footer links stay visible */
+  .t-footer { padding-bottom: 120px; }
+}
+
+@media (max-width: 500px) {
+  .t-headline { font-size: 36px; line-height: 1.05; }
+  .t-cta-primary { padding: 18px 26px; font-size: 16px; }
+  .t-trust-row { gap: 14px; font-size: 13px; }
+}
+
+/* ---------- KLON-BANNER + GELBE RANDNOTIZEN ----------------------------
+   VOR DER VEROEFFENTLICHUNG ERSATZLOS LOESCHEN. */
+.draft-banner { background: rgba(245,158,11,0.10); border-bottom: 2px solid rgba(245,158,11,0.55);
+  color: #fde68a; padding: 14px 20px; font-size: 13px; line-height: 1.55; }
+.draft-banner .inner { max-width: 900px; margin: 0 auto; }
+.draft-banner strong { color: #fff; }
+.draft-banner ul { margin: 8px 0 0 18px; }
+.chef-note { display: block; margin: 8px 0; padding: 7px 11px; border-left: 4px solid #f59e0b;
+  background: rgba(245,158,11,0.10); color: #fde68a; font-size: 12px; line-height: 1.5; border-radius: 0 6px 6px 0; }
+</style>
+</head>
+<body>
+
+<!-- KLON-BANNER - VOR DER VEROEFFENTLICHUNG ERSATZLOS LOESCHEN (Block + CSS) -->
+<div class="draft-banner">
+  <div class="inner">
+    <strong>KLON DER DEUTSCHEN HAUPTSEITE - nicht veroeffentlicht.</strong> Stand 07.09.2026. Die Live-Seite ist
+    unveraendert. Geaendert wurde nur, was mit dem Haptik-Produkt und den alten Windows-Oberflaechen zu tun hat.
+    Offene Punkte:
+    <ul>
+      <li><strong>&#10004; Preis Haptik: 7,99 EUR - vom Chef festgelegt (07.09. 02:58). ERLEDIGT.</strong>
+          Das Produkt laeuft jetzt auf jedem Hubschrauber. Ich erfinde keinen Preis.</li>
+      <li><strong>&#10004; Buendel: 14,99 EUR - vom Chef festgelegt (07.09. 02:58). ERLEDIGT.</strong> Ersparnis neu gerechnet: 7,99 + 7,99 = 15,98, also 0,99 guenstiger.</li>
+      <li><strong>&#9888; Der gruene Streifen ganz oben nennt "v1.52"</strong> - alte Zahl, NICHT geraten.
+          Der Chef sagt, was dort stehen soll, oder der Streifen kommt weg.</li>
+      <li><strong>&#9888; "Drag &amp; Drop Installation"</strong> bei der Sound-Karte stammt aus der Zeit vor dem
+          Installationsprogramm. Nicht geaendert, weil ungeprueft.</li>
+      <li><strong>Flight Dynamics und Rotor Shadow</strong> stehen neu als Hinweis mit SimMarket-Verweis -
+          ohne Kaufknopf, ohne "bald hier".</li>
+      <li><strong>&#9888; Die verlinkten Infoseiten <code>../mod-*.html</code> gibt es nur auf ENGLISCH</strong>
+          (Chef 07.09. 02:16: die deutschen Mod-Seiten werden nicht veroeffentlicht). Der Verweis von hier fuehrt
+          also auf eine englische Seite. Chef-Entscheid offen.</li>
+      <li><strong>Rechtsseiten NICHT angefasst:</strong> in <code>agb.html</code>, <code>rabatt.html</code>,
+          <code>checkout.html</code> steht der alte Produktname samt Preis. Vertrags- und Preistext - da aendere
+          ich nichts von mir aus.</li>
+      <li><strong>&#9888; STRIPE-PREISE SIND NICHT GEAENDERT.</strong> Die neuen Betraege stehen nur auf
+          unseren Seiten. Die Artikel im Stripe-Konto tragen weiter die alten Preise - der Kunde zahlt
+          sonst auf der Bezahlseite etwas anderes, als hier steht. <strong>Das muss der Chef im
+          Stripe-Konto selbst nachziehen</strong>; von uns aus ist das nicht moeglich und wurde NICHT
+          angefasst.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- NAV -->
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="./" class="t-nav-brand">
+      <img src="../../fwx-logo.svg" alt="FWX Aviation" class="t-nav-logo">
+      FWX Aviation
+    </a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="../../support.html" style="color:var(--text-dim);font-size:13px;font-weight:600;" title="Unterst&uuml;tze uns">Support</a>
+      <a href="../" style="color:var(--text-dim);font-size:13px;font-weight:600;" title="English">EN</a>
+      <a href="#pricing" class="t-nav-cta">Preise</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO - single viewport, research-driven
+     Follows: problem-first headline, 1 CTA, price-in-button,
+     risk-reversal visible, pilot credibility, press on demand.
+     ============================================================ -->
+<section class="t-hero">
+  <div class="t-hero-inner">
+
+    <a href="../../de/changelog.html" style="display:inline-flex;align-items:center;gap:10px;padding:10px 18px;margin-bottom:18px;border-radius:999px;background:linear-gradient(90deg, rgba(34,197,94,0.18), rgba(14,165,233,0.18));border:1px solid rgba(34,197,94,0.55);color:#bbf7d0;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;">
+      <span style="background:#22c55e;color:#0a0a0a;font-weight:800;padding:2px 8px;border-radius:999px;font-size:11px;letter-spacing:1px;">NEU</span>
+      v1.52 Update ist live: hörbare Turbinen-Zündung und vollständiger unabhängiger Hochlauf pro Triebwerk
+      <span style="color:#86efac;">→</span>
+    </a>
+
+    <div class="t-eyebrow">🎧 MSFS 2024 · EC135 SOUND MOD · ROTOR-HAPTIK</div>
+
+    <h1 class="t-headline">
+      Realitätsgetreuer EC135<br>
+      <span class="accent">Turbinencharakter.</span>
+    </h1>
+
+    <p class="t-sub">
+      <strong>Jede Drehzahl hören. Jedes Rotorblatt spüren.</strong>
+      Authentischer <strong>Cockpit- und Außensound</strong> für den EC135 in MSFS 2024 - und Rotor-Haptik,
+      die auf <strong>jedem Hubschrauber</strong> im Simulator arbeitet. Beides stellst du im Simulator selbst
+      ein, im FWX Control Center.
+    </p>
+
+    <!-- Demo media (YouTube embed: will be replaced with native A/B audio player when samples are prepared) -->
+    <div class="t-demo">
+      <div class="t-demo-pad">
+        <iframe src="https://www.youtube-nocookie.com/embed/ZVN1D-Lr_eQ?rel=0&amp;modestbranding=1&amp;showinfo=0"
+                title="FWX EC135 Turbine Sound Enhancement Mod: 60 second cockpit demo"
+                loading="lazy"
+                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="t-demo-caption">
+      <span class="live-dot"></span>
+      Cockpit- und Außen-Demo. Ton einschalten um den Turbinencharakter zu hören.
+    </div>
+
+    <!-- Primary CTA -->
+    <a href="checkout.html?product=bundle"
+       class="t-cta-primary"
+       data-umami-event="live-de-hero-buy-bundle">
+      <span>Bundle jetzt kaufen</span>
+            <span class="price">€14,99</span>
+      <span class="arrow">→</span>
+    </a>
+
+    <div class="t-cta-below">
+      <span class="shield">🛡️</span>
+      <span>Funktioniert es bei dir nicht wie erwartet? Schreib uns innerhalb von 30 Tagen mit deiner Bestellnummer, dann gibt es eine volle Rückerstattung bei technischen Problemen.</span>
+    </div>
+
+    <div class="t-trust-row">
+      <span class="t-trust-item"><span class="icon">⚡</span>Sofort-Download</span>
+      <span class="t-trust-item"><span class="icon">💳</span>Sichere Stripe-Zahlung</span>
+      <span class="t-trust-item"><span class="icon">🛠</span>Kostenlose Updates</span>
+    </div>
+
+    <!-- Kompatibilitaets-Hinweis (Kundenschutz) -->
+    <div style="margin-top:18px;text-align:center;font-size:13px;color:var(--text-dim);">
+      ✓ Kompatibel mit dem Nemeth Design EC135 (kostenlos in MSFS 2024). <strong>Nicht</strong> kompatibel mit der HPG H135/H145 von Hype Performance Group.
+    </div>
+
+    <!-- Press strip -->
+    <div class="t-press">
+      <div class="t-press-label">Bekannt aus</div>
+      <div class="t-press-quotes">
+        <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer">
+          "A highly detailed sound set for the EC135 in MSFS 2024." - <strong>ThresholdX</strong>
+        </a>
+        <a href="https://www.simflight.de/2026/04/04/fwx-ec135-sound-enhancement-pack-realistischer-turbinensound-fuer-den-msfs-2024/" target="_blank" rel="noopener noreferrer">
+          "Hebt die akustische Immersion auf ein neues Niveau." - <strong>simFlight.de</strong>
+        </a>
+        <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer">
+          "Covers both ears and body." - <strong>MSFS Addons</strong>
+        </a>
+      </div>
+    </div>
+
+    <div class="t-hero-sec">
+      Nur das Turbine Sound Enhancement Mod oder nur Haptic? <a href="#pricing">Alle Optionen weiter unten ↓</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTS - 3 cards, bundle highlighted
+     ============================================================ -->
+<section class="t-section" id="pricing">
+  <div class="t-section-head">
+    <h2>Drei Wege, deinen EC135 zu veredeln</h2>
+    <p>Einmalzahlung · Sofort-Download · kompatibel mit MS Store und Steam Edition von MSFS 2024.</p>
+  </div>
+
+  <div class="t-cards">
+
+    <div class="t-card">
+      <div class="t-tag">Sound</div>
+      <h3>FWX EC135 Turbine Sound Enhancement Mod</h3>
+      <p class="t-tagline">Kompletter Cockpit- und Außensound für den EC135.</p>
+      <div class="t-price">
+        <span class="big">€7,99</span>
+            </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">Endpreis. Keine USt. ausgewiesen gem. §19 UStG (Kleinunternehmer). Digitaler Download, keine Versandkosten.</p>
+      <ul>
+        <li>Cockpit- und Außensound-Erweiterung</li>
+        <li>Eigene Turbinen-Startsequenz</li>
+        <li>Realistische Turbinen-Tonhöhen</li>
+        <li>Shaker-sicher: kein unerwünschtes Brummen im Cockpit-Ton</li>
+        <li>Drag &amp; Drop Installation, rückgängig machbar</li>
+      </ul>
+      <a class="t-buy"
+         href="checkout.html?product=sound"
+         data-umami-event="live-de-buy-sound">
+        Turbine Sound Enhancement Mod kaufen (€7,99)
+      </a>
+      <div class="t-refund-note">🛡️ 30 Tage Garantie (techn. Probleme) · ⚡ Sofort-Download</div>
+    </div>
+
+    <div class="t-card popular">
+      <div class="popular-tag">BELIEBTESTE WAHL</div>
+      <div class="t-tag">Sound + Haptic Bundle</div>
+      <h3>FWX EC135 Sound + Haptic Bundle</h3>
+      <p class="t-tagline">Turbinensound + Rotorimpulse. Das volle Immersionspaket.</p>
+      <div class="t-price">
+        <span class="big">€14,99</span>
+            </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">Endpreis. Keine USt. ausgewiesen gem. §19 UStG (Kleinunternehmer). Digitaler Download, keine Versandkosten.</p>
+      <ul>
+        <li>Alles aus dem Turbine Sound Enhancement Mod</li>
+        <li>Alles aus der FWX Helicopter Rotor Blade Haptic</li>
+        <li>Rotorimpulse auf jedem Hubschrauber, nicht nur auf dem EC135</li>
+        <li>Alle Einstellungen im FWX Control Center im Simulator</li>
+        <li>Du sparst €0,99 gegenüber Einzelkauf</li>
+      </ul>
+      <span class="chef-note">&#10004; PREIS VOM CHEF FESTGELEGT (07.09.2026, 02:58): 14,99 EUR.
+      Ersparnis neu gerechnet: 7,99 + 7,99 = 15,98, also 0,99 guenstiger im Buendel.
+      &#9888; ACHTUNG: der Preis im Stripe-Konto ist damit NICHT geaendert - Chef-Sache.</span>
+      <a class="t-buy"
+         href="checkout.html?product=bundle"
+         data-umami-event="live-de-buy-bundle">
+        Bundle kaufen (€14,99)
+      </a>
+      <div class="t-refund-note">🛡️ 30 Tage Garantie (techn. Probleme) · ⚡ Sofort-Download · 🛠 Kostenlose Updates</div>
+    </div>
+
+    <div class="t-card">
+      <div class="t-tag">Haptic</div>
+      <h3>FWX Helicopter Rotor Blade Haptic</h3>
+      <p class="t-tagline">Jedes Blatt spüren - auf jedem Hubschrauber.</p>
+      <div class="t-price">
+        <span class="big">€7,99</span>
+            </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">Endpreis. Keine USt. ausgewiesen gem. §19 UStG (Kleinunternehmer). Digitaler Download, keine Versandkosten.</p>
+      <ul>
+        <li>Einzelne Blattschläge statt einer gleichmäßigen Vibration</li>
+        <li>Auf jedem Hubschrauber in MSFS 2024, Turbine wie Kolbenmotor</li>
+        <li>Blattzahl wird für die gängigen Muster von allein gesetzt</li>
+        <li>Lautstärke, Bass und Impulsstärke im Panel im Simulator</li>
+        <li>Testimpuls-Knopf, damit du es am Boden prüfen kannst</li>
+      </ul>
+      <span class="chef-note">&#10004; PREIS VOM CHEF FESTGELEGT (07.09.2026, 02:58): 7,99 EUR.
+      &#9888; ACHTUNG: der Preis im Stripe-Konto ist damit NICHT geaendert - das muss der Chef dort
+      selbst tun, sonst zahlt der Kunde auf der Bezahlseite weiter den alten Betrag.</span>
+      <a class="t-buy"
+         href="checkout.html?product=haptic"
+         data-umami-event="live-de-buy-haptic">
+        Rotor Blade Haptic kaufen (€7,99)
+      </a>
+      <p style="font-size:12px;margin-top:10px;"><a href="../../mod-rotor-haptic.html" style="color:var(--accent);">Vollständige Beschreibung der Rotor Blade Haptic &rarr;</a></p>
+      <div class="t-refund-note">🛡️ 30 Tage Garantie (techn. Probleme) · ⚡ Sofort-Download</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     PILOT STORY - the unique moat
+     ============================================================ -->
+
+<!-- WEITERE FWX ADD-ONS - nur SimMarket, kein eigener Kaufweg -->
+<section class="t-section" id="more">
+  <div class="t-section-head">
+    <h2>Zwei weitere FWX Add-ons, auf SimMarket</h2>
+    <p>Diese beiden gibt es über SimMarket. Wie alles von uns werden sie im FWX Control Center im Simulator eingestellt.</p>
+  </div>
+  <div class="t-cards">
+    <div class="t-card">
+      <div class="t-tag">Flight Realism</div>
+      <h3>FWX Helicopter Flight Dynamics</h3>
+      <p class="t-tagline">Live-Daten des Fluges und deine eigenen Steuerbewegungen, in dem Moment weitergegeben, in dem sie entstehen.</p>
+      <ul>
+        <li>Wirkt auf jeden Hubschrauber in MSFS 2024</li>
+        <li>Vorwärtsflug und Schwebeflug getrennt einstellbar</li>
+        <li>Ein Profil je Hubschraubermuster, für dich gespeichert</li>
+        <li>Vollständig im Panel im Simulator einstellbar</li>
+      </ul>
+      <a class="t-buy" href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer" data-umami-event="live-de-simmarket-fd">
+        Auf SimMarket erhältlich &rarr;
+      </a>
+      <p style="font-size:12px;margin-top:10px;"><a href="../../mod-flight-dynamics.html" style="color:var(--accent);">Vollständige Beschreibung (englisch) &rarr;</a></p>
+    </div>
+    <div class="t-card">
+      <div class="t-tag">Rotor Shadow</div>
+      <h3>FWX Helicopter Rotor Shadow</h3>
+      <p class="t-tagline">Der drehende Rotorschatten, den der Simulator fallen lässt, sobald die Drehzahl steigt.</p>
+      <ul>
+        <li>Sieben Hubschraubermuster, jedes einzeln eingemessen</li>
+        <li>Haupt- und Heckrotor werfen ihren eigenen Schatten</li>
+        <li>Auf dem Boden, auf dem Rumpf und auf allem, was du überfliegst</li>
+        <li>Ein Schalter im Panel im Simulator</li>
+      </ul>
+      <a class="t-buy" href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer" data-umami-event="live-de-simmarket-rs">
+        Auf SimMarket erhältlich &rarr;
+      </a>
+      <p style="font-size:12px;margin-top:10px;"><a href="../../mod-rotor-shadow.html" style="color:var(--accent);">Vollständige Beschreibung (englisch) &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="t-pilot">
+  <div class="t-pilot-inner">
+    <h2>Präzises Audio und Haptik, exklusiv für den EC135 entwickelt.</h2>
+    <p>
+      Die FWX EC135 Enhancement Mod ist ein spezialisiertes Audio- und Haptik-Paket, das von Grund auf für ein einziges
+      Luftfahrzeug im Microsoft Flight Simulator 2024 entwickelt wurde. Jede Turbinen-Schicht wurde realitätsgetreu gestaltet
+      und für den Einsatz im Simulator abgestimmt. Cockpit- und Außenlagen sind getrennt gemischt.
+    </p>
+    <p>
+      Ergänzend macht die FWX Helicopter Rotor Blade Haptic den Rotor im Sitz oder über die Steuerung spürbar -
+      einzelne Blattschläge beim Anlassen, ein tiefer, ruhiger Bass bei voller Drehzahl. Sie ist weder an den
+      EC135 noch an einen Vierblattrotor gebunden: sie arbeitet auf <strong>jedem Hubschrauber</strong> in
+      MSFS 2024, Turbine wie Kolbenmotor, und setzt die Blattzahl für die gängigen Muster von allein.
+    </p>
+    <p>
+      Alles, was du für beide Produkte einstellst, stellst du an einer Stelle ein: im <strong>FWX Control
+      Center</strong>, einem Fenster, das du im Microsoft Flight Simulator 2024 über die Werkzeugleiste öffnest.
+      Es gibt kein Fenster außerhalb des Simulators zu bedienen und nichts, was nebenher laufen muss - du stellst
+      es dort ein, wo du fliegst.
+    </p>
+    <p>
+      Das Produkt wird aktiv weiterentwickelt, kein statisches Release, und laufend auf Basis von direktem
+      Community-Feedback verfeinert. Unabhängig besprochen von ThresholdX, simFlight.de und MSFS Addons.
+      Mit 30 Tage Garantie bei technischen Problemen.
+    </p>
+    <p class="sig">- Finn West, FinnWest Aviation</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     GUARANTEE SECTION - reinforce risk-reversal
+     ============================================================ -->
+<section class="t-guarantee">
+  <div class="t-guarantee-card">
+    <div class="big-shield">🛡️</div>
+    <h2>30 Tage Garantie bei technischen Problemen</h2>
+    <p>Falls das Produkt auf deinem Setup nicht funktioniert oder nicht dem entspricht was die Demo zeigt, schreib uns innerhalb von 30 Tagen mit deiner Bestellnummer. Wir prüfen den Fall und erstatten bei bestätigten technischen Problemen vollständig.</p>
+    <p><strong>Fair und zügig.</strong> Wir prüfen jede Anfrage und erstatten bei bestätigten technischen Problemen.</p>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:14px;">Diese technische Erstattung ist eine freiwillige Kulanzregelung zusätzlich zum gesetzlichen Widerrufsrecht nach deutschem Recht. Das gesetzliche Widerrufsrecht für digitale Inhalte erlischt mit Bereitstellung des Download-Links.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER - organised into groups (info, community, legal)
+     ============================================================ -->
+<footer class="t-footer">
+  <div class="t-footer-grid">
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Produkt-Info</div>
+      <a href="faq.html">FAQ</a>
+      <a href="install.html">Installationsanleitung</a>
+      <a href="../../de/changelog.html">Changelog</a>
+      <a href="/download.html">Download / erneut laden</a>
+      <a href="../../de/contact.html">Kontakt &amp; Support</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Community</div>
+      <a href="https://www.youtube.com/@FinnWest" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener noreferrer">Reddit</a>
+      <a href="https://discord.gg/nfGaV5eXJg" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer">SimMarket Shop</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Presse</div>
+      <a href="presse.html">Presse &amp; Media Kit</a>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer">ThresholdX</a>
+      <a href="https://www.simflight.de/2026/04/04/fwx-ec135-sound-enhancement-pack-realistischer-turbinensound-fuer-den-msfs-2024/" target="_blank" rel="noopener noreferrer">simFlight.de</a>
+      <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer">MSFS Addons</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Rechtliches</div>
+      <a href="/">Hauptseite</a>
+      <a href="../../impressum.html">Impressum</a>
+      <a href="../../datenschutz.html">Datenschutz</a>
+      <a href="../../agb.html">AGB</a>
+      <a href="../../widerruf.html">Widerrufsbelehrung</a>
+      <a href="../../support.html" style="color:#cbd5e1;">Unterst&uuml;tze uns &#9749;</a>
+    </div>
+
+  </div>
+  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px 0 10px;">EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</div>
+  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. Asobo Studio ist eine Marke des jeweiligen Inhabers. ButtKicker ist eine Marke der The Guitammer Company. Alle weiteren Produkt- und Firmennamen sind Marken ihrer jeweiligen Inhaber. FinnWest Aviation ist ein unabhängiger Drittanbieter und steht in keiner Verbindung zu diesen Unternehmen und wird von ihnen nicht unterstützt oder gesponsert.</div>
+  <div class="t-footer-bottom">© 2026 FinnWest Aviation</div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<a href="checkout.html?product=bundle"
+   class="t-mobile-cta"
+   data-umami-event="live-de-mobile-sticky-buy">
+  <div class="label">
+    <span class="sub">EC135 BUNDLE · 30 TAGE GARANTIE</span>
+    <span>Bundle jetzt kaufen</span>
+  </div>
+  <span class="price">€14,99 →</span>
+</a>
+
+<!-- Umami tracking (same endpoint, event names prefixed 'live-' to split reporting) -->
+<script>if(!localStorage.getItem("fwx-notrack")&&navigator.doNotTrack!=="1"&&window.doNotTrack!=="1"&&navigator.msDoNotTrack!=="1"&&navigator.globalPrivacyControl!==true){var s=document.createElement("script");s.defer=true;s.src="/script.js";s.setAttribute("data-website-id","80459d03-bda7-45fa-a7bc-6472be80e47a");s.setAttribute("data-host-url","https://webhook.finnwestx1.com");document.head.appendChild(s);}</script>
+
+</body>
+</html>
