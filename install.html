@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FWX EC135 Enhancement Mod: Installation Guide</title>
-<meta name="description" content="Step-by-step installation guide for the FWX EC135 Enhancement Mod and Haptic Bass Shaker Mod in MSFS 2024.">
+<meta name="description" content="Step-by-step installation guide for the FWX EC135 Turbine Sound Enhancement Mod and the FWX Helicopter Rotor Blade Haptic in MSFS 2024.">
 <style>
 :root {
   --bg: #05050a;
@@ -197,6 +197,8 @@ hr.sep {
 </head>
 <body>
 
+
+
 <nav class="t-nav">
   <div class="t-nav-inner">
     <a href="./" class="t-nav-brand">
@@ -213,12 +215,12 @@ hr.sep {
 <main>
 
   <h1>Installation <span class="accent">guide</span>.</h1>
-  <p class="lede">Step-by-step setup for the FWX EC135 Turbine Sound Enhancement Mod and the FWX EC135 Haptic - Bass Shaker Mod. About 5 minutes; no command line or registry edits required.</p>
+  <p class="lede">Step-by-step setup for the FWX EC135 Turbine Sound Enhancement Mod and the FWX Helicopter Rotor Blade Haptic. About 5 minutes; no command line or registry edits required. Once installed, everything is set from the FWX Control Center panel inside the simulator.</p>
 
   <div class="nav-pills">
     <a href="#requirements">Requirements</a>
     <a href="#sound-pack">Turbine Sound Enhancement Mod</a>
-    <a href="#haptic-engine">Haptic Engine</a>
+    <a href="#haptic-engine">Rotor Blade Haptic</a>
     <a href="#troubleshooting">Troubleshooting</a>
     <a href="#uninstall">Uninstall</a>
   </div>
@@ -228,7 +230,7 @@ hr.sep {
     <li style="padding:6px 0;">✓ <strong>Microsoft Flight Simulator 2024</strong> (MS Store or Steam edition)</li>
     <li style="padding:6px 0;">✓ <strong>The EC135</strong> (already free with MSFS 2024, nothing extra to install)</li>
     <li style="padding:6px 0;">✓ <strong>Windows 10 or 11</strong></li>
-    <li style="padding:6px 0;">✓ <strong>ButtKicker or bass shaker</strong> (optional, only for the Haptic Engine)</li>
+    <li style="padding:6px 0;">✓ <strong>A shaker or transducer</strong> connected as an audio output (optional, only for the Rotor Blade Haptic)</li>
     <li style="padding:6px 0;">✓ Your Stripe order number from the confirmation email</li>
   </ul>
 
@@ -274,15 +276,15 @@ hr.sep {
 
   <hr class="sep">
 
-  <h2 id="haptic-engine">Installing the Haptic Bass Shaker Mod</h2>
+  <h2 id="haptic-engine">Installing the FWX Helicopter Rotor Blade Haptic</h2>
 
   <ol class="steps">
     <li>
       <strong>Connect your haptic device.</strong>
-      ButtKicker, bass shaker or any transducer connected as a standard audio output device on Windows. Make sure it is recognized by Windows Sound settings before installing.
+      Any shaker or transducer connected as a standard audio output device on Windows. Make sure it is recognised in Windows Sound settings before installing.
     </li>
     <li>
-      <strong>Run the Haptic Engine installer. Choose Install when prompted.</strong>
+      <strong>Run the installer. Choose Install when prompted.</strong>
       Double-click <code>FWX-RotorHaptic-Setup-v1.53.exe</code>. No ZIP, nothing to extract. When the installer opens, pick <strong>Install</strong>. Same SmartScreen confirmation as above.
     </li>
     <li>
@@ -290,22 +292,24 @@ hr.sep {
       Default is <code>C:\Program Files\FWX\RotorHapticEngine</code>. Accept or change it.
     </li>
     <li>
-      <strong>Enable autostart.</strong>
-      The installer offers to register the Haptic Engine to start automatically when MSFS 2024 launches. Leave this enabled unless you want to start it manually.
-    </li>
-    <li>
-      <strong>Open the GUI once.</strong>
-      After installation, launch "FWX EC135 Haptic - Bass Shaker Mod" from the Start menu. Select your haptic output device from the dropdown. Click <em>Save</em>.
-    </li>
-    <li>
       <strong>Start MSFS 2024 with any helicopter.</strong>
-      The Haptic Engine sends pulse signals to your haptic device in sync with the helicopter. Works with any 4-blade rotor helicopter in MSFS 2024, not just the EC135.
+      There is nothing else to install and no separate program to open.
+    </li>
+    <li>
+      <strong>Open the FWX Control Center from the toolbar and go to the Haptic tab.</strong>
+      Pick your device from the list and press <em>Apply &amp; Save</em>. That is the only setup step - and it is
+      done inside the simulator, in mid-flight if you like.
+    </li>
+    <li>
+      <strong>Fly.</strong>
+      The rotor arrives in your seat or through your controls, on <strong>every helicopter</strong> in MSFS 2024,
+      turbine or piston - not just the EC135. The blade count is picked for the common types by itself.
     </li>
   </ol>
 
   <div class="callout ok">
     <div class="head">✓ Tip: tuning the pulse strength</div>
-    <p>The GUI has live sliders for pulse intensity, blade rattle threshold and low-RPM behaviour. Start at default, then adjust while flying. Changes apply in real time without a restart.</p>
+    <p>The Haptic tab of the FWX Control Center has three sliders - <em>volume</em>, <em>bass</em> and <em>pulse strength</em> - plus a test pulse button so you can check it on the ground. Start at the default, then adjust while flying. Changes apply straight away, without a restart.</p>
   </div>
 
   <hr class="sep">
@@ -315,8 +319,8 @@ hr.sep {
   <h3>The new audio is not audible after installing.</h3>
   <p>Package load order. Inside MSFS → Content Manager → make sure <em>fwx-ec135-sound</em> is loaded above the stock EC135 package. Restart MSFS. This is the #1 issue on Steam installations.</p>
 
-  <h3>The Haptic Engine shows "No device found".</h3>
-  <p>Windows does not see your haptic transducer as an audio output device. Open Windows Sound settings → make sure the device is listed and set as default or secondary output. Reopen the FWX GUI, it should appear in the dropdown.</p>
+  <h3>The Haptic tab shows no device.</h3>
+  <p>Windows does not see your transducer as an audio output device. Open Windows Sound settings → make sure the device is listed and set as a default or secondary output. Then close and reopen the FWX Control Center panel; the device appears in the list.</p>
 
   <h3>SmartScreen blocks the installer.</h3>
   <p>Expected. We are not code-signed yet (code signing is €250/year, planned for a future release). Click <em>More info</em> → <em>Run anyway</em>. The installer is safe, it only writes to your Community folder and Program Files.</p>
@@ -330,7 +334,7 @@ hr.sep {
   <p>Run the same installer (.exe) you used to install. Each FWX installer doubles as its own uninstaller. When it opens, choose <strong>Uninstall</strong> instead of Install.</p>
   <ul style="list-style:none; padding:0; color:var(--text-dim);">
     <li style="padding:6px 0;">• <strong>Turbine Sound Enhancement Mod:</strong> run <code>FWX-EC135-SoundPack-Setup-v1.52.exe</code> → Uninstall. The Community folder entries are removed cleanly and the default EC135 sounds come back.</li>
-    <li style="padding:6px 0;">• <strong>Haptic Bass Shaker Mod:</strong> run <code>FWX-RotorHaptic-Setup-v1.53.exe</code> → Uninstall. The program is removed from your system and the autostart entry is cleaned up.</li>
+    <li style="padding:6px 0;">• <strong>FWX Helicopter Rotor Blade Haptic:</strong> run <code>FWX-RotorHaptic-Setup-v1.53.exe</code> → Uninstall. It removes itself cleanly.</li>
     <li style="padding:6px 0;">• <strong>Bundle:</strong> run <code>FWX-EC135-Bundle-Setup-v1.52.exe</code> → Uninstall to remove both products in one go.</li>
   </ul>
   <p>The uninstall is straightforward: just run the installer file you already have. There is no ZIP to manage, no Windows registry to clean by hand, and no Control Panel step.</p>
