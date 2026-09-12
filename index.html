@@ -454,8 +454,11 @@ img, svg { max-width: 100%; display: block; }
 /* Zweispaltige Kachel - nur fuer das Ergaenzungspaket (12.09.2026) */
 .t-card .t-two-col { display: grid; gap: 0 30px; grid-template-columns: 1fr; }
 @media (min-width: 760px) { .t-card .t-two-col { grid-template-columns: 1fr 1fr; } }
-.t-card .t-two-col ul { margin-bottom: 14px; }
-.t-card .t-desc { font-size: 13px; color: var(--text-dim); margin: 0 0 16px; line-height: 1.55; }
+.t-card .t-two-col ul { margin-bottom: 10px; }
+.t-card .t-desc {
+  font-size: 13px; color: var(--text-dim); line-height: 1.55;
+  text-align: center; max-width: 760px; margin: 6px auto 18px;
+}
 .t-card .t-desc p { margin: 0 0 6px; }
 .t-card ul.t-hooks li a {
   color: var(--text-dim); text-decoration: none;
@@ -801,22 +804,6 @@ img, svg { max-width: 100%; display: block; }
       <div class="t-two-col">
 
         <div>
-          <ul>
-            <li>Works on every helicopter in MSFS 2024</li>
-            <li>Forward flight and hover set separately</li>
-            <li>Seven helicopter types, each tuned individually</li>
-            <li>Fully adjustable in the panel inside the simulator</li>
-          </ul>
-          <div class="t-desc">
-            <p>In the hover the helicopter no longer holds itself. It &ldquo;lives&rdquo; under the pilot and wants to be flown.</p>
-            <p>First there is a seamless transition into forward flight.</p>
-            <p>Both the live aerodynamic influences and the influences of the pilot become clearly noticeable.</p>
-            <p>Nothing is pre-computed, nothing is played back. Everything happens live.</p>
-            <p>We do NOT replace the flight model of the simulator &ndash; it stays fully in force.</p>
-          </div>
-        </div>
-
-        <div>
           <ul class="t-hooks">
             <li><a href="mod-flight-dynamics-rotor-shadow.html#fd" data-umami-event="live-fdshadow-hook-hover">The hover: the helicopter no longer holds itself</a></li>
             <li><a href="mod-flight-dynamics-rotor-shadow.html#fd" data-umami-event="live-fdshadow-hook-live">Live flight data plus your control inputs</a></li>
@@ -825,6 +812,23 @@ img, svg { max-width: 100%; display: block; }
           </ul>
         </div>
 
+        <div>
+          <ul>
+            <li>Works on every helicopter in MSFS 2024</li>
+            <li>Forward flight and hover set separately</li>
+            <li>Seven helicopter types, each tuned individually</li>
+            <li>Fully adjustable in the panel inside the simulator</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="t-desc">
+        <p>In the hover the helicopter no longer holds itself. It &ldquo;lives&rdquo; under the pilot and wants to be flown.</p>
+        <p>First there is a seamless transition into forward flight.</p>
+        <p>Both the live aerodynamic influences and the influences of the pilot become clearly noticeable.</p>
+        <p>Nothing is pre-computed, nothing is played back. Everything happens live.</p>
+        <p>We do NOT replace the flight model of the simulator &ndash; it stays fully in force.</p>
       </div>
       <a class="t-buy" href="mod-flight-dynamics-rotor-shadow.html" data-umami-event="live-fdshadow">
         Details and purchase &rarr;
