@@ -403,6 +403,18 @@ img, svg { max-width: 100%; display: block; }
   font-size: 12px; color: var(--text-muted);
 }
 
+/* Zweispaltige Kachel - nur fuer das Ergaenzungspaket (12.09.2026) */
+.t-card .t-two-col { display: grid; gap: 0 30px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .t-card .t-two-col { grid-template-columns: 1fr 1fr; } }
+.t-card .t-two-col ul { margin-bottom: 14px; }
+.t-card .t-desc { font-size: 13px; color: var(--text-dim); margin: 0 0 16px; line-height: 1.55; }
+.t-card .t-desc p { margin: 0 0 6px; }
+.t-card ul.t-hooks li a {
+  color: var(--text-dim); text-decoration: none;
+  border-bottom: 1px dotted rgba(148,163,184,0.55);
+}
+.t-card ul.t-hooks li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
 /* ============ PILOT SECTION ============ */
 .t-pilot {
   padding: 80px 20px;
@@ -723,12 +735,34 @@ img, svg { max-width: 100%; display: block; }
       <div class="t-tag">Flight Dynamics &amp; Rotor Shadow</div>
       <h3>FWX Heli Flight Dynamics &amp; Rotor Shadow</h3>
       <p class="t-tagline">Flight Dynamics und Rotor Shadow in einem Paket &ndash; für Besitzer des Haptic Mods, des Sound + Haptic Bundles oder des Sound Mods. Nur hier auf der Website.</p>
-      <ul>
-        <li>Wirkt auf jeden Hubschrauber in MSFS 2024</li>
-        <li>Vorwärtsflug und Schwebeflug getrennt einstellbar</li>
-        <li>Sieben Hubschraubermuster, jedes einzeln abgestimmt</li>
-        <li>Vollständig im Panel im Simulator einstellbar</li>
-      </ul>
+      <div class="t-two-col">
+
+        <div>
+          <ul>
+            <li>Wirkt auf jeden Hubschrauber in MSFS 2024</li>
+            <li>Vorwärtsflug und Schwebeflug getrennt einstellbar</li>
+            <li>Sieben Hubschraubermuster, jedes einzeln abgestimmt</li>
+            <li>Vollständig im Panel im Simulator einstellbar</li>
+          </ul>
+          <div class="t-desc">
+            <p>Der Hubschrauber hält sich im Schwebeflug nicht mehr selbst. Er &bdquo;lebt&ldquo; unter dem Piloten und will geflogen werden.</p>
+            <p>Zunächst erfolgt ein nahtloser Übergang in den Bewegungsflug.</p>
+            <p>Die aerodynamischen Live-Einflüsse als auch die Einflüsse des Piloten werden deutlich spürbar.</p>
+            <p>Nichts ist vorberechnet, nichts abgespielt. Alles geschieht live.</p>
+            <p>Wir ersetzen NICHT das Flugmodell des Simulators &ndash; es bleibt vollständig in Kraft.</p>
+          </div>
+        </div>
+
+        <div>
+          <ul class="t-hooks">
+            <li><a href="mod-flight-dynamics-rotor-shadow.html#fd" data-umami-event="live-de-fdshadow-hook-schwebe">Im Schwebeflug hält sich der Hubschrauber nicht mehr selbst</a></li>
+            <li><a href="mod-flight-dynamics-rotor-shadow.html#fd" data-umami-event="live-de-fdshadow-hook-live">Echtzeit-Flugdaten plus Steuereingaben</a></li>
+            <li><a href="mod-flight-dynamics-rotor-shadow.html#schatten" data-umami-event="live-de-fdshadow-hook-schatten">Sieben Muster, Schatten in Live-Drehzahl zurück</a></li>
+            <li><a href="mod-flight-dynamics-rotor-shadow.html#bilder" data-umami-event="live-de-fdshadow-hook-bilder">Rotor Shadow in Bildern</a></li>
+          </ul>
+        </div>
+
+      </div>
       <a class="t-buy" href="mod-flight-dynamics-rotor-shadow.html" data-umami-event="live-de-fdshadow">
         Details und Kauf &rarr;
       </a>
