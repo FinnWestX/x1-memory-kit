@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FWX Heli Flight Dynamics &amp; Rotor Shadow für den Microsoft Flight Simulator 2024</title>
+<meta name="description" content="Flight Dynamics und Rotor Shadow für jeden Hubschrauber im MSFS 2024, ohne das Haptik-Modul. Für Besitzer des FWX Haptic Mods, des Sound + Haptic Bundles oder des Sound Mods (einzeln). Nur hier auf finnwestx1.com.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="alternate" hreflang="en" href="https://finnwestx1.com/mod-flight-dynamics-rotor-shadow.html">
+<link rel="alternate" hreflang="de" href="https://finnwestx1.com/de/mod-flight-dynamics-rotor-shadow.html">
+<link rel="alternate" hreflang="x-default" href="https://finnwestx1.com/mod-flight-dynamics-rotor-shadow.html">
+<!-- Nirgends verlinkt: kein Eintrag in index.html, keine Navigation, keine Sitemap, kein canonical. -->
+<style>
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img, svg { max-width: 100%; display: block; }
+
+/* ---------------------------------------------------------------------------------- */
+
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-brand:hover { text-decoration: none; }
+.t-nav-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+.t-nav-cta:hover { text-decoration: none; filter: brightness(1.1); }
+
+main {
+  max-width: 820px; margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+.eyebrow {
+  display: inline-block;
+  padding: 7px 16px; margin-bottom: 20px;
+  border-radius: 999px;
+  background: rgba(14,165,233,0.1);
+  border: 1px solid rgba(14,165,233,0.35);
+  color: var(--accent);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.02em; line-height: 1.1;
+  margin-bottom: 14px;
+}
+h1 .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.subtitle {
+  font-size: 15px; color: var(--accent);
+  font-weight: 600; letter-spacing: 0.2px;
+  margin-bottom: 16px;
+}
+.lede {
+  font-size: 17px; color: var(--text-dim);
+  margin-bottom: 30px; max-width: 640px;
+}
+
+.nav-pills {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 48px; padding: 16px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.nav-pills a {
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(14,165,233,0.08);
+  border: 1px solid rgba(14,165,233,0.3);
+  color: var(--accent);
+  font-size: 13px; font-weight: 600;
+  text-decoration: none;
+}
+.nav-pills a:hover { background: rgba(14,165,233,0.18); text-decoration: none; }
+
+h2 {
+  color: #fff; font-size: 28px; font-weight: 800;
+  margin: 48px 0 20px;
+  letter-spacing: -0.01em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  color: #fff; font-size: 19px; font-weight: 700;
+  margin: 30px 0 12px;
+}
+p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+p strong { color: #fff; }
+
+ul.checks {
+  list-style: none; margin: 20px 0 30px; padding: 0;
+  font-size: 15px; color: var(--text-dim);
+}
+ul.checks li {
+  padding: 9px 0 9px 26px;
+  position: relative;
+}
+ul.checks li::before {
+  content: "\2713"; color: var(--ok);
+  position: absolute; left: 0; top: 9px; font-weight: 800;
+}
+ul.checks li strong { color: #fff; }
+
+ol.steps {
+  counter-reset: step;
+  list-style: none; padding: 0; margin: 20px 0 30px;
+}
+ol.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding: 18px 22px 18px 60px;
+  margin-bottom: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-dim);
+  font-size: 15px;
+}
+ol.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  top: 16px; left: 16px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 14px;
+  display: grid; place-items: center;
+  box-shadow: 0 4px 12px -3px rgba(14,165,233,0.5);
+}
+ol.steps > li strong { color: #fff; }
+
+.callout {
+  border-radius: 12px; padding: 18px 22px;
+  margin: 22px 0;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 14px; color: var(--text-dim);
+}
+.callout .head {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; color: #fff; margin-bottom: 8px;
+  font-size: 14px;
+}
+.callout.ok { background: rgba(34,197,94,0.06); border-color: rgba(34,197,94,0.35); }
+.callout.ok .head { color: var(--ok); }
+
+/* --- Panel screenshots --- */
+.shot { margin: 26px 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--card); }
+.shot img { display: block; width: 100%; height: auto; }
+.shot figcaption { padding: 12px 16px; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--border); }
+
+/* --- Bildergalerie Rotor Shadow: 1 Spalte mobil, 2 Spalten ab Tablet --- */
+.gallery { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 26px 0 30px; }
+@media (min-width: 680px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+.gallery figure { margin: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--card); }
+.gallery img { display: block; width: 100%; height: auto; }
+.gallery figcaption { padding: 10px 14px; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--border); }
+
+/* Kaufweg */
+.buy-row {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  margin: 24px 0 12px;
+}
+.buy-btn {
+  display: inline-block; padding: 15px 26px; border-radius: 12px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 15px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 15px 45px -12px rgba(14,165,233,0.55);
+}
+.buy-btn:hover { text-decoration: none; filter: brightness(1.1); }
+.buy-btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(14,165,233,0.45);
+  color: var(--accent);
+  box-shadow: none;
+}
+.refund-note {
+  font-size: 13px; color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.back-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.back-cta h3 { color: #fff; font-size: 22px; margin-bottom: 10px; margin-top: 0; }
+.back-cta p { color: var(--text-dim); margin-bottom: 20px; }
+.back-cta .btn {
+  display: inline-block; padding: 14px 28px; border-radius: 12px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 15px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.back-cta .btn:hover { text-decoration: none; filter: brightness(1.1); }
+
+.t-footer {
+  padding: 60px 20px 40px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  font-size: 13px; color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="./" class="t-nav-brand">
+      <img src="../fwx-logo.svg" alt="FWX Aviation" class="t-nav-logo">
+      FWX Aviation
+    </a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="../mod-flight-dynamics-rotor-shadow.html" style="color:var(--text-dim);font-size:13px;font-weight:600;" title="English">EN</a>
+      <a href="#kaufen" class="t-nav-cta">Kaufen</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="eyebrow">MSFS 2024 &middot; ERWEITERUNGS-PAKET &middot; NUR HIER</div>
+
+  <h1>FWX Heli <span class="accent">Flight Dynamics &amp; Rotor Shadow.</span></h1>
+  <p class="subtitle">für den Microsoft Flight Simulator 2024</p>
+  <p class="lede">
+    <strong>Dieses Hubschrauber-Paket:</strong> Im Kern eine neue wesentliche Erweiterung für die Flugdynamik.
+    Ein Gamechanger, auf den wir sehr stolz sind. <strong>Kein Kamera-Effekt!</strong> Der Hubschrauber selbst
+    fliegt spürbar realistischer. Das Flugmodell des Simulators bleibt in Kraft, unsere Technik gibt ihm
+    zusätzliche Bewegungscharakteristik mit.
+  </p>
+  <p>
+    <strong>Im Paket dabei:</strong> Eine einzigartige und perfektionierte Rotorschatten-Technik, als Ergänzung
+    für die dafür bekannten sieben Modelle im Sim. Dieses Paket richtet sich somit an alle Hubschrauberpiloten
+    im MSFS 2024.
+  </p>
+  <p style="font-size:13px;color:var(--text-muted);margin-bottom:30px;">
+    Von den Machern des FWX EC135 Sound Mods, besprochen von SimFlight, Threshold und MSFS Addons.
+  </p>
+
+  <div class="nav-pills">
+    <a href="#wer">Für wen?</a>
+    <a href="#fd">Flight Dynamics</a>
+    <a href="#daneben">Zusammenspiel</a>
+    <a href="#panel">Das Bedienfeld</a>
+    <a href="#schatten">Rotor Shadow</a>
+    <a href="#bilder">In Bildern</a>
+    <a href="#nicht">Was es nicht macht</a>
+    <a href="#technik">Voraussetzungen</a>
+    <a href="#kaufen">Kaufen</a>
+  </div>
+
+  <h2 id="wer">Für wen das gedacht ist</h2>
+
+  <div class="callout ok">
+    <div class="head">Für Besitzer unserer Mods</div>
+    Für Besitzer des FWX Haptic Mods, des Sound + Haptic Bundles oder des Sound Mods (einzeln): Flight Dynamics
+    und Rotor Shadow, ohne etwas doppelt zu bezahlen. Alles wird im FWX Control Center im Simulator eingestellt.
+  </div>
+
+  <p>
+    Wenn du eines unserer Mods schon hast, kennst du das FWX Control Center &ndash; es kommt mit jedem
+    FWX-Produkt mit. Darin hast du die beiden gesperrten Reiter gesehen: <em>Flight Dynamics</em> und
+    <em>Rotor Shadow</em>. Dieses Paket schaltet genau diese beiden frei &ndash; und nichts, wofür du schon einmal
+    bezahlt hast, ist ein zweites Mal darin.
+  </p>
+  <p>
+    Genauso ist es für alle gedacht, die diese beiden Erweiterungen wollen und weder Klang noch Haptik dazu
+    brauchen. Du bekommst dieselbe Flight Dynamics und denselben Rotor Shadow, im selben Control Center.
+  </p>
+
+  <h2 id="fd">Flight Dynamics &ndash; was es macht</h2>
+  <p>
+    <strong>Die Flugdynamik ist das Herzstück.</strong> Was sie macht:
+  </p>
+  <ul class="checks">
+    <li>Der Hubschrauber hält sich im Schwebeflug nicht mehr selbst. Er &bdquo;lebt&ldquo; unter dem Piloten und
+        will geflogen werden &hellip;</li>
+    <li>Dasselbe gilt für den Bewegungsflug. Zunächst erfolgt ein nahtloser Übergang in den Bewegungsflug. Der
+        Bewegungsflug selbst, egal welche Richtung, wird von unserem System gleichermaßen behandelt. Die
+        aerodynamischen Live-Einflüsse als auch die Einflüsse des Piloten werden deutlich spürbar. Das macht das
+        Ganze von Grund auf lebendiger und immersiver.</li>
+    <li>Alles kann ins Detail personalisiert vom Kunden eingestellt werden.</li>
+    <li>Was den Hubschrauber bewegt, entsteht laufend aus den Echtzeit-Flugdaten des Simulators plus den
+        Steuereingaben des Piloten im selben Augenblick. Nichts ist vorberechnet, nichts abgespielt. Alles
+        geschieht live.</li>
+    <li>Jedes Muster hat speicherbare Profile und wird komfortabel im Simulator selbst über die Toolbar
+        konfiguriert. Somit keine Einstellungen außerhalb des Sims nötig. Die Standardmuster kommen mit
+        getesteter Voreinstellung. Die Default-Werte können für evtl. Drittanbieter-Helis vom Kunden individuell
+        auf seine eigenen Bedürfnisse eingestellt und gesichert werden.</li>
+    <li>Dies gilt für jeden Hubschrauber im MSFS 2024, nicht nur für ein einzelnes Muster.</li>
+  </ul>
+
+  <p>
+    Die Reihenfolge dahinter ist bewusst so gebaut: Der Simulator rechnet. Unsere Technik gibt dem Flugverhalten
+    zusätzliche Daten mit. Wichtig dabei: <strong>Wir ersetzen NICHT das Flugmodell des Simulators.</strong> Es
+    bleibt vollständig in Kraft und rechnet weiter wie vorgesehen. Unsere Technik liest, was dort entsteht, und
+    gibt zusätzliche Bewegungsanteile hinzu. Ausgeführt wird alles vom Simulator selbst. Das Original bleibt
+    unangetastet, somit kein Überschreiben der original Simulator-Werte. Der Simulator verarbeitet das und gibt
+    das Flugverhalten dementsprechend aus.
+  </p>
+
+  <figure class="shot">
+    <img src="../panel-flight-dynamics-1.jpg" alt="FWX Control Center im Simulator, Reiter Flight Dynamics: der Block für den Bewegungsflug mit Hauptschalter, Blockstärke, Böen und den Gruppen Nicken, Gieren und Rollen, jede mit einem Regler für Anströmung und einem für Lebendigkeit." width="569" height="909" loading="lazy">
+    <figcaption>FWX Control Center &ndash; Reiter Flight Dynamics (so sieht es im Simulator aus)</figcaption>
+  </figure>
+
+  <figure class="shot">
+    <img src="../panel-flight-dynamics-2.jpg" alt="Derselbe Reiter Flight Dynamics, Block Schwebeflug: eigene Werte für Blockstärke, Böen, Nicken, Gieren und Rollen – der Schwebeflug wird unabhängig vom Bewegungsflug eingestellt." width="569" height="906" loading="lazy">
+    <figcaption>FWX Control Center &ndash; der Schwebeflug wird unabhängig vom Bewegungsflug eingestellt</figcaption>
+  </figure>
+
+  <h2 id="daneben">Zusammenspiel mit anderen Add-ons</h2>
+  <p>
+    Drittanbieter-Kamerawerkzeuge setzen ihre Werte ungestört obendrauf. <strong>Wir fassen die Kamera nicht
+    an.</strong> Wer mit ChasePlane und/oder FS Realistic fliegt, arbeitet also weiter wie gewohnt: die beiden
+    wirken auf Kamera und Klang, wir auf das Flugverhalten darunter. Für viele Simmer gehören ChasePlane und
+    FS Realistic zur Grundausstattung. Genau deshalb war uns wichtig, dass unser Paket daneben ohne Einschränkung
+    läuft.
+  </p>
+
+  <h2 id="panel">Das Bedienfeld</h2>
+  <p>
+    <strong>Bedient wird alles an einer Stelle im Simulator über die Toolbar.</strong> Man öffnet im Flug das
+    FWX Control Center: ein Reiter je Erweiterung, oben ein Hauptschalter, darunter die Einstellungen. Jede
+    Änderung wirkt sofort, ohne Neustart. Kein zweites Fenster, das nebenher laufen muss, und niemand muss aus
+    dem Flug heraus, um etwas zu ändern.
+  </p>
+  <p>
+    <strong>Gerade in VR zahlt sich das besonders aus.</strong> Wer die Brille auf hat, kann kein Fenster neben
+    dem Simulator bedienen, ohne sie abzunehmen. Bei uns muss er das nicht: Das Bedienfeld sitzt im Simulator und
+    ist damit auch mit aufgesetzter Brille erreichbar. Einstellen im Flug, ohne den Flug zu verlassen. Auch im
+    klassischen 2D-Betrieb eine tolle Sache, da keine externe Windowsanwendung von außen bedient werden muss.
+  </p>
+
+  <h2 id="schatten">Rotor Shadow</h2>
+  <p>
+    <strong>Kurz zum Rotorschatten:</strong> Über dem Piloten dreht ein Rotor, und bei sieben bekannten Mustern
+    verschwindet dessen Schatten im Simulator unterschiedlich ab einer gewissen Drehzahl vollständig. Somit
+    anfangs noch zu sehen, nach dem Startup plötzlich nicht mehr. Genau diesen sieben bringt unser
+    Rotorschatten-Mod den Schatten in Live-Drehzahl zurück, alle übrigen haben ihren Schatten ohnehin.
+  </p>
+  <p>Die sieben Muster:</p>
+  <ul class="checks">
+    <li><strong>Airbus H125</strong></li>
+    <li><strong>Airbus H135 (EC135)</strong></li>
+    <li><strong>Airbus H225</strong></li>
+    <li><strong>Guimbal Cabri G2</strong></li>
+    <li><strong>Robinson R66</strong></li>
+    <li><strong>Sikorsky S-64 Skycrane</strong></li>
+    <li><strong>Boeing CH-47 Chinook</strong></li>
+  </ul>
+
+  <figure class="shot">
+    <img src="../panel-rotor-shadow-1.jpg" alt="FWX Control Center im Simulator, Reiter Rotor Shadow: Statuszeile, ein großer Hauptschalter, der erkannte Hubschrauber und das Profil, das für ihn gilt." width="579" height="336" loading="lazy">
+    <figcaption>FWX Control Center &ndash; Reiter Rotor Shadow (so sieht es im Simulator aus)</figcaption>
+  </figure>
+
+  <h2 id="bilder">Rotor Shadow in Bildern</h2>
+  <p>
+    Alle sieben unterstützten Muster, im Simulator aufgenommen mit laufendem Mod &ndash; der Rotorschatten ist in
+    voller Drehzahl da, wo der Simulator von allein nichts zeichnet.
+  </p>
+
+  <div class="gallery">
+
+    <figure>
+      <img src="../rotor-shadow-gallery-01.jpg" alt="Blick aus dem Cockpit der H125 auf den Rollweg: der Schatten des Hubschraubers mit der drehenden Rotorscheibe und dem Heckrotor, deutlich auf dem Beton." width="1280" height="720" loading="lazy">
+      <figcaption>Airbus H125 &ndash; Rotorschatten in voller Drehzahl</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../rotor-shadow-gallery-02.jpg" alt="Blick durch das Kabinenfenster der EC135 auf das Vorfeld: der Schatten des Hubschraubers mit drehender Rotorscheibe auf dem Beton." width="1280" height="720" loading="lazy">
+      <figcaption>Airbus H135 (EC135) &ndash; Rotorschatten in voller Drehzahl</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../rotor-shadow-gallery-03.jpg" alt="Blick aus dem Cockpit der H225 hinunter auf die Bahn: der Schatten zeigt die große Rotorscheibe und den Heckrotor der schweren Maschine." width="1280" height="720" loading="lazy">
+      <figcaption>Airbus H225 &ndash; Rotorschatten in voller Drehzahl</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../rotor-shadow-gallery-04.jpg" alt="Blick aus dem Cockpit der Cabri G2 auf die Bahn: der Schatten der kleinen Maschine, Hauptrotor und Heckrotor getrennt erkennbar." width="1280" height="720" loading="lazy">
+      <figcaption>Guimbal Cabri G2 &ndash; Rotorschatten in voller Drehzahl</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../rotor-shadow-gallery-05.jpg" alt="Blick am Türrahmen der R66 vorbei auf den Rollweg: der Schatten mit dem schlanken Heckausleger unter dem drehenden Hauptrotor." width="1280" height="720" loading="lazy">
+      <figcaption>Robinson R66 &ndash; Rotorschatten in voller Drehzahl</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../rotor-shadow-gallery-06.jpg" alt="Blick aus dem Cockpit der S-64 Skycrane auf die Bahn: der Schatten des langen, offenen Rumpfs unter dem drehenden Hauptrotor." width="1280" height="720" loading="lazy">
+      <figcaption>Sikorsky S-64 Skycrane &ndash; Rotorschatten in voller Drehzahl</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../rotor-shadow-gallery-07.jpg" alt="Blick durch die Dachfenster des Chinook-Cockpits auf die Bahn: der Rotorschatten des Tandem-Hubschraubers auf dem Beton." width="1280" height="720" loading="lazy">
+      <figcaption>Boeing CH-47 Chinook &ndash; Rotorschatten in voller Drehzahl</figcaption>
+    </figure>
+
+  </div>
+
+  <div class="callout ok">
+    <div class="head">Unser Anspruch</div>
+    Nach unserer Marktübersicht gibt es für den MSFS 2024 derzeit nichts, was das Flugverhalten von Hubschraubern
+    in dieser Form immersiver und einstellbar macht.
+  </div>
+
+  <h2 id="nicht">Was es nicht macht</h2>
+  <ul class="checks">
+    <li><strong>Wir ersetzen NICHT das Flugmodell des Simulators.</strong> Es bleibt vollständig in Kraft und rechnet weiter wie vorgesehen.</li>
+    <li><strong>Wir fassen die Kamera nicht an.</strong></li>
+    <li><strong>Rotor Shadow wirkt nur auf die sieben oben genannten Muster.</strong> Alle übrigen haben ihren Schatten ohnehin.</li>
+    <li><strong>Es wirkt auf Hubschrauber</strong>, nicht auf Flugzeuge.</li>
+    <li><strong>In diesem Paket ist kein Haptik-Modul und kein Sound-Mod.</strong> Das sind eigene FWX-Produkte.</li>
+  </ul>
+
+  <h2 id="technik">Voraussetzungen</h2>
+  <ul class="checks">
+    <li><strong>Microsoft Flight Simulator 2024.</strong> PC, Steam oder Microsoft Store. MSFS 2020 wird nicht unterstützt.</li>
+    <li><strong>Windows 11.</strong> Nicht auf der Xbox, dort lassen sich keine Add-ons von Drittanbietern installieren.</li>
+    <li><strong>Flight Dynamics: jeder Hubschrauber</strong> im Simulator.</li>
+    <li><strong>Rotor Shadow: die sieben oben genannten Muster.</strong></li>
+    <li><strong>Keine zusätzliche Hardware.</strong> Die Steuerung, mit der du heute fliegst, reicht.</li>
+  </ul>
+
+  <h2 id="kaufen">Kaufen</h2>
+  <p>
+    Dieses Paket gibt es <strong>nur hier auf finnwestx1.com</strong>. Es ist <strong>nicht auf SimMarket</strong>
+    erhältlich &ndash; es wurde für Kunden zusammengestellt, die den FWX Haptic Mod, das Sound + Haptic Bundle
+    oder den Sound Mod schon besitzen und nichts doppelt bezahlen sollen.
+  </p>
+
+  <div class="buy-row">
+    <a class="buy-btn" href="https://buy.stripe.com/6oU4gt0hgbNybQpfjq2Nq0a" target="_blank" rel="noopener noreferrer" data-umami-event="mod-fdshadow-buy-de">
+      Auf finnwestx1.com kaufen &ndash; 19,99 &euro;
+    </a>
+  </div>
+  <div class="refund-note">&#128737;&#65039; 30 Tage Garantie (techn. Probleme) &middot; &#9889; Sofort-Download &middot; &#128736; Kostenlose Updates</div>
+
+  <section class="back-cta">
+    <h3>Noch etwas unklar?</h3>
+    <p>Schreib an <a href="mailto:Finn.West@gmx.net">Finn.West@gmx.net</a>, ich antworte persönlich. Meistens unter 24 Stunden.</p>
+    <a href="contact.html" class="btn">Kontakt &amp; Support &rarr;</a>
+  </section>
+
+</main>
+
+<footer class="t-footer">
+  <div style="max-width:1080px;margin:0 auto;display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Produkt-Info</div>
+      <a href="faq.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">FAQ</a>
+      <a href="install.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Installationsanleitung</a>
+      <a href="changelog.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Changelog</a>
+      <a href="contact.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Kontakt &amp; Support</a>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Community</div>
+      <a href="https://www.youtube.com/@FinnWest" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">YouTube</a>
+      <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Reddit</a>
+      <a href="https://discord.gg/nfGaV5eXJg" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Discord</a>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Presse</div>
+      <a href="presse.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Presse &amp; Media Kit</a>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">ThresholdX</a>
+      <a href="https://www.simflight.de/2026/04/04/fwx-ec135-sound-enhancement-pack-realistischer-turbinensound-fuer-den-msfs-2024/" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">simFlight.de</a>
+      <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">MSFS Addons</a>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Rechtliches</div>
+      <a href="/" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Hauptseite</a>
+      <a href="../impressum.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Impressum</a>
+      <a href="../datenschutz.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Datenschutz</a>
+      <a href="../agb.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">AGB</a>
+      <a href="../widerruf.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Widerrufsbelehrung</a>
+      <a href="../support.html" style="color:#cbd5e1;font-size:14px;padding:3px 0;">Unterst&uuml;tze uns &#9749;</a>
+    </div>
+
+  </div>
+  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px 0 10px;">EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</div>
+  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. Asobo Studio ist eine Marke des jeweiligen Inhabers. Alle weiteren Produkt- und Firmennamen sind Marken ihrer jeweiligen Inhaber. FinnWest Aviation ist ein unabhängiger Drittanbieter und steht in keiner Verbindung zu diesen Unternehmen und wird von ihnen nicht unterstützt oder gesponsert.</div>
+  <div style="max-width:1080px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--text-muted);">&copy; 2026 FinnWest Aviation</div>
+</footer>
+
+<script>if(!localStorage.getItem("fwx-notrack")&&navigator.doNotTrack!=="1"&&window.doNotTrack!=="1"&&navigator.msDoNotTrack!=="1"&&navigator.globalPrivacyControl!==true){var s=document.createElement("script");s.defer=true;s.src="/script.js";s.setAttribute("data-website-id","80459d03-bda7-45fa-a7bc-6472be80e47a");s.setAttribute("data-host-url","https://webhook.finnwestx1.com");document.head.appendChild(s);}</script>
+
+</body>
+</html>
