@@ -21,6 +21,6 @@
   <line x1="156" y1="265" x2="356" y2="265" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
   <!-- FWX Text -->
   <text x="256" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="8">FWX</text>
-  <!-- Aviation Text -->
-  <text x="256" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="400" fill="#0ea5e9" letter-spacing="12">AVIATION</text>
+  <!-- SimAviation Text -->
+  <text x="256" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400" fill="#0ea5e9" letter-spacing="7">SIMAVIATION</text>
 </svg>

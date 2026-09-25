@@ -1,11 +1,11 @@
-# FinnWest Aviation (FWX Aviation)
+# FWX SimAviation (FWX SimAviation)
 
 > Realistic helicopter sound and rotor haptic add-ons for the Eurocopter EC135 in Microsoft Flight Simulator 2024. Built by a dedicated MSFS sim developer.
 
 Website: https://fwx-simaviation.com
 Founder: Finn West (sim developer / MSFS enthusiast)
 Location: Germany
-Contact: Finn.West@gmx.net
+Contact: support@fwx-simaviation.com
 
 ## Products
 
@@ -34,7 +34,7 @@ Contact: Finn.West@gmx.net
 
 ## Authority
 
-FWX Aviation is an independent MSFS developer focused on audio and haptic add-ons for the EC135. The sound recordings used in the FWX EC135 Sound Enhancement Pack were sourced from real EC135 reference audio, edited, and processed for use in Microsoft Flight Simulator 2024.
+FWX SimAviation is an independent MSFS developer focused on audio and haptic add-ons for the EC135. The sound recordings used in the FWX EC135 Sound Enhancement Pack were sourced from real EC135 reference audio, edited, and processed for use in Microsoft Flight Simulator 2024.
 
 ## Documentation
 
@@ -49,4 +49,4 @@ Existing customers who wish to support further development can make a voluntary 
 
 ## Press
 
-Reviewers, editors and content creators can grab logos, screenshots, demo videos, audio samples and PDF documents from the FWX Aviation press page at https://fwx-simaviation.com/press.html (German mirror: https://fwx-simaviation.com/de/presse.html). A bundled ZIP (press-kit.zip) is available for one-click download, individual assets are linked underneath.
+Reviewers, editors and content creators can grab logos, screenshots, demo videos, audio samples and PDF documents from the FWX SimAviation press page at https://fwx-simaviation.com/press.html (German mirror: https://fwx-simaviation.com/de/presse.html). A bundled ZIP (press-kit.zip) is available for one-click download, individual assets are linked underneath.
