@@ -20,7 +20,7 @@
   <!-- Trennlinie -->
   <line x1="156" y1="265" x2="356" y2="265" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4"/>
   <!-- FWX Text -->
-  <text x="256" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="8">FWX</text>
+  <text x="256" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="108" font-weight="800" fill="#ffffff" letter-spacing="8">FWX</text>
   <!-- SimAviation Text -->
-  <text x="256" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400" fill="#0ea5e9" letter-spacing="7">SIMAVIATION</text>
+  <text x="256" y="400" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="400" fill="#0ea5e9" letter-spacing="7">SimAviation</text>
 </svg>
