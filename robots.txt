@@ -44,4 +44,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://finnwestx1.com/sitemap.xml
+Sitemap: https://fwx-simaviation.com/sitemap.xml

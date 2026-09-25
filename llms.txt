@@ -2,7 +2,7 @@
 
 > Realistic helicopter sound and rotor haptic add-ons for the Eurocopter EC135 in Microsoft Flight Simulator 2024. Built by a dedicated MSFS sim developer.
 
-Website: https://finnwestx1.com
+Website: https://fwx-simaviation.com
 Founder: Finn West (sim developer / MSFS enthusiast)
 Location: Germany
 Contact: Finn.West@gmx.net
@@ -15,7 +15,7 @@ Contact: Finn.West@gmx.net
 
 ## Distribution
 
-- Direct from finnwestx1.com (Stripe: cards, PayPal, Apple Pay, Google Pay, Klarna)
+- Direct from fwx-simaviation.com (Stripe: cards, PayPal, Apple Pay, Google Pay, Klarna)
 - SimMarket (Vendor Client #2558)
 
 ## Compatibility
@@ -38,15 +38,15 @@ FWX Aviation is an independent MSFS developer focused on audio and haptic add-on
 
 ## Documentation
 
-- Terms of Service: https://finnwestx1.com/agb.html
-- Privacy Policy: https://finnwestx1.com/datenschutz.html
-- Cancellation Policy: https://finnwestx1.com/widerruf.html
-- Imprint: https://finnwestx1.com/impressum.html
+- Terms of Service: https://fwx-simaviation.com/agb.html
+- Privacy Policy: https://fwx-simaviation.com/datenschutz.html
+- Cancellation Policy: https://fwx-simaviation.com/widerruf.html
+- Imprint: https://fwx-simaviation.com/impressum.html
 
 ## Voluntary Support
 
-Existing customers who wish to support further development can make a voluntary contribution (pay-what-you-want) at https://finnwestx1.com/support.html. This is strictly voluntary, without consideration, without invoice, without right of withdrawal, and not a tax-deductible donation. Payments are processed by Stripe.
+Existing customers who wish to support further development can make a voluntary contribution (pay-what-you-want) at https://fwx-simaviation.com/support.html. This is strictly voluntary, without consideration, without invoice, without right of withdrawal, and not a tax-deductible donation. Payments are processed by Stripe.
 
 ## Press
 
-Reviewers, editors and content creators can grab logos, screenshots, demo videos, audio samples and PDF documents from the FWX Aviation press page at https://finnwestx1.com/press.html (German mirror: https://finnwestx1.com/de/presse.html). A bundled ZIP (press-kit.zip) is available for one-click download, individual assets are linked underneath.
+Reviewers, editors and content creators can grab logos, screenshots, demo videos, audio samples and PDF documents from the FWX Aviation press page at https://fwx-simaviation.com/press.html (German mirror: https://fwx-simaviation.com/de/presse.html). A bundled ZIP (press-kit.zip) is available for one-click download, individual assets are linked underneath.
