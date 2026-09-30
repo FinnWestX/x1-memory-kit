@@ -477,6 +477,27 @@ img, svg { max-width: 100%; display: block; }
 .g-grid figure { margin:0; }
 .g-grid img { border-radius:10px; border:1px solid var(--border); width:100%; }
 .g-grid figcaption { font-size:12px; color:var(--text-muted); margin-top:5px; }
+/* ---- PANELRASTER 30.09.2026: zwei getrennte Gruppen, Hochformat und Querformat ---- */
+.panel-grid { display:grid; grid-template-columns:1fr; gap:18px; margin:16px auto 0; max-width:1080px; align-items:start; }
+.panel-grid figure { margin:0; }
+.panel-grid img { display:block; width:100%; height:auto; object-fit:contain; margin:0 auto;
+                  border:1px solid var(--border); border-radius:12px; background:var(--bg-alt); }
+.panel-grid figcaption { margin-top:8px; font-size:13px; color:var(--text-muted); line-height:1.5; text-align:center; }
+.panel-grid img[src$="overview.jpg"] { max-width:683px; }
+.panel-grid img[src$="hover.png"]    { max-width:641px; }
+.panel-grid img[src$="motion.png"]   { max-width:640px; }
+.panel-grid img[src$="rotor.jpg"]    { max-width:644px; }
+.panel-grid img[src$="strength.jpg"] { max-width:649px; }
+.panel-grid img[src$="profile.jpg"]  { max-width:652px; }
+.panel-landscape { margin-top:26px; }
+@media (min-width:700px)  { .panel-grid.panel-portrait, .panel-grid.panel-landscape { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1000px) { .panel-grid.panel-portrait, .panel-grid.panel-landscape { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+/* ---- ICON-PLATZHALTER BUNDLES 30.09.2026 ---- */
+.icon-box { position:relative; aspect-ratio:1/1; width:100%; max-width:240px; margin:16px auto 0;
+            background:var(--bg-alt); border:1px solid var(--border); border-radius:12px;
+            display:flex; align-items:center; justify-content:center; }
+.icon-ph { text-align:center; color:var(--text-muted); font-size:12px; padding:12px; }
+.icon-ph strong { display:block; color:var(--text-dim); font-size:13px; margin-bottom:4px; }
 .f-list { list-style:none; margin-top:12px; }
 .f-list li { padding:7px 0 7px 22px; position:relative; color:var(--text-dim); font-size:14px;
              border-bottom:1px solid rgba(255,255,255,0.05); }
@@ -621,12 +642,6 @@ img, svg { max-width: 100%; display: block; }
     <p>Eight helicopter types, one video each. Every video flies the same pattern twice: first without the extension, then with it.</p>
   </div>
 
-<!-- HINWEIS ENTFERNEN SOBALD VIDEOS OEFFENTLICH -->
-  <div class="pg-notice">
-    <strong>The videos are not public yet.</strong>
-    All players on this page are embedded and correct, but the videos are still set to private on YouTube. Until they are released the players stay empty. Nothing else on the page needs to be changed for that.
-  </div>
-
   <div class="vid-grid">
     <figure class="vid-item">
       <div class="vid-frame"><iframe src="https://www.youtube.com/embed/WrP_715I8ZU" title="Airbus H125, flight dynamics" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -679,6 +694,10 @@ img, svg { max-width: 100%; display: block; }
     <div class="vid-frame"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotor shadow on seven helicopter types" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <figcaption>Rotor Shadow, seven helicopter types</figcaption>
   </figure>
+  <figure class="vid-item vid-solo">
+    <div class="vid-frame"><iframe src="https://www.youtube.com/embed/iFIKjhCXaDs" title="EC135, before and after: sound and rotor shadow" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <figcaption>EC135, before and after: sound and rotor shadow</figcaption>
+  </figure>
 </section>
 
 <section class="t-section">
@@ -686,35 +705,15 @@ img, svg { max-width: 100%; display: block; }
     <h2>Setting it up in the simulator</h2>
     <p>Everything is set in the panel inside the simulator, while the flight continues. Changes take effect at once and are stored per helicopter type.</p>
   </div>
-  <div class="pnl-top">
-    <figure class="pnl-fig pnl-tall">
-      <img src="../assets/panel/overview.jpg" width="683" height="972" loading="lazy" alt="Panel in the simulator, overview of all settings">
-      <figcaption>Overview: all sections of the panel at a glance</figcaption>
-    </figure>
-    <div class="pnl-strips">
-      <figure class="pnl-fig">
-        <img src="../assets/panel/rotor.jpg" width="644" height="406" loading="lazy" alt="Panel section for the rotor shadow">
-        <figcaption>Rotor shadow, switched on and off per helicopter type</figcaption>
-      </figure>
-      <figure class="pnl-fig">
-        <img src="../assets/panel/strength.jpg" width="649" height="349" loading="lazy" alt="Panel section for the overall strength of the flight dynamics">
-        <figcaption>Overall strength of the flight dynamics</figcaption>
-      </figure>
-      <figure class="pnl-fig">
-        <img src="../assets/panel/profile.jpg" width="652" height="322" loading="lazy" alt="Panel section for the profile of the current helicopter type">
-        <figcaption>Profile of the helicopter type currently loaded</figcaption>
-      </figure>
-    </div>
+  <div class="panel-grid panel-portrait">
+    <figure><img src="../assets/panel/overview.jpg" alt="Panel in the simulator, overview of all settings" width="683" height="972" loading="lazy"><figcaption>Overview: all sections of the panel at a glance</figcaption></figure>
+    <figure><img src="../assets/panel/hover.png" alt="Panel section for the behaviour in the hover" width="641" height="1116" loading="lazy"><figcaption>Hover: how much the helicopter drifts and how quickly it reacts</figcaption></figure>
+    <figure><img src="../assets/panel/motion.png" alt="Panel section for the movement in forward flight" width="640" height="1118" loading="lazy"><figcaption>Motion: the movement in forward flight, axis by axis</figcaption></figure>
   </div>
-  <div class="pnl-pair">
-    <figure class="pnl-fig pnl-tall">
-      <img src="../assets/panel/hover.png" width="641" height="1116" loading="lazy" alt="Panel section for the behaviour in the hover">
-      <figcaption>Hover: how much the helicopter drifts and how quickly it reacts</figcaption>
-    </figure>
-    <figure class="pnl-fig pnl-tall">
-      <img src="../assets/panel/motion.png" width="640" height="1118" loading="lazy" alt="Panel section for the movement in forward flight">
-      <figcaption>Motion: the movement in forward flight, axis by axis</figcaption>
-    </figure>
+  <div class="panel-grid panel-landscape">
+    <figure><img src="../assets/panel/rotor.jpg" alt="Panel section for the rotor shadow" width="644" height="406" loading="lazy"><figcaption>Rotor shadow, switched on and off per helicopter type</figcaption></figure>
+    <figure><img src="../assets/panel/strength.jpg" alt="Panel section for the overall strength of the flight dynamics" width="649" height="349" loading="lazy"><figcaption>Overall strength of the flight dynamics</figcaption></figure>
+    <figure><img src="../assets/panel/profile.jpg" alt="Panel section for the profile of the current helicopter type" width="652" height="322" loading="lazy"><figcaption>Profile of the helicopter type currently loaded</figcaption></figure>
   </div>
 </section>
 

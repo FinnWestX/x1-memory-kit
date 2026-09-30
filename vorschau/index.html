@@ -481,6 +481,27 @@ img, svg { max-width: 100%; display: block; }
 .g-grid figure { margin:0; }
 .g-grid img { border-radius:10px; border:1px solid var(--border); width:100%; }
 .g-grid figcaption { font-size:12px; color:var(--text-muted); margin-top:5px; }
+/* ---- PANELRASTER 30.09.2026: zwei getrennte Gruppen, Hochformat und Querformat ---- */
+.panel-grid { display:grid; grid-template-columns:1fr; gap:18px; margin:16px auto 0; max-width:1080px; align-items:start; }
+.panel-grid figure { margin:0; }
+.panel-grid img { display:block; width:100%; height:auto; object-fit:contain; margin:0 auto;
+                  border:1px solid var(--border); border-radius:12px; background:var(--bg-alt); }
+.panel-grid figcaption { margin-top:8px; font-size:13px; color:var(--text-muted); line-height:1.5; text-align:center; }
+.panel-grid img[src$="overview.jpg"] { max-width:683px; }
+.panel-grid img[src$="hover.png"]    { max-width:641px; }
+.panel-grid img[src$="motion.png"]   { max-width:640px; }
+.panel-grid img[src$="rotor.jpg"]    { max-width:644px; }
+.panel-grid img[src$="strength.jpg"] { max-width:649px; }
+.panel-grid img[src$="profile.jpg"]  { max-width:652px; }
+.panel-landscape { margin-top:26px; }
+@media (min-width:700px)  { .panel-grid.panel-portrait, .panel-grid.panel-landscape { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1000px) { .panel-grid.panel-portrait, .panel-grid.panel-landscape { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+/* ---- ICON-PLATZHALTER BUNDLES 30.09.2026 ---- */
+.icon-box { position:relative; aspect-ratio:1/1; width:100%; max-width:240px; margin:16px auto 0;
+            background:var(--bg-alt); border:1px solid var(--border); border-radius:12px;
+            display:flex; align-items:center; justify-content:center; }
+.icon-ph { text-align:center; color:var(--text-muted); font-size:12px; padding:12px; }
+.icon-ph strong { display:block; color:var(--text-dim); font-size:13px; margin-bottom:4px; }
 .f-list { list-style:none; margin-top:12px; }
 .f-list li { padding:7px 0 7px 22px; position:relative; color:var(--text-dim); font-size:14px;
              border-bottom:1px solid rgba(255,255,255,0.05); }
@@ -556,7 +577,7 @@ html { scroll-behavior: smooth; }
   <a class="p-card p-link" href="#rotor-blade-haptic">
     <h3>Rotor Blade Haptic</h3>
     <div class="p-desc">Every single blade beat in your seat or your controls, for every helicopter.</div>
-    <div class="p-price">EUR 11.89</div>
+    <div class="p-price">EUR 8.89</div>
     <div class="p-jump">Read more &#8595;</div>
   </a>
 </div>
@@ -610,10 +631,12 @@ html { scroll-behavior: smooth; }
       <div class="v-ph"><strong>Video follows</strong>for Flight Dynamics</div>
     </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
-    <div class="g-grid">
+    <div class="panel-grid panel-portrait">
       <figure><img src="../assets/panel/overview.jpg" alt="Panel overview" width="683" height="972" loading="lazy"><figcaption>Panel overview</figcaption></figure>
       <figure><img src="../assets/panel/hover.png" alt="Hover settings" width="641" height="1116" loading="lazy"><figcaption>Hover settings</figcaption></figure>
       <figure><img src="../assets/panel/motion.png" alt="Motion settings" width="640" height="1118" loading="lazy"><figcaption>Motion settings</figcaption></figure>
+    </div>
+    <div class="panel-grid panel-landscape">
       <figure><img src="../assets/panel/rotor.jpg" alt="Rotor settings" width="644" height="406" loading="lazy"><figcaption>Rotor settings</figcaption></figure>
       <figure><img src="../assets/panel/strength.jpg" alt="Strength settings" width="649" height="349" loading="lazy"><figcaption>Strength settings</figcaption></figure>
       <figure><img src="../assets/panel/profile.jpg" alt="Saved profiles" width="652" height="322" loading="lazy"><figcaption>Saved profiles</figcaption></figure>
@@ -657,7 +680,7 @@ html { scroll-behavior: smooth; }
     </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
-      <span class="prod-price">EUR 11.89</span>
+      <span class="prod-price">EUR 8.89</span>
       <!-- KAUFKNOPF: noch abgeschaltet -->
       <span class="p-buy p-soon">Purchase not active yet</span>
     </div>
@@ -689,9 +712,9 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">Bundle</div>
     <h2>Flight Dynamics + Rotor Shadow + Haptic</h2>
     <p class="prod-text">Flight Dynamics, Rotor Shadow and Rotor Blade Haptic in one package. The helicopter stops holding itself in the air, carries its turning shadow with it and passes every single blade beat into your seat or your controls. Flight Dynamics and the haptic part work with every helicopter in the simulator, the shadow on the seven supported types.</p>
-    <div class="v-box v-single">
-      <!-- VIDEO FOLGT: Flight Dynamics + Rotor Shadow + Haptic -->
-      <div class="v-ph"><strong>Video follows</strong>for Flight Dynamics + Rotor Shadow + Haptic</div>
+    <div class="icon-box">
+      <!-- ICON FOLGT: Flight Dynamics + Rotor Shadow + Haptic -->
+      <div class="icon-ph"><strong>Icon follows</strong>for Flight Dynamics + Rotor Shadow + Haptic</div>
     </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
@@ -708,9 +731,9 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">Bundle</div>
     <h2>Sound + Haptic Bundle</h2>
     <p class="prod-text">Turbine Sound and Rotor Blade Haptic in one package. You hear the recorded turbine of the EC135 and feel every blade beat in your seat at the same time. The haptic part works with every helicopter in the simulator, the sound part with the Nemeth Design EC135.</p>
-    <div class="v-box v-single">
-      <!-- VIDEO FOLGT: Sound + Haptic Bundle -->
-      <div class="v-ph"><strong>Video follows</strong>for Sound + Haptic Bundle</div>
+    <div class="icon-box">
+      <!-- ICON FOLGT: Sound + Haptic Bundle -->
+      <div class="icon-ph"><strong>Icon follows</strong>for Sound + Haptic Bundle</div>
     </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
@@ -727,9 +750,9 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">Bundle</div>
     <h2>All-in-One Bundle</h2>
     <p class="prod-text">Every FWX SimAviation add-on in a single package: Flight Dynamics, Rotor Shadow, Rotor Blade Haptic and Turbine Sound. You get living flight behaviour, the turning rotor shadow, blade beats in your seat and the recorded turbine of the EC135. The sound belongs to the Nemeth Design EC135, everything else works with every helicopter in the simulator.</p>
-    <div class="v-box v-single">
-      <!-- VIDEO FOLGT: All-in-One Bundle -->
-      <div class="v-ph"><strong>Video follows</strong>for All-in-One Bundle</div>
+    <div class="icon-box">
+      <!-- ICON FOLGT: All-in-One Bundle -->
+      <div class="icon-ph"><strong>Icon follows</strong>for All-in-One Bundle</div>
     </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
