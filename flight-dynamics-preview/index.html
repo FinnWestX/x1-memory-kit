@@ -544,6 +544,8 @@ img, svg { max-width: 100%; display: block; }
 }
 @media (min-width: 1024px) {
   .vid-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Bell UH-1 in die dritte Spalte, damit die Mitte der letzten Reihe frei bleibt */
+  .vid-grid > .uh1-right { grid-column: 3; }
 }
 .vid-item { margin: 0; min-width: 0; }
 .vid-frame {
@@ -671,7 +673,7 @@ img, svg { max-width: 100%; display: block; }
       <div class="vid-frame"><iframe src="https://www.youtube.com/embed/dL6QBUNJjm8" title="Boeing CH-47 Chinook, flight dynamics" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <figcaption>Boeing CH-47 Chinook</figcaption>
     </figure>
-    <figure class="vid-item">
+    <figure class="vid-item uh1-right">
       <div class="vid-frame"><iframe src="https://www.youtube.com/embed/97bNbxhP2kQ" title="Bell UH-1, flight dynamics" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <figcaption>Bell UH-1</figcaption>
     </figure>
@@ -682,21 +684,6 @@ img, svg { max-width: 100%; display: block; }
   <figure class="vid-item vid-solo">
     <div class="vid-frame"><iframe src="https://www.youtube.com/embed/izJxLWfht98" title="Guimbal Cabri G2, split view comparison" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <figcaption>Guimbal Cabri G2, split view comparison</figcaption>
-  </figure>
-</section>
-
-<section class="t-section">
-  <div class="t-section-head">
-    <h2>Rotor Shadow</h2>
-    <p>Seven helicopter types are supported: Airbus H125, Airbus H135, Airbus H225, Guimbal Cabri G2, Robinson R66, Sikorsky S-64 Skycrane and Boeing CH-47 Chinook.</p>
-  </div>
-  <figure class="vid-item vid-solo">
-    <div class="vid-frame"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotor shadow on seven helicopter types" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    <figcaption>Rotor Shadow, seven helicopter types</figcaption>
-  </figure>
-  <figure class="vid-item vid-solo">
-    <div class="vid-frame"><iframe src="https://www.youtube.com/embed/iFIKjhCXaDs" title="EC135, before and after: sound and rotor shadow" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    <figcaption>EC135, before and after: sound and rotor shadow</figcaption>
   </figure>
 </section>
 
@@ -714,6 +701,30 @@ img, svg { max-width: 100%; display: block; }
     <figure><img src="../assets/panel/rotor.jpg" alt="Panel section for the rotor shadow" width="644" height="406" loading="lazy"><figcaption>Rotor shadow, switched on and off per helicopter type</figcaption></figure>
     <figure><img src="../assets/panel/strength.jpg" alt="Panel section for the overall strength of the flight dynamics" width="649" height="349" loading="lazy"><figcaption>Overall strength of the flight dynamics</figcaption></figure>
     <figure><img src="../assets/panel/profile.jpg" alt="Panel section for the profile of the current helicopter type" width="652" height="322" loading="lazy"><figcaption>Profile of the helicopter type currently loaded</figcaption></figure>
+  </div>
+</section>
+
+<section class="t-section">
+  <div class="t-section-head">
+    <h2>Rotor Shadow</h2>
+    <p>Seven helicopter types are supported: Airbus H125, Airbus H135, Airbus H225, Guimbal Cabri G2, Robinson R66, Sikorsky S-64 Skycrane and Boeing CH-47 Chinook.</p>
+  </div>
+  <figure class="vid-item vid-solo">
+    <div class="vid-frame"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotor shadow on seven helicopter types" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <figcaption>Rotor Shadow, seven helicopter types</figcaption>
+  </figure>
+</section>
+
+<section class="t-section">
+  <div class="t-section-head">
+    <h2>From our EC135 sound mod</h2>
+    <p>Before and after: sound and rotor shadow on the EC135.</p>
+  </div>
+  <div class="vid-grid">
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/iFIKjhCXaDs" title="EC135, before and after: sound and rotor shadow" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>EC135, before and after: sound and rotor shadow</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -735,7 +746,6 @@ img, svg { max-width: 100%; display: block; }
     <div class="t-footer-col">
       <div class="t-footer-head">Community</div>
       <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener noreferrer">Reddit</a>
     </div>
     <div class="t-footer-col">
       <div class="t-footer-head">Legal</div>

@@ -477,6 +477,14 @@ img, svg { max-width: 100%; display: block; }
 .v-ph strong { display:block; color:var(--text-dim); font-size:13px; margin-bottom:4px; }
 .v-label { font-size:12px; font-weight:700; color:var(--text-dim); margin-bottom:5px; letter-spacing:0.4px; }
 .v-single { max-width:820px; }
+/* ---- VIDEORASTER 30.09.2026: kleine Kacheln, 1 / 2 / 3 Spalten ---- */
+.v-grid { display:grid; grid-template-columns:1fr; gap:16px; margin:16px auto 0; max-width:1040px; align-items:start; }
+.v-grid figure { margin:0; }
+.v-grid figcaption { margin-top:7px; font-size:13px; color:var(--text-muted); line-height:1.5; text-align:center; }
+.v-grid-2 { max-width:700px; }
+@media (min-width:700px)  { .v-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1000px) { .v-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+                            .v-grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 .g-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-top:16px; }
 .g-grid figure { margin:0; }
 .g-grid img { border-radius:10px; border:1px solid var(--border); width:100%; }
@@ -626,10 +634,17 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">For helicopters</div>
     <h2>Flight Dynamics</h2>
     <p class="prod-text">The aircraft behaves the way its own aerodynamics say it should: it breathes, drifts and settles instead of sitting in the air as if it were on rails. A hover is something you hold, not something the simulator holds for you. Speed, weight and attitude all change the feel. The aircraft is lively, never twitchy, and your inputs stay in charge. How strongly all of this comes through stays your choice, separately for each helicopter.</p>
-    <div class="v-box v-single">
-      <!-- VIDEO FOLGT: Flight Dynamics -->
-      <div class="v-ph"><strong>Video follows</strong>for Flight Dynamics</div>
-    </div>
+      <div class="v-grid">
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/WrP_715I8ZU" title="Airbus H125" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Airbus H125</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/DVwShPgwW3E" title="Airbus H135" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Airbus H135</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/74lokrjXWqE" title="Airbus H225" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Airbus H225</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/UwzaC_V4XLc" title="Guimbal Cabri G2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Guimbal Cabri G2</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/Wyff4SbHDy0" title="Robinson R66" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Robinson R66</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/a6BGM2qqmQU" title="Sikorsky S-64" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Sikorsky S-64</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/dL6QBUNJjm8" title="Boeing CH-47 Chinook" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Boeing CH-47 Chinook</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/97bNbxhP2kQ" title="Bell UH-1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Bell UH-1</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/izJxLWfht98" title="Guimbal Cabri G2, side-by-side view" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Guimbal Cabri G2, side-by-side view</figcaption></figure>
+      </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="panel-grid panel-portrait">
       <figure><img src="../assets/panel/overview.jpg" alt="Panel overview" width="683" height="972" loading="lazy"><figcaption>Panel overview</figcaption></figure>
@@ -655,10 +670,10 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">For helicopters</div>
     <h2>Rotor Shadow</h2>
     <p class="prod-text">On seven helicopters in the simulator the rotor shadow is only there at rest and while the rotor spools up. From medium rpm upwards it is gone completely, which is exactly the time you spend flying. This add-on gives your machine its turning shadow back, at full rotor speed too: on the ground, on the fuselage and on everything you fly over. Main rotor and tail rotor each cast their own, clearly separate shadow instead of both ending up as one dark blob. Each of the seven supported types was tuned individually, so the shadow belongs to the machine it falls from.</p>
-    <div class="v-box v-single">
-      <!-- VIDEO FOLGT: Rotor Shadow -->
-      <div class="v-ph"><strong>Video follows</strong>for Rotor Shadow</div>
-    </div>
+      <div class="v-grid v-grid-2">
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotor shadow, seven helicopter types" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Rotor shadow, seven helicopter types</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/iFIKjhCXaDs" title="EC135, before and after: sound and rotor shadow" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>EC135, before and after: sound and rotor shadow</figcaption></figure>
+      </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
       <span class="prod-price">EUR 9.99</span>
@@ -674,10 +689,7 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">For helicopters</div>
     <h2>Rotor Blade Haptic</h2>
     <p class="prod-text">Ordinary haptics send one steady vibration, and that feels like a washing machine. In a real helicopter you feel every single blade pass, and every type has its own rhythm. On start-up the beats are slow enough to count along, one by one, and at full rotor speed they run together into a deep, even bass. Winding up, hovering and hard manoeuvres each feel different, so you notice what the helicopter is doing without taking your eyes off the horizon. It works with every helicopter in the simulator, turbine or piston, and needs a bass shaker or tactile transducer to be felt.</p>
-    <div class="v-box v-single">
-      <!-- VIDEO FOLGT: Rotor Blade Haptic -->
-      <div class="v-ph"><strong>Video follows</strong>for Rotor Blade Haptic</div>
-    </div>
+    <p class="prod-text">There is no video of its own for the haptics: it is something you feel, not something you see. It can be seen at work together with the other add-ons in the videos above.</p>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
       <span class="prod-price">EUR 8.89</span>
@@ -693,10 +705,10 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">For the EC135</div>
     <h2>Turbine Sound</h2>
     <p class="prod-text">The default EC135 sounds are flat and without character. This mod replaces them completely, inside and out, with recordings of real helicopters. In the cockpit every phase of flight has its own character: cold start, spool-up, idle, flight and shutdown. From outside there is the twin-turbine howl that gives this helicopter its signature from a distance. It is made for one single helicopter and works only there, the Nemeth Design EC135 that comes free with the simulator as Local Legend 21; in every other aircraft the simulator sounds exactly as it did before.</p>
-    <div class="v-box v-single">
-      <!-- VIDEO FOLGT: Turbine Sound -->
-      <div class="v-ph"><strong>Video follows</strong>for Turbine Sound</div>
-    </div>
+      <div class="v-grid v-grid-2">
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/ym6WTRpOIlw" title="EC135, sound from inside" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>EC135, sound from inside</figcaption></figure>
+        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/1_a5MbU3o-Q" title="EC135, sound from outside" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>EC135, sound from outside</figcaption></figure>
+      </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
       <span class="prod-price">EUR 11.89</span>
@@ -777,7 +789,6 @@ html { scroll-behavior: smooth; }
     <div class="t-footer-col">
       <div class="t-footer-head">Community</div>
       <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener noreferrer">Reddit</a>
     </div>
     <div class="t-footer-col">
       <div class="t-footer-head">Legal</div>
