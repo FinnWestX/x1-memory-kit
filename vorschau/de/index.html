@@ -490,6 +490,29 @@ img, svg { max-width: 100%; display: block; }
 @media (max-width:640px){ .v-pair { grid-template-columns:1fr; } }
 </style>
 
+
+<style>
+/* Ein-Seiten-Aufbau mit Sprungmarken, 30.09.2026 */
+html { scroll-behavior: smooth; }
+.t-section[id] { scroll-margin-top: 80px; }
+.p-card.p-link { cursor:pointer; transition:border-color .15s ease, transform .15s ease; }
+.p-card.p-link:hover { border-color:var(--brand); transform:translateY(-3px); }
+.p-card .p-jump { font-size:13px; font-weight:700; color:var(--brand); margin-top:12px; }
+.p-bundles { border-top:1px solid var(--border); }
+.prod-inner { max-width:820px; margin:0 auto; }
+.prod-inner h2 { font-size:clamp(24px,3.4vw,34px); font-weight:900; color:#fff; margin-bottom:6px; letter-spacing:-0.02em; }
+.prod-kind { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px; }
+.prod-text { color:var(--text-dim); font-size:16px; line-height:1.7; margin-bottom:22px; }
+.prod-meta { font-size:12px; color:var(--text-muted); margin-top:10px; }
+.prod-buy { display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:18px; }
+.prod-price { font-size:28px; font-weight:800; color:var(--accent); letter-spacing:-0.5px; }
+.prod-buy .p-buy { min-width:220px; }
+.backlink { display:inline-block; margin-top:26px; padding:11px 20px; border-radius:999px;
+            border:1px solid var(--border); background:var(--card); color:var(--text-dim);
+            font-size:13px; font-weight:700; }
+.backlink:hover { color:#fff; border-color:var(--brand); }
+</style>
+
 </head>
 <body>
 <!-- NEUE STARTSEITE, VORSCHAU. Noch nicht live geschaltet, nirgends verlinkt. -->
@@ -501,7 +524,7 @@ img, svg { max-width: 100%; display: block; }
     </a>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="../" style="color:var(--text-dim);font-size:13px;font-weight:600;">EN</a>
-      <a href="#produkte" class="t-nav-cta">Zu den Produkten</a>
+      <a href="#all-helicopters" class="t-nav-cta">Zu den Produkten</a>
     </div>
   </div>
 </nav>
@@ -514,77 +537,207 @@ img, svg { max-width: 100%; display: block; }
   </div>
 </header>
 
-<section class="t-section" id="produkte">
-  <div class="t-section-head"><h2>Produkte</h2></div>
+<section class="t-section" id="all-helicopters">
+  <div class="t-section-head"><h2>Für Hubschrauber</h2>
+    <p>Flugdynamik und Haptik wirken auf jedem Hubschrauber. Der Rotorschatten deckt die sieben Muster ab, bei denen der Simulator ihn weglässt. Ein Klick führt zur Beschreibung.</p></div>
   <div class="p-grid">
-  <div class="p-card">
-    <span class="p-tag">BESTER PREIS</span>
-    <h3>All-in-One Bundle</h3>
-    <div class="p-desc">Alle FWX-Erweiterungen in einem Installationsprogramm: Flugdynamik, Rotorschatten, Rotorblatt-Haptik und Turbinenklang.</div>
-    <!-- PREIS FOLGT -->
-    <div class="p-price">-,-- &euro;<small>unverbindliche Preisempfehlung folgt</small></div>
-    <!-- KAUFKNOPF: Adresse wird eingesetzt, sobald der Preis feststeht -->
-    <span class="p-buy p-soon">Preis folgt</span>
-  </div>
-  <div class="p-card">
-    <span class="p-tag">BUNDLE</span>
-    <h3>Flight Dynamics + Rotor Shadow + Haptic</h3>
-    <div class="p-desc">Die drei Hubschrauber-Erweiterungen zusammen. Wirkt auf jeden Hubschrauber im Simulator.</div>
-    <!-- PREIS FOLGT -->
-    <div class="p-price">-,-- &euro;<small>unverbindliche Preisempfehlung folgt</small></div>
-    <!-- KAUFKNOPF: Adresse wird eingesetzt, sobald der Preis feststeht -->
-    <span class="p-buy p-soon">Preis folgt</span>
-  </div>
-  <div class="p-card">
-    
+  <a class="p-card p-link" href="#flight-dynamics">
     <h3>Flight Dynamics</h3>
-    <div class="p-desc">Der Hubschrauber hält sich nicht mehr selbst. Er lebt unter dem Piloten und will geflogen werden.</div>
-    <!-- PREIS FOLGT -->
-    <div class="p-price">-,-- &euro;<small>unverbindliche Preisempfehlung folgt</small></div>
-    <!-- KAUFKNOPF: Adresse wird eingesetzt, sobald der Preis feststeht -->
-    <span class="p-buy p-soon">Preis folgt</span>
-  </div>
-  <div class="p-card">
-    
+    <div class="p-desc">Der Hubschrauber hält sich nicht mehr selbst, er lebt unter den Händen.</div>
+    <div class="p-price">16,99 &euro;</div>
+    <div class="p-jump">Beschreibung ansehen &#8595;</div>
+  </a>
+  <a class="p-card p-link" href="#rotor-shadow">
     <h3>Rotor Shadow</h3>
-    <div class="p-desc">Gibt sieben Hubschraubermustern den Rotorschatten zurück, der ab einer bestimmten Drehzahl verschwindet.</div>
-    <!-- PREIS FOLGT -->
-    <div class="p-price">-,-- &euro;<small>unverbindliche Preisempfehlung folgt</small></div>
-    <!-- KAUFKNOPF: Adresse wird eingesetzt, sobald der Preis feststeht -->
-    <span class="p-buy p-soon">Preis folgt</span>
-  </div>
-  <div class="p-card">
-    
-    <h3>Rotor Haptic</h3>
-    <div class="p-desc">Echte Rotorimpulse für Bass-Shaker und Körperschallwandler. Wirkt auf jeden Hubschrauber.</div>
-    <!-- PREIS FOLGT -->
-    <div class="p-price">-,-- &euro;<small>unverbindliche Preisempfehlung folgt</small></div>
-    <!-- KAUFKNOPF: Adresse wird eingesetzt, sobald der Preis feststeht -->
-    <span class="p-buy p-soon">Preis folgt</span>
-  </div>
-  <div class="p-card">
-    
-    <h3>Turbine Sound</h3>
-    <div class="p-desc">Vollständiger Turbinenklang für Cockpit und Außenansicht der EC135.</div>
-    <!-- PREIS FOLGT -->
-    <div class="p-price">-,-- &euro;<small>unverbindliche Preisempfehlung folgt</small></div>
-    <!-- KAUFKNOPF: Adresse wird eingesetzt, sobald der Preis feststeht -->
-    <span class="p-buy p-soon">Preis folgt</span>
-  </div>
+    <div class="p-desc">Der drehende Rotorschatten auch bei voller Drehzahl, auf den sieben Mustern, bei denen der Simulator ihn weglässt.</div>
+    <div class="p-price">9,99 &euro;</div>
+    <div class="p-jump">Beschreibung ansehen &#8595;</div>
+  </a>
+  <a class="p-card p-link" href="#rotor-blade-haptic">
+    <h3>Rotor Blade Haptic</h3>
+    <div class="p-desc">Jeder einzelne Blattschlag im Sitz oder in den Steuerorganen, für jeden Hubschrauber.</div>
+    <div class="p-price">11,89 &euro;</div>
+    <div class="p-jump">Beschreibung ansehen &#8595;</div>
+  </a>
 </div>
 </section>
 
-<section class="t-section">
-  <div class="t-section-head"><h2>Warum bei uns</h2></div>
-  <div class="t-trust-row">
-    <div class="t-trust-item"><strong style="color:var(--text);">30 Tage Umtausch</strong><br><span style="color:var(--text-dim);font-size:13px;">Innerhalb von 30 Tagen nach dem Kauf nehmen wir jedes Produkt zurück.</span></div>
-    <div class="t-trust-item"><strong style="color:var(--text);">In der Fachpresse</strong><br><span style="color:var(--text-dim);font-size:13px;">Über unsere Erweiterungen wurde unabhängig berichtet.</span></div>
+<section class="t-section" id="for-the-ec135">
+  <div class="t-section-head"><h2>Für die EC135</h2>
+    <p>Für einen einzigen Hubschrauber im Microsoft Flight Simulator 2024 gemacht. Ein Klick führt zur Beschreibung.</p></div>
+  <div class="p-grid">
+  <a class="p-card p-link" href="#turbine-sound">
+    <h3>Turbine Sound</h3>
+    <div class="p-desc">Aufgenommener Turbinenklang für die Nemeth Design EC135, im Cockpit und von außen.</div>
+    <div class="p-price">11,89 &euro;</div>
+    <div class="p-jump">Beschreibung ansehen &#8595;</div>
+  </a>
+</div>
+</section>
+
+<section class="t-section p-bundles" id="bundles">
+  <div class="t-section-head"><h2>Pakete</h2>
+    <p>Mehrere Erweiterungen in einem Paket. Ein Klick führt zur Beschreibung.</p></div>
+  <div class="p-grid">
+  <a class="p-card p-link" href="#bundle-dynamics-shadow-haptic">
+    <h3>Flight Dynamics + Rotor Shadow + Haptic</h3>
+    <div class="p-desc">Die drei Hubschrauber-Erweiterungen in einem Paket.</div>
+    <div class="p-price">30,93 &euro;</div>
+    <div class="p-jump">Beschreibung ansehen &#8595;</div>
+  </a>
+  <a class="p-card p-link" href="#bundle-sound-haptic">
+    <h3>Sound + Haptic Bundle</h3>
+    <div class="p-desc">Turbine Sound und Rotor Blade Haptic zusammen.</div>
+    <div class="p-price">14,99 &euro;</div>
+    <div class="p-jump">Beschreibung ansehen &#8595;</div>
+  </a>
+  <a class="p-card p-link" href="#bundle-all-in-one">
+    <h3>All-in-One Bundle</h3>
+    <div class="p-desc">Alle Erweiterungen von FWX SimAviation in einem Paket.</div>
+    <div class="p-price">32,71 &euro;</div>
+    <div class="p-jump">Beschreibung ansehen &#8595;</div>
+  </a>
+</div>
+</section>
+
+<section class="t-section" id="flight-dynamics">
+  <div class="prod-inner">
+    <div class="prod-kind">Für Hubschrauber</div>
+    <h2>Flight Dynamics</h2>
+    <p class="prod-text">Der Hubschrauber hält sich im Schwebeflug nicht mehr selbst. Er lebt unter dem Piloten und will geflogen werden. Dasselbe gilt für den Bewegungsflug: Die aerodynamischen Live-Einflüsse wie auch die Einflüsse des Piloten werden deutlich spürbar. Nichts ist vorberechnet, nichts abgespielt, alles geschieht live. Wie stark das alles durchkommt, kann bis ins Detail eingestellt werden, getrennt für jeden Hubschrauber.</p>
+    <div class="v-box v-single">
+      <!-- VIDEO FOLGT: Flight Dynamics -->
+      <div class="v-ph"><strong>Video folgt</strong>zu Flight Dynamics</div>
+    </div>
+    <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
+    <div class="g-grid">
+      <figure><img src="../../assets/panel/overview.jpg" alt="Panel im Überblick" width="683" height="972" loading="lazy"><figcaption>Panel im Überblick</figcaption></figure>
+      <figure><img src="../../assets/panel/hover.png" alt="Einstellungen Schwebeflug" width="641" height="1116" loading="lazy"><figcaption>Einstellungen Schwebeflug</figcaption></figure>
+      <figure><img src="../../assets/panel/motion.png" alt="Einstellungen Bewegung" width="640" height="1118" loading="lazy"><figcaption>Einstellungen Bewegung</figcaption></figure>
+      <figure><img src="../../assets/panel/rotor.jpg" alt="Einstellungen Rotor" width="644" height="406" loading="lazy"><figcaption>Einstellungen Rotor</figcaption></figure>
+      <figure><img src="../../assets/panel/strength.jpg" alt="Einstellungen Stärke" width="649" height="349" loading="lazy"><figcaption>Einstellungen Stärke</figcaption></figure>
+      <figure><img src="../../assets/panel/profile.jpg" alt="Gespeicherte Profile" width="652" height="322" loading="lazy"><figcaption>Gespeicherte Profile</figcaption></figure>
+    </div>
+    <div class="prod-buy">
+      <span class="prod-price">16,99 &euro;</span>
+      <!-- KAUFKNOPF: noch abgeschaltet -->
+      <span class="p-buy p-soon">Kauf noch nicht aktiv</span>
+    </div>
+    <a class="backlink" href="#all-helicopters">Zurück zur Übersicht</a>
   </div>
-  <div class="t-press" style="margin-top:22px;">
-    <div class="t-press-label">Berichte über uns</div>
-    <a href="https://thresholdx.net/fwx-aviation-releases-three-default-helicopter-improvements-for-msfs-2024/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">ThresholdX &ndash; 14.09.2026</a>
-    <a href="https://www.simflight.de/2026/09/08/helicopter-universal-bundle-msfs-2024-simflight/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">simFlight.de &ndash; 08.09.2026</a>
-    <a href="https://www.simflight.de/2026/06/08/msfs-2024-grosses-update-v1-49-fuer-das-fwx-ec135-sound-pack/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">simFlight.de &ndash; 08.06.2026</a>
+</section>
+
+<section class="t-section" id="rotor-shadow">
+  <div class="prod-inner">
+    <div class="prod-kind">Für Hubschrauber</div>
+    <h2>Rotor Shadow</h2>
+    <p class="prod-text">Über dem Piloten dreht ein Rotor, und bei sieben bekannten Mustern verschwindet dessen Schatten im Simulator ab mittlerer Drehzahl vollständig. Anfangs ist er noch zu sehen, nach dem Startup plötzlich nicht mehr, also während des gesamten Fluges. Genau diesen sieben bringt unser Rotorschatten-Mod den Schatten in Live-Drehzahl zurück, auf dem Boden, auf der Zelle und auf allem, was überflogen wird. Hauptrotor und Heckrotor werfen jeweils ihren eigenen Schatten statt eines dunklen Flecks. Jedes der sieben unterstützten Muster wurde einzeln abgestimmt.</p>
+    <div class="v-box v-single">
+      <!-- VIDEO FOLGT: Rotor Shadow -->
+      <div class="v-ph"><strong>Video folgt</strong>zu Rotor Shadow</div>
+    </div>
+    <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">9,99 &euro;</span>
+      <!-- KAUFKNOPF: noch abgeschaltet -->
+      <span class="p-buy p-soon">Kauf noch nicht aktiv</span>
+    </div>
+    <a class="backlink" href="#all-helicopters">Zurück zur Übersicht</a>
+  </div>
+</section>
+
+<section class="t-section" id="rotor-blade-haptic">
+  <div class="prod-inner">
+    <div class="prod-kind">Für Hubschrauber</div>
+    <h2>Rotor Blade Haptic</h2>
+    <p class="prod-text">Übliche Haptik schickt eine einzige gleichförmige Vibration, und das fühlt sich an wie eine Waschmaschine. In einem echten Hubschrauber spürt man jeden einzelnen Blattdurchgang, und jedes Muster hat seinen eigenen Rhythmus. Beim Anlassen sind die Schläge langsam genug zum Mitzählen, bei voller Drehzahl verschmelzen sie zu einem tiefen, gleichmäßigen Bass. Hochlaufen, Schwebeflug und harte Manöver fühlen sich verschieden an, so merkt man am Körper, was der Hubschrauber gerade tut, ohne den Blick vom Horizont zu nehmen. Es wirkt auf jeden Hubschrauber im Simulator, Turbine wie Kolbenmotor, und braucht einen Bass-Shaker oder Körperschallwandler, damit es spürbar wird.</p>
+    <div class="v-box v-single">
+      <!-- VIDEO FOLGT: Rotor Blade Haptic -->
+      <div class="v-ph"><strong>Video folgt</strong>zu Rotor Blade Haptic</div>
+    </div>
+    <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">11,89 &euro;</span>
+      <!-- KAUFKNOPF: noch abgeschaltet -->
+      <span class="p-buy p-soon">Kauf noch nicht aktiv</span>
+    </div>
+    <a class="backlink" href="#all-helicopters">Zurück zur Übersicht</a>
+  </div>
+</section>
+
+<section class="t-section" id="turbine-sound">
+  <div class="prod-inner">
+    <div class="prod-kind">Für die EC135</div>
+    <h2>Turbine Sound</h2>
+    <p class="prod-text">Die Standardklänge der EC135 sind flach und ohne Charakter. Dieses Mod ersetzt sie vollständig, innen wie außen, durch Aufnahmen echter Hubschrauber. Im Cockpit hat jede Flugphase ihren eigenen Charakter: kalter Start, Hochlauf, Leerlauf, Flug und Abstellen. Von außen ist das Heulen der beiden Turbinen da, das diese Maschine schon aus der Ferne erkennbar macht. Es ist für einen einzigen Hubschrauber gemacht und wirkt nur dort, auf der Nemeth Design EC135, die dem Simulator als Local Legend 21 kostenlos beiliegt; jedes andere Luftfahrzeug klingt genau wie vorher.</p>
+    <div class="v-box v-single">
+      <!-- VIDEO FOLGT: Turbine Sound -->
+      <div class="v-ph"><strong>Video folgt</strong>zu Turbine Sound</div>
+    </div>
+    <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">11,89 &euro;</span>
+      <!-- KAUFKNOPF: noch abgeschaltet -->
+      <span class="p-buy p-soon">Kauf noch nicht aktiv</span>
+    </div>
+    <a class="backlink" href="#for-the-ec135">Zurück zur Übersicht</a>
+  </div>
+</section>
+
+<section class="t-section" id="bundle-dynamics-shadow-haptic">
+  <div class="prod-inner">
+    <div class="prod-kind">Paket</div>
+    <h2>Flight Dynamics + Rotor Shadow + Haptic</h2>
+    <p class="prod-text">Flight Dynamics, Rotor Shadow und Rotor Blade Haptic in einem Paket. Der Hubschrauber hält sich nicht mehr selbst in der Luft, nimmt seinen drehenden Schatten mit und gibt jeden einzelnen Blattschlag in den Sitz oder in die Steuerorgane weiter. Flight Dynamics und der Haptik-Teil wirken auf jeden Hubschrauber im Simulator, der Schatten auf den sieben unterstützten Mustern.</p>
+    <div class="v-box v-single">
+      <!-- VIDEO FOLGT: Flight Dynamics + Rotor Shadow + Haptic -->
+      <div class="v-ph"><strong>Video folgt</strong>zu Flight Dynamics + Rotor Shadow + Haptic</div>
+    </div>
+    <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">30,93 &euro;</span>
+      <!-- KAUFKNOPF: noch abgeschaltet -->
+      <span class="p-buy p-soon">Kauf noch nicht aktiv</span>
+    </div>
+    <a class="backlink" href="#bundles">Zurück zur Übersicht</a>
+  </div>
+</section>
+
+<section class="t-section" id="bundle-sound-haptic">
+  <div class="prod-inner">
+    <div class="prod-kind">Paket</div>
+    <h2>Sound + Haptic Bundle</h2>
+    <p class="prod-text">Turbine Sound und Rotor Blade Haptic in einem Paket. Man hört die aufgenommene Turbine der EC135 und spürt gleichzeitig jeden Blattschlag im Sitz. Der Haptik-Teil wirkt auf jeden Hubschrauber im Simulator, der Klang-Teil auf die Nemeth Design EC135.</p>
+    <div class="v-box v-single">
+      <!-- VIDEO FOLGT: Sound + Haptic Bundle -->
+      <div class="v-ph"><strong>Video folgt</strong>zu Sound + Haptic Bundle</div>
+    </div>
+    <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">14,99 &euro;</span>
+      <!-- KAUFKNOPF: noch abgeschaltet -->
+      <span class="p-buy p-soon">Kauf noch nicht aktiv</span>
+    </div>
+    <a class="backlink" href="#bundles">Zurück zur Übersicht</a>
+  </div>
+</section>
+
+<section class="t-section" id="bundle-all-in-one">
+  <div class="prod-inner">
+    <div class="prod-kind">Paket</div>
+    <h2>All-in-One Bundle</h2>
+    <p class="prod-text">Alle Erweiterungen von FWX SimAviation in einem Paket: Flight Dynamics, Rotor Shadow, Rotor Blade Haptic und Turbine Sound. Dazu gehören lebendiges Flugverhalten, der drehende Rotorschatten, Blattschläge im Sitz und die aufgenommene Turbine der EC135. Der Klang gehört zur Nemeth Design EC135, alles andere wirkt auf jeden Hubschrauber im Simulator.</p>
+    <div class="v-box v-single">
+      <!-- VIDEO FOLGT: All-in-One Bundle -->
+      <div class="v-ph"><strong>Video folgt</strong>zu All-in-One Bundle</div>
+    </div>
+    <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">32,71 &euro;</span>
+      <!-- KAUFKNOPF: noch abgeschaltet -->
+      <span class="p-buy p-soon">Kauf noch nicht aktiv</span>
+    </div>
+    <a class="backlink" href="#bundles">Zurück zur Übersicht</a>
   </div>
 </section>
 
@@ -600,14 +753,8 @@ img, svg { max-width: 100%; display: block; }
     </div>
     <div class="t-footer-col">
       <div class="t-footer-head">Community</div>
-      <a href="https://www.youtube.com/@FinnWest" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
       <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener noreferrer">Reddit</a>
-      <a href="https://discord.gg/nfGaV5eXJg" target="_blank" rel="noopener noreferrer">Discord</a>
-    </div>
-    <div class="t-footer-col">
-      <div class="t-footer-head">Presse</div>
-      <a href="https://thresholdx.net/fwx-aviation-releases-three-default-helicopter-improvements-for-msfs-2024/" target="_blank" rel="noopener noreferrer">ThresholdX</a>
-      <a href="https://www.simflight.de/2026/09/08/helicopter-universal-bundle-msfs-2024-simflight/" target="_blank" rel="noopener noreferrer">simFlight.de</a>
     </div>
     <div class="t-footer-col">
       <div class="t-footer-head">Rechtliches</div>
