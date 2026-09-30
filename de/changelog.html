@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FWX EC135 Enhancement Mod: Changelog</title>
-<meta name="description" content="Versionshistorie des FWX EC135 Enhancement Mod, der Haptic Bass Shaker Mod und des Bundles für MSFS 2024.">
+<meta name="description" content="Versionshistorie des FWX EC135 Enhancement Mod, der Haptic Mod und des Bundles für MSFS 2024.">
 <style>
 :root {
   --bg: #05050a;
@@ -212,27 +212,133 @@ h1 .accent {
 
   <div style="margin:24px 0 36px;padding:22px 26px;border-radius:14px;background:linear-gradient(135deg, rgba(34,197,94,0.14), rgba(14,165,233,0.10));border:1px solid rgba(34,197,94,0.45);">
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">
-      <span style="background:#22c55e;color:#0a0a0a;font-weight:800;padding:3px 10px;border-radius:999px;font-size:11px;letter-spacing:1.5px;">NEU · JULI 2026</span>
-      <strong style="color:#fff;font-size:18px;">Sound v1.54 + Haptic v1.54 + Bundle v1.54</strong>
+      <span style="background:#22c55e;color:#0a0a0a;font-weight:800;padding:3px 10px;border-radius:999px;font-size:11px;letter-spacing:1.5px;">NEU · 2.2.0 · SEPTEMBER 2026</span>
+      <strong style="color:#fff;font-size:18px;">Version 2.2.0 – großes Update für Heli Flight Dynamics</strong>
     </div>
     <p style="margin:0;color:#d1fae5;font-size:15px;line-height:1.55;">
-      Fix mit Flugzeug-Bindung: Der Turbinensound und der Rotor-Haptik-Effekt wirken jetzt <strong>nur noch auf dem EC135/H135</strong>. Bisher konnten sie bei installiertem Mod auch auf andere Flugzeuge wirken. Das Bundle wurde entsprechend angeglichen. Am Klang bzw. an der Haptik selbst ändert sich nichts.
+      Ein komplett erneuertes Kernsystem für Flight Dynamics mit neuen, im Flug abgestimmten Werksprofilen, ein überarbeitetes FWX Control Center mit Anleitung und Handbüchern auf Englisch und Deutsch sowie ein überarbeiteter Installer. <strong>Wichtig:</strong> Profile, die mit früheren Versionen gespeichert wurden, können nicht mehr verwendet werden und werden beim Update entfernt – Details unten.
     </p>
   </div>
 
+  <div class="product-group-head">Großes Update für Heli Flight Dynamics · Version 2.2.0</div>
+  <article class="release current">
+    <div class="release-head">
+      <h2>v2.2.0</h2>
+      <span class="version-tag">Alle Produkte</span>
+      <span class="current-tag">Aktuell · NEU</span>
+    </div>
+    <div class="release-date">September 2026</div>
+    <div class="release-notes">
+      <h3>Wichtig – Profile aus früheren Versionen</h3>
+      <ul>
+        <li>Dieses Update bringt ein komplett erneuertes Kernsystem für Flight Dynamics. Deshalb können Profile, die mit früheren Versionen gespeichert wurden, nicht mehr verwendet werden und wurden beim Update entfernt. Alle Hubschrauber starten mit unseren neuen, sorgfältig abgestimmten FWX-Werksprofilen. Stelle alles nach deinem Geschmack ein und drücke Save – dein eigenes Profil wird automatisch angelegt, und unser Werksprofil bleibt immer unberührt als sichere Rückfallebene. Künftige Updates behalten deine Profile.</li>
+      </ul>
+      <h3>Heli Flight Dynamics</h3>
+      <ul>
+        <li>Neue, im Flug abgestimmte Werksprofile für Cabri, R66, EC135, H125, H225, Bell 407, UH-1H, CH-47D und S-64F. Andere Hubschrauber starten mit einem allgemeinen Grundprofil.</li>
+        <li>Hubschrauber ohne FWX-Werksprofil starten mit neutraler Drehrichtung (Tandem) – stelle die Drehrichtung deines Hubschraubers im Panel ein.</li>
+        <li>Alle Regler nutzen jetzt eine einheitliche Skala von 0–100; die Knöpfe + / – verstellen in Einerschritten.</li>
+        <li>Schwebeflug und Vorwärtsflug (jetzt „Flight in motion“) lassen sich unabhängig voneinander einstellen.</li>
+        <li>Rollen und Gieren im Schwebeflug wirken jetzt durchgehend.</li>
+        <li>Neuer Regler „Speed gain“: Je schneller du fliegst, desto stärker die Anströmungseffekte.</li>
+        <li>Neuer Abschnitt „Effect strength &amp; response“ mit „Overall Strength of Effect“ (je Hubschrauber), „Output smoothing“ und „Effect build-up speed“.</li>
+        <li>Die Effektstärke passt sich jetzt automatisch an Größe und Massenverteilung jedes Hubschraubers an.</li>
+        <li>Tandem-Hubschrauber wie der Chinook werden unterstützt (Drehrichtung „Tandem“).</li>
+        <li>Behoben: Beim Wechsel des Hubschraubers konnte eine von Hand gewählte Drehrichtung des Hauptrotors zurückgesetzt werden. Die Drehrichtung kommt jetzt immer aus deinem Profil.</li>
+        <li>Ground effect ist jetzt eine Einstellung im Abschnitt Hover.</li>
+        <li>Behoben: In einzelnen Situationen konnte beim Übergang zwischen Schwebe- und Vorwärtsflug ein Ruck auftreten.</li>
+        <li>Bedienung gestrafft: übersichtlichere Regler. „Liveliness“ heißt jetzt „Mechanical Dynamics“.</li>
+        <li>Profile: Save, Save As, Load und Factory settings. Beliebig viele eigene Profile; dein eigenes Profil entsteht beim ersten Save. Werksprofile können nie überschrieben oder gelöscht werden. Speichern überschreibt nie das Profil eines anderen Hubschraubers. Save As gilt für alle Varianten desselben Hubschraubers.</li>
+        <li>Kein automatisches Speichern mehr: Änderungen bleiben erhalten, wenn du Save drückst. „(unsaved)“ erscheint nur, wenn ein Wert wirklich von deinem gespeicherten Stand abweicht.</li>
+        <li>Beim Start, beim Wechsel des Hubschraubers, bei jedem neuen Flug und bei der Rückkehr von einem Flugzeug wird dein zuletzt gespeicherter Stand geladen – einschließlich Hauptschalter.</li>
+        <li>Rote Markierungen an jedem Regler zeigen deinen gespeicherten Wert, und jeder Regler hat einen eigenen Reset-Knopf dorthin zurück. „Factory settings“ setzt den ganzen Hubschrauber auf sein Werksprofil zurück.</li>
+        <li>Behoben: In einzelnen Situationen konnte ein Druck auf die Hauptschalter-Taste mehrfach umschalten. Jetzt schaltet ein Druck genau einmal.</li>
+        <li>Flugzeuge: Flight Dynamics arbeitet nur mit Hubschraubern. Ist ein Flugzeug geladen, sind alle FWX-Reiter mit einem deutlichen Hinweis ausgegraut, und die Taste für den Hauptschalter hat keine Wirkung.</li>
+      </ul>
+      <h3>Haptic</h3>
+      <ul>
+        <li>Der Haptic-Reiter zeigt jetzt die Blattzahl des aktuellen Hubschraubers.</li>
+        <li>Die Meldungen des Haptic-Programms wurden überarbeitet und vereinheitlicht.</li>
+        <li>Der Haptic-Reiter wurde übersichtlicher gestaltet.</li>
+      </ul>
+      <h3>Rotor Shadow</h3>
+      <ul>
+        <li>Die Schattendarstellung der R66 wurde an die anderen Muster angeglichen.</li>
+        <li>Die Meldungen des Rotor-Shadow-Programms wurden überarbeitet und vereinheitlicht.</li>
+        <li>Behoben: Beim Cabri konnte der Rotor-Shadow-Reiter „not detected“ anzeigen. Der Reiter zeigt jetzt außerdem den kurzen Hubschraubernamen.</li>
+      </ul>
+      <h3>Sound</h3>
+      <ul>
+        <li>Sound-Reiter: Ist ein anderes Luftfahrzeug als die EC135 geladen, zeigt der Status jetzt „NOT EC135“.</li>
+        <li>Klarerer Hinweis im Sound-Reiter zur Wahl von Kopfhörer oder Lautsprechern.</li>
+      </ul>
+      <h3>FWX Control Center (Panel)</h3>
+      <ul>
+        <li>Neuer Name „FWX Control Center“; der Reiter heißt jetzt „Flight Dynamics“.</li>
+        <li>Neuer Hilfe-Reiter „?“ mit bebilderter Schritt-für-Schritt-Anleitung und dem vollständigen Handbuch – mit dem neuen Kapitel zur Funktionsweise der Profile.</li>
+        <li>Ein Fragezeichen an jedem Abschnitt und Regler erklärt ihn (öffnet sich beim Darüberfahren).</li>
+        <li>Vier Textgrößen, darunter eine große Stufe für VR; die Wahl wird für VR und 2D getrennt gespeichert.</li>
+        <li>Hintergrund wählbar: schwarz, weiß oder durchsichtig.</li>
+        <li>Aufklappbare Abschnitte mit einem Knopf „Collapse / Expand all sections“; aufgeräumteres Layout und größere Knöpfe.</li>
+        <li>Aufgeräumte Statusanzeigen („Connected“ / „Not running“).</li>
+        <li>Neuer Tipp: mit Live-Wetter fliegen – dort sind die Effekte am deutlichsten spürbar.</li>
+      </ul>
+      <h3>Installer</h3>
+      <ul>
+        <li>Behoben: Beim Nachinstallieren eines weiteren FWX-Produkts konnte der automatische Start bereits vorhandener FWX-Produkte abgeschaltet werden.</li>
+        <li>Die Hauptschalter-Taste ist frei im Panel belegbar.</li>
+        <li>Der Installer prüft vor dem Start, ob der Simulator geschlossen ist.</li>
+        <li>Behoben: Konnte in einzelnen Fällen eine Datei nicht geschrieben werden, meldete der Installer trotzdem Erfolg. Jetzt erscheint „Installation INCOMPLETE“ mit den betroffenen Dateien.</li>
+        <li>Die Deinstallation ist jetzt auch über die Windows-Einstellungen möglich.</li>
+        <li>Pakete mit Flight Dynamics enthalten das Handbuch zusätzlich als PDF auf Englisch und Deutsch.</li>
+        <li>Profile aus früheren Versionen werden beim Update entfernt (siehe Punkt 1).</li>
+      </ul>
+    </div>
+  </article>
+
+
   <div class="product-group-head">FWX EC135 Enhancement Mod: Sound</div>
 
-  <article class="release current">
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.12</h2>
+      <span class="version-tag">Turbine Sound Enhancement Mod</span>
+    </div>
+    <div class="release-date">9. September 2026</div>
+    <div class="release-notes">
+      <h3>Verbessert</h3>
+      <ul>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.8</h2>
+      <span class="version-tag">Turbine Sound Enhancement Mod</span>
+    </div>
+    <div class="release-date">7. September 2026</div>
+    <div class="release-notes">
+      <h3>Neu</h3>
+      <ul>
+        <li>Einheitlicher Installer für MSFS 2024 aus dem Microsoft Store und von Steam.</li>
+        <li>Alle Einstellungen im FWX Control Center direkt im Simulator – kein separates Windows-Programm mehr.</li>
+        <li>Audiogerät bequem nach Namen wählbar.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
     <div class="release-head">
       <h2>v1.54</h2>
       <span class="version-tag">Turbine Sound Enhancement Mod</span>
-      <span class="current-tag">Aktuell · NEU</span>
     </div>
     <div class="release-date">Juli 2026</div>
     <div class="release-notes">
-      <h3>Behoben</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li><strong>Aktivierung mit Flugzeug-Bindung.</strong> Der Turbinensound wirkt jetzt nur noch auf dem EC135/H135. Bisher konnte er bei installiertem Mod auch auf anderen Flugzeugen abgespielt werden. Am Klang selbst ändert sich nichts.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -244,11 +350,9 @@ h1 .accent {
     </div>
     <div class="release-date">Juni 2026</div>
     <div class="release-notes">
-      <h3>Neu</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li><strong>Hörbare Turbinen-Zündung.</strong> Direkt zu Beginn jedes Triebwerkstarts hörst du jetzt die typischen Zünder-Klicks der Turbine, dann das deutlich hörbare Durchzünden der Brennkammer.</li>
-        <li><strong>Vollständiger, unabhängiger Hochlauf pro Triebwerk.</strong> Anschließend spielt jedes Triebwerk seinen kompletten Turbinen-Hochlauf. Starte oder stoppe jedes Triebwerk einzeln und höre jeden Hochlauf vollständig.</li>
-        <li><strong>Angeglichene Kaltstart-Schicht.</strong> Die Anlasserschicht von Triebwerk 1 beim Kaltstart entspricht jetzt der von Triebwerk 2 für durchgängigen Realismus auf beiden Seiten.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -260,15 +364,9 @@ h1 .accent {
     </div>
     <div class="release-date">Mai 2026</div>
     <div class="release-notes">
-      <h3>Neu</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li><strong>Abbrechbare Startsequenz.</strong> Der Hochlauf der Turbine kann jetzt jederzeit durch Ausschalten des Starter-Switches abgebrochen werden, wie beim echten EC135. Kein festgenagelter Startvorgang mehr, sobald der Schalter umgelegt ist.</li>
-        <li><strong>Vollständig unabhängige Doppel-Triebwerke.</strong> Engine 1 und Engine 2 sind jetzt komplett getrennt. Asymmetrischer Start, asymmetrisches Shutdown, Single-Engine-Taxi: jedes Triebwerk spielt seine eigene Sound-Ebene.</li>
-      </ul>
-      <h3>Installer</h3>
-      <ul>
-        <li>Neuer Installer mit editierbarem Community-Ordner-Pfad-Picker und verbesserter Auto-Erkennung.</li>
-        <li>Saubere Apps-und-Features-Integration für ordentliche Windows-Deinstallation.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -280,14 +378,9 @@ h1 .accent {
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>Behoben</h3>
-      <ul>
-        <li>Startgeräusch der Turbine wird jetzt zuverlässig vom Kaltstart an abgespielt. Unter bestimmten Audio-Konfigurationen konnte das FWX-Startgeräusch in v1.44 nicht greifen, sodass MSFS auf das Default-Geräusch zurückfiel.</li>
-        <li>KI-Helikopter (AI Traffic) bekommen jetzt korrekt die FWX-Sounds zugewiesen.</li>
-      </ul>
       <h3>Verbessert</h3>
       <ul>
-        <li>Deutlich schlankere Installation (278 MB statt 433 MB) und schnellerer Installer-Durchlauf.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -299,14 +392,9 @@ h1 .accent {
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>Neu</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li>Der Installer zeigt jetzt einen expliziten <strong>Package-Reorder-Dialog</strong>. Bei einigen Steam-Installationen muss das FWX-Paket über dem Standard-EC135-Paket geladen werden, und der Dialog erklärt diesen Schritt jetzt, damit er nicht übersehen wird.</li>
-        <li>Aktualisierte Produktbeschreibung und Voraussetzungen erwähnen den Lade-Reihenfolge-Hinweis direkt.</li>
-      </ul>
-      <h3>Fixes</h3>
-      <ul>
-        <li>Behoben: der von einigen Steam-Nutzern gemeldete Lade-Reihenfolge-Fall, bei dem der FWX-Sound nach der Installation nicht hörbar war.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -320,27 +408,54 @@ h1 .accent {
     <div class="release-notes">
       <h3>Neu</h3>
       <ul>
-        <li>Kompletter Cockpit- und Außen-Turbinensound für den EC135 in MSFS 2024.</li>
-        <li>Vollst&auml;ndig neuer Klang f&uuml;r Triebwerk und Umgebung, mit eigener Startsequenz.</li>
-        <li>Abgestimmte Pitch-Variation für weichere, realistischere Turbinen-Reaktion bei Drehmomentwechseln.</li>
-        <li>ButtKicker-sicher, kein internes Cockpit-Bass-Brummen.</li>
+        <li>Erstveröffentlichung.</li>
       </ul>
     </div>
   </article>
 
-  <div class="product-group-head">FWX EC135 Haptic - Bass Shaker Mod</div>
+  <div class="product-group-head">FWX EC135 Haptic Mod</div>
 
-  <article class="release current">
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.12</h2>
+      <span class="version-tag">Haptic Engine</span>
+    </div>
+    <div class="release-date">9. September 2026</div>
+    <div class="release-notes">
+      <h3>Verbessert</h3>
+      <ul>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.8</h2>
+      <span class="version-tag">Haptic Engine</span>
+    </div>
+    <div class="release-date">7. September 2026</div>
+    <div class="release-notes">
+      <h3>Neu</h3>
+      <ul>
+        <li>Einheitlicher Installer für MSFS 2024 aus dem Microsoft Store und von Steam.</li>
+        <li>Alle Einstellungen im FWX Control Center direkt im Simulator – kein separates Windows-Programm mehr.</li>
+        <li>Haptik für alle Hubschrauber – nicht mehr nur für die EC135.</li>
+        <li>Haptik-Stärke im Panel einstellbar.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
     <div class="release-head">
       <h2>v1.54</h2>
       <span class="version-tag">Haptic Engine</span>
-      <span class="current-tag">Aktuell · NEU</span>
     </div>
     <div class="release-date">Juli 2026</div>
     <div class="release-notes">
-      <h3>Behoben</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li><strong>Aktivierung mit Flugzeug-Bindung.</strong> Der Rotor-Haptik-Effekt wirkt jetzt nur noch auf dem EC135/H135. Bisher konnte er auch auf anderen Flugzeugen ausgelöst werden. Klang und Impuls-Charakteristik sind unverändert.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -352,14 +467,9 @@ h1 .accent {
     </div>
     <div class="release-date">Mai 2026</div>
     <div class="release-notes">
-      <h3>Installer</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li>Neuer Installer mit editierbarem Community-Ordner-Pfad-Picker und verbesserter Auto-Erkennung.</li>
-        <li>Saubere Apps-und-Features-Integration für ordentliche Windows-Deinstallation.</li>
-      </ul>
-      <h3>Unverändert</h3>
-      <ul>
-        <li>Klang und Impuls-Charakteristik identisch zu v1.52. Dieses Release verfeinert ausschließlich das Installations-Erlebnis.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -371,9 +481,9 @@ h1 .accent {
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>Wartung</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li>Wartungs-Release. Kleinere interne Anpassung, keine funktionalen Änderungen gegenüber v1.51.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -385,10 +495,9 @@ h1 .accent {
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>Neu</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li><strong>Auto-Close:</strong> die Haptic Engine beendet sich jetzt automatisch, wenn MSFS 2024 geschlossen wird. Keine Hintergrundprozesse mehr nach dem Sim-Ende.</li>
-        <li>Stabilität und Performance verbessert bei Rotor-Lesevorgängen und Geräte-Ausgabe.</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -402,34 +511,54 @@ h1 .accent {
     <div class="release-notes">
       <h3>Neu</h3>
       <ul>
-        <li>Rotorimpuls-Erzeugung synchron zum Helikopter.</li>
-        <li>Zuverlässiges Pause-Verhalten in MSFS 2024.</li>
-        <li>Startet automatisch mit MSFS.</li>
-        <li>GUI mit Live-Reglern für Impulsstärke, Rattern-Schwellwert und Geräte-Dropdown.</li>
-        <li>Funktioniert mit jedem 4-Blatt-Rotor-Helikopter in MSFS 2024, nicht auf den EC135 beschränkt.</li>
+        <li>Erstveröffentlichung.</li>
       </ul>
     </div>
   </article>
 
   <div class="product-group-head">FWX EC135 Sound + Haptic Bundle</div>
 
-  <article class="release current">
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.12</h2>
+      <span class="version-tag">Bundle</span>
+    </div>
+    <div class="release-date">9. September 2026</div>
+    <div class="release-notes">
+      <h3>Verbessert</h3>
+      <ul>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.8</h2>
+      <span class="version-tag">Bundle</span>
+    </div>
+    <div class="release-date">7. September 2026</div>
+    <div class="release-notes">
+      <h3>Neu</h3>
+      <ul>
+        <li>Beide Produkte in einem einheitlichen Installer für MSFS 2024 aus dem Microsoft Store und von Steam.</li>
+        <li>Alle Einstellungen im FWX Control Center direkt im Simulator – kein separates Windows-Programm mehr.</li>
+        <li>Sound: Audiogerät bequem nach Namen wählbar.</li>
+        <li>Haptik: für alle Hubschrauber, Stärke im Panel einstellbar.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
     <div class="release-head">
       <h2>v1.54</h2>
       <span class="version-tag">Bundle</span>
-      <span class="current-tag">Aktuell · NEU</span>
     </div>
     <div class="release-date">Juli 2026</div>
     <div class="release-notes">
-      <h3>Behoben</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li><strong>Aktivierung mit Flugzeug-Bindung für beide Komponenten.</strong> Sound und Rotor-Haptik wirken jetzt nur noch auf dem EC135/H135. Bisher konnten sie auch auf andere Flugzeuge wirken.</li>
-      </ul>
-      <h3>Inhalt</h3>
-      <ul>
-        <li>Turbine Sound Enhancement Mod v1.54</li>
-        <li>Haptic Bass Shaker Mod v1.54</li>
-        <li>Ein-Klick-Installer mit editierbarem Community-Ordner-Pfad-Picker und separaten Deinstall-Einträgen für jede Komponente</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -441,11 +570,9 @@ h1 .accent {
     </div>
     <div class="release-date">Juni 2026</div>
     <div class="release-notes">
-      <h3>Inhalt</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li>Turbine Sound Enhancement Mod v1.52 (hörbare Turbinen-Zündung, Durchzünden und vollständiger unabhängiger Hochlauf pro Triebwerk)</li>
-        <li>Haptic Bass Shaker Mod v1.53 (Klang und Impuls-Charakteristik unverändert)</li>
-        <li>Ein-Klick-Installer mit editierbarem Community-Ordner-Pfad-Picker und separaten Deinstall-Einträgen für jede Komponente</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -457,11 +584,9 @@ h1 .accent {
     </div>
     <div class="release-date">Mai 2026</div>
     <div class="release-notes">
-      <h3>Inhalt</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li>Turbine Sound Enhancement Mod v1.49 (abbrechbare Startsequenz, vollständig unabhängige Doppel-Triebwerke)</li>
-        <li>Haptic Bass Shaker Mod v1.53 (neuer Installer, Klang und Impuls-Charakteristik unverändert)</li>
-        <li>Neuer Installer mit editierbarem Community-Ordner-Pfad-Picker, verbesserter Auto-Erkennung, sauberer Apps-und-Features-Integration und separaten Deinstall-Einträgen für jede Komponente</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -473,11 +598,9 @@ h1 .accent {
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>Inhalt</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li>Turbine Sound Enhancement Mod v1.46 (Startgeräusch wieder zuverlässig auf allen Systemen, KI-Helikopter-Sounds korrekt zugewiesen, schlankere Installation)</li>
-        <li>Haptic Bass Shaker Mod v1.52 (Wartungs-Release ohne funktionale Änderungen)</li>
-        <li>Kombinierter Installer mit separaten Deinstall-Einträgen für jede Komponente</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -489,11 +612,9 @@ h1 .accent {
     </div>
     <div class="release-date">April 2026</div>
     <div class="release-notes">
-      <h3>Inhalt</h3>
+      <h3>Verbessert</h3>
       <ul>
-        <li>Turbine Sound Enhancement Mod v1.44 (mit Package-Reorder-Dialog)</li>
-        <li>Haptic Bass Shaker Mod v1.51 (mit Auto-Close und Stabilitätsverbesserungen)</li>
-        <li>Kombinierter Installer mit separaten Deinstall-Einträgen für jede Komponente</li>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
       </ul>
     </div>
   </article>
@@ -507,7 +628,89 @@ h1 .accent {
     <div class="release-notes">
       <h3>Neu</h3>
       <ul>
-        <li>Erster Bundle-Installer, der Turbine Sound Enhancement Mod v1.41 und Haptic Engine v1.42 kombiniert.</li>
+        <li>Erstveröffentlichung.</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="product-group-head">FWX Heli Flight Dynamics &amp; Rotor Shadow</div>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.12</h2>
+      <span class="version-tag">Flight Dynamics &amp; Rotor Shadow</span>
+    </div>
+    <div class="release-date">12. September 2026</div>
+    <div class="release-notes">
+      <h3>Neu</h3>
+      <ul>
+        <li>Erstveröffentlichung: FWX Heli Flight Dynamics &amp; Rotor Shadow.</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="product-group-head">FWX Helicopter All-in-One Bundle</div>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.12</h2>
+      <span class="version-tag">All-in-One Bundle</span>
+    </div>
+    <div class="release-date">9. September 2026</div>
+    <div class="release-notes">
+      <h3>Verbessert</h3>
+      <ul>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.8</h2>
+      <span class="version-tag">All-in-One Bundle</span>
+    </div>
+    <div class="release-date">7. September 2026</div>
+    <div class="release-notes">
+      <h3>Neu</h3>
+      <ul>
+        <li>Erstveröffentlichung: alle FWX-Hubschrauber-Add-ons in einem Paket – neu dabei Heli Flight Dynamics und Rotor Shadow.</li>
+        <li>Alle Einstellungen im FWX Control Center direkt im Simulator – kein separates Windows-Programm mehr.</li>
+        <li>Haptik für alle Hubschrauber – nicht mehr nur für die EC135.</li>
+        <li>Einheitlicher Installer für MSFS 2024 aus dem Microsoft Store und von Steam.</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="product-group-head">FWX Heli Flight Dynamics &amp; Rotor Effects</div>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.12</h2>
+      <span class="version-tag">Flight Dynamics &amp; Rotor Effects</span>
+    </div>
+    <div class="release-date">9. September 2026</div>
+    <div class="release-notes">
+      <h3>Verbessert</h3>
+      <ul>
+        <li>Allgemeine optische und einstelltechnische Verbesserungen.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.0.8</h2>
+      <span class="version-tag">Flight Dynamics &amp; Rotor Effects</span>
+    </div>
+    <div class="release-date">7. September 2026</div>
+    <div class="release-notes">
+      <h3>Neu</h3>
+      <ul>
+        <li>Erstveröffentlichung: Heli Flight Dynamics, Rotor Shadow und Haptik in einem Paket.</li>
+        <li>Alle Einstellungen im FWX Control Center direkt im Simulator – kein separates Windows-Programm mehr.</li>
+        <li>Haptik für alle Hubschrauber – nicht mehr nur für die EC135.</li>
+        <li>Einheitlicher Installer für MSFS 2024 aus dem Microsoft Store und von Steam.</li>
       </ul>
     </div>
   </article>
@@ -535,7 +738,6 @@ h1 .accent {
       <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Community</div>
       <a href="https://www.youtube.com/@FinnWest" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">YouTube</a>
       <a href="https://www.reddit.com/user/FWXAviation" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Reddit</a>
-      <a href="https://discord.gg/nfGaV5eXJg" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Discord</a>
       <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">SimMarket Shop</a>
     </div>
 
@@ -557,7 +759,7 @@ h1 .accent {
 
   </div>
   <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px 0 10px;">EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</div>
-  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. Asobo Studio ist eine Marke des jeweiligen Inhabers. ButtKicker ist eine Marke der The Guitammer Company. Alle weiteren Produkt- und Firmennamen sind Marken ihrer jeweiligen Inhaber. FWX SimAviation ist ein unabhängiger Drittanbieter und steht in keiner Verbindung zu diesen Unternehmen und wird von ihnen nicht unterstützt oder gesponsert.</div>
+  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. Asobo Studio ist eine Marke des jeweiligen Inhabers. Alle weiteren Produkt- und Firmennamen sind Marken ihrer jeweiligen Inhaber. FWX SimAviation ist ein unabhängiger Drittanbieter und steht in keiner Verbindung zu diesen Unternehmen und wird von ihnen nicht unterstützt oder gesponsert.</div>
   <div style="max-width:1080px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--text-muted);">© 2026 FWX SimAviation</div>
 </footer>
 
