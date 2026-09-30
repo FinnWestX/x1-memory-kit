@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flugdynamik und Rotorschatten im Flug - FWX SimAviation</title>
+<meta name="description" content="Flugdynamik und Rotorschatten für Hubschrauber im Microsoft Flight Simulator 2024, im Video gezeigt an acht Hubschraubertypen.">
+<link rel="canonical" href="https://fwx-simaviation.com/promo/de/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FWX SimAviation">
+<meta property="og:title" content="Flugdynamik und Rotorschatten im Flug - FWX SimAviation">
+<meta property="og:description" content="Flugdynamik und Rotorschatten für Hubschrauber im Microsoft Flight Simulator 2024, im Video gezeigt an acht Hubschraubertypen.">
+<meta property="og:url" content="https://fwx-simaviation.com/de/flight-dynamics-vorschau/">
+<meta property="og:image" content="https://fwx-simaviation.com/og-image.png">
+<link rel="icon" href="../../fwx-logo.svg" type="image/svg+xml">
+<style>
+/* ============================================================
+   Grundstil der Seite. Uebernommen aus dem gemeinsamen
+   Stylesheet der Website. Einige Klassen darin werden auf
+   dieser Vorfuehrseite nicht benutzt (Verkaufskacheln,
+   Kaufknoepfe), weil hier nichts verkauft wird.
+   ============================================================ */
+
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img, svg { max-width: 100%; display: block; }
+
+/* ------- TEST BANNER ------- */
+/* ------- NAV ------- */
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+
+/* ------- HERO ------- */
+.t-hero {
+  min-height: calc(100vh - 56px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 60px 20px 40px;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(14,165,233,0.18), transparent 55%),
+    var(--bg);
+  overflow: hidden;
+}
+.t-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: url('../../hero-bg.webp') center top / 100% auto no-repeat;
+  opacity: 0.66;
+  pointer-events: none;
+}
+.t-hero-inner {
+  position: relative; z-index: 2;
+  max-width: 960px; width: 100%; text-align: center;
+}
+.t-eyebrow {
+  display: inline-block;
+  padding: 7px 16px; margin-bottom: 22px;
+  border-radius: 999px;
+  background: rgba(14,165,233,0.1);
+  border: 1px solid rgba(14,165,233,0.35);
+  color: var(--accent);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.t-headline {
+  font-size: clamp(38px, 6.5vw, 72px);
+  line-height: 1.02;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+}
+.t-headline .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.t-sub {
+  font-size: clamp(16px, 1.7vw, 19px);
+  color: var(--text-dim);
+  max-width: 620px;
+  margin: 0 auto 30px;
+  line-height: 1.55;
+}
+.t-sub strong { color: #fff; font-weight: 700; }
+
+/* Demo media frame */
+.t-demo {
+  max-width: 820px; margin: 0 auto 30px;
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 30px 100px -20px rgba(0,0,0,0.8),
+    0 0 0 1px rgba(14,165,233,0.3);
+  background: #000;
+}
+.t-demo-pad { position: relative; padding-bottom: 56.25%; height: 0; }
+.t-demo iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.t-demo-caption {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-size: 13px; color: var(--text-dim);
+  margin: 14px 0 26px;
+}
+.t-demo-caption .live-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--ok);
+  animation: t-pulse 2s infinite ease-in-out;
+}
+@keyframes t-pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.9);} }
+
+/* Primary CTA - single, bold, price-in-button */
+.t-cta-primary {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 22px 40px;
+  font-size: 19px; font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand) 60%, var(--accent));
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  box-shadow:
+    0 25px 70px -15px rgba(14,165,233,0.7),
+    0 0 0 1px rgba(14,165,233,0.35) inset;
+  transition: transform .15s ease, box-shadow .2s ease;
+  letter-spacing: 0.2px;
+}
+.t-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 32px 80px -15px rgba(14,165,233,0.85), 0 0 0 1px rgba(14,165,233,0.5) inset; }
+.t-cta-primary .old-price { color: rgba(255,255,255,0.55); text-decoration: line-through; font-size: 14px; font-weight: 600; margin-right: -4px; }
+.t-cta-primary .price { font-size: 22px; font-weight: 900; }
+.t-cta-primary .arrow { font-size: 20px; }
+
+.t-cta-below {
+  margin-top: 14px;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 18px; border-radius: 999px;
+  background: rgba(34,197,94,0.1);
+  border: 1px dashed rgba(34,197,94,0.45);
+  color: #86efac;
+  font-size: 13px; font-weight: 600;
+}
+.t-cta-below .shield { font-size: 15px; }
+
+/* Secondary (below the fold) - link style to not compete with primary */
+.t-hero-sec {
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.t-hero-sec a { color: var(--accent); text-decoration: underline; font-weight: 600; }
+
+/* Trust row: pilot cred + stars + sold */
+.t-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 22px; margin-top: 34px;
+  color: var(--text-dim); font-size: 14px;
+}
+.t-trust-item { display: inline-flex; align-items: center; gap: 8px; }
+.t-trust-item .icon { color: var(--accent); font-size: 16px; }
+.t-trust-item strong { color: #fff; font-weight: 700; }
+.t-stars { color: #f59e0b; letter-spacing: 2px; font-size: 17px; }
+
+/* Press strip */
+.t-press {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 26px;
+}
+.t-press-label {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 14px;
+}
+.t-press-quotes {
+  display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;
+  font-size: 14px;
+}
+.t-press-quotes a {
+  color: var(--text-dim); font-style: italic; max-width: 340px;
+}
+.t-press-quotes a:hover { color: #fff; }
+.t-press-quotes strong { color: var(--accent); font-style: normal; font-weight: 600; }
+
+/* ============ PRODUCTS SECTION ============ */
+.t-section {
+  padding: 90px 20px 70px;
+  background: linear-gradient(180deg, var(--bg), var(--bg-alt));
+  border-top: 1px solid var(--border);
+}
+.t-section-head { text-align: center; max-width: 680px; margin: 0 auto 50px; }
+.t-section-head h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 900; color: #fff;
+  margin-bottom: 12px; letter-spacing: -0.02em;
+}
+.t-section-head p { color: var(--text-dim); font-size: 16px; }
+
+.t-cards {
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  max-width: 1080px; margin: 0 auto;
+}
+.t-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 26px;
+}
+.t-card.popular {
+  border-color: rgba(14,165,233,0.5);
+  box-shadow: 0 25px 70px -20px rgba(14,165,233,0.45);
+  transform: translateY(-8px);
+}
+.t-card .popular-tag {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-size: 11px; font-weight: 800;
+  padding: 6px 14px; border-radius: 999px;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px -6px rgba(14,165,233,0.6);
+}
+.t-card .t-tag {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 8px;
+}
+.t-card h3 {
+  font-size: 21px; font-weight: 800; color: #fff;
+  margin-bottom: 8px;
+}
+.t-card .t-tagline {
+  font-size: 14px; color: var(--text-dim);
+  margin-bottom: 18px; min-height: 38px;
+}
+.t-card .t-price {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 18px;
+}
+.t-card .t-price .big {
+  font-size: 42px; font-weight: 900; color: #fff;
+  line-height: 1;
+}
+.t-card .t-price .old {
+  color: var(--text-muted); text-decoration: line-through;
+  font-size: 15px;
+}
+.t-card ul {
+  list-style: none; margin: 0 0 22px; padding: 0;
+  font-size: 14px; color: var(--text-dim);
+}
+.t-card ul li {
+  padding: 7px 0 7px 22px;
+  position: relative;
+}
+.t-card ul li::before {
+  content: "✓"; color: var(--ok);
+  position: absolute; left: 0; font-weight: 800;
+}
+.t-card .t-buy {
+  display: block; text-align: center;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.t-card.popular .t-buy {
+  box-shadow: 0 15px 45px -10px rgba(14,165,233,0.55);
+}
+.t-card .t-buy:hover { filter: brightness(1.1); }
+.t-card .t-refund-note {
+  text-align: center; margin-top: 12px;
+  font-size: 12px; color: var(--text-muted);
+}
+
+/* Zweispaltige Kachel - nur fuer das Ergaenzungspaket (12.09.2026) */
+.t-card .t-two-col { display: grid; gap: 0 30px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .t-card .t-two-col { grid-template-columns: 1fr 1fr; } }
+.t-card .t-two-col ul { margin-bottom: 10px; }
+.t-card .t-desc {
+  font-size: 13px; color: var(--text-dim); line-height: 1.55;
+  text-align: center; max-width: 760px; margin: 6px auto 18px;
+}
+.t-card .t-desc p { margin: 0 0 6px; }
+.t-card ul.t-hooks li a {
+  color: var(--text-dim); text-decoration: none;
+  border-bottom: 1px dotted rgba(148,163,184,0.55);
+}
+.t-card ul.t-hooks li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ============ PILOT SECTION ============ */
+.t-pilot {
+  padding: 80px 20px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.t-pilot-inner {
+  max-width: 900px; margin: 0 auto;
+  text-align: center;
+}
+.t-pilot h2 {
+  font-size: clamp(26px, 4vw, 36px);
+  color: #fff; font-weight: 900;
+  margin-bottom: 20px;
+}
+.t-pilot p {
+  color: var(--text-dim); font-size: 17px; line-height: 1.7;
+  max-width: 680px; margin: 0 auto 14px;
+}
+.t-pilot .sig {
+  margin-top: 22px; color: var(--accent); font-weight: 700;
+  font-size: 15px;
+}
+
+/* ============ FAQ / GUARANTEE ============ */
+.t-guarantee {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, var(--bg-alt), var(--bg));
+  text-align: center;
+}
+.t-guarantee-card {
+  max-width: 640px; margin: 0 auto;
+  background: rgba(34,197,94,0.05);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 20px;
+  padding: 40px 30px;
+}
+.t-guarantee-card .big-shield { font-size: 48px; margin-bottom: 16px; }
+.t-guarantee-card h2 {
+  color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 14px;
+}
+.t-guarantee-card p {
+  color: var(--text-dim); font-size: 15px; line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* ============ FOOTER ============ */
+.t-footer {
+  padding: 60px 20px 40px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  font-size: 13px; color: var(--text-muted);
+}
+.t-footer-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.t-footer-col { display: flex; flex-direction: column; gap: 6px; }
+.t-footer-head {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 10px;
+}
+.t-footer-col a {
+  color: var(--text-dim); font-size: 14px;
+  padding: 3px 0;
+  transition: color 0.15s ease;
+}
+.t-footer-col a:hover { color: #fff; }
+.t-footer-bottom {
+  max-width: 1080px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ============ MOBILE STICKY CTA ============ */
+.t-mobile-cta {
+  display: none;
+}
+@media (max-width: 720px) {
+  .t-mobile-cta {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    position: fixed; bottom: 14px; left: 14px; right: 14px; z-index: 90;
+    padding: 14px 18px;
+    background: linear-gradient(90deg, var(--brand-2), var(--brand));
+    border-radius: 999px;
+    color: #fff; font-weight: 800; font-size: 14px;
+    box-shadow: 0 25px 60px -15px rgba(14,165,233,0.7),
+                0 0 0 1px rgba(255,255,255,0.15) inset;
+  }
+  .t-mobile-cta .label { display: flex; flex-direction: column; text-align: left; }
+  .t-mobile-cta .label .sub { font-size: 10px; opacity: 0.85; letter-spacing: 0.5px; }
+  .t-mobile-cta .price { font-size: 16px; font-weight: 900; }
+  .t-hero { padding-bottom: 120px; }
+  .t-headline { font-size: 40px; }
+  .t-card.popular { transform: none; }
+  /* Leave room for the sticky buy button so legal footer links stay visible */
+  .t-footer { padding-bottom: 120px; }
+}
+
+@media (max-width: 500px) {
+  .t-headline { font-size: 36px; line-height: 1.05; }
+  .t-cta-primary { padding: 18px 26px; font-size: 16px; }
+  .t-trust-row { gap: 14px; font-size: 13px; }
+}
+</style>
+
+<style>
+/* Ergaenzungen fuer die neuen Seiten - nutzen dieselben Variablen */
+.p-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-top:26px; }
+.p-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+          padding:22px; display:flex; flex-direction:column; }
+.p-card h3 { font-size:17px; margin-bottom:6px; }
+.p-card .p-desc { color:var(--text-dim); font-size:14px; flex:1; margin-bottom:16px; }
+.p-price { font-size:26px; font-weight:800; color:var(--accent); margin-bottom:12px; letter-spacing:-0.5px; }
+.p-price small { display:block; font-size:11px; font-weight:500; color:var(--text-muted); letter-spacing:0; }
+.p-buy { display:block; text-align:center; background:var(--brand); color:#fff; font-weight:700;
+         padding:11px 18px; border-radius:10px; font-size:14px; }
+.p-buy:hover { background:var(--brand-2); }
+.p-buy.p-soon { background:rgba(255,255,255,0.06); color:var(--text-muted); cursor:default;
+                border:1px dashed var(--border); }
+.p-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+         color:var(--brand); border:1px solid var(--brand); border-radius:999px; padding:2px 9px; margin-bottom:10px; }
+.v-pair { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:10px; }
+.v-type { font-size:15px; font-weight:700; margin:26px 0 2px; color:var(--text); }
+.v-box { position:relative; aspect-ratio:16/9; background:var(--bg-alt); border:1px solid var(--border);
+         border-radius:10px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.v-box iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+.v-ph { text-align:center; color:var(--text-muted); font-size:12px; padding:12px; }
+.v-ph strong { display:block; color:var(--text-dim); font-size:13px; margin-bottom:4px; }
+.v-label { font-size:12px; font-weight:700; color:var(--text-dim); margin-bottom:5px; letter-spacing:0.4px; }
+.v-single { max-width:820px; }
+.v-typ { max-width:100%; margin-top:6px; }
+.i-box { background:var(--bg-alt); border:1px dashed var(--border); border-radius:10px;
+         display:flex; align-items:center; justify-content:center; width:100%; }
+.g-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-top:16px; }
+.g-grid figure { margin:0; }
+.g-grid img { border-radius:10px; border:1px solid var(--border); width:100%; }
+.g-grid figcaption { font-size:12px; color:var(--text-muted); margin-top:5px; }
+/* ---- PANELRASTER 30.09.2026: zwei getrennte Gruppen, Hochformat und Querformat ---- */
+.panel-grid { display:grid; grid-template-columns:1fr; gap:18px; margin:16px auto 0; max-width:1080px; align-items:start; }
+.panel-grid figure { margin:0; }
+.panel-grid img { display:block; width:100%; height:auto; object-fit:contain; margin:0 auto;
+                  border:1px solid var(--border); border-radius:12px; background:var(--bg-alt); }
+.panel-grid figcaption { margin-top:8px; font-size:13px; color:var(--text-muted); line-height:1.5; text-align:center; }
+.panel-grid img[src$="overview.jpg"] { max-width:683px; }
+.panel-grid img[src$="hover.png"]    { max-width:641px; }
+.panel-grid img[src$="motion.png"]   { max-width:640px; }
+.panel-grid img[src$="rotor.jpg"]    { max-width:644px; }
+.panel-grid img[src$="strength.jpg"] { max-width:649px; }
+.panel-grid img[src$="profile.jpg"]  { max-width:652px; }
+.panel-landscape { margin-top:26px; }
+@media (min-width:700px)  { .panel-grid.panel-portrait, .panel-grid.panel-landscape { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1000px) { .panel-grid.panel-portrait, .panel-grid.panel-landscape { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+/* ---- ICON-PLATZHALTER BUNDLES 30.09.2026 ---- */
+.icon-box { position:relative; aspect-ratio:1/1; width:100%; max-width:240px; margin:16px auto 0;
+            background:var(--bg-alt); border:1px solid var(--border); border-radius:12px;
+            display:flex; align-items:center; justify-content:center; }
+.icon-ph { text-align:center; color:var(--text-muted); font-size:12px; padding:12px; }
+.icon-ph strong { display:block; color:var(--text-dim); font-size:13px; margin-bottom:4px; }
+.f-list { list-style:none; margin-top:12px; }
+.f-list li { padding:7px 0 7px 22px; position:relative; color:var(--text-dim); font-size:14px;
+             border-bottom:1px solid rgba(255,255,255,0.05); }
+.f-list li:before { content:"\2022"; position:absolute; left:6px; color:var(--brand); font-weight:700; }
+.note { background:var(--card); border:1px solid var(--border); border-left:3px solid var(--brand);
+        border-radius:10px; padding:16px 18px; margin-top:20px; color:var(--text-dim); font-size:14px; }
+@media (max-width:640px){ .v-pair { grid-template-columns:1fr; } }
+</style>
+<style>
+/* ============================================================
+   Vorfuehrseite, Umbau 30.09.2026
+   Videoraster statt bildschirmfuellender Einzelplayer.
+   Breite Schirme drei Spalten, mittlere zwei, Handy eine.
+   ============================================================ */
+.t-hero { min-height: auto; padding: 66px 20px 52px; }
+.t-hero::before { opacity: 0.42; }
+
+.pg-wrap { max-width: 1200px; margin: 0 auto; }
+.pg-lead { color: var(--text-dim); font-size: 16px; line-height: 1.65; max-width: 780px; margin: 0 auto; }
+
+/* ---- Hinweisband ueber dem Videobereich ---- */
+.pg-notice {
+  max-width: 1000px; margin: 0 auto 30px;
+  background: rgba(245,158,11,0.09);
+  border: 1px solid rgba(245,158,11,0.45);
+  border-left: 4px solid #f59e0b;
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: #fcd34d;
+  font-size: 14px; line-height: 1.6;
+}
+.pg-notice strong { display: block; color: #fde68a; font-size: 15px; margin-bottom: 4px; }
+
+/* ---- VIDEORASTER ---- */
+.vid-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .vid-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .vid-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Bell UH-1 in die dritte Spalte, damit die Mitte der letzten Reihe frei bleibt */
+  .vid-grid > .uh1-right { grid-column: 3; }
+}
+.vid-item { margin: 0; min-width: 0; }
+.vid-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.vid-frame iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0; display: block;
+}
+.vid-item figcaption {
+  margin-top: 9px;
+  font-size: 13px; font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.2px;
+}
+
+/* Einzelnes Video, ruhig zentriert, aber nie bildschirmfuellend */
+.vid-solo { max-width: 700px; margin: 0 auto; }
+.vid-solo figcaption { text-align: center; }
+
+/* ---- PANELBILDER ---- */
+.pnl-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  align-items: start;
+}
+@media (min-width: 860px) {
+  .pnl-top { grid-template-columns: minmax(0,0.9fr) minmax(0,1.1fr); }
+}
+.pnl-strips { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.pnl-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1080px;
+  margin: 26px auto 0;
+}
+@media (min-width: 720px) {
+  .pnl-pair { grid-template-columns: repeat(2, 1fr); }
+}
+.pnl-fig { margin: 0; }
+.pnl-fig img {
+  width: 100%; height: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-alt);
+}
+.pnl-fig.pnl-tall img { max-height: 620px; width: auto; margin: 0 auto; }
+.pnl-fig figcaption {
+  margin-top: 8px;
+  font-size: 13px; color: var(--text-muted);
+  line-height: 1.5; text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+<div style="background:#0a0f1f;border-bottom:1px solid rgba(14,165,233,0.35);color:#7dd3fc;text-align:center;font-size:12.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:8px 16px;">Promo-Seite &middot; FWX SimAviation &middot; September 2026 &middot; Nur Videos, kein Verkauf</div>
+<!-- PROMOSEITE. Oeffentlich erreichbar, bewusst nirgends verlinkt.
+     KEIN noindex (Chef-Entscheid). Kein Verkauf: keine Preise, keine Kaufknoepfe.
+     Umzug 30.09.2026 von flight-dynamics-preview bzw. de/flight-dynamics-vorschau nach promo/. -->
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="../../" class="t-nav-brand">
+      <img src="../../fwx-logo.svg" alt="FWX SimAviation" class="t-nav-logo">
+      FWX SimAviation
+    </a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="../" style="color:var(--text-dim);font-size:13px;font-weight:600;">EN</a>
+      <a href="#kontakt" class="t-nav-cta">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<header class="t-hero">
+  <div class="t-hero-inner">
+    <h1 class="t-headline">Flugdynamik und Rotorschatten im Flug</h1>
+    <p class="t-sub">Ein Blick auf das, was sich verändert, gezeigt an acht Hubschraubertypen.</p>
+    <p class="pg-lead">Die Erweiterung der Flugdynamik behält das Flugmodell des Microsoft Flight Simulator 2024 und legt die Bewegung darüber, die ein Hubschrauber in der Luft hat. Im Schwebeflug hält sich die Maschine nicht mehr selbst, sie will geflogen werden. Der Rotorschatten gibt den Schatten zurück, den der Simulator ab einer bestimmten Rotordrehzahl fallen lässt, mit der echten Drehzahl und geneigt mit der Maschine. Alles Weitere wird im Simulator selbst eingestellt.</p>
+    <p style="margin-top:18px;font-size:14px;color:#94a3b8;">Diese Seite zeigt die Mods im Einsatz: jedes Video zeigt den laufenden Simulator, mit und ohne Mod im direkten Vergleich.</p>
+  </div>
+</header>
+
+<section class="t-section">
+  <div class="t-section-head">
+    <h2>Flight Dynamics</h2>
+    <p>Acht Hubschraubertypen, je ein Video. In jedem Video wird dieselbe Platzrunde zweimal geflogen: erst ohne die Erweiterung, dann mit ihr.</p>
+  </div>
+
+  <div class="vid-grid">
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/WrP_715I8ZU" title="Airbus H125, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Airbus H125</figcaption>
+    </figure>
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/DVwShPgwW3E" title="Airbus H135, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Airbus H135 (EC135)</figcaption>
+    </figure>
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/74lokrjXWqE" title="Airbus H225, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Airbus H225</figcaption>
+    </figure>
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/UwzaC_V4XLc" title="Guimbal Cabri G2, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Guimbal Cabri G2</figcaption>
+    </figure>
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/Wyff4SbHDy0" title="Robinson R66, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Robinson R66</figcaption>
+    </figure>
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/a6BGM2qqmQU" title="Sikorsky S-64, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Sikorsky S-64 Skycrane</figcaption>
+    </figure>
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/dL6QBUNJjm8" title="Boeing CH-47 Chinook, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Boeing CH-47 Chinook</figcaption>
+    </figure>
+    <figure class="vid-item uh1-right">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/97bNbxhP2kQ" title="Bell UH-1, Flugdynamik" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>Bell UH-1</figcaption>
+    </figure>
+  </div>
+
+  <h3 style="text-align:center;font-size:18px;color:#fff;margin:48px 0 6px;">Vergleichsansicht auf geteiltem Bild</h3>
+  <p style="text-align:center;color:var(--text-dim);font-size:14px;max-width:640px;margin:0 auto 18px;">Die Guimbal Cabri G2 ein zweites Mal, beide Durchgänge gleichzeitig auf einem Bild: links ohne die Erweiterung, rechts mit ihr.</p>
+  <figure class="vid-item vid-solo">
+    <div class="vid-frame"><iframe src="https://www.youtube.com/embed/izJxLWfht98" title="Guimbal Cabri G2, Vergleich auf geteiltem Bild" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <figcaption>Guimbal Cabri G2, Vergleichsansicht auf geteiltem Bild</figcaption>
+  </figure>
+</section>
+
+<section class="t-section">
+  <div class="t-section-head">
+    <h2>Bedienung im Simulator</h2>
+    <p>Alles wird im Bedienfeld im Simulator eingestellt, während der Flug weiterläuft. Änderungen wirken sofort und werden je Hubschraubertyp gespeichert.</p>
+  </div>
+  <div class="panel-grid panel-portrait">
+    <figure><img src="../../assets/panel/overview.jpg" alt="Bedienfeld im Simulator, Übersicht über alle Einstellungen" width="683" height="972" loading="lazy"><figcaption>Übersicht: alle Bereiche des Bedienfelds auf einen Blick</figcaption></figure>
+    <figure><img src="../../assets/panel/hover.png" alt="Bereich des Bedienfelds für das Verhalten im Schwebeflug" width="641" height="1116" loading="lazy"><figcaption>Schwebeflug: wie stark die Maschine wandert und wie schnell sie reagiert</figcaption></figure>
+    <figure><img src="../../assets/panel/motion.png" alt="Bereich des Bedienfelds für die Bewegung im Vorwärtsflug" width="640" height="1118" loading="lazy"><figcaption>Bewegung im Vorwärtsflug, nach Achsen getrennt</figcaption></figure>
+  </div>
+  <div class="panel-grid panel-landscape">
+    <figure><img src="../../assets/panel/rotor.jpg" alt="Bereich des Bedienfelds für den Rotorschatten" width="644" height="406" loading="lazy"><figcaption>Rotorschatten, je Hubschraubertyp zuschaltbar</figcaption></figure>
+    <figure><img src="../../assets/panel/strength.jpg" alt="Bereich des Bedienfelds für die Gesamtstärke der Flugdynamik" width="649" height="349" loading="lazy"><figcaption>Gesamtstärke der Flugdynamik</figcaption></figure>
+    <figure><img src="../../assets/panel/profile.jpg" alt="Bereich des Bedienfelds für das Profil des geladenen Hubschraubertyps" width="652" height="322" loading="lazy"><figcaption>Profil des gerade geladenen Hubschraubertyps</figcaption></figure>
+  </div>
+</section>
+
+<section class="t-section">
+  <div class="t-section-head">
+    <h2>Rotor Shadow</h2>
+    <p>Sieben Hubschraubertypen werden unterstützt: Airbus H125, Airbus H135, Airbus H225, Guimbal Cabri G2, Robinson R66, Sikorsky S-64 Skycrane und Boeing CH-47 Chinook.</p>
+  </div>
+  <figure class="vid-item vid-solo">
+    <div class="vid-frame"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotorschatten auf sieben Hubschraubertypen" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <figcaption>Rotor Shadow, sieben Hubschraubertypen</figcaption>
+  </figure>
+</section>
+
+<section class="t-section">
+  <div class="t-section-head">
+    <h2>Von unserem EC135 Soundmod</h2>
+    <p>Vorher und nachher: Klang und Rotorschatten an der EC135.</p>
+  </div>
+  <div class="vid-grid">
+    <figure class="vid-item">
+      <div class="vid-frame"><iframe src="https://www.youtube.com/embed/iFIKjhCXaDs" title="EC135, vorher und nachher: Klang und Rotorschatten" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <figcaption>EC135, vorher und nachher: Klang und Rotorschatten</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="t-section" id="kontakt">
+  <div class="t-section-head"><h2>Kontakt</h2></div>
+  <p style="color:var(--text-dim);text-align:center;">Fragen zur Vorführung oder zu Material:<br>
+  <a href="mailto:support@fwx-simaviation.com" style="color:var(--accent);font-weight:700;">support@fwx-simaviation.com</a></p>
+</section>
+
+<footer class="t-footer">
+  <div class="t-footer-grid">
+    <div class="t-footer-col">
+      <div class="t-footer-head">Produktinfos</div>
+      <a href="../../faq.html">FAQ</a>
+      <a href="../../install.html">Installationsanleitung</a>
+      <a href="../../changelog.html">Änderungen</a>
+      <a href="../../contact.html">Kontakt &amp; Support</a>
+    </div>
+    <div class="t-footer-col">
+      <div class="t-footer-head">Community</div>
+      <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
+    <div class="t-footer-col">
+      <div class="t-footer-head">Rechtliches</div>
+      <a href="../../">Hauptseite</a>
+      <a href="../../impressum.html">Impressum</a>
+      <a href="../../datenschutz.html">Datenschutz</a>
+      <a href="../../agb.html">AGB</a>
+      <a href="../../widerruf.html">Widerruf</a>
+    </div>
+  </div>
+  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">
+    EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator is a trademark of Microsoft Corporation.
+    FWX SimAviation is not affiliated with either company.
+  </div>
+  <div class="t-footer-bottom">© 2026 FWX SimAviation</div>
+</footer>
+</body>
+</html>
