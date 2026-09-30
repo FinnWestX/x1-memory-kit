@@ -564,13 +564,27 @@ html { scroll-behavior: smooth; }
 .prod-pl { margin-top:14px; font-size:14px; text-align:center; }
 .prod-pl a { color:var(--accent); font-weight:700; }
 </style>
+<style>
+/* Kopf-Marke */
+.t-nav-brand { gap:14px; }
+.t-nav .t-nav-logo { width:60px; height:60px; padding:0; border:0; background:transparent; box-shadow:0 0 18px -2px rgba(14,165,233,0.55); }
+.nav-word { display:flex; flex-direction:column; line-height:1; }
+.nav-fwx { font-size:28px; font-weight:900; letter-spacing:3px; color:#fff; }
+.nav-sim { font-size:13px; font-weight:600; letter-spacing:3.5px; color:var(--brand); margin-top:4px; text-transform:uppercase; }
+@media (max-width:600px) {
+  .t-nav .t-nav-logo { width:42px; height:42px; }
+  .t-nav-brand { gap:10px; }
+  .nav-fwx { font-size:20px; letter-spacing:2px; }
+  .nav-sim { font-size:10px; letter-spacing:2px; margin-top:3px; }
+}
+</style>
 </head>
 <body>
 <nav class="t-nav">
   <div class="t-nav-inner">
     <a href="./" class="t-nav-brand">
       <img src="../fwx-logo.svg" alt="FWX SimAviation" class="t-nav-logo">
-      FWX SimAviation
+      <span class="nav-word"><span class="nav-fwx">FWX</span><span class="nav-sim">SimAviation</span></span>
     </a>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="de/" style="color:var(--text-dim);font-size:13px;font-weight:600;">DE</a>
@@ -634,7 +648,7 @@ html { scroll-behavior: smooth; }
 </div>
 </section>
 <section class="t-section" id="all-helicopters">
-  <div class="t-section-head"><h2>For helicopters</h2>
+  <div class="t-section-head"><h2>For all helicopters</h2>
     <p>Flight Dynamics and Rotor Haptic work on every helicopter, Rotor Shadow on seven supported types. Select one to jump to its description.</p></div>
   <div class="p-grid">
   <a class="p-card p-link" href="#flight-dynamics">
@@ -658,7 +672,7 @@ html { scroll-behavior: smooth; }
 </div>
 </section>
 <section class="t-section" id="for-the-ec135">
-  <div class="t-section-head"><h2>For the EC135</h2>
+  <div class="t-section-head"><h2>EC135 only</h2>
     <p>Made for the EC135 in Microsoft Flight Simulator 2024. Select it to jump to its description.</p></div>
   <div class="p-grid">
   <a class="p-card p-link" href="#turbine-sound">
@@ -721,7 +735,7 @@ html { scroll-behavior: smooth; }
 </section>
 <section class="t-section" id="flight-dynamics">
   <div class="prod-inner">
-    <div class="prod-kind">For helicopters</div>
+    <div class="prod-kind">For all helicopters</div>
     <h2>FWX Helicopter Flight Dynamics</h2>
     <p class="prod-contains">Includes: Flight Dynamics · PDF manual</p>
     <p class="prod-text">Heli Flight Dynamics keeps the flight model of Microsoft Flight Simulator 2024 and adds extra motion in the hover and in forward flight, which can be set separately. In the hover the helicopter drifts slightly and has to be actively held; how much is set in the FWX Control Center.</p>
@@ -760,7 +774,7 @@ html { scroll-behavior: smooth; }
 </section>
 <section class="t-section" id="rotor-shadow">
   <div class="prod-inner">
-    <div class="prod-kind">For helicopters</div>
+    <div class="prod-kind">For all helicopters</div>
     <h2>FWX Helicopter Rotor Shadow Mod</h2>
     <p class="prod-contains">Includes: Rotor Shadow</p>
     <p class="prod-text">On seven types the simulator stops drawing the rotor shadow above a certain rotor speed. Rotor Shadow brings it back – matched to the current rotor speed and tilting with the helicopter.</p>
@@ -780,7 +794,7 @@ html { scroll-behavior: smooth; }
 </section>
 <section class="t-section" id="rotor-blade-haptic">
   <div class="prod-inner">
-    <div class="prod-kind">For helicopters</div>
+    <div class="prod-kind">For all helicopters</div>
     <h2>FWX Helicopter Rotor Haptic Mod</h2>
     <p class="prod-contains">Includes: Rotor Haptic</p>
     <p class="prod-text">Rotor Haptic passes on every single blade pass as vibration, and every type has its own rhythm. During start-up the beats are slow enough to count; at full rotor speed they merge into a deep, even bass. Spool-up, hover and hard manoeuvres feel different, so you can feel what the helicopter is doing.</p>
@@ -796,7 +810,7 @@ html { scroll-behavior: smooth; }
 </section>
 <section class="t-section" id="turbine-sound">
   <div class="prod-inner">
-    <div class="prod-kind">For the EC135</div>
+    <div class="prod-kind">EC135 only</div>
     <h2>FWX EC135 Turbine Sound Enhancement Mod</h2>
     <p class="prod-contains">Includes: EC135 Turbine Sound</p>
     <p class="prod-text">This mod completely replaces the sounds of the EC135 in Microsoft Flight Simulator 2024, inside and out, with recorded turbine sounds. In the cockpit every phase of flight has its own sound: cold start, spool-up, idle, flight and shutdown. From outside you hear the whine of the two turbines.</p>
