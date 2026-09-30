@@ -485,6 +485,10 @@ img, svg { max-width: 100%; display: block; }
 @media (min-width:700px)  { .v-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (min-width:1000px) { .v-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
                             .v-grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+/* ---- EIN-SPALTEN-VIDEORASTER 30.09.2026 ---- */
+.v-grid.v-grid-1 { grid-template-columns:1fr; max-width:720px; }
+@media (min-width:700px)  { .v-grid.v-grid-1 { grid-template-columns:1fr; } }
+@media (min-width:1000px) { .v-grid.v-grid-1 { grid-template-columns:1fr; } }
 .g-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-top:16px; }
 .g-grid figure { margin:0; }
 .g-grid img { border-radius:10px; border:1px solid var(--border); width:100%; }
@@ -670,9 +674,8 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">For helicopters</div>
     <h2>Rotor Shadow</h2>
     <p class="prod-text">On seven helicopters in the simulator the rotor shadow is only there at rest and while the rotor spools up. From medium rpm upwards it is gone completely, which is exactly the time you spend flying. This add-on gives your machine its turning shadow back, at full rotor speed too: on the ground, on the fuselage and on everything you fly over. Main rotor and tail rotor each cast their own, clearly separate shadow instead of both ending up as one dark blob. Each of the seven supported types was tuned individually, so the shadow belongs to the machine it falls from.</p>
-      <div class="v-grid v-grid-2">
+      <div class="v-grid v-grid-1">
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotor shadow, seven helicopter types" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Rotor shadow, seven helicopter types</figcaption></figure>
-        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/iFIKjhCXaDs" title="EC135, before and after: sound and rotor shadow" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>EC135, before and after: sound and rotor shadow</figcaption></figure>
       </div>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">

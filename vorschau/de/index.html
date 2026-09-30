@@ -485,6 +485,10 @@ img, svg { max-width: 100%; display: block; }
 @media (min-width:700px)  { .v-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (min-width:1000px) { .v-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
                             .v-grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+/* ---- EIN-SPALTEN-VIDEORASTER 30.09.2026 ---- */
+.v-grid.v-grid-1 { grid-template-columns:1fr; max-width:720px; }
+@media (min-width:700px)  { .v-grid.v-grid-1 { grid-template-columns:1fr; } }
+@media (min-width:1000px) { .v-grid.v-grid-1 { grid-template-columns:1fr; } }
 .g-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-top:16px; }
 .g-grid figure { margin:0; }
 .g-grid img { border-radius:10px; border:1px solid var(--border); width:100%; }
@@ -670,9 +674,8 @@ html { scroll-behavior: smooth; }
     <div class="prod-kind">Für Hubschrauber</div>
     <h2>Rotor Shadow</h2>
     <p class="prod-text">Über dem Piloten dreht ein Rotor, und bei sieben bekannten Mustern verschwindet dessen Schatten im Simulator ab mittlerer Drehzahl vollständig. Anfangs ist er noch zu sehen, nach dem Startup plötzlich nicht mehr, also während des gesamten Fluges. Genau diesen sieben bringt unser Rotorschatten-Mod den Schatten in Live-Drehzahl zurück, auf dem Boden, auf der Zelle und auf allem, was überflogen wird. Hauptrotor und Heckrotor werfen jeweils ihren eigenen Schatten statt eines dunklen Flecks. Jedes der sieben unterstützten Muster wurde einzeln abgestimmt.</p>
-      <div class="v-grid v-grid-2">
+      <div class="v-grid v-grid-1">
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotorschatten, sieben Hubschraubertypen" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Rotorschatten, sieben Hubschraubertypen</figcaption></figure>
-        <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/iFIKjhCXaDs" title="EC135, vorher und nachher: Klang und Rotorschatten" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>EC135, vorher und nachher: Klang und Rotorschatten</figcaption></figure>
       </div>
     <p class="prod-meta">Version 2.2.0 (Stand 30.09.2026)</p>
     <div class="prod-buy">
