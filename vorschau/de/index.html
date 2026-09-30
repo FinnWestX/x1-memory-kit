@@ -578,6 +578,12 @@ html { scroll-behavior: smooth; }
   .nav-sim { font-size:10px; letter-spacing:2px; margin-top:3px; }
 }
 </style>
+<style>
+/* Hero-Logo */
+.hero-logo { display:block; width:130px; height:130px; margin:0 auto 12px; filter:drop-shadow(0 0 18px rgba(14,165,233,0.55)); }
+.hero-tag { font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:18px; }
+@media (max-width:600px) { .hero-logo { width:90px; height:90px; } .hero-tag { font-size:11px; letter-spacing:2px; } }
+</style>
 </head>
 <body>
 <nav class="t-nav">
@@ -595,7 +601,8 @@ html { scroll-behavior: smooth; }
 
 <header class="t-hero">
   <div class="t-hero-inner">
-    <div class="t-eyebrow">FWX SimAviation</div>
+    <img src="../../fwx-logo.svg" alt="FWX SimAviation" class="hero-logo" width="130" height="130">
+    <div class="hero-tag">Hubschrauber-Mods · Version 2.2.0</div>
     <h1 class="t-headline">Erweiterungen für den Microsoft Flight Simulator</h1>
     <p class="t-sub">Hubschrauber-Erweiterungen für den Microsoft Flight Simulator 2024: Flight Dynamics, Rotor Shadow, Rotor Haptic und EC135 Turbine Sound. Version 2.2.0.</p>
   </div>
