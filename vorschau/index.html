@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FWX SimAviation - Add-ons for Microsoft Flight Simulator</title>
-<meta name="description" content="FWX SimAviation builds add-ons for Microsoft Flight Simulator. Detail you feel and hear in flight: how it moves, how it sounds and how it looks.">
+<title>FWX SimAviation - Helicopter add-ons for Microsoft Flight Simulator 2024</title>
+<meta name="description" content="Helicopter add-ons for Microsoft Flight Simulator 2024: Flight Dynamics, Rotor Shadow, Rotor Haptic and EC135 Turbine Sound. Version 2.2.0.">
 <link rel="canonical" href="https://fwx-simaviation.com/vorschau/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FWX SimAviation">
-<meta property="og:title" content="FWX SimAviation - Add-ons for Microsoft Flight Simulator">
-<meta property="og:description" content="FWX SimAviation builds add-ons for Microsoft Flight Simulator. Detail you feel and hear in flight: how it moves, how it sounds and how it looks.">
+<meta property="og:title" content="FWX SimAviation - Helicopter add-ons for Microsoft Flight Simulator 2024">
+<meta property="og:description" content="Helicopter add-ons for Microsoft Flight Simulator 2024: Flight Dynamics, Rotor Shadow, Rotor Haptic and EC135 Turbine Sound. Version 2.2.0.">
 <meta property="og:url" content="https://fwx-simaviation.com/vorschau/">
 <meta property="og:image" content="https://fwx-simaviation.com/og-image.png">
 <link rel="icon" href="../fwx-logo.svg" type="image/svg+xml">
@@ -546,9 +546,26 @@ html { scroll-behavior: smooth; }
 .backlink:hover { color:#fff; border-color:var(--brand); }
 </style>
 
+<style>
+.pk-wrap { max-width:1000px; margin:0 auto; overflow-x:auto; }
+.pk-table { width:100%; border-collapse:collapse; font-size:14px; min-width:560px; }
+.pk-table th, .pk-table td { border-bottom:1px solid var(--border); padding:9px 8px; text-align:center; color:var(--text-dim); }
+.pk-table th { color:#fff; font-size:12px; letter-spacing:0.4px; }
+.pk-table td:first-child, .pk-table th:first-child { text-align:left; }
+.pk-table td:first-child a { color:var(--accent); font-weight:700; }
+.pk-yes { color:var(--ok); font-weight:800; }
+@media (max-width:600px) { .pk-table { min-width:0; font-size:11px; } .pk-table th, .pk-table td { padding:7px 3px; } .pk-table th { font-size:10px; letter-spacing:0; } }
+.pk-fit { max-width:1000px; margin:22px auto 0; color:var(--text-dim); font-size:15px; line-height:1.7; }
+.pk-fit a { color:var(--accent); font-weight:700; }
+.pk-common { max-width:1000px; margin:14px auto 0; color:var(--text-muted); font-size:13px; line-height:1.6; }
+.prod-contains { font-size:14px; font-weight:700; color:var(--accent); margin:0 0 14px; }
+.prod-note { background:rgba(245,158,11,0.09); border:1px solid rgba(245,158,11,0.45); border-left:4px solid #f59e0b;
+             border-radius:10px; padding:12px 16px; color:#fcd34d; font-size:14px; line-height:1.6; margin:0 0 18px; }
+.prod-pl { margin-top:14px; font-size:14px; text-align:center; }
+.prod-pl a { color:var(--accent); font-weight:700; }
+</style>
 </head>
 <body>
-<!-- NEUE STARTSEITE, VORSCHAU. Noch nicht live geschaltet, nirgends verlinkt. -->
 <nav class="t-nav">
   <div class="t-nav-inner">
     <a href="./" class="t-nav-brand">
@@ -557,7 +574,7 @@ html { scroll-behavior: smooth; }
     </a>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="de/" style="color:var(--text-dim);font-size:13px;font-weight:600;">DE</a>
-      <a href="#all-helicopters" class="t-nav-cta">See products</a>
+      <a href="#overview" class="t-nav-cta">Package overview</a>
     </div>
   </div>
 </nav>
@@ -566,78 +583,151 @@ html { scroll-behavior: smooth; }
   <div class="t-hero-inner">
     <div class="t-eyebrow">FWX SimAviation</div>
     <h1 class="t-headline">Add-ons for Microsoft Flight Simulator</h1>
-    <p class="t-sub">We build add-ons you feel and hear in flight. Detail that changes how it moves, how it sounds and how it looks in the simulator.</p>
+    <p class="t-sub">Helicopter add-ons for Microsoft Flight Simulator 2024: Flight Dynamics, Rotor Shadow, Rotor Haptic and EC135 Turbine Sound. Version 2.2.0.</p>
   </div>
 </header>
 
+<section class="t-section" id="overview">
+  <div class="t-section-head"><h2>What&#x27;s included?</h2>
+    <p>Seven packages, four products. The table shows what each package contains.</p></div>
+  <div class="pk-wrap">
+    <table class="pk-table">
+      <tr><th>Package</th><th>Flight Dynamics</th><th>Rotor Shadow</th><th>Rotor Haptic</th><th>EC135 Turbine Sound</th><th>PDF manual</th></tr>
+      <tr><td><a href="#bundle-all-in-one">FWX Helicopter All-in-One Bundle</a></td><td><span class="pk-yes">&#10003;</span></td><td><span class="pk-yes">&#10003;</span></td><td><span class="pk-yes">&#10003;</span></td><td><span class="pk-yes">&#10003;</span></td><td><span class="pk-yes">&#10003;</span></td></tr>
+      <tr><td><a href="#bundle-dynamics-shadow-haptic">FWX Heli Flight Dynamics &amp; Rotor Effects</a></td><td><span class="pk-yes">&#10003;</span></td><td><span class="pk-yes">&#10003;</span></td><td><span class="pk-yes">&#10003;</span></td><td>–</td><td><span class="pk-yes">&#10003;</span></td></tr>
+      <tr><td><a href="#flight-dynamics">FWX Helicopter Flight Dynamics</a></td><td><span class="pk-yes">&#10003;</span></td><td>–</td><td>–</td><td>–</td><td><span class="pk-yes">&#10003;</span></td></tr>
+      <tr><td><a href="#rotor-shadow">FWX Helicopter Rotor Shadow Mod</a></td><td>–</td><td><span class="pk-yes">&#10003;</span></td><td>–</td><td>–</td><td>–</td></tr>
+      <tr><td><a href="#rotor-blade-haptic">FWX Helicopter Rotor Haptic Mod</a></td><td>–</td><td>–</td><td><span class="pk-yes">&#10003;</span></td><td>–</td><td>–</td></tr>
+      <tr><td><a href="#bundle-sound-haptic">FWX EC135 Sound &amp; Haptic Bundle</a></td><td>–</td><td>–</td><td><span class="pk-yes">&#10003;</span></td><td><span class="pk-yes">&#10003;</span></td><td>–</td></tr>
+      <tr><td><a href="#turbine-sound">FWX EC135 Turbine Sound Enhancement Mod</a></td><td>–</td><td>–</td><td>–</td><td><span class="pk-yes">&#10003;</span></td><td>–</td></tr>
+    </table>
+  </div>
+  <p class="pk-fit"><strong>Which package is right for you?</strong><br>
+    You want everything? → <a href="#bundle-all-in-one">FWX Helicopter All-in-One Bundle</a><br>
+    You fly different helicopters? → <a href="#bundle-dynamics-shadow-haptic">FWX Heli Flight Dynamics &amp; Rotor Effects</a><br>
+    You mainly fly the EC135? → <a href="#bundle-sound-haptic">FWX EC135 Sound &amp; Haptic Bundle</a></p>
+  <p class="pk-common">All packages: one installer for Microsoft Flight Simulator 2024 from the Microsoft Store or Steam. Everything is controlled in the FWX Control Center inside the simulator – each product has its own tab, plus a help tab “?” with guide and manual. Rotor Haptic needs a tactile transducer.</p>
+</section>
+
+<section class="t-section p-bundles" id="bundles">
+  <div class="t-section-head"><h2>Bundles</h2>
+    <p>Several products in one package, with one installer. Select one to jump to its description.</p></div>
+  <div class="p-grid">
+  <a class="p-card p-link" href="#bundle-all-in-one">
+    <h3>FWX Helicopter All-in-One Bundle</h3>
+    <div class="p-desc">Includes: Flight Dynamics, Rotor Shadow, Rotor Haptic and EC135 Turbine Sound.</div>
+    <div class="p-price">EUR 32.71</div>
+    <div class="p-jump">Read more &#8595;</div>
+  </a>
+  <a class="p-card p-link" href="#bundle-dynamics-shadow-haptic">
+    <h3>FWX Heli Flight Dynamics &amp; Rotor Effects</h3>
+    <div class="p-desc">Includes: Flight Dynamics, Rotor Shadow and Rotor Haptic.</div>
+    <div class="p-price">EUR 30.93</div>
+    <div class="p-jump">Read more &#8595;</div>
+  </a>
+  <a class="p-card p-link" href="#bundle-sound-haptic">
+    <h3>FWX EC135 Sound &amp; Haptic Bundle</h3>
+    <div class="p-desc">Includes: EC135 Turbine Sound and Rotor Haptic.</div>
+    <div class="p-price">EUR 14.99</div>
+    <div class="p-jump">Read more &#8595;</div>
+  </a>
+</div>
+</section>
 <section class="t-section" id="all-helicopters">
   <div class="t-section-head"><h2>For helicopters</h2>
-    <p>Flight dynamics and haptics work on every helicopter. Rotor shadow covers the seven types where the simulator leaves it out. Select one to jump to its description.</p></div>
+    <p>Flight Dynamics and Rotor Haptic work on every helicopter, Rotor Shadow on seven supported types. Select one to jump to its description.</p></div>
   <div class="p-grid">
   <a class="p-card p-link" href="#flight-dynamics">
-    <h3>Flight Dynamics</h3>
-    <div class="p-desc">The helicopter stops holding itself and starts to live under your hands.</div>
+    <h3>FWX Helicopter Flight Dynamics</h3>
+    <div class="p-desc">Extra motion in the hover and in forward flight, set separately, for every helicopter. Factory profiles for nine types.</div>
     <div class="p-price">EUR 16.99</div>
     <div class="p-jump">Read more &#8595;</div>
   </a>
   <a class="p-card p-link" href="#rotor-shadow">
-    <h3>Rotor Shadow</h3>
-    <div class="p-desc">The turning rotor shadow back at full rotor speed, on the seven types where the simulator leaves it out.</div>
+    <h3>FWX Helicopter Rotor Shadow Mod</h3>
+    <div class="p-desc">The turning rotor shadow on seven types where the simulator stops drawing it above a certain rotor speed.</div>
     <div class="p-price">EUR 9.99</div>
     <div class="p-jump">Read more &#8595;</div>
   </a>
   <a class="p-card p-link" href="#rotor-blade-haptic">
-    <h3>Rotor Blade Haptic</h3>
-    <div class="p-desc">Every single blade beat in your seat or your controls, for every helicopter.</div>
+    <h3>FWX Helicopter Rotor Haptic Mod</h3>
+    <div class="p-desc">Every single blade pass as vibration, for every helicopter. Needs a tactile transducer.</div>
     <div class="p-price">EUR 8.89</div>
     <div class="p-jump">Read more &#8595;</div>
   </a>
 </div>
 </section>
-
 <section class="t-section" id="for-the-ec135">
   <div class="t-section-head"><h2>For the EC135</h2>
-    <p>Made for one single helicopter in Microsoft Flight Simulator 2024. Select it to jump to its description.</p></div>
+    <p>Made for the EC135 in Microsoft Flight Simulator 2024. Select it to jump to its description.</p></div>
   <div class="p-grid">
   <a class="p-card p-link" href="#turbine-sound">
-    <h3>Turbine Sound</h3>
-    <div class="p-desc">Recorded turbine sound for the Nemeth Design EC135, in the cockpit and from outside.</div>
+    <h3>FWX EC135 Turbine Sound Enhancement Mod</h3>
+    <div class="p-desc">Recorded turbine sound for the EC135, in the cockpit and from outside.</div>
     <div class="p-price">EUR 11.89</div>
     <div class="p-jump">Read more &#8595;</div>
   </a>
 </div>
 </section>
-
-<section class="t-section p-bundles" id="bundles">
-  <div class="t-section-head"><h2>Bundles</h2>
-    <p>Several add-ons in one package. Select one to jump to its description.</p></div>
-  <div class="p-grid">
-  <a class="p-card p-link" href="#bundle-dynamics-shadow-haptic">
-    <h3>Flight Dynamics + Rotor Shadow + Haptic</h3>
-    <div class="p-desc">The three helicopter add-ons in one package.</div>
-    <div class="p-price">EUR 30.93</div>
-    <div class="p-jump">Read more &#8595;</div>
-  </a>
-  <a class="p-card p-link" href="#bundle-sound-haptic">
-    <h3>Sound + Haptic Bundle</h3>
-    <div class="p-desc">Turbine Sound and Rotor Blade Haptic together.</div>
-    <div class="p-price">EUR 14.99</div>
-    <div class="p-jump">Read more &#8595;</div>
-  </a>
-  <a class="p-card p-link" href="#bundle-all-in-one">
-    <h3>All-in-One Bundle</h3>
-    <div class="p-desc">Every FWX SimAviation add-on in a single package.</div>
-    <div class="p-price">EUR 32.71</div>
-    <div class="p-jump">Read more &#8595;</div>
-  </a>
-</div>
+<section class="t-section" id="bundle-all-in-one">
+  <div class="prod-inner">
+    <div class="prod-kind">Bundle</div>
+    <h2>FWX Helicopter All-in-One Bundle</h2>
+    <p class="prod-contains">Includes: Flight Dynamics, Rotor Shadow, Rotor Haptic, EC135 Turbine Sound · PDF manual</p>
+    <p class="prod-text">Everything in one package: The FWX Helicopter All-in-One Bundle combines Heli Flight Dynamics, Rotor Shadow, Rotor Haptic and the EC135 Turbine Sound Enhancement Mod. One installer sets everything up, and all mods start automatically with the simulator. Everything is controlled in one place, the FWX Control Center inside the simulator: each product has its own tab, plus a shared help tab with guide and manual.</p>
+    <p class="prod-text">Flight Dynamics and Rotor Haptic work on every helicopter, Rotor Shadow on the seven supported types, and the Turbine Sound on the EC135. The manual is also included as PDF in English and German.</p>
+    <p class="prod-note">Important when updating: profiles from earlier versions can no longer be used and are removed. Create your own profile again with Save.</p>
+    <div class="icon-box" style="display:none"></div>
+    <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">EUR 32.71</span>
+      <span class="p-buy p-soon">Purchase not active yet</span>
+    </div>
+    <a class="backlink" href="#bundles">Back to overview</a>
+  </div>
 </section>
-
+<section class="t-section" id="bundle-dynamics-shadow-haptic">
+  <div class="prod-inner">
+    <div class="prod-kind">Bundle</div>
+    <h2>FWX Heli Flight Dynamics &amp; Rotor Effects</h2>
+    <p class="prod-contains">Includes: Flight Dynamics, Rotor Shadow, Rotor Haptic · PDF manual</p>
+    <p class="prod-text">Flight Dynamics, Rotor Shadow and Rotor Haptic in one package, with one installer. Everything is controlled in the FWX Control Center inside the simulator, each product with its own tab.</p>
+    <p class="prod-text">Flight Dynamics and Rotor Haptic work on every helicopter, Rotor Shadow on the seven supported types. The manual is also included as PDF in English and German.</p>
+    <p class="prod-note">Important when updating: profiles from earlier versions can no longer be used and are removed. Create your own profile again with Save.</p>
+    <div class="icon-box" style="display:none"></div>
+    <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">EUR 30.93</span>
+      <span class="p-buy p-soon">Purchase not active yet</span>
+    </div>
+    <a class="backlink" href="#bundles">Back to overview</a>
+  </div>
+</section>
+<section class="t-section" id="bundle-sound-haptic">
+  <div class="prod-inner">
+    <div class="prod-kind">Bundle</div>
+    <h2>FWX EC135 Sound &amp; Haptic Bundle</h2>
+    <p class="prod-contains">Includes: EC135 Turbine Sound, Rotor Haptic</p>
+    <p class="prod-text">EC135 Turbine Sound and Rotor Haptic in one package, with one installer. Everything is controlled in the FWX Control Center inside the simulator, each product with its own tab.</p>
+    <p class="prod-text">You hear the recorded turbine of the EC135 and feel every blade pass. Rotor Haptic works on every helicopter and needs a tactile transducer, for example on your seat; the Turbine Sound works on the EC135.</p>
+    <div class="icon-box" style="display:none"></div>
+    <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
+    <div class="prod-buy">
+      <span class="prod-price">EUR 14.99</span>
+      <span class="p-buy p-soon">Purchase not active yet</span>
+    </div>
+    <a class="backlink" href="#bundles">Back to overview</a>
+  </div>
+</section>
 <section class="t-section" id="flight-dynamics">
   <div class="prod-inner">
     <div class="prod-kind">For helicopters</div>
-    <h2>Flight Dynamics</h2>
-    <p class="prod-text">The aircraft behaves the way its own aerodynamics say it should: it breathes, drifts and settles instead of sitting in the air as if it were on rails. A hover is something you hold, not something the simulator holds for you. Speed, weight and attitude all change the feel. The aircraft is lively, never twitchy, and your inputs stay in charge. How strongly all of this comes through stays your choice, separately for each helicopter.</p>
+    <h2>FWX Helicopter Flight Dynamics</h2>
+    <p class="prod-contains">Includes: Flight Dynamics · PDF manual</p>
+    <p class="prod-text">Heli Flight Dynamics keeps the flight model of Microsoft Flight Simulator 2024 and adds extra motion in the hover and in forward flight, which can be set separately. In the hover the helicopter drifts slightly and has to be actively held; how much is set in the FWX Control Center.</p>
+    <p class="prod-text">Factory profiles for nine helicopter types: Cabri, R66, EC135, H125, H225, Bell 407, UH-1H, CH-47D and S-64F; other helicopters start from a general base profile. The effect strength adapts to the size and weight distribution of each helicopter. Press Save to create your own profile per helicopter; the factory profile stays unchanged. The manual is also included as PDF in English and German.</p>
+    <p class="prod-note">Important when updating: profiles from earlier versions can no longer be used and are removed. Create your own profile again with Save.</p>
+      <p class="prod-text" style="margin-bottom:0;">Every video flies the same circuit twice: first without, then with Flight Dynamics. The last video shows the Guimbal Cabri G2 on a split screen.</p>
       <div class="v-grid">
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/WrP_715I8ZU" title="Airbus H125" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Airbus H125</figcaption></figure>
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/DVwShPgwW3E" title="Airbus H135" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Airbus H135</figcaption></figure>
@@ -649,6 +739,7 @@ html { scroll-behavior: smooth; }
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/97bNbxhP2kQ" title="Bell UH-1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Bell UH-1</figcaption></figure>
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/izJxLWfht98" title="Guimbal Cabri G2, side-by-side view" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Guimbal Cabri G2, side-by-side view</figcaption></figure>
       </div>
+    <p class="prod-pl"><a href="https://www.youtube.com/playlist?list=PLZRmJ-cAHUkQ" target="_blank" rel="noopener noreferrer">All Flight Dynamics videos as a YouTube playlist</a></p>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="panel-grid panel-portrait">
       <figure><img src="../assets/panel/overview.jpg" alt="Panel overview" width="683" height="972" loading="lazy"><figcaption>Panel overview</figcaption></figure>
@@ -662,120 +753,65 @@ html { scroll-behavior: smooth; }
     </div>
     <div class="prod-buy">
       <span class="prod-price">EUR 16.99</span>
-      <!-- KAUFKNOPF: noch abgeschaltet -->
       <span class="p-buy p-soon">Purchase not active yet</span>
     </div>
     <a class="backlink" href="#all-helicopters">Back to overview</a>
   </div>
 </section>
-
 <section class="t-section" id="rotor-shadow">
   <div class="prod-inner">
     <div class="prod-kind">For helicopters</div>
-    <h2>Rotor Shadow</h2>
-    <p class="prod-text">On seven helicopters in the simulator the rotor shadow is only there at rest and while the rotor spools up. From medium rpm upwards it is gone completely, which is exactly the time you spend flying. This add-on gives your machine its turning shadow back, at full rotor speed too: on the ground, on the fuselage and on everything you fly over. Main rotor and tail rotor each cast their own, clearly separate shadow instead of both ending up as one dark blob. Each of the seven supported types was tuned individually, so the shadow belongs to the machine it falls from.</p>
+    <h2>FWX Helicopter Rotor Shadow Mod</h2>
+    <p class="prod-contains">Includes: Rotor Shadow</p>
+    <p class="prod-text">On seven types the simulator stops drawing the rotor shadow above a certain rotor speed. Rotor Shadow brings it back – matched to the current rotor speed and tilting with the helicopter.</p>
+    <p class="prod-text">Supported types: Airbus EC135, Airbus H125, Airbus H225, Guimbal Cabri G2, Robinson R66, Sikorsky S-64 Skycrane, Boeing CH-47D Chinook.</p>
+    <p class="prod-text">Main and tail rotor each cast their own shadow; each of the seven types is tuned individually. In the FWX Control Center the shadow can be switched on and off per helicopter type.</p>
       <div class="v-grid v-grid-1">
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/P2jadJNTvOY" title="Rotor shadow, seven helicopter types" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Rotor shadow, seven helicopter types</figcaption></figure>
       </div>
+    <p class="prod-pl"><a href="https://www.youtube.com/playlist?list=PLaOwqUonleUQ" target="_blank" rel="noopener noreferrer">All Rotor Shadow videos as a YouTube playlist</a></p>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
       <span class="prod-price">EUR 9.99</span>
-      <!-- KAUFKNOPF: noch abgeschaltet -->
       <span class="p-buy p-soon">Purchase not active yet</span>
     </div>
     <a class="backlink" href="#all-helicopters">Back to overview</a>
   </div>
 </section>
-
 <section class="t-section" id="rotor-blade-haptic">
   <div class="prod-inner">
     <div class="prod-kind">For helicopters</div>
-    <h2>Rotor Blade Haptic</h2>
-    <p class="prod-text">Ordinary haptics send one steady vibration, and that feels like a washing machine. In a real helicopter you feel every single blade pass, and every type has its own rhythm. On start-up the beats are slow enough to count along, one by one, and at full rotor speed they run together into a deep, even bass. Winding up, hovering and hard manoeuvres each feel different, so you notice what the helicopter is doing without taking your eyes off the horizon. It works with every helicopter in the simulator, turbine or piston, and needs a bass shaker or tactile transducer to be felt.</p>
-    <p class="prod-text">There is no video of its own for the haptics: it is something you feel, not something you see. It can be seen at work together with the other add-ons in the videos above.</p>
+    <h2>FWX Helicopter Rotor Haptic Mod</h2>
+    <p class="prod-contains">Includes: Rotor Haptic</p>
+    <p class="prod-text">Rotor Haptic passes on every single blade pass as vibration, and every type has its own rhythm. During start-up the beats are slow enough to count; at full rotor speed they merge into a deep, even bass. Spool-up, hover and hard manoeuvres feel different, so you can feel what the helicopter is doing.</p>
+    <p class="prod-text">Rotor Haptic works on every helicopter in the simulator. You set the strength in the FWX Control Center; the Haptic tab shows the number of rotor blades of the current helicopter. To feel it, you need a tactile transducer, for example on your seat.</p>
+    <p class="prod-text">There is no video for the haptics: they are felt, not seen.</p>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
       <span class="prod-price">EUR 8.89</span>
-      <!-- KAUFKNOPF: noch abgeschaltet -->
       <span class="p-buy p-soon">Purchase not active yet</span>
     </div>
     <a class="backlink" href="#all-helicopters">Back to overview</a>
   </div>
 </section>
-
 <section class="t-section" id="turbine-sound">
   <div class="prod-inner">
     <div class="prod-kind">For the EC135</div>
-    <h2>Turbine Sound</h2>
-    <p class="prod-text">The default EC135 sounds are flat and without character. This mod replaces them completely, inside and out, with recordings of real helicopters. In the cockpit every phase of flight has its own character: cold start, spool-up, idle, flight and shutdown. From outside there is the twin-turbine howl that gives this helicopter its signature from a distance. It is made for one single helicopter and works only there, the Nemeth Design EC135 that comes free with the simulator as Local Legend 21; in every other aircraft the simulator sounds exactly as it did before.</p>
+    <h2>FWX EC135 Turbine Sound Enhancement Mod</h2>
+    <p class="prod-contains">Includes: EC135 Turbine Sound</p>
+    <p class="prod-text">This mod completely replaces the sounds of the EC135 in Microsoft Flight Simulator 2024, inside and out, with recorded turbine sounds. In the cockpit every phase of flight has its own sound: cold start, spool-up, idle, flight and shutdown. From outside you hear the whine of the two turbines.</p>
+    <p class="prod-text">The mod works only on the EC135; every other aircraft sounds exactly as before. You choose the audio device by name in the FWX Control Center.</p>
       <div class="v-grid v-grid-2">
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/ym6WTRpOIlw" title="EC135, sound from inside" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>EC135, sound from inside</figcaption></figure>
         <figure><div class="v-box"><iframe src="https://www.youtube.com/embed/1_a5MbU3o-Q" title="EC135, sound from outside" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>EC135, sound from outside</figcaption></figure>
       </div>
+    <p class="prod-pl"><a href="https://www.youtube.com/playlist?list=PLfoW4pDR8Y6k" target="_blank" rel="noopener noreferrer">All Turbine Sound videos as a YouTube playlist</a></p>
     <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
     <div class="prod-buy">
       <span class="prod-price">EUR 11.89</span>
-      <!-- KAUFKNOPF: noch abgeschaltet -->
       <span class="p-buy p-soon">Purchase not active yet</span>
     </div>
     <a class="backlink" href="#for-the-ec135">Back to overview</a>
-  </div>
-</section>
-
-<section class="t-section" id="bundle-dynamics-shadow-haptic">
-  <div class="prod-inner">
-    <div class="prod-kind">Bundle</div>
-    <h2>Flight Dynamics + Rotor Shadow + Haptic</h2>
-    <p class="prod-text">Flight Dynamics, Rotor Shadow and Rotor Blade Haptic in one package. The helicopter stops holding itself in the air, carries its turning shadow with it and passes every single blade beat into your seat or your controls. Flight Dynamics and the haptic part work with every helicopter in the simulator, the shadow on the seven supported types.</p>
-    <div class="icon-box">
-      <!-- ICON FOLGT: Flight Dynamics + Rotor Shadow + Haptic -->
-      <div class="icon-ph"><strong>Icon follows</strong>for Flight Dynamics + Rotor Shadow + Haptic</div>
-    </div>
-    <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
-    <div class="prod-buy">
-      <span class="prod-price">EUR 30.93</span>
-      <!-- KAUFKNOPF: noch abgeschaltet -->
-      <span class="p-buy p-soon">Purchase not active yet</span>
-    </div>
-    <a class="backlink" href="#bundles">Back to overview</a>
-  </div>
-</section>
-
-<section class="t-section" id="bundle-sound-haptic">
-  <div class="prod-inner">
-    <div class="prod-kind">Bundle</div>
-    <h2>Sound + Haptic Bundle</h2>
-    <p class="prod-text">Turbine Sound and Rotor Blade Haptic in one package. You hear the recorded turbine of the EC135 and feel every blade beat in your seat at the same time. The haptic part works with every helicopter in the simulator, the sound part with the Nemeth Design EC135.</p>
-    <div class="icon-box">
-      <!-- ICON FOLGT: Sound + Haptic Bundle -->
-      <div class="icon-ph"><strong>Icon follows</strong>for Sound + Haptic Bundle</div>
-    </div>
-    <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
-    <div class="prod-buy">
-      <span class="prod-price">EUR 14.99</span>
-      <!-- KAUFKNOPF: noch abgeschaltet -->
-      <span class="p-buy p-soon">Purchase not active yet</span>
-    </div>
-    <a class="backlink" href="#bundles">Back to overview</a>
-  </div>
-</section>
-
-<section class="t-section" id="bundle-all-in-one">
-  <div class="prod-inner">
-    <div class="prod-kind">Bundle</div>
-    <h2>All-in-One Bundle</h2>
-    <p class="prod-text">Every FWX SimAviation add-on in a single package: Flight Dynamics, Rotor Shadow, Rotor Blade Haptic and Turbine Sound. You get living flight behaviour, the turning rotor shadow, blade beats in your seat and the recorded turbine of the EC135. The sound belongs to the Nemeth Design EC135, everything else works with every helicopter in the simulator.</p>
-    <div class="icon-box">
-      <!-- ICON FOLGT: All-in-One Bundle -->
-      <div class="icon-ph"><strong>Icon follows</strong>for All-in-One Bundle</div>
-    </div>
-    <p class="prod-meta">Version 2.2.0 (as of 30 Sep 2026)</p>
-    <div class="prod-buy">
-      <span class="prod-price">EUR 32.71</span>
-      <!-- KAUFKNOPF: noch abgeschaltet -->
-      <span class="p-buy p-soon">Purchase not active yet</span>
-    </div>
-    <a class="backlink" href="#bundles">Back to overview</a>
   </div>
 </section>
 
@@ -804,8 +840,7 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
   <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">
-    EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator is a trademark of Microsoft Corporation.
-    FWX SimAviation is not affiliated with either company.
+    EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator 2024 is a trademark of Microsoft Corporation. Asobo Studio is a trademark of its respective owner. All other product and company names are trademarks of their respective owners. FWX SimAviation is an independent third-party developer and is not affiliated with, endorsed by, or sponsored by any of these companies.
   </div>
   <div class="t-footer-bottom">© 2026 FWX SimAviation</div>
 </footer>
