@@ -46,7 +46,3 @@ FWX SimAviation is an independent MSFS developer focused on audio and haptic add
 ## Voluntary Support
 
 Existing customers who wish to support further development can make a voluntary contribution (pay-what-you-want) at https://fwx-simaviation.com/support.html. This is strictly voluntary, without consideration, without invoice, without right of withdrawal, and not a tax-deductible donation. Payments are processed by Stripe.
-
-## Press
-
-Reviewers, editors and content creators can grab logos, screenshots, demo videos, audio samples and PDF documents from the FWX SimAviation press page at https://fwx-simaviation.com/press.html (German mirror: https://fwx-simaviation.com/de/presse.html). A bundled ZIP (press-kit.zip) is available for one-click download, individual assets are linked underneath.
