@@ -6,8 +6,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/fwx-logo-32.png">
 <link rel="apple-touch-icon" href="/fwx-logo-256.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FWX EC135 Enhancement Mod: Installationsanleitung</title>
-<meta name="description" content="Schritt-für-Schritt Installationsanleitung für das FWX EC135 Turbine Sound Enhancement Mod und die FWX Helicopter Rotor Blade Haptic in MSFS 2024.">
+<title>Installationsanleitung - FWX SimAviation</title>
+<meta name="description" content="So installierst, aktualisierst und deinstallierst du die Hubschrauber-Mods 2.2.0 von FWX SimAviation für den Microsoft Flight Simulator 2024: ein Installer für alle sieben Pakete.">
 <style>
 :root {
   --bg: #05050a;
@@ -264,143 +264,127 @@ hr.sep {
     </a>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="../install.html" style="color:var(--text-dim);font-size:13px;font-weight:600;">EN</a>
-      <a href="./#pricing" class="t-nav-cta">Preise</a>
+      <a href="./#uebersicht" class="t-nav-cta">Preise</a>
     </div>
   </div>
 </nav>
 
 <main>
 
-  <h1>Installations-<span class="accent">Anleitung</span>.</h1>
-  <p class="lede">Schritt-für-Schritt Einrichtung für das FWX EC135 Turbine Sound Enhancement Mod und die FWX Helicopter Rotor Blade Haptic. Etwa 5 Minuten; keine Kommandozeile und keine Registry-Eingriffe nötig. Eingestellt wird danach alles im FWX Control Center im Simulator.</p>
+  <h1>Installations&shy;<span class="accent">anleitung</span>.</h1>
+  <p class="lede">Einrichtung aller Hubschrauber-Mods von FWX SimAviation, Version 2.2.0. Ein Installer für alle Pakete. Danach stellst du alles im FWX Control Center im Simulator ein.</p>
 
   <div class="nav-pills">
     <a href="#requirements">Voraussetzungen</a>
-    <a href="#sound-pack">Turbine Sound Enhancement Mod</a>
-    <a href="#haptic-engine">Rotor Blade Haptic</a>
+    <a href="#packages">Pakete</a>
+    <a href="#install">Installation</a>
+    <a href="#control-center">FWX Control Center</a>
+    <a href="#update">Update</a>
     <a href="#troubleshooting">Fehlerbehebung</a>
     <a href="#uninstall">Deinstallation</a>
   </div>
 
   <h2 id="requirements">Voraussetzungen</h2>
   <ul style="list-style:none; padding:0; color:var(--text-dim);">
-    <li style="padding:6px 0;">✓ <strong>Microsoft Flight Simulator 2024</strong> (MS Store oder Steam Edition)</li>
-    <li style="padding:6px 0;">✓ <strong>Der EC135</strong> (bereits kostenlos in MSFS 2024, nichts zusätzlich zu installieren)</li>
-    <li style="padding:6px 0;">✓ <strong>Windows 10 oder 11</strong></li>
-    <li style="padding:6px 0;">✓ <strong>Ein Shaker oder Schallwandler</strong> als Audio-Ausgang angeschlossen (optional, nur für die Rotor Blade Haptic)</li>
-    <li style="padding:6px 0;">✓ Deine Stripe-Bestellnummer aus der Bestätigungsmail</li>
+    <li style="padding:6px 0;">&#10003; <strong>Microsoft Flight Simulator 2024</strong> auf einem Windows-PC, Microsoft-Store- oder Steam-Ausgabe. Der Installer findet beide selbst.</li>
+    <li style="padding:6px 0;">&#10003; <strong>Für den EC135 Turbine Sound:</strong> die EC135, die im Microsoft Flight Simulator 2024 enthalten ist.</li>
+    <li style="padding:6px 0;">&#10003; <strong>Für Rotor Haptic:</strong> ein Körperschallwandler an einem eigenen Audioausgang, den Windows als Audiogerät anzeigt.</li>
+    <li style="padding:6px 0;">&#10003; <strong>Für den Download:</strong> Bei Kauf auf unserer Website die E-Mail-Adresse deines Kaufs und deine Bestellnummer. Bei Kauf auf SimMarket dein SimMarket-Konto.</li>
   </ul>
 
   <hr class="sep">
 
-  <h2 id="sound-pack">Turbine Sound Enhancement Mod installieren</h2>
-
-  <ol class="steps">
-    <li>
-      <strong>MSFS 2024 schließen.</strong>
-      Stelle sicher, dass Microsoft Flight Simulator 2024 komplett beendet ist bevor du installierst. Wenn es läuft, ist der Community-Ordner möglicherweise gesperrt.
-    </li>
-    <li>
-      <strong>Installer (.exe) herunterladen.</strong>
-      Öffne den Download-Link aus deiner Stripe-Bestätigungsmail und speichere <code>FWX-EC135-SoundPack-Setup-v1.52.exe</code> auf deinem Desktop oder im Downloads-Ordner. Du kannst bis zu 3 Mal erneut herunterladen, indem du E-Mail und Bestellnummer eingibst. Kein ZIP, nichts zum Entpacken.
-    </li>
-    <li>
-      <strong>Installer starten. Bei der Auswahl "Installieren" wählen.</strong>
-      Doppelklicke <code>FWX-EC135-SoundPack-Setup-v1.52.exe</code>. Der Installer öffnet sich und bietet zwei Optionen an. Wähle <strong>Installieren</strong>. Windows SmartScreen fragt eventuell nach einer Bestätigung. Klicke <em>Weitere Informationen</em> → <em>Trotzdem ausführen</em> (der Installer ist noch nicht code-signiert, aber sicher).
-    </li>
-    <li>
-      <strong>Community-Ordner bestätigen.</strong>
-      Der Installer erkennt deinen MSFS 2024 Community-Ordner für MS Store und Steam automatisch. Bei einem eigenen Speicherort einfach manuell den richtigen Ordner auswählen.
-    </li>
-    <li>
-      <strong>Package-Reorder-Dialog aufmerksam lesen.</strong>
-      Ab v1.42 gibt es einen expliziten Dialog zur Paket-Ladereihenfolge. Bei einigen Steam-Installationen muss das FWX-Paket ÜBER dem Standard-EC135 platziert werden, damit der neue Sound Vorrang hat. Setze den Haken zur Bestätigung, dass du es gelesen hast.
-    </li>
-    <li>
-      <strong>Installation abschließen.</strong>
-      Klick dich durch die restlichen Bildschirme. Der Installer kopiert nur Dateien; weder Python noch Visual C++ Runtime werden benötigt, und es sind keine Treiber zu installieren.
-    </li>
-    <li>
-      <strong>MSFS 2024 starten und EC135 laden.</strong>
-      Starte einen Freiflug mit dem EC135. Triebwerke anlassen. Der neue Turbinensound sollte sofort hörbar sein.
-    </li>
-  </ol>
-
-  <div class="callout warn">
-    <div class="head">⚠️ Steam-Nutzer: Paket-Ladereihenfolge</div>
-    <p>Falls der neue Sound nach der Installation nicht hörbar ist, muss die Paket-Ladereihenfolge in MSFS angepasst werden. In MSFS zu <em>Content Manager</em> gehen, <em>fwx-ec135-sound</em> finden und sicherstellen, dass es <strong>über</strong> dem Standard-EC135-Paket geladen wird. MSFS neu starten.</p>
+  <h2 id="packages">Pakete</h2>
+  <p style="color:var(--text-dim);">Sieben Pakete, vier Produkte. Alle Pakete nutzen denselben Installer.</p>
+  <div style="overflow-x:auto;margin:16px 0 8px;">
+    <table style="width:100%;border-collapse:collapse;font-size:14px;color:var(--text-dim);min-width:520px;">
+      <tr><th style="padding:8px 6px;border-bottom:1px solid var(--border);color:#fff;font-size:12px;text-align:left;">Paket</th><th style="padding:8px 6px;border-bottom:1px solid var(--border);color:#fff;font-size:12px;">Flight Dynamics</th><th style="padding:8px 6px;border-bottom:1px solid var(--border);color:#fff;font-size:12px;">Rotor Shadow</th><th style="padding:8px 6px;border-bottom:1px solid var(--border);color:#fff;font-size:12px;">Rotor Haptic</th><th style="padding:8px 6px;border-bottom:1px solid var(--border);color:#fff;font-size:12px;">EC135 Turbine Sound</th><th style="padding:8px 6px;border-bottom:1px solid var(--border);color:#fff;font-size:12px;">PDF-Handbuch</th></tr>
+      <tr><td style="padding:8px 6px;border-bottom:1px solid var(--border);">FWX Helicopter All-in-One Bundle</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td></tr>
+      <tr><td style="padding:8px 6px;border-bottom:1px solid var(--border);">FWX Heli Flight Dynamics &amp; Rotor Effects</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td></tr>
+      <tr><td style="padding:8px 6px;border-bottom:1px solid var(--border);">FWX Helicopter Flight Dynamics</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td></tr>
+      <tr><td style="padding:8px 6px;border-bottom:1px solid var(--border);">FWX Helicopter Rotor Shadow Mod</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td></tr>
+      <tr><td style="padding:8px 6px;border-bottom:1px solid var(--border);">FWX Helicopter Rotor Haptic Mod</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td></tr>
+      <tr><td style="padding:8px 6px;border-bottom:1px solid var(--border);">FWX EC135 Sound &amp; Haptic Bundle</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td></tr>
+      <tr><td style="padding:8px 6px;border-bottom:1px solid var(--border);">FWX EC135 Turbine Sound Enhancement Mod</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;"><span style="color:var(--ok);font-weight:800;">&#10003;</span></td><td style="padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;">&middot;</td></tr>
+    </table>
   </div>
+
+  <div class="callout">Flight Dynamics und Rotor Haptic wirken auf jeden Hubschrauber. Rotor Shadow unterstützt sieben Typen: Airbus EC135, Airbus H125, Airbus H225, Guimbal Cabri G2, Robinson R66, Sikorsky S-64 Skycrane, Boeing CH-47D Chinook. Der EC135 Turbine Sound wirkt nur auf die EC135.</div>
 
   <hr class="sep">
 
-  <h2 id="haptic-engine">FWX Helicopter Rotor Blade Haptic installieren</h2>
-
+  <h2 id="install">Installation</h2>
   <ol class="steps">
     <li>
-      <strong>Haptik-Gerät anschließen.</strong>
-      Ein Shaker oder Schallwandler, als Standard-Audio-Ausgabegerät in Windows angeschlossen. Stelle sicher, dass er in den Windows-Sound-Einstellungen erkannt wird, bevor du installierst.
+      <strong>Installer herunterladen.</strong>
+      Kauf auf unserer Website: Öffne das <a href="https://fwx-simaviation.com/download.html">Download-Portal</a> und gib die E-Mail-Adresse deines Kaufs und deine Bestellnummer ein. Du kannst bis zu 3 Mal je Kauf herunterladen, und das Portal liefert immer die aktuelle Version. Kauf auf SimMarket: Lade ihn in deinem SimMarket-Konto herunter.
     </li>
     <li>
-      <strong>Installationsprogramm starten. "Installieren" wählen.</strong>
-      Doppelklicke <code>FWX-RotorHaptic-Setup-v1.53.exe</code>. Kein ZIP, nichts zum Entpacken. Wenn der Installer öffnet, wähle <strong>Installieren</strong>. Gleiche SmartScreen-Bestätigung wie oben.
+      <strong>Simulator schließen.</strong>
+      Beende den Microsoft Flight Simulator 2024 vollständig. Der Installer prüft das vor dem Start und bittet dich sonst, den Simulator zuerst zu schließen.
     </li>
     <li>
-      <strong>Installationsordner wählen.</strong>
-      Standard ist <code>C:\Program Files\FWX\RotorHapticEngine</code>. Übernehmen oder ändern.
+      <strong>Installer (.exe) starten.</strong>
+      Es gibt einen Installer für alle Pakete. Er erkennt selbst, welche Produkte dein Paket enthält. Windows SmartScreen kann warnen, weil der Installer nicht digital signiert ist. Klicke auf <em>Weitere Informationen</em> und dann auf <em>Trotzdem ausführen</em>.
     </li>
     <li>
-      <strong>MSFS 2024 mit einem beliebigen Hubschrauber starten.</strong>
-      Es ist nichts weiter zu installieren und kein zweites Programm zu öffnen.
+      <strong>Den Schritten folgen.</strong>
+      Der Installer findet deine Microsoft-Store- oder Steam-Installation des Microsoft Flight Simulator 2024 selbst. Kann eine Datei nicht geschrieben werden, zeigt er &bdquo;Installation INCOMPLETE&ldquo; mit den betroffenen Dateien.
     </li>
     <li>
-      <strong>FWX Control Center über die Werkzeugleiste öffnen, Reiter Haptic.</strong>
-      Dein Gerät aus der Liste wählen und auf <em>Übernehmen und speichern</em> drücken. Das ist der einzige
-      Einrichtungsschritt - und er passiert im Simulator, wenn du willst mitten im Flug.
-    </li>
-    <li>
-      <strong>Fliegen.</strong>
-      Der Rotor kommt im Sitz oder über die Steuerung bei dir an, auf <strong>jedem Hubschrauber</strong> in
-      MSFS 2024, Turbine wie Kolbenmotor - nicht nur auf dem EC135. Für die gängigen Muster ist alles
-      bereits voreingestellt.
+      <strong>Simulator starten und FWX Control Center öffnen.</strong>
+      Öffne das Bedienfeld über die Werkzeugleiste im Simulator. Jedes Produkt hat einen eigenen Reiter.
     </li>
   </ol>
 
-  <div class="callout ok">
-    <div class="head">✓ Tipp: Impulsstärke anpassen</div>
-    <p>Der Reiter Haptic im FWX Control Center hat drei Regler - <em>Lautstärke</em>, <em>Bass</em> und <em>Impulsstärke</em> - dazu einen Testimpuls-Knopf, mit dem du es am Boden prüfen kannst. Starte mit den Standardwerten und passe während des Flugs an. Änderungen wirken sofort, ohne Neustart.</p>
-  </div>
+  <hr class="sep">
+
+  <h2 id="control-center">Einrichtung im FWX Control Center</h2>
+  <ul style="list-style:none; padding:0; color:var(--text-dim);">
+    <li style="padding:6px 0;">&bull; <strong>Hilfe-Reiter &bdquo;?&ldquo;:</strong> eine bebilderte Schritt-für-Schritt-Anleitung und das vollständige Handbuch. Pakete mit Flight Dynamics enthalten das Handbuch zusätzlich als PDF auf Englisch und Deutsch.</li>
+    <li style="padding:6px 0;">&bull; <strong>Flight Dynamics:</strong> arbeitet mit jedem Hubschrauber. Im Flug abgestimmte Werksprofile für neun Typen (Cabri, R66, EC135, H125, H225, Bell 407, UH-1H, CH-47D, S-64F); andere Hubschrauber starten mit einem allgemeinen Grundprofil. Stell alles ein und drück <em>Save</em>, dann entsteht dein eigenes Profil; das Werksprofil bleibt immer unberührt. Ist ein Flugzeug geladen, sind die FWX-Reiter ausgegraut, denn Flight Dynamics arbeitet nur mit Hubschraubern.</li>
+    <li style="padding:6px 0;">&bull; <strong>Rotor Shadow:</strong> je Hubschraubertyp ein- und ausschaltbar.</li>
+    <li style="padding:6px 0;">&bull; <strong>Rotor Haptic:</strong> Wähle im Haptic-Reiter deinen Körperschallwandler als Ausgabegerät und stelle dort die Stärke ein. Der Reiter zeigt auch die Blattzahl des aktuellen Hubschraubers.</li>
+    <li style="padding:6px 0;">&bull; <strong>EC135 Turbine Sound:</strong> Wähle im Sound-Reiter deine Kopfhörer oder Lautsprecher nach Namen.</li>
+  </ul>
+
+  <hr class="sep">
+
+  <h2 id="update">Update auf 2.2.0</h2>
+  <p style="color:var(--text-dim);">Lade den aktuellen Installer wie oben herunter und starte ihn. Er ersetzt die installierten Dateien.</p>
+  <div class="callout"><strong>Wichtig:</strong> Profile, die mit früheren Versionen gespeichert wurden, können nicht mehr verwendet werden und werden beim Update entfernt. Alle Hubschrauber starten mit den neuen FWX-Werksprofilen. Mit <em>Save</em> legst du dein eigenes Profil neu an.</div>
 
   <hr class="sep">
 
   <h2 id="troubleshooting">Fehlerbehebung</h2>
 
-  <h3>Der neue Sound ist nach der Installation nicht hörbar.</h3>
-  <p>Paket-Ladereihenfolge. In MSFS → Content Manager → sicherstellen, dass <em>fwx-ec135-sound</em> über dem Standard-EC135-Paket geladen wird. MSFS neu starten. Das ist das Problem #1 bei Steam-Installationen.</p>
+  <h3>Der Installer bittet mich, den Simulator zu schließen.</h3>
+  <p>Beende den Microsoft Flight Simulator 2024 vollständig und starte den Installer erneut.</p>
 
-  <h3>Der Reiter Haptic zeigt kein Gerät.</h3>
-  <p>Windows erkennt deinen Schallwandler nicht als Audio-Ausgabegerät. Öffne die Windows-Sound-Einstellungen → stelle sicher, dass das Gerät gelistet und als Standard- oder Sekundärausgang gesetzt ist. Dann das FWX Control Center schließen und wieder öffnen; das Gerät erscheint in der Liste.</p>
+  <h3>Der Installer zeigt &bdquo;Installation INCOMPLETE&ldquo;.</h3>
+  <p>Einige Dateien konnten nicht geschrieben werden; der Installer listet sie auf. Prüfe, ob der Simulator geschlossen ist, und starte den Installer erneut. Bleibt die Meldung, schick die Liste an <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a>.</p>
 
-  <h3>SmartScreen blockiert den Installer.</h3>
-  <p>Erwartet. Wir sind noch nicht code-signiert (Code-Signatur kostet €250/Jahr, für eine zukünftige Version geplant). Klick <em>Weitere Informationen</em> → <em>Trotzdem ausführen</em>. Der Installer ist sicher, er schreibt nur in deinen Community-Ordner und Program Files.</p>
+  <h3>SmartScreen warnt vor dem Installer.</h3>
+  <p>Der Installer ist nicht digital signiert, deshalb kann Windows warnen. Klicke auf <em>Weitere Informationen</em> und dann auf <em>Trotzdem ausführen</em>.</p>
 
-  <h3>Ich habe es gekauft, wo ist mein Download?</h3>
-  <p>Prüfe deinen Spam-Ordner nach der Stripe-Mail mit dem Download-Link. Falls nicht vorhanden, schreibe an <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a> mit deiner Bestellnummer. Wir senden ihn innerhalb weniger Stunden erneut.</p>
+  <h3>Der Haptic-Reiter zeigt kein Gerät.</h3>
+  <p>Windows zeigt deinen Körperschallwandler noch nicht als Audioausgang an. Prüfe die Windows-Soundeinstellungen, dann schließe das FWX Control Center und öffne es wieder. Das Gerät erscheint dann in der Liste.</p>
+
+  <h3>Die FWX-Reiter sind ausgegraut.</h3>
+  <p>Es ist ein Flugzeug geladen. Flight Dynamics arbeitet nur mit Hubschraubern; lade einen Hubschrauber.</p>
+
+  <h3>Wo ist mein Download?</h3>
+  <p>Kauf auf unserer Website: im <a href="https://fwx-simaviation.com/download.html">Download-Portal</a> mit der E-Mail-Adresse deines Kaufs und deiner Bestellnummer. Kauf auf SimMarket: in deinem SimMarket-Konto. Klappt es nicht, schreib an <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a> mit deiner Bestellnummer.</p>
 
   <hr class="sep">
 
   <h2 id="uninstall">Deinstallation</h2>
-  <p>Starte dieselbe Installer-Datei (.exe) erneut, mit der du installiert hast. Jeder FWX-Installer ist gleichzeitig sein eigener Deinstaller. Wenn er öffnet, wähle <strong>Deinstallieren</strong> statt Installieren.</p>
-  <ul style="list-style:none; padding:0; color:var(--text-dim);">
-    <li style="padding:6px 0;">• <strong>Turbine Sound Enhancement Mod:</strong> <code>FWX-EC135-SoundPack-Setup-v1.52.exe</code> starten → Deinstallieren. Die Einträge im Community-Ordner werden sauber entfernt und die Standard-EC135-Sounds kommen zurück.</li>
-    <li style="padding:6px 0;">• <strong>FWX Helicopter Rotor Blade Haptic:</strong> <code>FWX-RotorHaptic-Setup-v1.53.exe</code> starten → Deinstallieren. Es entfernt sich sauber.</li>
-    <li style="padding:6px 0;">• <strong>Bundle:</strong> <code>FWX-EC135-Bundle-Setup-v1.52.exe</code> starten → Deinstallieren entfernt beide Produkte in einem Schritt.</li>
-  </ul>
-  <p>Die Deinstallation ist unkompliziert: einfach die Installer-Datei verwenden, die du bereits hast. Es gibt kein ZIP zu verwalten, keinen Registry-Eingriff per Hand, und auch keinen Schritt über die Systemsteuerung.</p>
+  <p style="color:var(--text-dim);">Schließe den Simulator. Entferne dann den FWX-Eintrag in den Windows-Einstellungen unter den installierten Apps.</p>
 
   <section class="back-cta">
-    <h3>Noch Probleme?</h3>
-    <p>Schreibe an <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a> und ich helfe persönlich. Antwort meist unter 24 Stunden.</p>
-    <a href="./#pricing" class="btn">Zurück zu den Preisen →</a>
+    <h3>Noch Fragen?</h3>
+    <p>Schreib an <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a>. Wir helfen dir.</p>
+    <a href="./#uebersicht" class="btn">Alle Pakete ansehen &rarr;</a>
   </section>
 
 </main>
