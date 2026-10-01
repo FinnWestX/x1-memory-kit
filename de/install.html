@@ -193,6 +193,42 @@ hr.sep {
   font-size: 13px; color: var(--text-muted);
 }
 .t-footer a { color: var(--text-dim); margin: 0 10px; }
+
+/* ===== FOOTER, einheitlich 01.10.2026. Feste Farben, damit die Fussleiste
+   in beiden Design-Systemen der Seite identisch aussieht. ===== */
+.t-footer {
+  padding: 60px 20px 40px;
+  background: #05050a;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px; color: #64748b;
+  text-align: left;
+}
+.t-footer-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.t-footer-col { display: flex; flex-direction: column; gap: 6px; }
+.t-footer-head {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: #7dd3fc; font-weight: 700;
+  margin-bottom: 10px;
+}
+.t-footer-col a {
+  color: #94a3b8; font-size: 14px;
+  padding: 3px 0; margin: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.t-footer-col a:hover { color: #fff; }
+.t-footer-bottom {
+  max-width: 1080px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #64748b;
+}
+.t-footer > div[style] a { color: #64748b; }
 </style>
 </head>
 <body>
@@ -349,35 +385,45 @@ hr.sep {
 </main>
 
 <footer class="t-footer">
-  <div style="max-width:1080px;margin:0 auto;display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+  <div class="t-footer-grid">
 
-    <div style="display:flex;flex-direction:column;gap:6px;">
-      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Produkt-Info</div>
-      <a href="../faq.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">FAQ</a>
-      <a href="../install.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Installationsanleitung</a>
-      <a href="../changelog.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Changelog</a>
-      <a href="../contact.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Kontakt &amp; Support</a>
+    <div class="t-footer-col">
+      <div class="t-footer-head">Produktinfo</div>
+      <a href="/de/faq.html">FAQ</a>
+      <a href="/de/install.html">Installationsanleitung</a>
+      <a href="/de/changelog.html">Changelog</a>
+      <a href="/download.html">Download und erneuter Download</a>
+      <a href="/de/contact.html">Kontakt und Support</a>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:6px;">
-      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Community</div>
-      <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">YouTube</a>
-      <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer" style="color:var(--text-dim);font-size:14px;padding:3px 0;">SimMarket Shop</a>
+    <div class="t-footer-col">
+      <div class="t-footer-head">Community</div>
+      <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer">SimMarket Shop</a>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:6px;">
-      <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">Rechtliches</div>
-      <a href="/" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Hauptseite</a>
-      <a href="../impressum.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Impressum</a>
-      <a href="../datenschutz.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Datenschutz</a>
-      <a href="../agb.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">AGB</a>
-      <a href="../widerruf.html" style="color:var(--text-dim);font-size:14px;padding:3px 0;">Widerrufsbelehrung</a>
+    <div class="t-footer-col">
+      <div class="t-footer-head">Presse</div>
+      <a href="https://msfsaddons.com/2026/09/10/fwx-takes-aim-at-three-msfs-2024-helicopter-shortcomings-at-once/" target="_blank" rel="noopener noreferrer">MSFS Addons: die drei neuen Mods</a>
+      <a href="https://thresholdx.net/fwx-aviation-releases-three-default-helicopter-improvements-for-msfs-2024/" target="_blank" rel="noopener noreferrer">Threshold: die drei neuen Mods</a>
+      <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer">MSFS Addons: EC135 Klang</a>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer">Threshold: EC135 Klang</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Rechtliches</div>
+      <a href="/">Startseite</a>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <a href="/agb.html">AGB</a>
+      <a href="/widerruf.html">Widerruf</a>
+      <a href="/support.html" style="color:#cbd5e1;">Unterst&uuml;tze uns &#9749;</a>
     </div>
 
   </div>
-  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px 0 10px;">EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</div>
-  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. Asobo Studio ist eine Marke des jeweiligen Inhabers. ButtKicker ist eine Marke der The Guitammer Company. Alle weiteren Produkt- und Firmennamen sind Marken ihrer jeweiligen Inhaber. FWX SimAviation ist ein unabhängiger Drittanbieter und steht in keiner Verbindung zu diesen Unternehmen und wird von ihnen nicht unterstützt oder gesponsert.</div>
-  <div style="max-width:1080px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--text-muted);">© 2026 FWX SimAviation</div>
+  <div style="text-align:center;color:#64748b;font-size:12px;margin:20px 0 10px;">EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:#64748b;">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</div>
+  <div style="text-align:center;color:#64748b;font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. Asobo Studio ist eine Marke des jeweiligen Inhabers. ButtKicker ist eine Marke der The Guitammer Company. Alle weiteren Produkt- und Firmennamen sind Marken ihrer jeweiligen Inhaber. FWX SimAviation ist ein unabh&auml;ngiger Drittanbieter und steht in keiner Verbindung zu diesen Unternehmen.</div>
+  <div class="t-footer-bottom">&copy; 2026 FWX SimAviation</div>
 </footer>
 
 <script>if(!localStorage.getItem("fwx-notrack")&&navigator.doNotTrack!=="1"&&window.doNotTrack!=="1"&&navigator.msDoNotTrack!=="1"&&navigator.globalPrivacyControl!==true){var s=document.createElement("script");s.defer=true;s.src="/script.js";s.setAttribute("data-website-id","80459d03-bda7-45fa-a7bc-6472be80e47a");s.setAttribute("data-host-url","https://webhook.finnwestx1.com");document.head.appendChild(s);}</script>

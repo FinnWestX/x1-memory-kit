@@ -14,6 +14,42 @@
         .step-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 16px 0; display: flex; gap: 16px; align-items: flex-start; }
         .step-num { width: 40px; height: 40px; min-width: 40px; display: flex; align-items: center; justify-content: center; background: var(--accent); color: #000; border-radius: 50%; font-weight: 700; font-size: 18px; }
     
+
+/* ===== FOOTER, einheitlich 01.10.2026. Feste Farben, damit die Fussleiste
+   in beiden Design-Systemen der Seite identisch aussieht. ===== */
+.t-footer {
+  padding: 60px 20px 40px;
+  background: #05050a;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px; color: #64748b;
+  text-align: left;
+}
+.t-footer-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.t-footer-col { display: flex; flex-direction: column; gap: 6px; }
+.t-footer-head {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: #7dd3fc; font-weight: 700;
+  margin-bottom: 10px;
+}
+.t-footer-col a {
+  color: #94a3b8; font-size: 14px;
+  padding: 3px 0; margin: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.t-footer-col a:hover { color: #fff; }
+.t-footer-bottom {
+  max-width: 1080px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #64748b;
+}
+.t-footer > div[style] a { color: #64748b; }
 </style>
 </head>
 <body>
@@ -89,20 +125,45 @@
     <script src="main.js"></script>
 
 <footer class="t-footer">
-  <div>
-    © 2026 FWX SimAviation ·
-    <a href="impressum.html">Impressum</a> ·
-    <a href="datenschutz.html">Privacy</a> ·
-    <a href="agb.html">Terms</a> ·
-    <a href="widerruf.html">Cancellation</a>
-      <a href="support.html" style="color:#cbd5e1;font-size:14px;padding:3px 0;">Support us &#9749;</a>
+  <div class="t-footer-grid">
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Product info</div>
+      <a href="/faq.html">FAQ</a>
+      <a href="/install.html">Installation guide</a>
+      <a href="/changelog.html">Changelog</a>
+      <a href="/download.html">Download / re-download</a>
+      <a href="/contact.html">Contact &amp; support</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Community</div>
+      <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer">SimMarket store</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Press</div>
+      <a href="https://msfsaddons.com/2026/09/10/fwx-takes-aim-at-three-msfs-2024-helicopter-shortcomings-at-once/" target="_blank" rel="noopener noreferrer">MSFS Addons: three new mods</a>
+      <a href="https://thresholdx.net/fwx-aviation-releases-three-default-helicopter-improvements-for-msfs-2024/" target="_blank" rel="noopener noreferrer">Threshold: three new mods</a>
+      <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer">MSFS Addons: EC135 sound</a>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer">Threshold: EC135 sound</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Legal</div>
+      <a href="/">Main site</a>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Privacy</a>
+      <a href="/agb.html">Terms</a>
+      <a href="/widerruf.html">Cancellation</a>
+      <a href="/support.html" style="color:#cbd5e1;">Support us &#9749;</a>
+    </div>
+
   </div>
-  <div style="text-align:center;color:var(--text-muted);font-size:12px;margin:20px auto 0;max-width:760px;">
-    EU dispute resolution: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">ec.europa.eu/consumers/odr</a>. We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board.
-  </div>
-  <div style="text-align:center;color:var(--text-muted);font-size:11px;margin:16px auto 0;max-width:760px;">
-    EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator 2024 is a trademark of Microsoft Corporation. Asobo Studio is a trademark of its respective owner. ButtKicker is a trademark of The Guitammer Company. All other product and company names are trademarks of their respective owners. FWX SimAviation is an independent third-party developer and is not affiliated with, endorsed by, or sponsored by any of these companies.
-  </div>
+  <div style="text-align:center;color:#64748b;font-size:12px;margin:20px 0 10px;">EU dispute resolution: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:#64748b;">ec.europa.eu/consumers/odr</a>. We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board.</div>
+  <div style="text-align:center;color:#64748b;font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator 2024 is a trademark of Microsoft Corporation. Asobo Studio is a trademark of its respective owner. ButtKicker is a trademark of The Guitammer Company. All other product and company names are trademarks of their respective owners. FWX SimAviation is an independent third-party developer and is not affiliated with, endorsed by, or sponsored by any of these companies.</div>
+  <div class="t-footer-bottom">&copy; 2026 FWX SimAviation</div>
 </footer>
 </body>
 </html>
