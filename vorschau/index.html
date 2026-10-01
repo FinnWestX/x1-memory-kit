@@ -587,6 +587,10 @@ html { scroll-behavior: smooth; }
 .hero-sim { font-size:calc(var(--h)*0.18); line-height:1; font-weight:600; letter-spacing:calc(var(--h)*0.05); color:var(--brand); text-transform:uppercase; margin-top:calc(var(--h)*0.12); }
 @media (max-width:900px) { .hero-mark { --h:112px; margin-bottom:max(26px, calc((100vh - 365px) / 3)); } }
 @media (max-width:600px) { .hero-mark { --h:63px; margin-bottom:max(26px, calc((100vh - 440px) / 3)); } }
+/* Hero-Banner (01.10.2026): sichtbarer Inhalt im PNG vertikal symmetrisch (88/500 transparent oben und unten), horizontal um 17,5/1500 nach links versetzt -> translateX gleicht aus. Abstand unten haelt das Banner mittig zwischen Kopfleiste und H1. */
+.hero-banner { display:block; width:620px; max-width:90%; height:auto; margin:0 auto max(26px, calc((100vh - 526px) / 3)); transform:translateX(1.17%); }
+@media (max-width:900px) { .hero-banner { width:420px; margin-bottom:max(26px, calc((100vh - 393px) / 3)); } }
+@media (max-width:600px) { .hero-banner { width:300px; margin-bottom:max(26px, calc((100vh - 477px) / 3)); } }
 </style>
 </head>
 <body>
@@ -605,10 +609,7 @@ html { scroll-behavior: smooth; }
 
 <header class="t-hero">
   <div class="t-hero-inner">
-    <div class="hero-mark">
-      <img src="../fwx-logo.svg" alt="FWX SimAviation" class="hero-logo" width="182" height="182">
-      <div class="hero-word" aria-hidden="true"><span class="hero-fwx">FWX</span><span class="hero-sim">SimAviation</span></div>
-    </div>
+    <img src="fwx-simaviation-banner.png" alt="FWX SimAviation" class="hero-banner" width="1500" height="500">
     <h1 class="t-headline">Add-ons for Microsoft Flight Simulator</h1>
     <p class="t-sub">Helicopter add-ons for Microsoft Flight Simulator 2024: Flight Dynamics, Rotor Shadow, Rotor Haptic and EC135 Turbine Sound. Version 2.2.0.</p>
   </div>
