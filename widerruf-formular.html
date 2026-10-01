@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/fwx-logo-32.png">
+<link rel="apple-touch-icon" href="/fwx-logo-256.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertrag widerrufen - FWX SimAviation</title>
+<style>
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+
+main {
+  max-width: 720px; margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.02em; line-height: 1.1;
+  margin-bottom: 14px;
+  text-align: center;
+}
+h1 .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lede {
+  font-size: 17px; color: var(--text-dim);
+  margin: 0 auto 44px; max-width: 560px;
+  text-align: center;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 44px 38px;
+  text-align: center;
+  box-shadow: 0 30px 80px -30px rgba(14,165,233,0.35);
+}
+.contact-icon {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  display: grid; place-items: center; margin: 0 auto 22px;
+  box-shadow: 0 20px 50px -15px rgba(14,165,233,0.7);
+}
+.contact-icon svg { width: 34px; height: 34px; color: #fff; }
+.contact-card h2 {
+  color: #fff; font-size: 24px; font-weight: 800;
+  margin-bottom: 10px;
+}
+.contact-card p.intro {
+  color: var(--text-dim); font-size: 16px;
+  margin-bottom: 26px;
+}
+.contact-card .email-line {
+  display: inline-block;
+  padding: 12px 22px;
+  background: rgba(14,165,233,0.08);
+  border: 1px solid rgba(14,165,233,0.3);
+  border-radius: 10px;
+  color: var(--accent);
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 26px;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  letter-spacing: 0.3px;
+}
+
+.contact-form {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.contact-form .row {
+  display: grid; gap: 14px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 14px;
+}
+.contact-form .row.full { grid-template-columns: 1fr; }
+.contact-form label {
+  display: block;
+  font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--text-dim); font-weight: 700;
+  margin-bottom: 6px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 0;
+  border-color: rgba(14,165,233,0.5);
+  background: rgba(255,255,255,0.07);
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.5;
+}
+.contact-form .submit-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 800; font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 20px 50px -15px rgba(14,165,233,0.55);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.contact-form .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 60px -15px rgba(14,165,233,0.8);
+}
+
+.hint {
+  font-size: 13px; color: var(--text-muted);
+  margin-top: 12px;
+  text-align: center;
+}
+.hint strong { color: #fff; }
+
+.alt-channels {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.alt-channels p {
+  color: var(--text-dim); font-size: 14px; margin-bottom: 16px;
+}
+.alt-channels .links {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+}
+.alt-channels .links a {
+  padding: 10px 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 14px; font-weight: 600;
+  text-decoration: none;
+}
+.alt-channels .links a:hover {
+  color: #fff; border-color: rgba(14,165,233,0.4);
+  text-decoration: none;
+}
+
+.response-time {
+  margin-top: 30px;
+  padding: 16px 22px;
+  background: rgba(34,197,94,0.06);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 12px;
+  color: #bbf7d0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.t-footer {
+  padding: 40px 20px 30px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px; color: var(--text-muted);
+}
+.t-footer a { color: var(--text-dim); margin: 0 10px; }
+
+@media (max-width: 620px) {
+  .contact-form .row { grid-template-columns: 1fr; }
+  .contact-card { padding: 32px 22px; }
+}
+
+/* ===== FOOTER, einheitlich 01.10.2026. Feste Farben, damit die Fussleiste
+   in beiden Design-Systemen der Seite identisch aussieht. ===== */
+.t-footer {
+  padding: 60px 20px 40px;
+  background: #05050a;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px; color: #64748b;
+  text-align: left;
+}
+.t-footer-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.t-footer-col { display: flex; flex-direction: column; gap: 6px; }
+.t-footer-head {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: #7dd3fc; font-weight: 700;
+  margin-bottom: 10px;
+}
+.t-footer-col a {
+  color: #94a3b8; font-size: 14px;
+  padding: 3px 0; margin: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.t-footer-col a:hover { color: #fff; }
+.t-footer-bottom {
+  max-width: 1080px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #64748b;
+}
+.t-footer > div[style] a { color: #64748b; }
+
+/* ===== MARKENBLOCK KOPFZEILE, einheitlich 01.10.2026. Werte 1:1 aus der
+   Vorschauseite uebernommen, Farbe fest, damit es in beiden Design-Systemen
+   identisch aussieht. ===== */
+.nav-word { display: flex; flex-direction: column; line-height: 1; }
+.nav-fwx { font-size: 28px; font-weight: 900; letter-spacing: 3px; color: #fff; }
+.nav-sim { font-size: 13px; font-weight: 600; letter-spacing: 4px; color: #0ea5e9; margin-top: 4px; }
+.t-nav-logo, .fwx-brand-logo {
+  width: 60px; height: 60px; padding: 0; border: 0;
+  background: transparent; flex: 0 0 auto;
+  box-shadow: 0 0 18px -2px rgba(14,165,233,0.55);
+}
+.fwx-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+@media (max-width: 600px) {
+  .nav-fwx { font-size: 20px; letter-spacing: 2px; }
+  .nav-sim { font-size: 10px; letter-spacing: 2.4px; margin-top: 3px; }
+  .t-nav-logo, .fwx-brand-logo { width: 42px; height: 42px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="/" class="t-nav-brand">
+      <img src="/fwx-logo.svg" alt="FWX SimAviation" class="t-nav-logo">
+      <span class="nav-word"><span class="nav-fwx">FWX</span><span class="nav-sim">SimAviation</span></span>
+    </a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="/widerruf.html" style="color:var(--text-dim);font-size:13px;font-weight:600;">Widerrufsbelehrung</a>
+      <a href="/#pricing" class="t-nav-cta">Preise</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Vertrag <span class="accent">widerrufen</span>.</h1>
+  <p class="lede">Hier k&ouml;nnen Sie einen bei uns get&auml;tigten Kauf widerrufen. Die Angaben helfen uns, Ihren Kauf zuzuordnen; Name und E-Mail-Adresse ben&ouml;tigen wir daf&uuml;r, alles andere ist freiwillig. Nach dem Absenden best&auml;tigen wir Ihnen den Eingang sofort auf der folgenden Seite. Die rechtlichen Einzelheiten stehen in der <a href="/widerruf.html">Widerrufsbelehrung</a>.</p>
+
+  <div class="contact-card">
+
+    <h2>Angaben zum Widerruf</h2>
+    <p class="intro">Mit <strong>*</strong> gekennzeichnete Felder sind Pflichtfelder.</p>
+
+    <form class="contact-form"
+          action="https://fwx-download.fwx-aviation.workers.dev/widerruf"
+          method="post">
+
+      <div class="row">
+        <div>
+          <label for="wf-name">Name *</label>
+          <input type="text" id="wf-name" name="name" maxlength="200" placeholder="Vor- und Nachname" required>
+        </div>
+        <div>
+          <label for="wf-email">E-Mail-Adresse *</label>
+          <input type="email" id="wf-email" name="email" maxlength="200" placeholder="E-Mail-Adresse aus dem Kauf" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="wf-order">Bestellnummer (falls vorhanden)</label>
+          <input type="text" id="wf-order" name="order" maxlength="200" placeholder="z. B. FWX-0123">
+        </div>
+        <div>
+          <label for="wf-product">Produkt (falls bekannt)</label>
+          <input type="text" id="wf-product" name="product" maxlength="200" placeholder="Name des Produkts">
+        </div>
+      </div>
+
+      <div class="row full">
+        <div>
+          <label for="wf-orderdate">Bestelldatum (falls bekannt)</label>
+          <input type="text" id="wf-orderdate" name="orderdate" maxlength="200" placeholder="z. B. 15.09.2026">
+        </div>
+      </div>
+
+      <div class="row full">
+        <div>
+          <label for="wf-message">Nachricht (optional)</label>
+          <textarea id="wf-message" name="message" maxlength="2000" placeholder="Wenn Sie uns noch etwas mitteilen m&ouml;chten."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        <span>Vertrag widerrufen</span>
+        <span>&rarr;</span>
+      </button>
+    </form>
+
+    <div class="hint">
+      Sie k&ouml;nnen den Widerruf auch einfach per E-Mail an <strong>support@fwx-simaviation.com</strong> erkl&auml;ren.
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="t-footer">
+  <div class="t-footer-grid">
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Produktinfo</div>
+      <a href="/de/faq.html">FAQ</a>
+      <a href="/de/install.html">Installationsanleitung</a>
+      <a href="/de/changelog.html">Changelog</a>
+      <a href="/download.html">Download und erneuter Download</a>
+      <a href="/de/contact.html">Kontakt und Support</a>
+      <a href="/promo/de/">Promo</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Community</div>
+      <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer">SimMarket Shop</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Presse</div>
+      <a href="https://msfsaddons.com/2026/09/10/fwx-takes-aim-at-three-msfs-2024-helicopter-shortcomings-at-once/" target="_blank" rel="noopener noreferrer">MSFS Addons: die drei neuen Mods</a>
+      <a href="https://thresholdx.net/fwx-aviation-releases-three-default-helicopter-improvements-for-msfs-2024/" target="_blank" rel="noopener noreferrer">Threshold: die drei neuen Mods</a>
+      <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer">MSFS Addons: EC135 Klang</a>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer">Threshold: EC135 Klang</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Rechtliches</div>
+      <a href="/">Startseite</a>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <a href="/agb.html">AGB</a>
+      <a href="/widerruf.html">Widerruf</a>
+      <a href="/support.html" style="color:#cbd5e1;">Unterst&uuml;tze uns &#9749;</a>
+    </div>
+
+  </div>
+  <div style="text-align:center;color:#64748b;font-size:12px;margin:20px 0 10px;">EU-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:#64748b;">ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</div>
+  <div style="text-align:center;color:#64748b;font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 ist eine Marke von Airbus Helicopters. Microsoft Flight Simulator 2024 ist eine Marke der Microsoft Corporation. Asobo Studio ist eine Marke des jeweiligen Inhabers. Alle weiteren Produkt- und Firmennamen sind Marken ihrer jeweiligen Inhaber. FWX SimAviation ist ein unabh&auml;ngiger Drittanbieter und steht in keiner Verbindung zu diesen Unternehmen.</div>
+  <div class="t-footer-bottom">&copy; 2026 FWX SimAviation</div>
+</footer>
+
+<script>if(!localStorage.getItem("fwx-notrack")&&navigator.doNotTrack!=="1"&&window.doNotTrack!=="1"&&navigator.msDoNotTrack!=="1"&&navigator.globalPrivacyControl!==true){var s=document.createElement("script");s.defer=true;s.src="/script.js";s.setAttribute("data-website-id","80459d03-bda7-45fa-a7bc-6472be80e47a");s.setAttribute("data-host-url","https://webhook.finnwestx1.com");document.head.appendChild(s);}</script>
+</body>
+</html>
