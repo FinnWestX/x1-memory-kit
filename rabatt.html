@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fwx-logo-32.png">
+    <link rel="apple-touch-icon" href="/fwx-logo-256.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discount Code / Rabattcode - FWX SimAviation</title>
         <script>if(!localStorage.getItem("fwx-notrack")&&navigator.doNotTrack!=="1"&&window.doNotTrack!=="1"&&navigator.msDoNotTrack!=="1"&&navigator.globalPrivacyControl!==true){var s=document.createElement("script");s.defer=true;s.src="/script.js";s.setAttribute("data-website-id","80459d03-bda7-45fa-a7bc-6472be80e47a");s.setAttribute("data-host-url","https://webhook.finnwestx1.com");document.head.appendChild(s);}</script>
@@ -50,6 +53,24 @@
   color: #64748b;
 }
 .t-footer > div[style] a { color: #64748b; }
+
+/* ===== MARKENBLOCK KOPFZEILE, einheitlich 01.10.2026. Werte 1:1 aus der
+   Vorschauseite uebernommen, Farbe fest, damit es in beiden Design-Systemen
+   identisch aussieht. ===== */
+.nav-word { display: flex; flex-direction: column; line-height: 1; }
+.nav-fwx { font-size: 28px; font-weight: 900; letter-spacing: 3px; color: #fff; }
+.nav-sim { font-size: 13px; font-weight: 600; letter-spacing: 4px; color: #0ea5e9; margin-top: 4px; }
+.t-nav-logo, .fwx-brand-logo {
+  width: 60px; height: 60px; padding: 0; border: 0;
+  background: transparent; flex: 0 0 auto;
+  box-shadow: 0 0 18px -2px rgba(14,165,233,0.55);
+}
+.fwx-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+@media (max-width: 600px) {
+  .nav-fwx { font-size: 20px; letter-spacing: 2px; }
+  .nav-sim { font-size: 10px; letter-spacing: 2.4px; margin-top: 3px; }
+  .t-nav-logo, .fwx-brand-logo { width: 42px; height: 42px; }
+}
 </style>
 </head>
 <body>
@@ -57,9 +78,9 @@
 
     <nav class="nav">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-logo" style="display:flex;align-items:center;gap:8px;">
-                <img src="fwx-logo.svg" alt="FWX" class="nav-logo-icon" style="width:64px;height:64px;border-radius:50%;margin:-16px 0;">
-                <span class="nav-logo-text">FWX SimAviation</span>
+            <a href="/" class="nav-logo fwx-brand">
+                <img src="/fwx-logo.svg" alt="FWX SimAviation" class="fwx-brand-logo">
+                <span class="nav-word"><span class="nav-fwx">FWX</span><span class="nav-sim">SimAviation</span></span>
             </a>
             <div class="nav-links">
                 <a href="index.html" class="en">Back to Home</a>

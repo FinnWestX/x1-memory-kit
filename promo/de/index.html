@@ -220,6 +220,24 @@ img, svg { max-width: 100%; display: block; }
 .vid-solo { max-width: 700px; margin: 0 auto; }
 .vid-solo figcaption { text-align: center; }
 @media (max-width:600px){ .pg-band { font-size:16px !important; } }
+
+/* ===== MARKENBLOCK KOPFZEILE, einheitlich 01.10.2026. Werte 1:1 aus der
+   Vorschauseite uebernommen, Farbe fest, damit es in beiden Design-Systemen
+   identisch aussieht. ===== */
+.nav-word { display: flex; flex-direction: column; line-height: 1; }
+.nav-fwx { font-size: 28px; font-weight: 900; letter-spacing: 3px; color: #fff; }
+.nav-sim { font-size: 13px; font-weight: 600; letter-spacing: 4px; color: #0ea5e9; margin-top: 4px; }
+.t-nav-logo, .fwx-brand-logo {
+  width: 60px; height: 60px; padding: 0; border: 0;
+  background: transparent; flex: 0 0 auto;
+  box-shadow: 0 0 18px -2px rgba(14,165,233,0.55);
+}
+.fwx-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+@media (max-width: 600px) {
+  .nav-fwx { font-size: 20px; letter-spacing: 2px; }
+  .nav-sim { font-size: 10px; letter-spacing: 2.4px; margin-top: 3px; }
+  .t-nav-logo, .fwx-brand-logo { width: 42px; height: 42px; }
+}
 </style>
 
 </head>
@@ -229,8 +247,8 @@ img, svg { max-width: 100%; display: block; }
 <nav class="t-nav">
   <div class="t-nav-inner">
     <a href="../../" class="t-nav-brand">
-      <img src="../../fwx-logo.svg" alt="FWX SimAviation" class="t-nav-logo">
-      FWX SimAviation
+      <img src="/fwx-logo.svg" alt="FWX SimAviation" class="t-nav-logo">
+      <span class="nav-word"><span class="nav-fwx">FWX</span><span class="nav-sim">SimAviation</span></span>
     </a>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="../" style="color:var(--text-dim);font-size:13px;font-weight:600;">EN</a>
