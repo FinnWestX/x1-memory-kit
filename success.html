@@ -83,6 +83,15 @@
     <section class="legal-page" style="text-align: center; padding-top: 200px;">
         <div class="container">
             <h1 style="font-size: 3rem;">Thank You!</h1>
+            <!-- Download right after payment (11.10.2026). Stripe sends the buyer here with
+                 ?session_id=...; the download worker checks the payment and hands out the
+                 download. No secret key in the browser. -->
+            <div id="instant-dl" style="display:none; max-width: 600px; margin: 32px auto; padding: 24px; border: 1px solid var(--accent); border-radius: 12px; text-align: center;">
+                <h2 style="font-size: 1.5rem; margin-bottom: 12px;">Your Download</h2>
+                <p id="instant-dl-status" style="color: var(--text-secondary);">Checking your payment, one moment please...</p>
+                <div id="instant-dl-buttons" style="margin-top: 16px;"></div>
+                <p id="instant-dl-note" style="display:none; color: var(--text-muted); font-size: 0.9rem; margin-top: 16px;"></p>
+            </div>
             <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 24px auto;">
                 Your purchase was successful! You can download your product anytime using your purchase email and order number.
             </p>
@@ -143,5 +152,53 @@
   <div style="text-align:center;color:#64748b;font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator 2024 is a trademark of Microsoft Corporation. Asobo Studio is a trademark of its respective owner. All other product and company names are trademarks of their respective owners. FWX SimAviation is an independent third-party developer and is not affiliated with, endorsed by, or sponsored by any of these companies.</div>
   <div class="t-footer-bottom">&copy; 2026 FWX SimAviation</div>
 </footer>
+<script>
+(function () {
+  var sid = new URLSearchParams(window.location.search).get("session_id");
+  if (!sid || !/^cs_live_[A-Za-z0-9]{10,200}$/.test(sid)) return;
+  var API = "https://fwx-download.fwx-aviation.workers.dev";
+  var box = document.getElementById("instant-dl");
+  var st = document.getElementById("instant-dl-status");
+  var btns = document.getElementById("instant-dl-buttons");
+  var note = document.getElementById("instant-dl-note");
+  box.style.display = "block";
+  var tries = 0;
+  function show(msg) { st.textContent = msg; }
+  function ask() {
+    tries++;
+    fetch(API + "/session?id=" + encodeURIComponent(sid), { cache: "no-store" })
+      .then(function (r) { return r.json().then(function (j) { return { code: r.status, j: j }; }); })
+      .then(function (res) {
+        var j = res.j || {};
+        if ((res.code === 202 || res.code === 402 || res.code === 502) && tries < 10) {
+          show("Your purchase is being finalized, one moment please...");
+          setTimeout(ask, 3000);
+          return;
+        }
+        if (!j.verified || !j.downloads || !j.downloads.length) {
+          show((j.message || "Your download could not be prepared here.") + " You will receive an email with your download details, and you can also use the download page below with your purchase email and order number.");
+          return;
+        }
+        show("Your payment is confirmed. Order number: " + j.invoice + ". Click to download:");
+        btns.innerHTML = "";
+        j.downloads.forEach(function (d) {
+          var a = document.createElement("a");
+          a.href = API + "/download?token=" + encodeURIComponent(d.token);
+          a.className = "btn btn-primary";
+          a.style.cssText = "display:block; margin: 10px auto; font-size: 1.05rem; padding: 14px 24px; color: #fff; opacity: 1;";
+          a.textContent = "Download " + d.product;
+          btns.appendChild(a);
+        });
+        note.style.display = "block";
+        note.textContent = "Each click counts as one download. You have " + j.remaining + " of 3 downloads left. The button is valid for 10 minutes; reload this page for a fresh one. You will also receive an email with the same order number " + j.invoice + ", so you can download again later on the download page.";
+      })
+      .catch(function () {
+        if (tries < 10) { setTimeout(ask, 3000); return; }
+        show("Your download could not be prepared here. You will receive an email with your download details, and you can also use the download page below with your purchase email and order number.");
+      });
+  }
+  ask();
+})();
+</script>
 </body>
 </html>
