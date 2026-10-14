@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="fwx-logo-32.png">
+<link rel="apple-touch-icon" href="fwx-logo-256.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General guide - FWX SimAviation</title>
+<meta name="description" content="General guide for FWX Flight Dynamics in Microsoft Flight Simulator 2024: how it works, setting up in the right order, the sliders, oscillation, unknown models. In English and German.">
+<style>
+:root {
+  --bg: #05050a;
+  --bg-alt: #0a0f1f;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.1);
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --brand: #0ea5e9;
+  --brand-2: #0284c7;
+  --accent: #7dd3fc;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; border-radius: 8px; }
+
+.t-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(5,5,10,0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.t-nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.t-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 15px; }
+.t-nav-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #05050a;
+  border: 2px solid var(--brand);
+  padding: 4px;
+  box-shadow: 0 0 0 1px rgba(14,165,233,0.5), 0 8px 24px -6px rgba(14,165,233,0.55);
+}
+.t-nav-cta {
+  padding: 10px 18px; border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 700; font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 24px -6px rgba(14,165,233,0.5);
+}
+
+main {
+  max-width: 820px; margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.02em; line-height: 1.1;
+  margin-bottom: 14px;
+}
+h1 .accent {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lede {
+  font-size: 17px; color: var(--text-dim);
+  margin-bottom: 30px; max-width: 640px;
+}
+
+.nav-pills {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 48px; padding: 16px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.nav-pills a {
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(14,165,233,0.08);
+  border: 1px solid rgba(14,165,233,0.3);
+  color: var(--accent);
+  font-size: 13px; font-weight: 600;
+  text-decoration: none;
+}
+.nav-pills a:hover { background: rgba(14,165,233,0.18); text-decoration: none; }
+
+h2 {
+  color: #fff; font-size: 28px; font-weight: 800;
+  margin: 48px 0 20px;
+  letter-spacing: -0.01em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  color: #fff; font-size: 19px; font-weight: 700;
+  margin: 30px 0 12px;
+}
+p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+p strong { color: #fff; }
+
+ol.steps {
+  counter-reset: step;
+  list-style: none; padding: 0; margin: 20px 0 30px;
+}
+ol.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding: 18px 22px 18px 60px;
+  margin-bottom: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-dim);
+  font-size: 15px;
+}
+ol.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  top: 16px; left: 16px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 14px;
+  display: grid; place-items: center;
+  box-shadow: 0 4px 12px -3px rgba(14,165,233,0.5);
+}
+ol.steps > li strong { color: #fff; }
+ol.steps > li code {
+  background: rgba(255,255,255,0.07);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: 13px;
+  color: var(--accent);
+  word-break: break-all;
+}
+
+.callout {
+  border-radius: 12px; padding: 18px 22px;
+  margin: 22px 0;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 14px; color: var(--text-dim);
+}
+.callout .head {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; color: #fff; margin-bottom: 8px;
+  font-size: 14px;
+}
+.callout.warn { background: rgba(245,158,11,0.06); border-color: rgba(245,158,11,0.35); }
+.callout.warn .head { color: var(--warn); }
+.callout.ok { background: rgba(34,197,94,0.06); border-color: rgba(34,197,94,0.35); }
+.callout.ok .head { color: var(--ok); }
+
+hr.sep {
+  border: 0; height: 1px;
+  background: var(--border);
+  margin: 60px 0 30px;
+}
+
+.back-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.back-cta h3 { color: #fff; font-size: 22px; margin-bottom: 10px; }
+.back-cta p { color: var(--text-dim); margin-bottom: 20px; }
+.back-cta .btn {
+  display: inline-block; padding: 14px 28px; border-radius: 12px;
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff; font-weight: 800; font-size: 15px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.t-footer {
+  padding: 40px 20px 30px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px; color: var(--text-muted);
+}
+.t-footer a { color: var(--text-dim); margin: 0 10px; }
+
+/* ===== FOOTER, einheitlich 01.10.2026. Feste Farben, damit die Fussleiste
+   in beiden Design-Systemen der Seite identisch aussieht. ===== */
+.t-footer {
+  padding: 60px 20px 40px;
+  background: #05050a;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px; color: #64748b;
+  text-align: left;
+}
+.t-footer-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.t-footer-col { display: flex; flex-direction: column; gap: 6px; }
+.t-footer-head {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: #7dd3fc; font-weight: 700;
+  margin-bottom: 10px;
+}
+.t-footer-col a {
+  color: #94a3b8; font-size: 14px;
+  padding: 3px 0; margin: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.t-footer-col a:hover { color: #fff; }
+.t-footer-bottom {
+  max-width: 1080px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #64748b;
+}
+.t-footer > div[style] a { color: #64748b; }
+
+/* ===== MARKENBLOCK KOPFZEILE, einheitlich 01.10.2026. Werte 1:1 aus der
+   Vorschauseite uebernommen, Farbe fest, damit es in beiden Design-Systemen
+   identisch aussieht. ===== */
+.nav-word { display: flex; flex-direction: column; line-height: 1; }
+.nav-fwx { font-size: 28px; font-weight: 900; letter-spacing: 3px; color: #fff; }
+.nav-sim { font-size: 13px; font-weight: 600; letter-spacing: 4px; color: #0ea5e9; margin-top: 4px; }
+.t-nav-logo, .fwx-brand-logo {
+  width: 60px; height: 60px; padding: 0; border: 0;
+  background: transparent; flex: 0 0 auto;
+  box-shadow: 0 0 18px -2px rgba(14,165,233,0.55);
+}
+.fwx-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+@media (max-width: 600px) {
+  .nav-fwx { font-size: 20px; letter-spacing: 2px; }
+  .nav-sim { font-size: 10px; letter-spacing: 2.4px; margin-top: 3px; }
+  .t-nav-logo, .fwx-brand-logo { width: 42px; height: 42px; }
+}
+
+/* Allgemeine Anleitung (guide.html, 14.10.2026): Listen im Fliesstext */
+main section ul, main section ol { color: var(--text-dim); font-size: 15px; margin: 0 0 14px 22px; }
+main section li { margin-bottom: 6px; }
+main section li ul { margin: 6px 0 0 20px; }
+main section li strong, main section p strong { color: #fff; }
+main section h2 { margin-top: 24px; }
+</style>
+</head>
+<body>
+
+
+
+<nav class="t-nav">
+  <div class="t-nav-inner">
+    <a href="index.html" class="t-nav-brand">
+      <img src="fwx-logo.svg" alt="FWX SimAviation" class="t-nav-logo">
+      <span class="nav-word"><span class="nav-fwx">FWX</span><span class="nav-sim">SimAviation</span></span>
+    </a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="#en" style="color:var(--text-dim);font-size:13px;font-weight:600;">EN</a>
+      <a href="#de" style="color:var(--text-dim);font-size:13px;font-weight:600;">DE</a>
+      <a href="index.html#overview" class="t-nav-cta">See pricing</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <h1>General <span class="accent">guide</span>.</h1>
+  <p class="lede">FWX Flight Dynamics: operation and setup. The same guide is included with the add-on as a PDF, in English and German.</p>
+
+  <div class="nav-pills">
+    <a href="#en">English</a>
+    <a href="#de">Deutsch</a>
+  </div>
+
+<section id="en" lang="en">
+<h2 id="fwx-flight-dynamics-general-guide">FWX Flight Dynamics: General Guide</h2>
+<p><em>Operation and setup · As of 14 October 2026</em></p>
+<div class="callout warn"><div class="head">Note for motion platforms (motion rigs):</div>FWX Flight Dynamics changes how the helicopter moves in the simulator. Because of this, motion platforms may react strongly or abruptly. Use FWX Flight Dynamics with a motion platform only with great care, or switch it off with the “MASTER” switch.</div>
+<h3 id="how-fwx-flight-dynamics-works">1. How FWX Flight Dynamics works</h3>
+<p>FWX Flight Dynamics does not reinvent the flight behaviour. The simulator's flight model stays completely intact. The program only amplifies what is really there: the real aerodynamic influences such as wind and airflow, your own control inputs and the mechanical characteristics of the helicopter you are flying. These influences become noticeable, and you set their strength with the sliders to suit your feel.</p>
+<p>A real helicopter is by nature a restless and very unstable aircraft. Every mechanical element, for example the governor that regulates the rotor speed, adds unrest, and so does the pilot's hand. This unrest has to be compensated all the time. That is why the program clearly separates aerodynamic and mechanical influences. Both can be adjusted individually and work together.</p>
+<p>So, just as in a real helicopter: the calmer your control inputs, the less unrest. The calmer the air, the calmer the flight model. In completely still air there is hardly anything for the “Airflow” sliders to amplify. That is not a fault; it is intended.</p>
+<p>Our focus is on making the flight behaviour feel alive, because everyone perceives realism differently. This liveliness is meant to make flying feel more realistic, but depending on personal taste it may also be perceived as unrealistic.</p>
+<p>The main switch “MASTER” turns the whole program on and off. It moves the helicopter on purpose: that is the intended effect, not a fault. With “MASTER OFF” the helicopter flies exactly the way the simulator flies it on its own.</p>
+<p>We test with ChasePlane and FSRealistic and have deliberately made FWX Flight Dynamics compatible with both, because most of the community uses them. These programs mainly work on camera and sound, FWX Flight Dynamics on flight behaviour. The two complement each other well. With other programs there may be overlaps that can cause problems.</p>
+<h3 id="setting-up-in-the-right-order">2. Setting up in the right order</h3>
+<p>For the helicopters that ship with Microsoft Flight Simulator 2024 there are tested factory profiles. Everything is already set there, and you only refine it to your taste. For any other model, follow exactly this order:</p>
+<ol type="1">
+<li><strong>“Main rotor direction”</strong>: the direction in which the main rotor turns, seen from above: “Clockwise” or “Counter-clockwise”. “Tandem” is for helicopters with two main rotors turning in opposite directions. For unknown models the program detects the direction automatically from the model data where that data can be read. For protected models, for example from the Marketplace, set it by hand. Check the direction in every case, otherwise the lever arm and torque effects work the wrong way round.</li>
+<li><strong>“Tail rotor lever arm”</strong>: For almost all helicopters, “Below” is the right choice in our program.</li>
+<li><strong>“Overall Strength of Effect”</strong>: Unknown models already start at 20 % (see section 7). Start low with light models as well. If it still feels too restless, go a little lower.</li>
+<li><strong>“SAVE PROFILE”</strong>: save the profile.</li>
+<li>Only then adjust the individual sliders to your taste, one at a time, and save the profile again.</li>
+</ol>
+<p>Rotor direction and lever arm always come first, because all other effects depend on them. Adjust from the bottom up: start low and increase slowly. A value that is too high can make the helicopter start to oscillate on all kinds of models (see section 4).</p>
+<p><strong>Profiles:</strong> Each helicopter type has its own profile, and variants of the same type share it. Settings are only saved with “SAVE PROFILE” or “SAVE AS...”; there is no automatic saving. “FACTORY SETTINGS” brings back the shipped values of the type.</p>
+<h3 id="how-the-sliders-work-together">3. How the sliders work together</h3>
+<ul>
+<li><strong>“Overall Strength of Effect”</strong> strengthens or weakens the entire flight behaviour of the helicopter at once. It is always the first thing to reach for.</li>
+<li>The sections <strong>“Hover”</strong> and <strong>“Flight in motion”</strong> each have their own overall slider, <strong>“Block strength”</strong>. It only acts on its own section, on top of “Overall Strength of Effect”, and scales the axes “Pitch”, “Yaw” and “Roll” by the same ratio. This lets you combine, for example, a calm, precise hover with a lively forward flight.</li>
+<li>The individual sliders inside each act on one thing only:
+<ul>
+<li><strong>“Airflow”</strong>: the part of the motion that comes from the surrounding air, meaning wind, crosswind and how they change. It is available on every axis.</li>
+<li><strong>“Mechanical Dynamics”</strong>: the part that comes from the machine itself, meaning the rotor and the airframe. Your own control inputs belong to it as well. It can be felt even in calm air and sits under “Yaw” and “Roll”.</li>
+<li><strong>“Gusts”</strong>: short pushes from changing air. In completely still weather it has no effect.</li>
+<li><strong>“Ground effect”</strong> (only in “Hover”): how clearly the helicopter feels the nearness of the ground.</li>
+</ul></li>
+<li>Three sliders decide how the movements arrive:
+<ul>
+<li><strong>“Output smoothing”</strong> makes them softer or more direct and damps individual jolts.</li>
+<li><strong>“Effect build-up speed”</strong> sets how quickly they build up.</li>
+<li><strong>“Speed gain”</strong> (only in “Flight in motion”) sets how strongly the effects grow with increasing speed. In the hover it has no effect.</li>
+</ul></li>
+<li><strong>Check boxes:</strong> Clear the tick and that part is switched off; the simulator's own original behaviour applies again. Your value is kept.</li>
+<li><strong>Reset symbol:</strong> It returns a single slider to the saved value of the loaded profile.</li>
+</ul>
+<h3 id="oscillation-cause-and-remedy">4. Oscillation: cause and remedy</h3>
+<p><strong>Cause:</strong> The program first amplifies a movement in one direction, aerodynamically and mechanically. Then it brings the movement back in line with the simulator's original flight behaviour. This interplay is exactly what creates the lively basic feel. If a slider is set too high, every correction overshoots the target and the helicopter starts to oscillate. This applies to all axes and all sliders.</p>
+<p><strong>Remedy:</strong></p>
+<ul>
+<li>If the whole helicopter feels too restless, lower “Overall Strength of Effect” first. If only one section is affected, lower “Block strength” there.</li>
+<li>If a model swings about one axis, lower the sliders of that axis first, step by step, until it is calm, and save the profile.</li>
+<li>If it keeps oscillating with the axis sliders lowered, turn “Gusts” down clearly in the affected section. “Gusts” exists once in “Hover” and once in “Flight in motion”. There it acts on all axes together and cannot be set per axis.</li>
+<li>If a model only starts to oscillate at higher speed, lower “Speed gain”. If you feel too little at higher speed, raise it.</li>
+<li>If it feels nervous rather than too strong, raise “Output smoothing” and lower “Effect build-up speed”.</li>
+<li>Do not set any slider to 0 % while doing this, because that switches the effect off completely. That only makes sense if you deliberately do not want that effect.</li>
+<li>Change only one thing at a time, fly a short circuit and then decide.</li>
+</ul>
+<h3 id="weight-and-inertia-why-the-sliders-have-so-much-headroom">5. Weight and inertia: why the sliders have so much headroom</h3>
+<p>How strongly a setting acts depends on the weight and inertia of the model, and the program adapts to them. Light models reach the point where they start to oscillate quickly, while heavy models tolerate much higher values. That is why the sliders have a lot of headroom upwards: every model can be set individually up to just below this limit.</p>
+<p>With every model this means feeling your way towards the right setting. Take your time and experiment until it feels right to you.</p>
+<h3 id="tail-rotor-and-wind-on-the-tail">6. Tail rotor and wind on the tail</h3>
+<p><strong>Lever effect:</strong> The tail rotor pushes the tail sideways and holds the nose against the torque of the main rotor. If it does not sit level with the centre of gravity, its thrust acts like a lever. If it sits above (“Above”), the helicopter rolls in the direction of the thrust. If it sits below (“Below”), it rolls the opposite way. “Middle” has no lever effect. “Tail rotor lever arm” reproduces this with every change in tail rotor thrust, that is, with every pedal input.</p>
+<p><strong>Rotor direction:</strong> “Main rotor direction” is crucial. If it is wrong, the signs are reversed: every effect that depends on it works the wrong way round, and the helicopter feels wrong. So always check it, even if the program has detected it automatically. With “Tandem” there is no torque turning the nose and no tail rotor. The lever arm is then set to “Middle” and locked.</p>
+<p><strong>Wind on the tail:</strong> When air flows sideways onto the tail boom and fin, it turns the nose into the wind and lets the helicopter roll slightly. When the helicopter banks into a turn in forward flight, the oblique airflow turns the nose in the direction of the turn, just as in a real helicopter (weathervane effect). The “Airflow” slider under “Yaw” makes this effect noticeable. If it is too strong for you, lower it in “Flight in motion”.</p>
+<p><strong>Interplay:</strong> If you hold against a crosswind with the pedal, the lever adds a slight rolling movement. This interplay is exactly what makes flying feel alive. That is why setting the rotor direction and the lever arm correctly matters so much.</p>
+<p>If you are unsure: with “Tandem” and “Middle” these characteristics stay neutral. You will, however, lose part of the mechanical liveliness.</p>
+<h3 id="unknown-models-from-third-party-developers">7. Unknown models from third-party developers</h3>
+<p>A model that FWX Flight Dynamics does not know starts with low base values. This includes models from other developers. “Block strength” is then at 50 % in both sections, “Overall Strength of Effect” at 20 % and all individual sliders in “Hover” and “Flight in motion” at 10 %. “Speed gain”, “Output smoothing” and “Effect build-up speed” are not lowered. Work your way up from there.</p>
+<p>The program detects the main rotor direction automatically from the model data where that data can be read. For protected models, for example from the Marketplace, set it by hand. The “Tail rotor lever arm” control starts at “Below”, which matches most helicopters. In every case, check “Main rotor direction” and “Tail rotor lever arm” before you fly, as described in section 2.</p>
+<p>Set up correctly, models from third-party developers work well too. We cannot set up every model in advance, because we do not know which helicopters you own, and we cannot buy and test every model on the market.</p>
+<p>Values can change with updates to the model, the simulator or other programs. If that happens, adjust your profile again.</p>
+<p>Different computer systems and operating systems repeatedly lead to different flight results, even with identical settings. Even aids such as automatic trim behave differently depending on the system. The best results come with these aids switched off, but that is not a requirement.</p>
+<h3 id="help-and-support">8. Help and support</h3>
+<ul>
+<li><strong>Question marks in the FWX Control Center:</strong> Hold the mouse over one and a short explanation appears.</li>
+<li><strong>Diagnostic file:</strong> If you have a problem, please send us your diagnostic file. For it, fly each flight phase, for example hover and forward flight, with and without the main switch “MASTER” for at least 60 seconds each.</li>
+<li><strong>Contact:</strong> support@fwx-simaviation.com</li>
+</ul>
+</section>
+
+  <hr class="sep">
+
+<section id="de" lang="de">
+<h2 id="fwx-flight-dynamics-allgemeine-anleitung">FWX Flight Dynamics: Allgemeine Anleitung</h2>
+<p><em>Bedienung und Einstellung · Stand 14.10.2026</em></p>
+<div class="callout warn"><div class="head">Hinweis für Bewegungsplattformen (Motion Rigs):</div>FWX Flight Dynamics verändert die Bewegungen des Hubschraubers im Simulator. Bewegungsplattformen können dadurch möglicherweise stark oder ruckartig reagieren. Nutzen Sie FWX Flight Dynamics mit einer Bewegungsplattform nur mit großer Vorsicht, oder schalten Sie es mit dem Schalter „MASTER“ aus.</div>
+<h3 id="so-arbeitet-fwx-flight-dynamics">1. So arbeitet FWX Flight Dynamics</h3>
+<p>FWX Flight Dynamics erfindet das Flugverhalten nicht neu. Das Flugmodell des Simulators bleibt vollständig erhalten. Das Programm verstärkt nur, was tatsächlich vorhanden ist: die echten aerodynamischen Einflüsse wie Wind und Luftströmung, Ihre eigenen Steuereingaben und die mechanischen Eigenschaften des jeweiligen Hubschraubers. Diese Einflüsse werden spürbar, und Sie stellen ihre Stärke mit den Reglern nach Ihrem Gefühl ein.</p>
+<p>Ein echter Hubschrauber ist von Natur aus ein unruhiges und sehr instabiles Fluggerät. Jede mechanische Stellschraube, zum Beispiel der Governor, also die Drehzahlregelung, bringt Unruhe hinein, ebenso die Hand des Piloten. Diese Unruhe muss ständig ausgeglichen werden. Deshalb trennt das Programm klar zwischen aerodynamischen und mechanischen Einflüssen. Beide sind einzeln einstellbar und greifen ineinander.</p>
+<p>Daher gilt wie im echten Hubschrauber: Je ruhiger die Steuereingaben, desto weniger Unruhe. Je ruhiger die Luft, desto ruhiger das Flugmodell. In ganz ruhiger Luft gibt es für die Regler „Airflow“ kaum etwas zu verstärken. Das ist kein Fehler, sondern so gewollt.</p>
+<p>Unser Schwerpunkt ist die Lebendigkeit des Flugverhaltens, denn Realismus empfindet jeder anders. Die Lebendigkeit soll das Fliegen realistischer wirken lassen, kann je nach persönlichem Geschmack aber auch als unrealistisch empfunden werden.</p>
+<p>Der Hauptschalter „MASTER“ schaltet das ganze Programm ein und aus. Er bewegt den Hubschrauber absichtlich, das ist der gewünschte Effekt und kein Fehler. Bei „MASTER OFF“ fliegt der Hubschrauber genau so, wie der Simulator ihn von sich aus fliegt.</p>
+<p>Wir testen mit ChasePlane und FSRealistic und haben FWX Flight Dynamics bewusst mit diesen beiden kompatibel gemacht, weil der Großteil der Community sie nutzt. Diese Programme setzen vor allem bei Kamera und Sound an, FWX Flight Dynamics beim Flugverhalten. Beides ergänzt sich gut. Mit anderen Programmen kann es zu Überschneidungen kommen, die Probleme verursachen können.</p>
+<h3 id="einstellen-in-der-richtigen-reihenfolge">2. Einstellen in der richtigen Reihenfolge</h3>
+<p>Für die Hubschrauber, die mit dem Microsoft Flight Simulator 2024 ausgeliefert werden, gibt es getestete Werksprofile. Dort ist alles bereits eingestellt, und Sie verfeinern nur nach Ihrem Geschmack. Bei jedem anderen Modell gehen Sie genau in dieser Reihenfolge vor:</p>
+<ol type="1">
+<li><strong>„Main rotor direction“</strong>: die Drehrichtung des Hauptrotors, von oben gesehen im Uhrzeigersinn („Clockwise“) oder gegen den Uhrzeigersinn („Counter-clockwise“). „Tandem“ gilt für Hubschrauber mit zwei gegenläufigen Hauptrotoren. Bei unbekannten Modellen erkennt das Programm die Drehrichtung automatisch aus den Modelldaten, wo diese lesbar sind. Bei geschützten Modellen, zum Beispiel aus dem Marketplace, stellen Sie sie von Hand ein. Kontrollieren Sie die Drehrichtung in jedem Fall, sonst wirken Hebel und Drehmomenteffekte falsch herum.</li>
+<li><strong>„Tail rotor lever arm“</strong>: Bei fast allen Hubschraubern ist in unserem Programm „Below“ die richtige Wahl.</li>
+<li><strong>„Overall Strength of Effect“</strong>: Unbekannte Modelle starten bereits mit 20 % (siehe Abschnitt 7). Auch bei leichten Modellen niedrig beginnen. Ist es Ihnen noch zu unruhig, etwas weniger.</li>
+<li><strong>„SAVE PROFILE“</strong>: das Profil speichern.</li>
+<li>Erst danach die einzelnen Regler nach Ihrem Geschmack anpassen, einen nach dem anderen, und das Profil erneut speichern.</li>
+</ol>
+<p>Drehrichtung und Hebel kommen immer zuerst, denn alle anderen Effekte hängen davon ab. Passen Sie von unten nach oben an, also niedrig beginnen und langsam steigern. Ein zu hoher Wert kann bei den unterschiedlichsten Modellen zum Aufschaukeln führen (siehe Abschnitt 4).</p>
+<p><strong>Profile:</strong> Jeder Hubschraubertyp hat sein eigenes Profil, Varianten desselben Typs teilen es. Gespeichert wird nur mit „SAVE PROFILE“ oder „SAVE AS...“, ein automatisches Speichern gibt es nicht. „FACTORY SETTINGS“ holt die ausgelieferten Werte des Typs zurück.</p>
+<h3 id="so-wirken-die-regler-zusammen">3. So wirken die Regler zusammen</h3>
+<ul>
+<li><strong>„Overall Strength of Effect“</strong> verstärkt oder schwächt das gesamte Flugverhalten des Hubschraubers auf einmal. Er ist immer das erste Mittel der Wahl.</li>
+<li>Die Abschnitte <strong>„Hover“</strong> (Schweben) und <strong>„Flight in motion“</strong> (Vorwärtsflug) haben je einen eigenen Gesamtregler <strong>„Block strength“</strong>. Er wirkt nur auf seinen Abschnitt, zusätzlich zu „Overall Strength of Effect“, und auf alle Achsen „Pitch“, „Yaw“ und „Roll“ im gleichen Verhältnis. So können Sie zum Beispiel ein ruhiges, präzises Schweben mit einem lebendigen Vorwärtsflug kombinieren.</li>
+<li>Die einzelnen Regler darin wirken jeweils nur auf eine Sache:
+<ul>
+<li><strong>„Airflow“</strong>: der Anteil der Bewegung, der aus der umgebenden Luft kommt, also Wind, Seitenwind und deren Änderung. Ihn gibt es auf jeder Achse.</li>
+<li><strong>„Mechanical Dynamics“</strong>: der Anteil, der aus der Maschine selbst kommt, also vom Rotor und von der Zelle. Dazu gehören auch Ihre eigenen Steuereingaben. Er ist auch in ruhiger Luft spürbar und sitzt unter „Yaw“ und „Roll“.</li>
+<li><strong>„Gusts“</strong>: kurze Stöße durch sich ändernde Luft. Bei ganz ruhigem Wetter wirkt er nicht.</li>
+<li><strong>„Ground effect“</strong> (nur in „Hover“): wie deutlich der Hubschrauber die Nähe zum Boden spürt.</li>
+</ul></li>
+<li>Drei Regler bestimmen, wie die Bewegungen ankommen:
+<ul>
+<li><strong>„Output smoothing“</strong> macht sie weicher oder direkter und dämpft einzelne Ausschläge.</li>
+<li><strong>„Effect build-up speed“</strong> bestimmt, wie schnell sie sich aufbauen.</li>
+<li><strong>„Speed gain“</strong> (nur in „Flight in motion“) legt fest, wie stark die Effekte mit zunehmender Geschwindigkeit wachsen. Im Schweben wirkt er nicht.</li>
+</ul></li>
+<li><strong>Kontrollkästchen:</strong> Nehmen Sie den Haken weg, ist dieser Teil aus, und es gilt wieder das ursprüngliche Verhalten des Simulators. Ihr Wert bleibt erhalten.</li>
+<li><strong>Rücksetzsymbol:</strong> Es holt bei einem einzelnen Regler den gespeicherten Wert des geladenen Profils zurück.</li>
+</ul>
+<h3 id="aufschaukeln-ursache-und-abhilfe">4. Aufschaukeln: Ursache und Abhilfe</h3>
+<p><strong>Ursache:</strong> Das Programm verstärkt eine Bewegung zuerst in eine Richtung, aerodynamisch und mechanisch. Danach gleicht es die Bewegung wieder an das ursprüngliche Flugverhalten des Simulators an. Genau dieses Zusammenspiel erzeugt das lebendige Grundgefühl. Steht ein Regler zu hoch, schießt jede Korrektur über das Ziel hinaus, und der Hubschrauber schaukelt sich auf. Das gilt für alle Achsen und alle Regler.</p>
+<p><strong>Abhilfe:</strong></p>
+<ul>
+<li>Ist Ihnen der ganze Hubschrauber zu unruhig, senken Sie zuerst „Overall Strength of Effect“. Betrifft es nur einen Abschnitt, senken Sie dort „Block strength“.</li>
+<li>Pendelt ein Modell um eine Achse, senken Sie zuerst die Regler dieser Achse schrittweise, bis es ruhig ist, und speichern Sie das Profil.</li>
+<li>Schaukelt es trotz gesenkter Achsenregler weiter, nehmen Sie „Gusts“ im betroffenen Abschnitt deutlich zurück. „Gusts“ gibt es je einmal in „Hover“ und in „Flight in motion“. Er wirkt dort gemeinsam auf alle Achsen und lässt sich nicht je Achse einstellen.</li>
+<li>Beginnt ein Modell erst bei höherer Geschwindigkeit zu schaukeln, senken Sie „Speed gain“. Ist bei höherer Geschwindigkeit zu wenig zu spüren, erhöhen Sie ihn.</li>
+<li>Wirkt es eher nervös als zu stark, erhöhen Sie „Output smoothing“ und senken Sie „Effect build-up speed“.</li>
+<li>Stellen Sie dabei keinen Regler auf 0 %, denn dann ist der jeweilige Effekt ganz ausgeschaltet. Das ist nur sinnvoll, wenn Sie diesen Effekt bewusst nicht haben möchten.</li>
+<li>Ändern Sie immer nur eine Sache, fliegen Sie eine kurze Runde und entscheiden Sie dann.</li>
+</ul>
+<h3 id="gewicht-und-trägheit-warum-die-regler-so-viel-spielraum-haben">5. Gewicht und Trägheit: warum die Regler so viel Spielraum haben</h3>
+<p>Wie stark eine Einstellung wirkt, hängt vom Gewicht und der Trägheit des jeweiligen Modells ab, und das Programm passt sich daran an. Bei leichten Modellen ist die Grenze zum Aufschaukeln schnell erreicht, schwere Modelle vertragen deutlich höhere Werte. Deshalb haben die Regler viel Spielraum nach oben: So lässt sich jedes Modell individuell bis kurz vor diese Grenze einstellen.</p>
+<p>Bei jedem Modell ist das ein Herantasten an den richtigen Zustand. Experimentieren Sie in Ruhe, bis es sich für Sie richtig anfühlt.</p>
+<h3 id="heckrotor-und-wind-am-heck">6. Heckrotor und Wind am Heck</h3>
+<p><strong>Hebelwirkung:</strong> Der Heckrotor drückt das Heck seitlich und hält die Nase gegen das Drehmoment des Hauptrotors. Sitzt er nicht auf Höhe des Schwerpunkts, wirkt sein Schub wie ein Hebel. Liegt er darüber („Above“), rollt der Hubschrauber in Schubrichtung. Liegt er darunter („Below“), rollt er entgegengesetzt. „Middle“ hat keine Hebelwirkung. „Tail rotor lever arm“ bildet das bei jeder Änderung des Heckrotorschubs ab, also bei jedem Pedaleinsatz.</p>
+<p><strong>Drehrichtung:</strong> Ganz entscheidend ist „Main rotor direction“. Stimmt sie nicht, sind die Vorzeichen vertauscht: Alle davon abhängigen Effekte wirken in die falsche Richtung, und der Hubschrauber fühlt sich falsch an. Kontrollieren Sie sie deshalb immer, auch wenn das Programm sie automatisch erkannt hat. Bei „Tandem“ gibt es kein Drehmoment, das die Nase dreht, und keinen Heckrotor. Der Hebel steht dann auf „Middle“ und ist gesperrt.</p>
+<p><strong>Wind am Heck:</strong> Strömt die Luft seitlich auf Heckausleger und Seitenflosse, dreht sie die Nase in den Wind und lässt den Hubschrauber leicht abrollen. Legt sich der Hubschrauber im Vorwärtsflug in die Kurve, dreht die schräge Anströmung die Nase in die Kurvenrichtung, so wie bei einem echten Hubschrauber (Windfahnenwirkung). Der Regler „Airflow“ unter „Yaw“ macht diesen Effekt spürbar. Ist er Ihnen zu stark, senken Sie ihn in „Flight in motion“.</p>
+<p><strong>Zusammenspiel:</strong> Halten Sie bei Seitenwind mit dem Pedal dagegen, kommt über den Hebel eine leichte Rollbewegung dazu. Genau dieses Zusammenspiel macht das Fliegen lebendig. Deshalb ist die richtige Einstellung von Drehrichtung und Hebel so wichtig.</p>
+<p>Wenn Sie unsicher sind: Mit „Tandem“ und „Middle“ bleiben diese Eigenschaften neutral. Dann geht allerdings ein Teil der mechanischen Lebendigkeit verloren.</p>
+<h3 id="unbekannte-modelle-von-drittanbietern">7. Unbekannte Modelle von Drittanbietern</h3>
+<p>Ein Modell, das FWX Flight Dynamics nicht kennt, startet mit niedrigen Grundwerten. Dazu zählen auch Modelle anderer Entwickler. „Block strength“ steht dann in beiden Abschnitten auf 50 %, „Overall Strength of Effect“ auf 20 % und alle Einzelregler in „Hover“ und „Flight in motion“ auf 10 %. „Speed gain“, „Output smoothing“ und „Effect build-up speed“ werden dabei nicht abgesenkt. Tasten Sie sich von dort aus nach oben heran.</p>
+<p>Die Drehrichtung des Hauptrotors erkennt das Programm automatisch aus den Modelldaten, wo diese lesbar sind. Bei geschützten Modellen, zum Beispiel aus dem Marketplace, stellen Sie sie von Hand ein. Der Regler „Tail rotor lever arm“ startet auf „Below“, passend zu den meisten Hubschraubern. Kontrollieren Sie „Main rotor direction“ und „Tail rotor lever arm“ in jedem Fall vor dem Flug, wie in Abschnitt 2 beschrieben.</p>
+<p>Richtig eingestellt funktionieren auch Modelle von Drittanbietern gut. Vorab einstellen können wir nicht jedes Modell, weil wir nicht wissen, welche Hubschrauber Sie besitzen, und nicht jedes Modell auf dem Markt kaufen und testen können.</p>
+<p>Werte können sich mit Updates des Modells, des Simulators oder anderer Programme ändern. Passen Sie Ihr Profil dann neu an.</p>
+<p>Unterschiedliche Computersysteme und Betriebssysteme führen trotz gleicher Einstellungen immer wieder zu unterschiedlichen Flugergebnissen. Selbst Hilfen wie eine automatische Trimmung wirken je nach System unterschiedlich. Die besten Ergebnisse gibt es mit ausgeschalteten Hilfen, das ist aber keine Voraussetzung.</p>
+<h3 id="hilfe-und-support">8. Hilfe und Support</h3>
+<ul>
+<li><strong>Fragezeichen im FWX Control Center:</strong> Halten Sie die Maus darüber, erscheint eine kurze Erklärung.</li>
+<li><strong>Diagnosedatei:</strong> Schicken Sie uns bei Problemen Ihre Diagnosedatei mit. Fliegen Sie dafür jeden Flugabschnitt, zum Beispiel Schweben und Vorwärtsflug, mit und ohne Hauptschalter „MASTER“ jeweils mindestens 60 Sekunden lang.</li>
+<li><strong>Kontakt:</strong> support@fwx-simaviation.com</li>
+</ul>
+</section>
+
+</main>
+
+<footer class="t-footer">
+  <div class="t-footer-grid">
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Product info</div>
+      <a href="faq.html">FAQ</a>
+      <a href="install.html">Installation guide</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="download.html">Download / re-download</a>
+      <a href="contact.html">Contact &amp; support</a>
+      <a href="promo/index.html">Promo</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Community</div>
+      <a href="https://www.youtube.com/@FWX-SimAviation" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://secure.simmarket.com/fwxaviation.mhtml" target="_blank" rel="noopener noreferrer">SimMarket store</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Press</div>
+      <a href="https://msfsaddons.com/2026/09/10/fwx-takes-aim-at-three-msfs-2024-helicopter-shortcomings-at-once/" target="_blank" rel="noopener noreferrer">MSFS Addons: three new mods</a>
+      <a href="https://thresholdx.net/fwx-aviation-releases-three-default-helicopter-improvements-for-msfs-2024/" target="_blank" rel="noopener noreferrer">Threshold: three new mods</a>
+      <a href="https://msfsaddons.com/2026/04/05/fwx-aviation-brings-real-world-ec135-audio-and-rotor-haptics-to-msfs-2024/" target="_blank" rel="noopener noreferrer">MSFS Addons: EC135 sound</a>
+      <a href="https://thresholdx.net/news/fwx135" target="_blank" rel="noopener noreferrer">Threshold: EC135 sound</a>
+    </div>
+
+    <div class="t-footer-col">
+      <div class="t-footer-head">Legal</div>
+      <a href="index.html">Main site</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Privacy</a>
+      <a href="agb.html">Terms</a>
+      <a href="widerruf.html">Cancellation</a>
+      <a href="support.html" style="color:#cbd5e1;">Support us &#9749;</a>
+    </div>
+
+  </div>
+  <div style="text-align:center;color:#64748b;font-size:12px;margin:20px 0 10px;">EU dispute resolution: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:#64748b;">ec.europa.eu/consumers/odr</a>. We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board.</div>
+  <div style="text-align:center;color:#64748b;font-size:11px;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto;">EC135 is a trademark of Airbus Helicopters. Microsoft Flight Simulator 2024 is a trademark of Microsoft Corporation. Asobo Studio is a trademark of its respective owner. All other product and company names are trademarks of their respective owners. FWX SimAviation is an independent third-party developer and is not affiliated with, endorsed by, or sponsored by any of these companies.</div>
+  <div class="t-footer-bottom">&copy; 2026 FWX SimAviation</div>
+</footer>
+
+<script>if(!localStorage.getItem("fwx-notrack")&&navigator.doNotTrack!=="1"&&window.doNotTrack!=="1"&&navigator.msDoNotTrack!=="1"&&navigator.globalPrivacyControl!==true){var s=document.createElement("script");s.defer=true;s.src="script.js";s.setAttribute("data-website-id","80459d03-bda7-45fa-a7bc-6472be80e47a");s.setAttribute("data-host-url","https://webhook.finnwestx1.com");document.head.appendChild(s);}</script>
+</body>
+</html>
