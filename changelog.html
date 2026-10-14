@@ -277,6 +277,38 @@ h1 .accent {
     </p>
   </div>
 
+  <div class="product-group-head">Update for Heli Flight Dynamics · Version 2.2.2</div>
+  <article class="release">
+    <div class="release-head">
+      <h2>v2.2.2</h2>
+      <span class="version-tag">Heli Flight Dynamics</span>
+    </div>
+    <div class="release-date">October 2026</div>
+    <div class="release-notes">
+      <h3>New</h3>
+      <ul>
+        <li>New general guide: It is included as a PDF in German and English and is also available in the panel under “?” and on our website. It explains step by step how to set up any helicopter to your liking.</li>
+        <li>Profile list for all helicopters: In every model, whether recognized by the program or not, you can now choose from all factory profiles and all of your own profiles.</li>
+        <li>Separate error file: Important notices and warnings are also collected in a small file of their own. This makes troubleshooting easier if you need support.</li>
+      </ul>
+      <h3>Improved</h3>
+      <ul>
+        <li>Gentler start for models the program does not know yet: Unknown helicopters now begin with conservative default values. “Overall Strength of Effect” is set to 20%, “Block strength” in “Hover” and “Flight in motion” to 50%, and all individual controls in both sections to 10%. “Speed gain”, “Output smoothing” and “Effect build-up speed” remain unchanged. From there, you can take your time setting up the model to your liking.</li>
+        <li>For unknown models, the “Tail rotor lever arm” control now starts at “Below”, which matches most helicopters.</li>
+        <li>For unknown models, the direction of rotation of the main rotor is now taken automatically from the model data, where readable. Please always check it anyway.</li>
+        <li>More stable connection to the simulator: If the simulator stays silent for a while or the connection drops briefly, the program reconnects on its own instead of closing.</li>
+        <li>The log files now stay small (5 MB at most). Older logs that are too large are trimmed automatically at startup.</li>
+      </ul>
+      <h3>Fixed</h3>
+      <ul>
+        <li>When switching helicopters, the direction of rotation of the previous model still applied for a few seconds.</li>
+        <li>The version number is now displayed consistently in the program, in the panel and during installation.</li>
+        <li>While the simulator is loading, the program no longer intervenes. After that, the effect starts gently.</li>
+        <li>The direction of rotation and the “Tail rotor lever arm” position that you set by hand are now saved in the profile of the helicopter and no longer jump back.</li>
+      </ul>
+    </div>
+  </article>
+
   <div class="product-group-head">Major update for Heli Flight Dynamics · Version 2.2.0</div>
   <article class="release current">
     <div class="release-head">
