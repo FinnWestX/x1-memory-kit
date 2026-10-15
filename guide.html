@@ -258,6 +258,8 @@ main section li { margin-bottom: 6px; }
 main section li ul { margin: 6px 0 0 20px; }
 main section li strong, main section p strong { color: #fff; }
 main section h2 { margin-top: 24px; }
+main section h2.sprache { color: var(--accent); font-size: 15px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase; border: 0; margin: 0 0 6px; padding: 0; }
 </style>
 </head>
 <body>
@@ -283,15 +285,21 @@ main section h2 { margin-top: 24px; }
   <h1>General <span class="accent">guide</span>.</h1>
   <p class="lede">FWX Flight Dynamics: operation and setup. The same guide is included with the add-on as a PDF, in English and German.</p>
 
+  <div class="callout warn">
+    <div class="head">Note for motion platforms (motion rigs):</div>FWX Flight Dynamics changes how the helicopter moves in the simulator. Because of this, motion platforms may react strongly or abruptly. Use FWX Flight Dynamics with a motion platform only with great care, or switch it off with the “MASTER” switch.
+    <div class="head">Hinweis für Bewegungsplattformen (Motion Rigs):</div>FWX Flight Dynamics verändert die Bewegungen des Hubschraubers im Simulator. Bewegungsplattformen können dadurch möglicherweise stark oder ruckartig reagieren. Nutzen Sie FWX Flight Dynamics mit einer Bewegungsplattform nur mit großer Vorsicht, oder schalten Sie es mit dem Schalter „MASTER“ aus.
+  </div>
+
   <div class="nav-pills">
     <a href="#en">English</a>
     <a href="#de">Deutsch</a>
   </div>
 
 <section id="en" lang="en">
+  <h2 class="sprache">English version</h2>
 <h2 id="fwx-flight-dynamics-general-guide">FWX Flight Dynamics: General Guide</h2>
 <p><em>Operation and setup · As of 14 October 2026</em></p>
-<div class="callout warn"><div class="head">Note for motion platforms (motion rigs):</div>FWX Flight Dynamics changes how the helicopter moves in the simulator. Because of this, motion platforms may react strongly or abruptly. Use FWX Flight Dynamics with a motion platform only with great care, or switch it off with the “MASTER” switch.</div>
+
 <h3 id="how-fwx-flight-dynamics-works">1. How FWX Flight Dynamics works</h3>
 <p>FWX Flight Dynamics does not reinvent the flight behaviour. The simulator's flight model stays completely intact. The program only amplifies what is really there: the real aerodynamic influences such as wind and airflow, your own control inputs and the mechanical characteristics of the helicopter you are flying. These influences become noticeable, and you set their strength with the sliders to suit your feel.</p>
 <p>A real helicopter is by nature a restless and very unstable aircraft. Every mechanical element, for example the governor that regulates the rotor speed, adds unrest, and so does the pilot's hand. This unrest has to be compensated all the time. That is why the program clearly separates aerodynamic and mechanical influences. Both can be adjusted individually and work together.</p>
@@ -352,6 +360,7 @@ main section h2 { margin-top: 24px; }
 <p><strong>Interplay:</strong> If you hold against a crosswind with the pedal, the lever adds a slight rolling movement. This interplay is exactly what makes flying feel alive. That is why setting the rotor direction and the lever arm correctly matters so much.</p>
 <p>If you are unsure: with “Tandem” and “Middle” these characteristics stay neutral. You will, however, lose part of the mechanical liveliness.</p>
 <h3 id="unknown-models-from-third-party-developers">7. Unknown models from third-party developers</h3>
+<p><strong>Helicopters without an FWX factory profile:</strong> We cannot test every model. Helicopters without a factory profile of their own therefore start with a deliberately low basic setting, because values that are too high can make an unknown model oscillate strongly. At first you will therefore feel very little. Raise the controls step by step, or load the profile of a helicopter you already like.</p>
 <p>A model that FWX Flight Dynamics does not know starts with low base values. This includes models from other developers. “Block strength” is then at 50 % in both sections, “Overall Strength of Effect” at 20 % and all individual sliders in “Hover” and “Flight in motion” at 10 %. “Speed gain”, “Output smoothing” and “Effect build-up speed” are not lowered. Work your way up from there.</p>
 <p>The program detects the main rotor direction automatically from the model data where that data can be read. For protected models, for example from the Marketplace, set it by hand. The “Tail rotor lever arm” control starts at “Below”, which matches most helicopters. In every case, check “Main rotor direction” and “Tail rotor lever arm” before you fly, as described in section 2.</p>
 <p>Set up correctly, models from third-party developers work well too. We cannot set up every model in advance, because we do not know which helicopters you own, and we cannot buy and test every model on the market.</p>
@@ -368,9 +377,10 @@ main section h2 { margin-top: 24px; }
   <hr class="sep">
 
 <section id="de" lang="de">
+  <h2 class="sprache">Deutsche Version</h2>
 <h2 id="fwx-flight-dynamics-allgemeine-anleitung">FWX Flight Dynamics: Allgemeine Anleitung</h2>
 <p><em>Bedienung und Einstellung · Stand 14.10.2026</em></p>
-<div class="callout warn"><div class="head">Hinweis für Bewegungsplattformen (Motion Rigs):</div>FWX Flight Dynamics verändert die Bewegungen des Hubschraubers im Simulator. Bewegungsplattformen können dadurch möglicherweise stark oder ruckartig reagieren. Nutzen Sie FWX Flight Dynamics mit einer Bewegungsplattform nur mit großer Vorsicht, oder schalten Sie es mit dem Schalter „MASTER“ aus.</div>
+
 <h3 id="so-arbeitet-fwx-flight-dynamics">1. So arbeitet FWX Flight Dynamics</h3>
 <p>FWX Flight Dynamics erfindet das Flugverhalten nicht neu. Das Flugmodell des Simulators bleibt vollständig erhalten. Das Programm verstärkt nur, was tatsächlich vorhanden ist: die echten aerodynamischen Einflüsse wie Wind und Luftströmung, Ihre eigenen Steuereingaben und die mechanischen Eigenschaften des jeweiligen Hubschraubers. Diese Einflüsse werden spürbar, und Sie stellen ihre Stärke mit den Reglern nach Ihrem Gefühl ein.</p>
 <p>Ein echter Hubschrauber ist von Natur aus ein unruhiges und sehr instabiles Fluggerät. Jede mechanische Stellschraube, zum Beispiel der Governor, also die Drehzahlregelung, bringt Unruhe hinein, ebenso die Hand des Piloten. Diese Unruhe muss ständig ausgeglichen werden. Deshalb trennt das Programm klar zwischen aerodynamischen und mechanischen Einflüssen. Beide sind einzeln einstellbar und greifen ineinander.</p>
@@ -431,6 +441,7 @@ main section h2 { margin-top: 24px; }
 <p><strong>Zusammenspiel:</strong> Halten Sie bei Seitenwind mit dem Pedal dagegen, kommt über den Hebel eine leichte Rollbewegung dazu. Genau dieses Zusammenspiel macht das Fliegen lebendig. Deshalb ist die richtige Einstellung von Drehrichtung und Hebel so wichtig.</p>
 <p>Wenn Sie unsicher sind: Mit „Tandem“ und „Middle“ bleiben diese Eigenschaften neutral. Dann geht allerdings ein Teil der mechanischen Lebendigkeit verloren.</p>
 <h3 id="unbekannte-modelle-von-drittanbietern">7. Unbekannte Modelle von Drittanbietern</h3>
+<p><strong>Hubschrauber ohne FWX-Werksprofil:</strong> Wir können nicht jedes Modell testen. Hubschrauber ohne eigenes Werksprofil starten deshalb mit einer bewusst niedrigen Grundeinstellung, denn zu hohe Werte können ein unbekanntes Modell stark aufschaukeln. Anfangs ist darum kaum etwas zu spüren. Stellen Sie die Regler schrittweise nach oben, oder laden Sie das Profil eines Hubschraubers, das Ihnen bereits gefällt.</p>
 <p>Ein Modell, das FWX Flight Dynamics nicht kennt, startet mit niedrigen Grundwerten. Dazu zählen auch Modelle anderer Entwickler. „Block strength“ steht dann in beiden Abschnitten auf 50 %, „Overall Strength of Effect“ auf 20 % und alle Einzelregler in „Hover“ und „Flight in motion“ auf 10 %. „Speed gain“, „Output smoothing“ und „Effect build-up speed“ werden dabei nicht abgesenkt. Tasten Sie sich von dort aus nach oben heran.</p>
 <p>Die Drehrichtung des Hauptrotors erkennt das Programm automatisch aus den Modelldaten, wo diese lesbar sind. Bei geschützten Modellen, zum Beispiel aus dem Marketplace, stellen Sie sie von Hand ein. Der Regler „Tail rotor lever arm“ startet auf „Below“, passend zu den meisten Hubschraubern. Kontrollieren Sie „Main rotor direction“ und „Tail rotor lever arm“ in jedem Fall vor dem Flug, wie in Abschnitt 2 beschrieben.</p>
 <p>Richtig eingestellt funktionieren auch Modelle von Drittanbietern gut. Vorab einstellen können wir nicht jedes Modell, weil wir nicht wissen, welche Hubschrauber Sie besitzen, und nicht jedes Modell auf dem Markt kaufen und testen können.</p>
