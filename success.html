@@ -102,8 +102,8 @@
                 Vielen Dank! Du kannst dein Produkt jederzeit herunterladen. Verwende deine Kauf-E-Mail und Bestellnummer auf der Download-Seite.
             </p>
             <p style="color: var(--text-muted); margin-top: 40px; font-size: 0.9rem;">
-                You will also receive a confirmation email from Stripe with your order details. You can download up to 3 times per purchase. Need help? Contact <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a>.<br><br>
-                Du erhältst auch eine Bestätigungsmail von Stripe mit deinen Bestelldaten. Du kannst bis zu 3 Mal pro Kauf herunterladen. Hilfe nötig? Schreib an <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a>.
+                You will also receive a confirmation email from Stripe with your order details. You can download up to 6 times per purchase. Need help? Contact <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a>.<br><br>
+                Du erhältst auch eine Bestätigungsmail von Stripe mit deinen Bestelldaten. Du kannst bis zu 6 Mal pro Kauf herunterladen. Hilfe nötig? Schreib an <a href="mailto:support@fwx-simaviation.com">support@fwx-simaviation.com</a>.
             </p>
             <a href="index.html" class="btn btn-primary" style="margin-top: 32px;">Back to Home</a>
         </div>
@@ -190,7 +190,7 @@
           btns.appendChild(a);
         });
         note.style.display = "block";
-        note.textContent = "Each click counts as one download. You have " + j.remaining + " of 3 downloads left. The button is valid for 10 minutes; reload this page for a fresh one. You will also receive an email with the same order number " + j.invoice + ", so you can download again later on the download page.";
+        note.textContent = "Each click counts as one download. You have " + j.remaining + " of 6 downloads left. The button is valid for 10 minutes; reload this page for a fresh one. You will also receive an email with the same order number " + j.invoice + ", so you can download again later on the download page.";
       })
       .catch(function () {
         if (tries < 10) { setTimeout(ask, 3000); return; }
